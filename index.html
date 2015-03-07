@@ -44,7 +44,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
+      <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
 
       
 
@@ -69,12 +69,346 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
         
       
         
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
       
 
+
+      <a class="sidebar-nav-item" href="/tags">Tags</a>
       <a class="sidebar-nav-item" href="/archive">Archive</a>
 
     </nav>
@@ -89,6 +423,63 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/wordpress-jekyll-switch-migration">
+        <!-- <span class=post-title-accent>></span> -->Switching From Wordpress to Jekyll in 20 minutes
+      </a>
+    </h1>
+
+    <span class="post-date">07 Mar 2015</span>
+    <hr>
+
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> f in *<span class="p">;</span> <span class="k">do</span> ruby process.rb <span class="nv">$f</span><span class="p">;</span> <span class="k">done</span>  
+</code></pre></div>
+<p>S: <code>^redirect_from: (\d+)-(\d+)-(\d+)-(.*).md$</code></p>
+
+<p>R: <code>redirect_from: /$1/$2/$4/</code></p>
+
+<hr>
+
+<p>S: <code>&lt;pre&gt;([\s\S]*?)\[cc lang=&quot;(.*?)&quot;(.*)\]</code>  (greedy match)</p>
+
+<p>R: <code>\n</code>`<code>$3\n</code></p>
+
+<hr>
+
+<p>S: <code>\[cc lang=&quot;(.*?)&quot; (.*)&quot;\]</code></p>
+
+<p>R: <code>\n</code>`<code>$1\n</code></p>
+
+<hr>
+
+<p>S: <code>\[/cc\]([\s\S]*?)&lt;/pre&gt;</code> </p>
+
+<p>R: <code>\n</code>`<code>\n</code></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/jekyll-redirect-http-equiv-not-working">
+        <!-- <span class=post-title-accent>></span> -->Jekyll Redirect Plugin <http equiv> forcing a file download
+      </a>
+    </h1>
+
+    <span class="post-date">07 Mar 2015</span>
+    <hr>
+
+    <h4>Problem</h4>
+
+<p>The redirect was not working. It was forcing a file download but was not redirecting the page. Turns out Jekyll does not correctly parse the case where the <strong>redirect_from</strong> </p>
+
+<h4>Solution</h4>
+
+<p>You need to add a trailing slat to the <code>redirect_from:URL</code> i.e. <code>redirect_from: /old_slug/</code> not
+<code>redirect_from: /old_slug</code>. Note the trailing slash. This is how it is supposed to be done.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/switching-to-fabric">
         <!-- <span class=post-title-accent>></span> -->Switching to Fabric from Crashlytics
       </a>
@@ -97,7 +488,15 @@
     <span class="post-date">05 Mar 2015</span>
     <hr>
 
-    <p>I had a weird error appear</p>
+    <p>I had a weird Java error appear after updating to <a href="http://fabric.io">Fabric</a>. It turned out the problem was - I forgot to remove the <code>crashlytics.jar</code> from the libs folder and there were still a few libraries there and the whole folder was getting compiled so when Fabric got added through <code>aarr</code> file, I ended up with 2 copies of the library, which created the problem.</p>
+
+<p>The initialization for <a href="http://fabric.io">Fabric</a> is a little different now too.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Fabric</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="nf">Crashlytics</span><span class="o">(),</span> <span class="k">new</span> <span class="nf">Twitter</span><span class="o">(</span><span class="n">authConfig</span><span class="o">),</span> <span class="k">new</span> <span class="nf">MoPub</span><span class="o">());</span>
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Fabric</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="nf">Crashlytics</span><span class="o">());</span>
+</code></pre></div>
+<p>if you only use Crashlytics</p>
 
   </div>
   
@@ -113,280 +512,629 @@
 
     <p><a href="http://slack.com">Slack</a>, <a href="http://hipchat.com">HipChat</a>, <a href="http://flowdock.com">Flowdock</a> and others are all the rave now but wait, wasn&#39;t there something like that like... mmm... 5 (!!!) years ago? There certainly was something like that and actually much, much better thing. It was called Google Wave, <a href="https://support.google.com/answer/1083134?hl=en">now defunct</a>.</p>
 
-<p>It even had the bot functionality back then and many more features which were apparently waaay ahead of its time. It took 5 years and a company that only does that (that would be Slack) to get eveeryone who&#39;s anyone to dring their cool aid. <code>pre text</code>
-2015-03-05-google-wave</p>
+<p>It even had the bot functionality back then and many more features which were apparently waaay ahead of its time. It took 5 years and a company that only does that (that would be Slack) to get everyone who&#39;s anyone to drink their cool aid. </p>
 
 <h4>Google Wave - RIP...</h4>
 
-<p><a href="/google-wave-vs-slack-hipchat">Google Wave had so much more potential than Slack, HipChat, FlowDoc and Co.</a></p>
-
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/code-highlighting-post">
-        <!-- <span class=post-title-accent>></span> -->Syntax Highlighting Post
+      <a href="/xcode-themes-collection">
+        <!-- <span class=post-title-accent>></span> -->Xcode themes collection
       </a>
     </h1>
 
-    <span class="post-date">16 Aug 2013</span>
+    <span class="post-date">23 Nov 2014</span>
     <hr>
 
-    <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<a href="http://en.wikipedia.org/wiki/Syntax_highlighting">^1</a></p>
+    <p>Good Xcode themes collection in one archive on <a href="https://github.com/hdoria/xcode-themes">Github</a>, with install script too!</p>
 
-<h3>Pygments Code Blocks</h3>
+<p>&nbsp;</p>
 
-<p>To modify styling and highlight colors edit <code>/_sass/_pygments.scss</code>.</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#container</span> <span class="p">{</span>
-    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">-240px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;pagination&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-    {% if page.previous %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.url }}{{ page.previous.url }}&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">title=</span><span class="s">&quot;{{ page.previous.title }}&quot;</span><span class="nt">&gt;</span>Previous article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-    {% if page.next %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.url }}{{ page.next.url }}&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">title=</span><span class="s">&quot;{{ page.next.title }}&quot;</span><span class="nt">&gt;</span>Next article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-<span class="nt">&lt;/nav&gt;</span><span class="c">&lt;!-- /.pagination --&gt;</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">Jekyll</span>
-  <span class="k">class</span> <span class="nc">TagIndex</span> <span class="o">&lt;</span> <span class="no">Page</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-      <span class="vi">@site</span> <span class="o">=</span> <span class="n">site</span>
-      <span class="vi">@base</span> <span class="o">=</span> <span class="n">base</span>
-      <span class="vi">@dir</span> <span class="o">=</span> <span class="n">dir</span>
-      <span class="vi">@name</span> <span class="o">=</span> <span class="s1">&#39;index.html&#39;</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">read_yaml</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">&#39;_layouts&#39;</span><span class="p">),</span> <span class="s1">&#39;tag_index.html&#39;</span><span class="p">)</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;tag&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">tag</span>
-      <span class="n">tag_title_prefix</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="o">[</span><span class="s1">&#39;tag_title_prefix&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;Tagged: &#39;</span>
-      <span class="n">tag_title_suffix</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="o">[</span><span class="s1">&#39;tag_title_suffix&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&amp;#8211;&#39;</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;title&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">tag_title_prefix</span><span class="si">}#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">&quot;</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;description&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;An archive of posts tagged </span><span class="si">#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">.&quot;</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
-
-<h3>Standard Code Block</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&gt;
-    {% if page.previous %}
-        &lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&gt;Previous article&lt;/a&gt;
-    {% endif %}
-    {% if page.next %}
-        &lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&gt;Next article&lt;/a&gt;
-    {% endif %}
-&lt;/nav&gt;&lt;!-- /.pagination --&gt;
+<h3>Using the install script:</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/hdoria/xcode-themes.git
+<span class="nv">$ </span><span class="nb">cd </span>xcode-themes
+<span class="nv">$ </span>./install.sh
 </code></pre></div>
-<h3>Fenced Code Blocks</h3>
-
-<p>To modify styling and highlight colors edit <code>/_sass/_coderay.scss</code>. Line numbers and a few other things can be modified in <code>_config.yml</code>. Consult <a href="http://jekyllrb.com/docs/configuration/">Jekyll&#39;s documentation</a> for more information.</p>
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#container</span> <span class="p">{</span>
-    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">-240px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;pagination&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-    {% if page.previous %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.url }}{{ page.previous.url }}&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">title=</span><span class="s">&quot;{{ page.previous.title }}&quot;</span><span class="nt">&gt;</span>Previous article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-    {% if page.next %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.url }}{{ page.next.url }}&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span> <span class="na">title=</span><span class="s">&quot;{{ page.next.title }}&quot;</span><span class="nt">&gt;</span>Next article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-<span class="nt">&lt;/nav&gt;</span><span class="c">&lt;!-- /.pagination --&gt;</span>
-</code></pre></div><div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">Jekyll</span>
-  <span class="k">class</span> <span class="nc">TagIndex</span> <span class="o">&lt;</span> <span class="no">Page</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-      <span class="vi">@site</span> <span class="o">=</span> <span class="n">site</span>
-      <span class="vi">@base</span> <span class="o">=</span> <span class="n">base</span>
-      <span class="vi">@dir</span> <span class="o">=</span> <span class="n">dir</span>
-      <span class="vi">@name</span> <span class="o">=</span> <span class="s1">&#39;index.html&#39;</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">read_yaml</span><span class="p">(</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">&#39;_layouts&#39;</span><span class="p">),</span> <span class="s1">&#39;tag_index.html&#39;</span><span class="p">)</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;tag&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">tag</span>
-      <span class="n">tag_title_prefix</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="o">[</span><span class="s1">&#39;tag_title_prefix&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;Tagged: &#39;</span>
-      <span class="n">tag_title_suffix</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">config</span><span class="o">[</span><span class="s1">&#39;tag_title_suffix&#39;</span><span class="o">]</span> <span class="o">||</span> <span class="s1">&#39;&amp;#8211;&#39;</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;title&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">tag_title_prefix</span><span class="si">}#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">&quot;</span>
-      <span class="nb">self</span><span class="o">.</span><span class="n">data</span><span class="o">[</span><span class="s1">&#39;description&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;An archive of posts tagged </span><span class="si">#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">.&quot;</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+<h3><a id="user-content-alternative-way" class="anchor" style="color: #4183c4;" href="https://github.com/hdoria/xcode-themes#alternative-way"></a>Manual install:</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/hdoria/xcode-themes.git
+<span class="nv">$ </span><span class="nb">cd </span>xcode-themes
+<span class="nv">$ </span>mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+<span class="nv">$ </span>cp *.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 </code></pre></div>
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/example-content">
-        <!-- <span class=post-title-accent>></span> -->Example content
+      <a href="/android-intentservice-vs-service">
+        <!-- <span class=post-title-accent>></span> -->Android IntentService vs. Service
       </a>
     </h1>
 
-    <span class="post-date">07 Feb 2012</span>
+    <span class="post-date">19 May 2014</span>
     <hr>
 
-    <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-</div>
+    <p>Android has often more than one way of doing something but it is not because of a poor design, rather because of the many possibilities that are available to Android developer and it is important to understand the nuances between various options to achieve something and choose the right tool for the job.</p>
 
-<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+<p>Let's look at services:</p>
 
-<blockquote>
-<p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-</blockquote>
+<h3 style="text-align: center;">IntentService vs. Service</h3>
 
-<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+<p><strong>When to use?</strong></p>
 
-<h2>Inline HTML elements</h2>
-
-<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-
-<ul>
-<li><strong>To bold text</strong>, use <code>&lt;strong&gt;</code>.</li>
-<li><em>To italicize text</em>, use <code>&lt;em&gt;</code>.</li>
-<li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code>&lt;abbr&gt;</code>, with an optional <code>title</code> attribute for the full phrase.</li>
-<li>Citations, like <cite>&mdash; Mark otto</cite>, should use <code>&lt;cite&gt;</code>.</li>
-<li><del>Deleted</del> text should use <code>&lt;del&gt;</code> and <ins>inserted</ins> text should use <code>&lt;ins&gt;</code>.</li>
-<li>Superscript <sup>text</sup> uses <code>&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code>&lt;sub&gt;</code>.</li>
+<ul style="color: #000000;">
+<li>The <em>Service</em> can be used in tasks with no UI, but shouldn't be too long. If you need to perform long tasks, you must use threads within Service.</li>
+<li>The <em>IntentService</em> can be used in long tasks usually with no communication to Main Thread. If communication is required, can use Main Thread handler or broadcast intents. Another case of use is when callbacks are needed (Intent triggered tasks).</li>
 </ul>
 
-<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+<p><strong>How to trigger?</strong></p>
 
-<h2>Heading</h2>
-
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-<h3>Code</h3>
-
-<p>Cum sociis natoque penatibus et magnis dis <code>code element</code> montes, nascetur ridiculus mus.</p>
-
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Example can be run directly in your JavaScript console</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;return a + b&quot;</span><span class="p">);</span>
-
-<span class="c1">// Call the function</span>
-<span class="nx">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span></code></pre></div>
-
-<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-
-<h3>Gists via GitHub Pages</h3>
-
-<p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
-
-<script src="https://gist.github.com/5555251.js?file=gist.md"> </script>
-
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>
-
-<h3>Lists</h3>
-
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
-<ul>
-<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-<li>Donec id elit non mi porta gravida at eget metus.</li>
-<li>Nulla vitae elit libero, a pharetra augue.</li>
+<ul style="color: #000000;">
+<li>The <em>Service</em> is triggered calling to method onStartService().</li>
+<li>The <em>IntentService</em> is triggered using an Intent, it spawns a new worker thread and the method onHandleIntent() is called on this thread.</li>
 </ul>
 
-<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+<p><strong>Triggered From</strong></p>
 
-<ol>
-<li>Vestibulum id ligula porta felis euismod semper.</li>
-<li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-</ol>
+<ul style="color: #000000;">
+<li>The <em>Service</em> may be triggered from any thread.</li>
+<li>The <em>IntentService</em> must be triggered from Main Thread.</li>
+</ul>
 
-<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+<p><strong>Runs On</strong></p>
 
-<dl>
-  <dt>HyperText Markup Language (HTML)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
+<ul style="color: #000000;">
+<li>The <em>Service</em> runs in background but it runs on the Main Thread of the application.</li>
+<li>The <em>IntentService</em> runs on a separate worker thread.</li>
+</ul>
 
-  <dt>Cascading Style Sheets (CSS)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
+<p><strong>Limitations / Drawbacks</strong></p>
 
-  <dt>JavaScript (JS)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
+<ul style="color: #000000;">
+<li>The <em>Service</em> may block the Main Thread of the application.</li>
+<li>The <em>IntentService</em> cannot run tasks in parallel. Hence all the consecutive intents will go into the message queue for the worker thread and will execute sequentially.</li>
+</ul>
 
-<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/os-x-uninstall-plex-media-server">
+        <!-- <span class=post-title-accent>></span> -->OS X Uninstall Plex Media Server
+      </a>
+    </h1>
 
-<h3>Images</h3>
+    <span class="post-date">07 May 2014</span>
+    <hr>
 
-<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
+    <p>You can follow the official directions <a href="https://support.plex.tv/hc/en-us/articles/201941078-Uninstall-Plex-Media-Server">here</a></p>
 
-<p><img src="http://placehold.it/800x400" alt="placeholder" title="Large example image">
-<img src="http://placehold.it/400x200" alt="placeholder" title="Medium example image">
-<img src="http://placehold.it/200x200" alt="placeholder" title="Small example image"></p>
+<p>Or you can just use <a href="http://freemacsoft.net/appcleaner/">AppCleaner</a> and drag the Plex Media Server app from the Applications folder and the AppCleaner will remove all the same files and folders for you in an instant!</p>
 
-<h3>Tables</h3>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/travel-inspiration">
+        <!-- <span class=post-title-accent>></span> -->Travel Inspiration
+      </a>
+    </h1>
 
-<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <span class="post-date">04 Apr 2014</span>
+    <hr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
+    <p><br />
+<blockquote><p>You&#39;ll always be able to make more money but you can not make more time. We&#39;ll all die but only a small select few are truly living</p></blockquote>
+<p>A truly inspirational video. It really made me want to sail around the world.</p>
+<p><iframe width="840" height="472" src="//www.youtube.com/embed/81DrG3Qy4BI" frameborder="0" allowfullscreen></iframe></p></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/mavericks-energy-saving-settings-sleep-and-display-sleep">
+        <!-- <span class=post-title-accent>></span> -->Mavericks energy saving settings sleep and display sleep
+      </a>
+    </h1>
+
+    <span class="post-date">27 Mar 2014</span>
+    <hr>
+
+    <p>Frustrated with flaky settings on Mavericks for energy savings? Puts your stuff to sleep when you don't want to and doesn't put it to sleep when you do? </p>
+
+<pre>pmset</pre>
+
+<p> comes to the rescue</p>
+
+<p>I used the following command:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo pmset displaysleep <span class="m">10</span> sleep 0
+</code></pre></div>
+<p>since I want my displays to go to sleep after 10 minutes and the computer never go to sleep.</p>
+
+<p>To specify behavior for when on battery power use the
+<pre>-b</pre>
+<p> switch e.g.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo pmset -b displaysleep <span class="m">5</span> sleep 15
+</code></pre></div>
+<p>to put your display to sleep after 5 minutes of idling and your computer after 15 minutes of idling.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/pull-screenshot-from-android-with-one-liner-using-adb">
+        <!-- <span class=post-title-accent>></span> -->Pull Screenshot from Android with one liner using 'adb'
+      </a>
+    </h1>
+
+    <span class="post-date">12 Mar 2014</span>
+    <hr>
+
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">adb shell screencap -p <span class="p">|</span> perl -pe <span class="s1">&#39;s/\x0D\x0A/\x0A/g&#39;</span> &gt; screenshot.png
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/evernote-account-limits-in-perspective">
+        <!-- <span class=post-title-accent>></span> -->Evernote account limits in perspective
+      </a>
+    </h1>
+
+    <span class="post-date">10 Mar 2014</span>
+    <hr>
+
+    <p>Evernote seems to be great tool for note taking and keeping pretty much everything you want organized. I used to use a <a href="http://dokuwiki.com">wiki</a> but recently I decided to give Evernote a second or third or fourth try. I am not sure what the number here is but this is the first time it actually clicked with me and I think I am actually going to use it instead of my wiki and switch to it completely. They just didn't have the the ecosystem in place when I tried it the first X times. Now they cover almost every platform and the support on the desktop is just great!</p>
+
+<p><span style="line-height: 1.5em;">There are some limitations for every account be it a free account or premium or even business account. When I first thought about the limitations I thought - that sucks... But then I thought - hey, let's put this in perspective and see how "real" these limitations are.</span></p>
+
+<p>So the limits are:</p>
+
+<table style="border: 1px solid #8a888b; width: 80%;" border="1" cellspacing="5" cellpadding="5">
+<tbody>
+<tr>
+<td> Number of notes</td>
+<td> 100,000</td>
+<td>If you crete X notes daily and <strong>never </strong>delete single note then:</p>
+<ul>
+<li>If you create 30 notes a day (<strong>every day</strong>)– it will take you a little over <strong>9 years </strong>to hit the quota.</li>
+<li>If you create just 5 notes a day (<strong>every day</strong>)– it will take you roughly <strong>55 years </strong>to hit the quota.</li>
+<li>If you create 30 motes a day (<strong>every day except</strong> <strong>w-ends) </strong>- it will take you a little less than <strong>13 years </strong>to hit the quota</li>
+<li>If you create 5 motes a day (<strong>every day except</strong> <strong>w-ends) </strong>- it will take you roughly <strong>80 years </strong>to hit the quota</li>
+</ul>
+<p>So, after putting it into a bit of perspective – it doesn't look that bad, right :) Besides, even in 10 years I bet the computational power would jump to such a level that the limit would be raised to 1 million notes and then it would be impractical to hit the limit in a lifetime (of course we need to take into the account the fact</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>100,000</td>
+<td>There are many speculations but many linguistic experts agree that an average adult has a vocabulary size of 20,000 to 35,000 words. Including the most obscure ones that you can think of. So I would say you are pretty much safe here as you are going to run of any meaningful means of managing the tags before you run out of quota</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tags per note</td>
+<td>100</td>
+<td>That's a lot for every give post. And this limit is not even interesting that much.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
 </table>
 
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-
-<hr>
-
-<p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
+<p>&nbsp;</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/whats-jekyll">
-        <!-- <span class=post-title-accent>></span> -->What's Jekyll?
+      <a href="/secret-ly-is-supposedly-inviting-hackers-to-contest-but-telegram-is-putting-their-money-and-a-lot-of-it-on-the-line">
+        <!-- <span class=post-title-accent>></span> -->Secret.ly is supposedly inviting hackers to contest but Telegram is putting their money and a lot of it on the line
       </a>
     </h1>
 
-    <span class="post-date">06 Feb 2012</span>
+    <span class="post-date">26 Feb 2014</span>
     <hr>
 
-    <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project&#39;s readme</a>:</p>
+    <p>A recently popular new startup that is making waves, namely <a href="http://secret.ly">Secret.ly</a> was quite soon hacked after it was first released, giving the attacker access to the identity of the poster, effectively defeating the purpose of the secrecy. So they said "We take security seriously" and <a href="https://hackerone.com/secret">threw a public challenge</a> to the hackers around the world... Or so it seems becase there are no real incentives besides curiosity and pride and maybe some swag from secretly.</p>
 
-<blockquote>
-<p>Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
+<p>On the other hand, the not so known messaging app created by the brothers Nikolay and Pavel Durov. While the latter is well known being the founder of the most popular russian social networking site VK.com, his brother Nikolay is less know and he was the one to device the new communication and <a href="https://core.telegram.org/mtproto">open source protocol MTProto</a> for the Telegram. Telegram is non profit, partially open source (the Protocol and API code is open so every one who is skeptical can make sure that it is truly secure) and is absolutely free. It is available for Android and iOS. And if all the above doesn't blow you away yet, there's more. To make sure their implementation is secure, they are running a <a href="https://telegram.org/crypto_contest">crypto challenge</a> and the winner will get $200,000 in Bitcoin currency. Now that's serious.</p>
 
-<p>It&#39;s an immensely useful tool and one we encourage you to use here with Hyde.</p>
+<h1></h1>
 
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/droidtocat-my-new-cute-blog-sentinel">
+        <!-- <span class=post-title-accent>></span> -->Droidtocat - my new cute blog sentinel :)
+      </a>
+    </h1>
+
+    <span class="post-date">18 Feb 2014</span>
+    <hr>
+
+    <p style="text-align: center;"><a src="http://inteist.com/media/droidtocat.png"><img class="aligncenter  wp-image-1345" alt="droidtocat" src="http://inteist.com/media/droidtocat.png" width="627" height="627" /></a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/introducing-hyde">
+        <!-- <span class=post-title-accent>></span> -->Introducing Hyde
+      </a>
+    </h1>
+
+    <span class="post-date">28 Dec 2013</span>
+    <hr>
+
+    <p>Hyde is a brazen two-column <a href="http://jekyllrb.com">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. It&#39;s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
+
+<h3>Built on Poole</h3>
+
+<p>Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by <a href="https://twitter.com/mdo">@mdo</a>. Poole, and every theme built on it (like Hyde here) includes the following:</p>
+
+<ul>
+<li>Complete Jekyll setup included (layouts, config, <a href="/404">404</a>, <a href="/atom.xml">RSS feed</a>, posts, and <a href="/about">example page</a>)</li>
+<li>Mobile friendly design and development</li>
+<li>Easily scalable text and component sizing with <code>rem</code> units in the CSS</li>
+<li>Support for a wide gamut of HTML elements</li>
+<li>Related posts (time-based, because Jekyll) below each post</li>
+<li>Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)</li>
+</ul>
+
+<h3>Hyde features</h3>
+
+<p>In addition to the features of Poole, Hyde adds the following:</p>
+
+<ul>
+<li>Sidebar includes support for textual modules and a dynamically generated navigation with active link support</li>
+<li>Two orientations for content and sidebar, default (left sidebar) and <a href="https://github.com/poole/lanyon#reverse-layout">reverse</a> (right sidebar), available via <code>&lt;body&gt;</code> classes</li>
+<li><a href="https://github.com/poole/hyde#themes">Eight optional color schemes</a>, available via <code>&lt;body&gt;</code> classes</li>
+</ul>
+
+<p><a href="https://github.com/poole/hyde#readme">Head to the readme</a> to learn more.</p>
+
+<h3>Browser support</h3>
+
+<p>Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.</p>
+
+<h3>Download</h3>
+
+<p>Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.</p>
+
+<p>Thanks!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/useful-meteor-resources">
+        <!-- <span class=post-title-accent>></span> -->Useful Meteor Resources
+      </a>
+    </h1>
+
+    <span class="post-date">22 Nov 2013</span>
+    <hr>
+
+    <ul>
+<li><a href="http://www.discovermeteor.com/" target="_blank">Discover Meteor</a>, by Tom Coleman and Sacha Greif (comprehensive ebook for all levels, assumes some prior JavaScript/programming experience)</li>
+<li><a href="http://javascriptissexy.com/how-to-learn-javascript-properly/" target="_blank">How to Learn JavaScript Properly</a>, by Richard Bovell (learning roadmaps for JavaScript beginners and first-time programmers)</li>
+<li><a href="https://www.eventedmind.com/" target="_blank">EventedMind</a>, by Chris Mather (intermediate/ advanced Meteor topics)</li>
+<li><a href="http://yauh.de/articles/376/best-learning-resources-for-meteorjs" target="_blank">Best Learning Resources for Meteor.js</a>, by Stephan Hochhaus (compilation of Meteor tutorials)</li>
+<li><a href="http://docs.meteor.com/" target="_blank">Official Meteor docs</a> and <a href="https://github.com/oortcloud/unofficial-meteor-faq" target="_blank">unofficial Meteor FAQ</a></li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/php-remove-curly-smart-quotes-from-string-data">
+        <!-- <span class=post-title-accent>></span> -->PHP remove curly (smart) quotes from string data
+      </a>
+    </h1>
+
+    <span class="post-date">25 Oct 2013</span>
+    <hr>
+
+    <p>Here's a simple function that will remove curly quotes aka smart quotes from your strings.  Very useful if you enter data from MS Word files or other sources that may use weird unicode characters. Use it as an input cleaning step before saving the string data.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">function</span> <span class="nf">remove_curly_quotes</span><span class="o">(</span><span class="n">$text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// First, replace UTF-8 characters.</span>
+    <span class="n">$text</span> <span class="o">=</span> <span class="n">str_replace</span><span class="o">(</span><span class="n">array</span><span class="o">(</span><span class="s">&quot;\xe2\x80\x98&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x99&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x9c&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x9d&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x93&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x94&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\xa6&quot;</span><span class="o">),</span> <span class="n">array</span><span class="o">(</span><span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;-&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">--</span><span class="err">&#39;</span><span class="o">,</span>
+        <span class="err">&#39;</span><span class="o">...</span><span class="err">&#39;</span><span class="o">),</span> <span class="n">$text</span><span class="o">);</span>
+    <span class="c1">// Next, replace their Windows-1252 equivalents.</span>
+    <span class="n">$text</span> <span class="o">=</span> <span class="n">str_replace</span><span class="o">(</span><span class="n">array</span><span class="o">(</span><span class="n">chr</span><span class="o">(</span><span class="mi">145</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">146</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">147</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">148</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">150</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">151</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">133</span><span class="o">)),</span> <span class="n">array</span><span class="o">(</span><span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;-&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">--</span><span class="err">&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">...</span><span class="err">&#39;</span><span class="o">),</span> <span class="n">$text</span><span class="o">);</span>
+
+    <span class="k">return</span> <span class="n">$text</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/hitting-multiple-files-using-bash-and-wget-or-curl">
+        <!-- <span class=post-title-accent>></span> -->Hitting multiple files using bash and wget or curl
+      </a>
+    </h1>
+
+    <span class="post-date">25 Oct 2013</span>
+    <hr>
+
+    <p>I needed to hit a number of files on a remote HTTP server with an index ranging from 1 to 150 and my first instinct was to use wget with some sort of a loop (bash script seemed like the most logical thing to do).</p>
+
+<p>Then I realized that I can do the same thing in a simple oneliner using 'curl'</p>
+
+<p>It's super easy using the following info:</p>
+
+<p>
+```bash
+<br />
+You can specify multiple URLs or parts of URLs by writing part sets within braces as in:</p>
+<p>http://site.{one,two,three}.com</p>
+<p>or you can get sequences of alphanumeric series by using [] as in:</p>
+<p>ftp://ftp.numericals.com/file[1-100].txt<br />
+ftp://ftp.numericals.com/file[001-100].txt (with leading zeros)<br />
+ftp://ftp.letters.com/file[a-z].txt</p>
+<p>Nested sequences are not supported, but you can use several ones next to each other:</p>
+<p>http://any.org/archive[1996-1999]/vol[1-4]/part{a,b,c}.html</p>
+<p>You can specify any amount of URLs on the command line. They will be fetched in a sequential manner<br />
+in the specified order.</p>
+<p>You can specify a step counter for the ranges to get every Nth number or letter:</p>
+<p>http://www.numericals.com/file[1-100:10].txt<br />
+http://www.letters.com/file[a-z:2].txt</p>
+<p>
+```
+</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/facebook-ios-sdk-print-sdk-version-number">
+        <!-- <span class=post-title-accent>></span> -->Facebook iOS SDK - print SDK version number
+      </a>
+    </h1>
+
+    <span class="post-date">18 Oct 2013</span>
+    <hr>
+
+    <div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;FB SDK VERSION : %@&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">FBSettings</span> <span class="n">sdkVersion</span><span class="p">]);</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/quote-of-the-day">
+        <!-- <span class=post-title-accent>></span> -->Quote of the day
+      </a>
+    </h1>
+
+    <span class="post-date">25 Sep 2013</span>
+    <hr>
+
+    <p><br />
+<h3>&quot;Any sufficiently advanced technology is indistinguishable from magic&quot;</h3>
+<p style="text-align: center;">-A.C. Clarke</p></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/getting-the-inch-size-of-the-android-device">
+        <!-- <span class=post-title-accent>></span> -->Getting the inch size of the Android device
+      </a>
+    </h1>
+
+    <span class="post-date">08 Sep 2013</span>
+    <hr>
+
+    <p>Here's a simple code snippet to calculate approximate physical size of the screen of any Android device. If you find that useful or have suggestions to improve – your thoughts and feedback are welcome in the comments.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="cm">/**</span>
+<span class="cm">     * Calculates an approximation to the diagonal size of the screen. Based on the width and height pixels, the # of pixels in diagonal are calculated and then using the density DPI</span>
+<span class="cm">     * the pixels are translated into physical dimension in pixels</span>
+<span class="cm">     *     </span>
+<span class="cm">     * @param activity</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">getDiagonalSize</span><span class="o">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">DisplayMetrics</span> <span class="n">metrics</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DisplayMetrics</span><span class="o">();</span>
+
+        <span class="n">activity</span><span class="o">.</span><span class="na">getWindowManager</span><span class="o">().</span><span class="na">getDefaultDisplay</span><span class="o">().</span><span class="na">getMetrics</span><span class="o">(</span><span class="n">metrics</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">((</span><span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span><span class="o">)</span> 
+                <span class="o">+</span> <span class="o">(</span><span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span><span class="o">))</span>
+                <span class="o">/</span> <span class="n">metrics</span><span class="o">.</span><span class="na">densityDpi</span><span class="o">;</span>
+
+    <span class="o">}</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/great-infografic-on-ios-vs-android-app-monetization">
+        <!-- <span class=post-title-accent>></span> -->Great infografic on iOS vs. Android app monetization
+      </a>
+    </h1>
+
+    <span class="post-date">07 Aug 2013</span>
+    <hr>
+
+    <p style="text-align: center;"><a src="http://inteist.com/media/ios_vs_android_revenue_opportunity_comparisson.jpg"><img class="aligncenter  wp-image-1221" alt="ios_vs_android_revenue_opportunity_comparisson" src="http://inteist.com/media/ios_vs_android_revenue_opportunity_comparisson.jpg" width="600" height="5980" /></a></p>
+
+<h2 style="text-align: center;">Enjoy!</h2>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/big-wave-surfing">
+        <!-- <span class=post-title-accent>></span> -->Big wave surfing
+      </a>
+    </h1>
+
+    <span class="post-date">07 Aug 2013</span>
+    <hr>
+
+    <p style="text-align: center;"><a src="http://inteist.com/media/biggest-wave-surfed.jpg"><img class="aligncenter  wp-image-1229" alt="biggest-wave-surfed" src="http://inteist.com/media/biggest-wave-surfed.jpg" width="553" height="311" /></a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/facebook-graph-api-methods-and-parameters">
+        <!-- <span class=post-title-accent>></span> -->Facebook Graph API methods and parameters
+      </a>
+    </h1>
+
+    <span class="post-date">11 Jul 2013</span>
+    <hr>
+
+    <p>Quick reference for available Facebook Graph API actions with accompanying parameters:</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><a src="http://inteist.com/media/Screen-Shot-2013-07-11-at-3.39.48-PM.png"><img class="aligncenter  wp-image-1205" alt="Facebook Graph API actions and parameters" src="http://inteist.com/media/Screen-Shot-2013-07-11-at-3.39.48-PM.png" width="670" height="440" /></a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/natural-oils-with-spf-who-knew">
+        <!-- <span class=post-title-accent>></span> -->Natural Oils with SPF, who knew
+      </a>
+    </h1>
+
+    <span class="post-date">27 May 2013</span>
+    <hr>
+
+    <p style="text-align: center;"><a src="http://inteist.com/media/natural-oils-with-SPF.jpg"><img class="aligncenter  wp-image-1137" alt="natural oils with SPF" src="http://inteist.com/media/natural-oils-with-SPF.jpg" width="576" height="576" /></a></p>
+
+<p style="text-align: center;">These are the natural oils that can be used as SPF protection agains bad UV rays. It should be much more healthy than using a sun block as the sun block itself is cancerogenic substance</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/open-source-android-clustering-library">
+        <!-- <span class=post-title-accent>></span> -->Open source Android clustering library
+      </a>
+    </h1>
+
+    <span class="post-date">27 May 2013</span>
+    <hr>
+
+    <p>Great <a href="https://github.com/twotoasters/clusterkraf">open source map clustering library</a> by <a href="http://twotoasters.com/">TwoToasters</a></p>
+
+<p>Check out the video of <a href="https://play.google.com/store/apps/details?id=com.twotoasters.clusterkraf.sample">sample application</a> in action</p>
+
+<p><iframe src="http://www.youtube.com/embed/We1kVxh2WFI" height="315" width="560" allowfullscreen="" frameborder="0"></iframe></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/nice-sliding-menu-with-unique-color-fade-effect-by-romain-guy">
+        <!-- <span class=post-title-accent>></span> -->Nice sliding menu with unique color fade effect by Romain Guy
+      </a>
+    </h1>
+
+    <span class="post-date">27 May 2013</span>
+    <hr>
+
+    <p>This <a href="http://www.curious-creature.org/2012/12/14/android-recipe-3-sliding-menu-layers-and-filters/#more-1676">nice sliding menu</a> is supported in its full glory with API level 14. But can be degraded gracefully on earlier version of the OS too.</p>
+
+<p>Tip from Romain:  use the drawing cache instead with View.setDrawingCacheEnabled.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/google-analytics-sessions-vs-flurry-analytics-session">
+        <!-- <span class=post-title-accent>></span> -->Google analytics sessions vs. Flurry analytics session
+      </a>
+    </h1>
+
+    <span class="post-date">26 May 2013</span>
+    <hr>
+
+    <p>Every time a start session is called using Flurry SDK, a new session is registered <strong>unless</strong> the call was made within 20 seconds [for the same user] of the previous call, in which case these consequent sessions simply extend the existing one.</p>
+
+<p>For Google Analytics, it is different. Google Analytics will group hits (any analytics API call you make is considered a hit in Google analytics) that are received within 30 minutes of one another [for the same user] into the same session.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/a-useful-tool-to-work-with-android-apks">
+        <!-- <span class=post-title-accent>></span> -->A useful tool to work with Android APKs
+      </a>
+    </h1>
+
+    <span class="post-date">23 May 2013</span>
+    <hr>
+
+    <p>Here's a nice project to be able to work with Android APK resources:</p>
+
+<p><a title="https://code.google.com/p/android-apktool/" href="https://code.google.com/p/android-apktool/">https://code.google.com/p/android-apktool/</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/hex-editor-for-mac-or-any-platform-actually-macvim-vim">
+        <!-- <span class=post-title-accent>></span> -->Hex editor for Mac or any platform actually - MacVim (Vim)
+      </a>
+    </h1>
+
+    <span class="post-date">23 May 2013</span>
+    <hr>
+
+    <p>Here's how to use Vim as a handy HEX editor:</p>
+
+<p>&nbsp;</p>
+
+<ol>
+<li><strong>Open the file in Vim.</strong></li>
+<li><strong>Run the command to convert</strong>
+<p><strong>:% ! xxd</strong></li>
+<li><strong>Edit all you need (i to get into insert edit mode)</strong></li>
+<li><strong>Once done, run to convert back</strong>
+<p><strong>:% ! xxd -r</strong></li>
+<li><strong>Save (it's :wq)</strong></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/should-microsoft-out-apple-apple">
+        <!-- <span class=post-title-accent>></span> -->Should Microsoft out-Apple Apple?
+      </a>
+    </h1>
+
+    <span class="post-date">17 May 2013</span>
+    <hr>
+
+    <p>Microsoft’s strategy should not be to produce a better phone or tablet or to be the best mobile content provider. It cannot out-Apple Apple.</p>
 
   </div>
   
@@ -394,7 +1142,7 @@
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page2">Older</a>
   
   
     <span class="pagination-item newer">Newer</span>

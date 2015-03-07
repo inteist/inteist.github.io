@@ -44,7 +44,7 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Home</a>
+      <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
 
       
 
@@ -69,12 +69,346 @@
         
       
         
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
           
         
       
         
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
       
 
+
+      <a class="sidebar-nav-item" href="/tags">Tags</a>
       <a class="sidebar-nav-item" href="/archive">Archive</a>
 
     </nav>
@@ -88,13 +422,39 @@
       <div class="post">
   <h1 class="post-title">Switching to Fabric from Crashlytics</h1>
   <span class="post-date">05 Mar 2015</span>
-  <p>I had a weird error appear</p>
+  <p>I had a weird Java error appear after updating to <a href="http://fabric.io">Fabric</a>. It turned out the problem was - I forgot to remove the <code>crashlytics.jar</code> from the libs folder and there were still a few libraries there and the whole folder was getting compiled so when Fabric got added through <code>aarr</code> file, I ended up with 2 copies of the library, which created the problem.</p>
+
+<p>The initialization for <a href="http://fabric.io">Fabric</a> is a little different now too.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Fabric</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="nf">Crashlytics</span><span class="o">(),</span> <span class="k">new</span> <span class="nf">Twitter</span><span class="o">(</span><span class="n">authConfig</span><span class="o">),</span> <span class="k">new</span> <span class="nf">MoPub</span><span class="o">());</span>
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Fabric</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="nf">Crashlytics</span><span class="o">());</span>
+</code></pre></div>
+<p>if you only use Crashlytics</p>
 
 </div>
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/wordpress-jekyll-switch-migration">
+            Switching From Wordpress to Jekyll in 20 minutes
+          </a>
+            <small>07 Mar 2015</small>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/jekyll-redirect-http-equiv-not-working">
+            Jekyll Redirect Plugin <http equiv> forcing a file download
+          </a>
+            <small>07 Mar 2015</small>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -107,37 +467,19 @@
     
       <li>
         <h3>
-          <a href="/introducing-hyde">
-            Introducing Hyde
+          <a href="/xcode-themes-collection">
+            Xcode themes collection
           </a>
-            <small>28 Dec 2013</small>
+            <small>23 Nov 2014</small>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/code-highlighting-post">
-            Syntax Highlighting Post
+          <a href="/android-intentservice-vs-service">
+            Android IntentService vs. Service
           </a>
-            <small>16 Aug 2013</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/should-microsoft-out-apple-apple">
-            Should Microsoft out-Apple Apple?
-          </a>
-            <small>17 May 2013</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/example-content">
-            Example content
-          </a>
-            <small>07 Feb 2012</small>
+            <small>19 May 2014</small>
         </h3>
       </li>
     
