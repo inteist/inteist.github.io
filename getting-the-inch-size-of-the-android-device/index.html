@@ -11,7 +11,7 @@
 
   <title>
     
-      Getting the inch size of the Android device &middot; Inteist
+      Getting the Inch Size of the Android Device &middot; Inteist
     
   </title>
 
@@ -55,8 +55,6 @@
         
       
         
-      
-        
           
         
       
@@ -384,6 +382,50 @@
       
         
       
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
         
@@ -408,8 +450,10 @@
       
 
 
-      <a class="sidebar-nav-item" href="/tags">Tags</a>
-      <a class="sidebar-nav-item" href="/archive">Archive</a>
+        <a class="sidebar-nav-item" href="/tags">Tags</a>
+
+        <a class="sidebar-nav-item" href="/archive">Archive</a>
+
 
     </nav>
 
@@ -420,84 +464,686 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Getting the inch size of the Android device</h1>
+  <h1 class="post-title">Getting the Inch Size of the Android Device</h1>
   <span class="post-date">08 Sep 2013</span>
-  <p>Here's a simple code snippet to calculate approximate physical size of the screen of any Android device. If you find that useful or have suggestions to improve – your thoughts and feedback are welcome in the comments.</p>
+  <p>Here&#39;s a simple code snippet to calculate approximate physical size of the screen of any Android device. If you find that useful or have suggestions to improve, your thoughts and feedback are welcome in the comments.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+<span class="cm"> * Calculates an approximation to the diagonal size of the screen. Based on the width and height pixels, the # of pixels in diagonal are calculated and then using the density DPI</span>
+<span class="cm"> * the pixels are translated into physical dimension in pixels</span>
+<span class="cm"> *     </span>
+<span class="cm"> * @param activity</span>
+<span class="cm"> * @return</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">getDiagonalSize</span><span class="o">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">DisplayMetrics</span> <span class="n">metrics</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DisplayMetrics</span><span class="o">();</span>
 
-<p>&nbsp;</p>
+    <span class="n">activity</span><span class="o">.</span><span class="na">getWindowManager</span><span class="o">().</span><span class="na">getDefaultDisplay</span><span class="o">().</span><span class="na">getMetrics</span><span class="o">(</span><span class="n">metrics</span><span class="o">);</span>
 
-<p>&nbsp;</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="cm">/**</span>
-<span class="cm">     * Calculates an approximation to the diagonal size of the screen. Based on the width and height pixels, the # of pixels in diagonal are calculated and then using the density DPI</span>
-<span class="cm">     * the pixels are translated into physical dimension in pixels</span>
-<span class="cm">     *     </span>
-<span class="cm">     * @param activity</span>
-<span class="cm">     * @return</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">getDiagonalSize</span><span class="o">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">DisplayMetrics</span> <span class="n">metrics</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DisplayMetrics</span><span class="o">();</span>
+    <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">((</span><span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span><span class="o">)</span> 
+            <span class="o">+</span> <span class="o">(</span><span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span><span class="o">))</span>
+            <span class="o">/</span> <span class="n">metrics</span><span class="o">.</span><span class="na">densityDpi</span><span class="o">;</span>
 
-        <span class="n">activity</span><span class="o">.</span><span class="na">getWindowManager</span><span class="o">().</span><span class="na">getDefaultDisplay</span><span class="o">().</span><span class="na">getMetrics</span><span class="o">(</span><span class="n">metrics</span><span class="o">);</span>
-
-        <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">((</span><span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span><span class="o">)</span> 
-                <span class="o">+</span> <span class="o">(</span><span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span><span class="o">))</span>
-                <span class="o">/</span> <span class="n">metrics</span><span class="o">.</span><span class="na">densityDpi</span><span class="o">;</span>
-
-    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div>
 </div>
 
+<!-- SIMILAR POSTS -->
 <div class="related">
-  <h2>Related Posts</h2>
+      
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+                      
+                      <h3>Similar Posts</h3>
+                      <ul class="related-posts">
+                      
+                        <li>
+                          <h4>
+                            <a href="/facebook-sdk-as-gradle-dependency">
+                              Including Facebook SDK to Android project via Gradle
+                            </a>
+                              <small>15 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/android-intentservice-vs-service">
+                              Android IntentService vs. Service
+                            </a>
+                              <small>19 May 2014</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+      
+          </ul>
+      
+</div>
+
+
+<!-- LATEST POSTS -->
+<div class="related">
+  <h3>Latest Posts</h3>
   <ul class="related-posts">
     
       <li>
-        <h3>
+        <h4>
+          <a href="/individual-google-play-services">
+            Individual Google Play Services for Android with Gradle
+          </a>
+            <small>15 Mar 2015</small>
+        </43>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/facebook-sdk-as-gradle-dependency">
+            Including Facebook SDK to Android project via Gradle
+          </a>
+            <small>15 Mar 2015</small>
+        </43>
+      </li>
+    
+      <li>
+        <h4>
           <a href="/wordpress-jekyll-switch-migration">
-            Switching From Wordpress to Jekyll in 20 minutes
+            Switching From Wordpress to Jekyll in 20 Minutes
           </a>
             <small>07 Mar 2015</small>
-        </h3>
+        </43>
       </li>
     
       <li>
-        <h3>
+        <h4>
           <a href="/jekyll-redirect-http-equiv-not-working">
-            Jekyll Redirect Plugin <http equiv> forcing a file download
+            Jekyll Redirect Plugin <http Equiv> Forcing a File Download
           </a>
             <small>07 Mar 2015</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/switching-to-fabric">
-            Switching to Fabric from Crashlytics
-          </a>
-            <small>05 Mar 2015</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/google-wave-vs-slack-hipchat">
-            Google Wave had so much more potential than Slack, HipChat, FlowDoc and Co.
-          </a>
-            <small>02 Mar 2015</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/xcode-themes-collection">
-            Xcode themes collection
-          </a>
-            <small>23 Nov 2014</small>
-        </h3>
+        </43>
       </li>
     
   </ul>
 </div>
+
+
+
+
+
+
+
 
     </div>
 

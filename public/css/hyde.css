@@ -68,22 +68,11 @@ hr {
   }
 }
 
-/* Sidebar links */
-.sidebar a {
-  color: #fff;
-  /*font-family: "Abril Fatface", serif;*/
-}
-
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
   margin-top: 0;
   font-family: 'Fjalla One', sans-serif;
   font-size: 3.5rem;
-}
-.sidebar-about a:hover {
-  text-decoration: underline;
-  color: #268bd2;
 }
 
 
@@ -96,6 +85,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Fjalla One', sans-serif;
 }
+
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
@@ -105,15 +95,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.75;
   font-size: 0.9rem;
 }
-a.sidebar-nav-item:hover,
+
+/*a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  /*text-decoration: underline;*/
   color: #268bd2;
 
 }
-.sidebar-nav-item.active {
-  /*font-weight: bold;*/
-}
+*/
+
+/*.sidebar-nav-item.active {
+  font-weight: bold;
+}*/
 
 /* The links overall  */
 a:hover,

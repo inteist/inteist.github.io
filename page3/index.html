@@ -55,8 +55,6 @@
         
       
         
-      
-        
           
         
       
@@ -384,6 +382,50 @@
       
         
       
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
         
@@ -408,8 +450,10 @@
       
 
 
-      <a class="sidebar-nav-item" href="/tags">Tags</a>
-      <a class="sidebar-nav-item" href="/archive">Archive</a>
+        <a class="sidebar-nav-item" href="/tags">Tags</a>
+
+        <a class="sidebar-nav-item" href="/archive">Archive</a>
+
 
     </nav>
 
@@ -423,945 +467,178 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/william-gibson-quote">
-        <!-- <span class=post-title-accent>></span> -->William Gibson Quote
+      <a href="/quote-of-the-day">
+        <!-- <span class=post-title-accent>></span> -->Quote of the Day
       </a>
     </h1>
 
-    <span class="post-date">13 Jul 2012</span>
+    <span class="post-date">25 Sep 2013</span>
     <hr>
 
-    <p><a src="http://inteist.com/media/The-future-is-here-it-is-just-not-evenly-distributed.png"><img class="aligncenter size-full wp-image-852" title="The-future-is-here-it-is-just-not-evenly-distributed" src="http://inteist.com/media/The-future-is-here-it-is-just-not-evenly-distributed.png" alt="" width="450" height="450" /></a></p>
+    <p><br />
+<h3>&quot;Any sufficiently advanced technology is indistinguishable from magic&quot;</h3>
+<p style="text-align: center;">-A.C. Clarke</p></p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/restore-a-file-deleted-from-git">
-        <!-- <span class=post-title-accent>></span> -->Restore a file deleted from Git
+      <a href="/getting-the-inch-size-of-the-android-device">
+        <!-- <span class=post-title-accent>></span> -->Getting the Inch Size of the Android Device
       </a>
     </h1>
 
-    <span class="post-date">12 Jul 2012</span>
+    <span class="post-date">08 Sep 2013</span>
     <hr>
 
-    <pre><strong> git rev-list -n 1 HEAD -- &lt;file_path&gt; </strong></pre>
+    <p>Here&#39;s a simple code snippet to calculate approximate physical size of the screen of any Android device. If you find that useful or have suggestions to improve, your thoughts and feedback are welcome in the comments.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+<span class="cm"> * Calculates an approximation to the diagonal size of the screen. Based on the width and height pixels, the # of pixels in diagonal are calculated and then using the density DPI</span>
+<span class="cm"> * the pixels are translated into physical dimension in pixels</span>
+<span class="cm"> *     </span>
+<span class="cm"> * @param activity</span>
+<span class="cm"> * @return</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">getDiagonalSize</span><span class="o">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">DisplayMetrics</span> <span class="n">metrics</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">DisplayMetrics</span><span class="o">();</span>
 
-<p>Which will give you the commit hash and then</p>
+    <span class="n">activity</span><span class="o">.</span><span class="na">getWindowManager</span><span class="o">().</span><span class="na">getDefaultDisplay</span><span class="o">().</span><span class="na">getMetrics</span><span class="o">(</span><span class="n">metrics</span><span class="o">);</span>
 
-<pre><strong> git checkout &lt;deleting_commit&gt;^ -- &lt;file_path&gt; </strong></pre>
+    <span class="k">return</span> <span class="n">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">((</span><span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">widthPixels</span><span class="o">)</span> 
+            <span class="o">+</span> <span class="o">(</span><span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span> <span class="o">*</span> <span class="n">metrics</span><span class="o">.</span><span class="na">heightPixels</span><span class="o">))</span>
+            <span class="o">/</span> <span class="n">metrics</span><span class="o">.</span><span class="na">densityDpi</span><span class="o">;</span>
 
-<p>Or you can do it in one command using a variable for the filepath</p>
+<span class="o">}</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/great-infografic-on-ios-vs-android-app-monetization">
+        <!-- <span class=post-title-accent>></span> -->Great Infografic on iOS vs. Android App Monetization
+      </a>
+    </h1>
 
-<p>Assuming you are using bash, setup an environment var:</p>
+    <span class="post-date">07 Aug 2013</span>
+    <hr>
 
-<pre><strong> export gitfile=&lt;file_path&gt; and then </strong></pre>
+    <p style="text-align: center;"><a src="http://inteist.com/media/ios_vs_android_revenue_opportunity_comparisson.jpg"><img class="aligncenter  wp-image-1221" alt="ios_vs_android_revenue_opportunity_comparisson" src="http://inteist.com/media/ios_vs_android_revenue_opportunity_comparisson.jpg" width="600" height="5980" /></a></p>
 
-<pre><strong> git checkout $(git rev-list -n 1 HEAD -- "$gitfile")^ -- "$gitfile" </strong></pre>
-
-<p>You can use</p>
-
-<pre><strong> echo $gitfile </strong></pre>
-
-<p>To make sure that the variable was set correctly.</p>
-
-<p>For other shells you would use it's own mechanism like</p>
-
-<pre><strong> setenv </strong></pre>
-
-<p>etc...</p>
-
-<p>Hope this helps!</p>
+<h2 style="text-align: center;">Enjoy!</h2>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/backward-compatible-action-bar-for-android">
-        <!-- <span class=post-title-accent>></span> -->Backward compatible Action Bar for Android
+      <a href="/big-wave-surfing">
+        <!-- <span class=post-title-accent>></span> -->Big Wave Surfing
       </a>
     </h1>
 
-    <span class="post-date">12 Jul 2012</span>
+    <span class="post-date">07 Aug 2013</span>
     <hr>
 
-    <p>To ease life of the Android developers who use action bar and tackle the problem of fragmentation between the older devices and the newer devices the following library might be very useful:</p>
+    <p style="text-align: center;"><a src="http://inteist.com/media/biggest-wave-surfed.jpg"><img class="aligncenter  wp-image-1229" alt="biggest-wave-surfed" src="http://inteist.com/media/biggest-wave-surfed.jpg" width="553" height="311" /></a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/facebook-graph-api-methods-and-parameters">
+        <!-- <span class=post-title-accent>></span> -->Facebook Graph API Methods and Parameters
+      </a>
+    </h1>
+
+    <span class="post-date">11 Jul 2013</span>
+    <hr>
+
+    <p>Quick reference for available Facebook Graph API actions with accompanying parameters:</p>
 
 <p>&nbsp;</p>
 
-<p><a href="https://github.com/JakeWharton/ActionBarSherlock">github.com/JakeWharton/ActionBarSherlock</a></p>
-
-<blockquote><p>The library will automatically use the <a href="http://developer.android.com/guide/topics/ui/actionbar.html">native ActionBar</a> implementation on Android 4.0 or later. For previous versions which do not include ActionBar, a custom action bar implementation based on the sources of Ice Cream Sandwich will automatically be wrapped around the layout. This allows you to easily develop an application with an action bar for every version of Android from 2.x and up.</p></blockquote>
-
-<p>P.S. The official Github Android client <a href="https://github.com/blog/1187-github-android-app-released">uses this library</a>.</p>
-
-<p><strong>2015-03-07 UPDATE:</strong>
-Google has released an <a href="http://developer.android.com/guide/topics/ui/actionbar.html">actionbar component in their compatibility library </a> a while ago. You should be using this now.</p>
+<p style="text-align: center;"><a src="http://inteist.com/media/Screen-Shot-2013-07-11-at-3.39.48-PM.png"><img class="aligncenter  wp-image-1205" alt="Facebook Graph API actions and parameters" src="http://inteist.com/media/Screen-Shot-2013-07-11-at-3.39.48-PM.png" width="670" height="440" /></a></p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/free-git-repository-hosting-plus-bug-tracking">
-        <!-- <span class=post-title-accent>></span> -->Free Git repository hosting plus bug tracking
+      <a href="/natural-oils-with-spf-who-knew">
+        <!-- <span class=post-title-accent>></span> -->Natural Oils With SPF, Who Knew
       </a>
     </h1>
 
-    <span class="post-date">12 Jul 2012</span>
+    <span class="post-date">27 May 2013</span>
     <hr>
 
-    <p>If you were in need of Git hosting and you did not like Github for some reason (I am personally not that crazy about them). You can get free Git hosting at <a href="http://www.bitbucket.org">Bitbucket</a>. Not only they give you a free hosting of personal repositories but they also provide a nice wiki and a bug tracking. These are the same guys who develop Jira – a widely used bug tracking system. Although the bug tracking that you get with BitBucket repository is pretty basic, it is enough for most small to medium projects.</p>
+    <p style="text-align: center;"><a src="http://inteist.com/media/natural-oils-with-SPF.jpg"><img class="aligncenter  wp-image-1137" alt="natural oils with SPF" src="http://inteist.com/media/natural-oils-with-SPF.jpg" width="576" height="576" /></a></p>
 
-<p>But the goodies do not stop here. They offer unlimited accounts for educational purposes and otherwise very reasonably priced accounts.</p>
-
-<p>Oh and actually they offer both HG (Mercurial) or Git hosting through the same interface/website/account :)</p>
-
-<p>Check them out!</p>
+<p style="text-align: center;">These are the natural oils that can be used as SPF protection agains bad UV rays. It should be much more healthy than using a sun block as the sun block itself is cancerogenic substance</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/phpstorm-change-default-open-in-a-new-frame">
-        <!-- <span class=post-title-accent>></span> -->PHPStorm change default open in a new frame
+      <a href="/open-source-android-clustering-library">
+        <!-- <span class=post-title-accent>></span> -->Open Source Android Clustering Library
       </a>
     </h1>
 
-    <span class="post-date">10 Jul 2012</span>
+    <span class="post-date">27 May 2013</span>
     <hr>
 
-    <p>When you (re)open a project in PHPStorm, it will ask you whether you want to open it in a new window or current. If you choose new window it will open another instance of PHPStorm and open there your project, if you choose otherwise it will replace the curent workspace with the new project. There is also a checkbox saying don't ask me again and then this will be the usual setting from now on. Now what if you did something and then you regret. It took me some time to find out how to change this. Here it is. It's quite simple actually and I would probably found it faster if I didn't google for it but just would use some common sense and find it myself (which I eventually had to reserve to since googling did not help)</p>
+    <p>Great <a href="https://github.com/twotoasters/clusterkraf">open source map clustering library</a> by <a href="http://twotoasters.com/">TwoToasters</a></p>
 
-<p>It's basically <strong>Settings-&gt;General-&gt;Confirm window to open project in</strong></p>
+<p>Check out the video of <a href="https://play.google.com/store/apps/details?id=com.twotoasters.clusterkraf.sample">sample application</a> in action</p>
 
-<p><a src="http://inteist.com/media/Screen-Shot-2012-07-10-at-6.08.46-PM.png"><img class="aligncenter size-full wp-image-826" title="PHPStorm Open in a New Window default setting ask again" src="http://inteist.com/media/Screen-Shot-2012-07-10-at-6.08.46-PM.png" alt="" width="381" height="168" /></a></p>
+<p><iframe src="http://www.youtube.com/embed/We1kVxh2WFI" height="315" width="560" allowfullscreen="" frameborder="0"></iframe></p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/add-gestures-and-gesture-control-to-your-windows-phone-7-application">
-        <!-- <span class=post-title-accent>></span> -->Add gestures to your Windows Phone 7 application
+      <a href="/nice-sliding-menu-with-unique-color-fade-effect-by-romain-guy">
+        <!-- <span class=post-title-accent>></span> -->Nice Sliding Menu With Unique Color Fade Effect by Romain Guy
       </a>
     </h1>
 
-    <span class="post-date">08 Jul 2012</span>
+    <span class="post-date">27 May 2013</span>
     <hr>
 
-    <p>As it turns out, it is extremely easy to add gestures to your Windows Phone app. All you need to do is add a reference to the Silverlight Toolkit</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">xmlns:toolkit=&quot;clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit&quot;
-</code></pre></div>
-<p>Then add the following code to any UI element (button, textbox etc...) that you want the gesture to be applied to and implement the listeners in your  .cs file</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;toolkit:gestureservice.gesturelistener&gt;</span>
-     <span class="nt">&lt;toolkit:GestureListener</span> 
-         <span class="na">DoubleTap=</span><span class="s">&quot;GestureListenerDoubleTap&quot;</span>
-         <span class="na">Hold=</span><span class="s">&quot;GestureListenerHold&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/toolkit:gestureservice.gesturelistener&gt;</span>
-</code></pre></div>
-<p>Last step is the implementation of the listeners:</p>
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">void</span> <span class="nf">GestureListenerDoubleTap</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">GestureEventArgs</span> <span class="n">e</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Double tap gesture&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>and</p>
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">void</span> <span class="nf">GestureListenerHold</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">GestureEventArgs</span> <span class="n">e</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Hold gesture&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p><center> </p>
+    <p>This <a href="http://www.curious-creature.org/2012/12/14/android-recipe-3-sliding-menu-layers-and-filters/#more-1676">nice sliding menu</a> is supported in its full glory with API level 14. But can be degraded gracefully on earlier version of the OS too.</p>
 
-<h3>That's it. It is <strong>THAT</strong> simple </h3>
-
-<p></center></p>
+<p>Tip from Romain:  use the drawing cache instead with View.setDrawingCacheEnabled.</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/how-to-determine-theme-accent-color-on-windows-phone">
-        <!-- <span class=post-title-accent>></span> -->How to determine theme accent color on Windows Phone
+      <a href="/google-analytics-sessions-vs-flurry-analytics-session">
+        <!-- <span class=post-title-accent>></span> -->Google Analytics Sessions vs. Flurry Analytics Session
       </a>
     </h1>
 
-    <span class="post-date">08 Jul 2012</span>
+    <span class="post-date">26 May 2013</span>
     <hr>
 
-    <p>That's how to determine theme accent color on Windows Phone 7</p>
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Determine the accent color.</span>
-<span class="n">Color</span> <span class="n">currentAccentColorHex</span> <span class="p">=</span> 
-    <span class="p">(</span><span class="n">Color</span><span class="p">)</span><span class="n">Application</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Resources</span><span class="p">[</span><span class="s">&quot;PhoneAccentColor&quot;</span><span class="p">];</span>
+    <p>Every time a start session is called using Flurry SDK, a new session is registered <strong>unless</strong> the call was made within 20 seconds [for the same user] of the previous call, in which case these consequent sessions simply extend the existing one.</p>
 
-<span class="k">switch</span> <span class="p">(</span><span class="n">currentAccentColorHex</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span>
-<span class="p">{</span>
-    <span class="k">case</span> <span class="s">&quot;#FF1BA1E2&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;blue&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="k">case</span> <span class="s">&quot;#FFA05000&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;brown&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="k">case</span> <span class="s">&quot;#FF339933&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;green&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="k">case</span> <span class="s">&quot;#FFE671B8&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;pink&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="k">case</span> <span class="s">&quot;#FFA200FF&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;purple&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="k">case</span> <span class="s">&quot;#FFE51400&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;red&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="k">case</span> <span class="s">&quot;#FF00ABA9&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;teal (viridian)&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="c1">// Lime changed to #FFA2C139 in Windows Phone OS 7.1.</span>
-    <span class="k">case</span> <span class="s">&quot;#FF8CBF26&quot;</span><span class="p">:</span> 
-    <span class="k">case</span> <span class="s">&quot;#FFA2C139&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;lime&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="c1">// Magenta changed to # FFD80073 in Windows Phone OS 7.1.</span>
-    <span class="k">case</span> <span class="s">&quot;#FFFF0097&quot;</span><span class="p">:</span> 
-    <span class="k">case</span> <span class="s">&quot;#FFD80073&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;magenta&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="c1">// #FFF9609 (previously orange) is named mango in Windows Phone OS 7.1.</span>
-    <span class="k">case</span> <span class="s">&quot;#FFF09609&quot;</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;mango (orange)&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-
-    <span class="c1">// Mobile operator or hardware manufacturer color</span>
-    <span class="k">default</span><span class="p">:</span> <span class="n">currentAccentColor</span> <span class="p">=</span> <span class="s">&quot;custom eleventh color&quot;</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-determine-theme-background-color-on-windows-phone">
-        <!-- <span class=post-title-accent>></span> -->How to determine theme background color on Windows Phone
-      </a>
-    </h1>
-
-    <span class="post-date">08 Jul 2012</span>
-    <hr>
-
-    <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Determine the visibility of the dark background.</span>
-<span class="n">Visibility</span> <span class="n">darkBackgroundVisibility</span> <span class="p">=</span>
-    <span class="p">(</span><span class="n">Visibility</span><span class="p">)</span><span class="n">Application</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Resources</span><span class="p">[</span><span class="s">&quot;PhoneDarkThemeVisibility&quot;</span><span class="p">];</span>
-
-<span class="c1">// Write the theme background value.</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">darkBackgroundVisibility</span> <span class="p">==</span> <span class="n">Visibility</span><span class="p">.</span><span class="n">Visible</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">textBlock1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;background = dark&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span>
-<span class="p">{</span>
-    <span class="n">textBlock1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;background = light&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/node-js">
-        <!-- <span class=post-title-accent>></span> -->Node.js
-      </a>
-    </h1>
-
-    <span class="post-date">30 Jun 2012</span>
-    <hr>
-
-    <p>An interesting podcast from the CEO of Joyent who is the largest user of Node and the current employer of the <a href="http://tinyclouds.org/">creator of Node</a>.</p>
-
-<p>The discussion revolved around what Node is good for and what it was not designed to do and why people who say that Node doesn't work for them are just not using it right. The rule of thumb - use the right tool for the job still remains right in software industry and will probably do so for a foreseeable future.</p>
-
-<p>&nbsp;</p>
-
-<p><iframe style="border: 0; outline: 0;" src="http://cdn.livestream.com/embed/gigaomstructure?layout=4&amp;clip=pla_1f93c688-c6ac-49d1-98ba-f9ba990fde23&amp;height=340&amp;width=560&amp;autoplay=false" frameborder="0" scrolling="no" width="560" height="340"></iframe></p>
+<p>For Google Analytics, it is different. Google Analytics will group hits (any analytics API call you make is considered a hit in Google analytics) that are received within 30 minutes of one another [for the same user] into the same session.</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/windows-phone-7-hidden-shortcut-keys-for-the-simulator-wp7">
-        <!-- <span class=post-title-accent>></span> -->Windows Phone 7 "hidden" shortcut keys for the simulator
+      <a href="/a-useful-tool-to-work-with-android-apks">
+        <!-- <span class=post-title-accent>></span> -->A Useful Tool to Work With Android APKs
       </a>
     </h1>
 
-    <span class="post-date">29 Jun 2012</span>
+    <span class="post-date">23 May 2013</span>
     <hr>
 
-    <p>Ever wondered how you can type on your Wp7 simulator using your keyboard?</p>
+    <p>Here's a nice project to be able to work with Android APK resources:</p>
 
-<p>Here's a list of useful keyboard shortcuts for the WP7 emulator which includes the answer to the above question.</p>
-
-<table border="1" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="127"><strong>Key</strong></td>
-<td valign="top" width="511"><strong>Description</strong></td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>F1</strong><strong></strong></td>
-<td valign="top" width="511">Use F1 key on the keyboard instead of back button on the phone</td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>F2</strong><strong></strong></td>
-<td valign="top" width="511">Use the key F2 on the keyboard for the Windows key in the Windows Phone 7</td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>Pageup</strong></td>
-<td valign="top" width="511">Enables the keyboard in the emulator when the focus is on the textbox</td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>PageDown</strong></td>
-<td valign="top" width="511">Disables the keyboard in the emulator</td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>F3</strong></td>
-<td valign="top" width="511">To open the Bing Search</td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>F7</strong></td>
-<td valign="top" width="511">To Activate the Physical Camera</td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>F9</strong></td>
-<td valign="top" width="511">Increase the Volume</td>
-</tr>
-<tr>
-<td valign="top" width="127"><strong>F10</strong></td>
-<td valign="top" width="511">Decrease the volume</td>
-</tr>
-</tbody>
-</table>
-
-<p></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/to-be-a-good-programmer-you-have-to-be-a-good-tester">
-        <!-- <span class=post-title-accent>></span> -->A Quote
-      </a>
-    </h1>
-
-    <span class="post-date">22 Jun 2012</span>
-    <hr>
-
-    <h1 style="text-align: center;"></h1>
-
-<h1 style="text-align: center;"></h1>
-
-<h1 style="text-align: center;">"To be a good programmer, you have to be a good tester"</h1>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>that's the hidden (or not so much) assumption what lies in the <strong>TDD</strong> (or Test Driven Development) methodology</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/nosql-is-the-future-or-is-it">
-        <!-- <span class=post-title-accent>></span> -->NoSQL is the future... or is it? )
-      </a>
-    </h1>
-
-    <span class="post-date">14 Jun 2012</span>
-    <hr>
-
-    <p style="text-align: center;"><a src="http://inteist.com/media/NoSQL-is-the-future.jpeg"><img class="aligncenter  wp-image-764" title="NoSQL is the future" src="http://inteist.com/media/NoSQL-is-the-future.jpeg" alt="" width="640" height="906" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-go-mobile-advice-from-google">
-        <!-- <span class=post-title-accent>></span> -->How to go mobile - advice from Google
-      </a>
-    </h1>
-
-    <span class="post-date">04 May 2012</span>
-    <hr>
-
-    <p>Google was and is pushing for better web both on desktop and now on mobile too.</p>
-
-<p>Here's a nice website that will help your company to transfer to mobile space: <a href="http://www.howtogomo.com/">http://www.howtogomo.com/</a></p>
-
-<p>They even have a <a title="gomometer" href="http://www.howtogomo.com/en/d/test-your-site/#gomo-meter">gomometer</a> which will analyze your site and give an advice on how to improve it so it is more "mobile friendly"</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/import-svn-repository-to-git">
-        <!-- <span class=post-title-accent>></span> -->Import SVN repository to Git
-      </a>
-    </h1>
-
-    <span class="post-date">05 Apr 2012</span>
-    <hr>
-
-    <p>To import an SVN repository into git, you can use the <strong>git svn</strong> command.</p>
-
-<p>If you want to just import your SVN repository into Git as is, you can run the following sequence of commands:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git svn clone SVN_REPO_URL LOCAL_DIR
-<span class="nv">$ </span><span class="nb">cd </span>LOCAL_DIR
-<span class="nv">$ </span>git remote add origin git@example.com:USER_NAME/REPO_NAME.git
-<span class="nv">$ </span>git push origin master
-</code></pre></div>
-<p>If you repository is setup in a standard way and you want the <strong>git svn</strong> command to be smart about it, you should add the <strong>-s</strong> flag to the first command:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git svn clone -s SVN_REPO_URL LOCAL_DIR
-<span class="nv">$ </span><span class="nb">cd </span>LOCAL_DIR
-<span class="nv">$ </span>git remote add origin git@example.com:USER_NAME/REPO_NAME.git
-<span class="nv">$ </span>git push origin master
-</code></pre></div>
-<p>Which basically says to <strong>git svn</strong> that your repository is in a standard layout.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/aprils-fool-2012-by-bitbucket">
-        <!-- <span class=post-title-accent>></span> -->April's fool 2012 by BitBucket
-      </a>
-    </h1>
-
-    <span class="post-date">01 Apr 2012</span>
-    <hr>
-
-    <p>
-<center></p>
-
-<h3>A funny April's fool joke by BitBucket</h3>
-
-<p><iframe width="560" height="315" src="http://www.youtube.com/embed/dYBjVTMUQY0" frameborder="0" allowfullscreen></iframe><br />
-</center></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/os-x-how-to-install-mongodb-for-php">
-        <!-- <span class=post-title-accent>></span> -->OS X How to install MongoDB for PHP
-      </a>
-    </h1>
-
-    <span class="post-date">15 Mar 2012</span>
-    <hr>
-
-    <h1>Installing MongoDB</h1>
-
-<p>This tutorial will use MacPorts, so please first of all make sure you have XCode installed as it will be needed for MacPorts (and many other things too if you are a developer and you probably are if you are reading this) </p>
-
-<p>You can see how to install MacPorts <a href="http://www.macports.org/install.php">here</a></p>
-
-<p><strong>Let's install MongoDB</strong>. It's one easy command with MacPorts</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo port install mongodb
-</code></pre></div>
-<p>***If you had MacPorts installed before, consider updating it</p>
-
-<h4>Create Mongo config file</h4>
-
-<p><!--more--></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo vim /etc/mongodb.conf
-</code></pre></div>
-<p>*** you can use nano instead of vim if you prefer
-<pre>sudo nano /etc/mongodb.conf</pre>
-<p>Paste the following into the
-<pre>mongodb.conf</pre>
-<p> and save the file.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># This is an example config file for MongoDB.</span>
-<span class="c"># Place it at /etc/mongodb.conf</span>
-<span class="c"># Based on a sample provided at</span>
-<span class="c"># http://www.mongodb.org/display/DOCS/File+Based+Configuration</span>
-<span class="nv">dbpath</span> <span class="o">=</span> /var/lib/mongodb
-<span class="nv">bind_ip</span> <span class="o">=</span> 127.0.0.1
-<span class="nv">noauth</span> <span class="o">=</span> <span class="nb">true</span>
-</code></pre></div>
-<p>After you are finished installing MongoDB via MacPorts, you should see the following notice:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">###########################################################</span>
-<span class="c"># A startup item has been generated that will aid in</span>
-<span class="c"># starting mongodb with launchd. It is disabled</span>
-<span class="c"># by default. Execute the following command to start it,</span>
-<span class="c"># and to cause it to launch at startup:</span>
-<span class="c">#</span>
-<span class="c"># sudo port load mongodb</span>
-<span class="c">###########################################################</span>
-</code></pre></div>
-<p>so running </p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo port load mongodb
-</code></pre></div>
-<p>should get you setup with automatic start of mongo.</p>
-
-<p>To start it manually you should create the following file:</p>
-
-<pre>/Library/LaunchDaemons/org.mongo.mongod.plist</pre>
-
-<p>and populate it with the following:</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
-<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;dict&gt;</span>
-<span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;&lt;string&gt;</span>org.macports.mongodb<span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
-<span class="nt">&lt;array&gt;</span>
-        <span class="nt">&lt;string&gt;</span>/opt/local/bin/daemondo<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>--label=mongodb<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>--start-cmd<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>sudo<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>-u<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>_mongo<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>/opt/local/bin/mongod<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>--dbpath<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>/opt/local/var/db/mongodb<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>--logpath<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>/opt/local/var/log/mongodb/mongodb.log<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>--logappend<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>;<span class="nt">&lt;/string&gt;</span>
-        <span class="nt">&lt;string&gt;</span>--pid=exec<span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;/array&gt;</span>
-<span class="nt">&lt;key&gt;</span>Debug<span class="nt">&lt;/key&gt;&lt;false</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;key&gt;</span>Disabled<span class="nt">&lt;/key&gt;&lt;true</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;key&gt;</span>KeepAlive<span class="nt">&lt;/key&gt;&lt;true</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-<span class="nt">&lt;/plist&gt;</span>
-</code></pre></div>
-<p><strong>to launch MongoDB on demand you will need run:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo launchctl load /Library/LaunchDaemons/org.mongo.mongod.plist
-</code></pre></div>
-<p>once you've done the above and MongoDB is either autostarted or you created the start script and started it manually, you should be able to run
-<pre>mongo</pre>
-<p>to get to the MongoDB shell:<br />
-<img src="http://inteist.com/media/mongo-shell-on-os-x-how-to-install-mongodb-on-osx.png" alt="MongoDB shell" /></p>
-
-<h1>Installing MongoDB PHP Driver</h1>
-
-<h4>Installing <strong>wget</strong></h4>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo port install wget
-</code></pre></div>
-<h4>Installing PHP PEAR</h4>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> /tmp
-<span class="nv">$ </span>wget http://pear.php.net/go-pear.phar
-<span class="nv">$ </span>sudo php -d <span class="nv">detect_unicode</span><span class="o">=</span><span class="m">0</span> go-pear.phar
-</code></pre></div>
-<h4>Configuring PHP PEAR</h4>
-
-<p>You will see the following prompt:</p>
-
-<pre>
-       1. Installation base ($prefix)                   : /Users/Admin/pear
-       2. Temporary directory for processing            : /tmp/pear/install
-       3. Temporary directory for downloads             : /tmp/pear/install
-       4. Binaries directory                            : /Users/Admin/pear/bin
-       5. PHP code directory ($php_dir)                 : /Users/Admin/pear/share/pear
-       6. Documentation directory                       : /Users/Admin/pear/docs
-       7. Data directory                                : /Users/Admin/pear/data
-       8. User-modifiable configuration files directory : /Users/Admin/pear/cfg
-       9. Public Web Files directory                    : /Users/Admin/pear/www
-      10. Tests directory                               : /Users/Admin/pear/tests
-      11. Name of configuration file                    : /Users/Admin/.pearrc
-
-      1-11, 'all' or Enter to continue:
-</pre>
-
-<p>Type <strong>1</strong> and then type <strong>/usr/local/pear</strong></p>
-
-<p>You will get the previous prompt but with different path values</p>
-
-<pre>
-       1. Installation base ($prefix)                   : /usr/local/pear
-       2. Temporary directory for processing            : /tmp/pear/install
-       3. Temporary directory for downloads             : /tmp/pear/install
-       4. Binaries directory                            : /usr/local/pear/bin
-       5. PHP code directory ($php_dir)                 : /usr/local/pear/share/pear
-       6. Documentation directory                       : /usr/local/pear/docs
-       7. Data directory                                : /usr/local/pear/data
-       8. User-modifiable configuration files directory : /usr/local/pear/cfg
-       9. Public Web Files directory                    : /usr/local/pear/www
-      10. Tests directory                               : /usr/local/pear/tests
-      11. Name of configuration file                    : /Users/Admin/.pearrc
-
-      1-11, 'all' or Enter to continue:
-</pre>
-
-<p>Type <strong>1</strong> and then type <strong>/etc/pearrc</strong></p>
-
-<p>Now type <strong><enter /></strong> the script will ask whether you want to change your <strong>php.ini</strong>. Answer <strong>Yes</strong> to this.</p>
-
-<p>Now you need to run:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo /usr/local/pear/bin/pecl install mongo
-</code></pre></div>
-<p>Configure the system PHP to load MongoDB extension.<br />
-Add this line to your php.ini:</p>
-
-<pre>extension=mongo.so</pre>
-
-<p>Restart Apache:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apachectl graceful
-</code></pre></div>
-<p>You should be all set to go... Enjoy!</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/os-x-setup-textwrangler-as-your-default-editor-for-git">
-        <!-- <span class=post-title-accent>></span> -->OS X Setup TextWrangler as your default editor for Git
-      </a>
-    </h1>
-
-    <span class="post-date">09 Mar 2012</span>
-    <hr>
-
-    <p>TextWrangler already installs the command line utility "edit" so the hardest pard is done, if you did not install it for some reason, then just go to "TextWrangler --&gt; Install Command Line Tools..." and you should be all set with this part.</p>
-
-<p>To make Git play nice (or should I rather say TextWrangler play nice with Git), we need to properly set it up as the default editor for Git. And luckily it's as easy as</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global core.editor <span class="s2">&quot;edit --wait --resume &quot;</span><span class="nv">$@</span><span class="s2">&quot;&quot;</span>
-</code></pre></div>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-debug-apps-on-kindle-fire-on-os-x">
-        <!-- <span class=post-title-accent>></span> -->How to debug apps on Kindle Fire on OS X
-      </a>
-    </h1>
-
-    <span class="post-date">16 Feb 2012</span>
-    <hr>
-
-    <p>So you bought the Kindle Fire and you want to start running and debugging your apps on it but when you connected it, you realized that it is not recognized automatically like other Android devices on OS X.</p>
-
-<p>No worries, it takes 2 minutes to set it up.</p>
-
-<p>You need to:</p>
-
-<ul>
-<li>add 2 lines to the "adb_usb.ini" file</li>
-<li>restart the ADB server</li>
-</ul>
-
-<p>Open up the terminal and edit the "adb_usb.ini" (you can use nano instead of vim): <strong>vim ~/.android/adb_usb.ini</strong></p>
-
-<p>add the following 2 lines to the file each on a separate line:</p>
-
-<p><a src="http://inteist.com/media/debugging-on-kindle-fire-the-adb_usb.ini-file-update.png"><img class="aligncenter size-full wp-image-708" title="debugging on kindle fire the adb_usb.ini file update" src="http://inteist.com/media/debugging-on-kindle-fire-the-adb_usb.ini-file-update.png" alt="" width="478" height="98" /></a></p>
-
-<p>now you need to restart the ADB server and you should be all set.</p>
-
-<p>The whole sequence of commands looks like this:</p>
-
-<p><a src="http://inteist.com/media/debugging-on-kindle-fire-command-sequence.png"><img class="aligncenter size-full wp-image-709" title="debugging on kindle fire command sequence" src="http://inteist.com/media/debugging-on-kindle-fire-command-sequence.png" alt="" width="426" height="148" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>Now you should also see the device while running your app from Eclipse</p>
-
-<p><a src="http://inteist.com/media/debugging-with-kindle-fire-available-for-selection-in-running-devices1.png"><img class="aligncenter size-full wp-image-714" title="debugging with kindle fire available for selection in running devices" src="http://inteist.com/media/debugging-with-kindle-fire-available-for-selection-in-running-devices1.png" alt="" width="613" height="156" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>For the official directions in case you need them and for directions for other OS besides OS X, you can check out <a href="http://g-ecx.images-amazon.com/images/G/01/sdk/Connecting_your_Kindle_Fire_to_ADB.pdf">this PDF</a></p>
-
-<p><strong>Important tip:</strong></p>
-
-<p>The networking will not work until you "disconnect" the device from USB - just click on "Disconnect" don't worry it will only cancel the "file transfer mode". You will still be able to deploy and now actually run apps that require networking.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/fixing-eclipse-fonts-on-os-x">
-        <!-- <span class=post-title-accent>></span> -->Fixing Eclipse fonts on OS X
-      </a>
-    </h1>
-
-    <span class="post-date">16 Feb 2012</span>
-    <hr>
-
-    <h2>Select the right font:</h2>
-
-<p><a src="http://inteist.com/media/osx_eclipse_font_setup.png"><img class="aligncenter size-full wp-image-697" title="osx_eclipse_font_setup" src="http://inteist.com/media/osx_eclipse_font_setup.png" alt="" width="629" height="535" /></a></p>
-
-<h2></h2>
-
-<p>&nbsp;</p>
-
-<h2>Turn off anti aliasing:</h2>
-
-<p>In the terminal run:</p>
-
-<pre><strong>defaults write org.eclipse.eclipse AppleAntiAliasingThreshold 20</strong></pre>
-
-<p>&nbsp;</p>
-
-<h2>Fix eclipse.ini:</h2>
-
-<p>edit $ECLIPSE_HOME » Eclipse.app » Contents » MacOS » eclipse.ini and remove the following line:</p>
-
-<pre><strong>-Dorg.eclipse.swt.internal.carbon.smallFonts</strong></pre>
-
-<p>&nbsp;<br />
-&nbsp;</p>
-
-<h2>End Result</h2>
-
-<p>The end result should look something like this:<br />
-&nbsp;<br />
-<a src="http://inteist.com/media/eclipse-font-setup-on-OS-X-end-result.png"><img src="http://inteist.com/media/eclipse-font-setup-on-OS-X-end-result.png" alt="" title="eclipse font setup on OS X end result" width="484" height="112" class="aligncenter size-full wp-image-705" /></a><br />
-&nbsp;&nbsp;</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/global-android-devcamp">
-        <!-- <span class=post-title-accent>></span> -->Global Android DevCamp
-      </a>
-    </h1>
-
-    <span class="post-date">15 Feb 2012</span>
-    <hr>
-
-    <p>Very nice graphics for the Android DevCamp</p>
-
-<p><a src="http://inteist.com/media/android-devcamp-banner.jpeg"><img src="http://inteist.com/media/android-devcamp-banner.jpeg" alt="" title="android devcamp banner" width="475" height="151" class="aligncenter size-full wp-image-687" /></a></p>
-
-<p>Going to be at the Cambridge office this w-end hacking away. If you are in the Greater Boston area and want to attent you can register here: <a href="http://devcampbostongtug.eventbrite.com/" title="http://devcampbostongtug.eventbrite.com/" target="_blank">http://devcampbostongtug.eventbrite.com/</a></p>
-
-<p>For all the locations around the world you can go <a href="http://android-dev-camp-2012.blogspot.com/p/usergroups.html" title="here" target="_blank">here</a>.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/smoked-by-windows-phone-at-ces">
-        <!-- <span class=post-title-accent>></span> -->Smoked by Windows Phone at CES
-      </a>
-    </h1>
-
-    <span class="post-date">05 Feb 2012</span>
-    <hr>
-
-    <p>An interesting marketing stunt performed by Microsoft's marketing at CES - betting people $100 that they won't be as fast on their phone compared to Windows Phone to perform some task like posting information to social networks, checking weather, finding a place to eat etc...</p>
-
-<p>To top that, everyone who got smoked got a brand new Windows Phone. Microsoft you are moving in the right direction!</p>
-
-<p><iframe width="560" height="315" src="http://www.youtube.com/embed/kQjGe53zw6w" frameborder="0" allowfullscreen></iframe></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/mobile-advertising-by-the-numbers-inforgraphics-from-inneractive">
-        <!-- <span class=post-title-accent>></span> -->Mobile advertising by the numbers - inforgraphics from InnerActive
-      </a>
-    </h1>
-
-    <span class="post-date">03 Feb 2012</span>
-    <hr>
-
-    <p>An interesting infographic from the mobile advertising provider and mediation company - InnerActive was produced encompassing the timeline between the last year's MWC in Barcelona and this year's MWC.</p>
-
-<p>&nbsp;</p>
-
-<p><a src="http://inteist.com/media/Mobile-advertising-infographics.jpg"><img class="aligncenter size-full wp-image-677" title="Mobile advertising infographics" src="http://inteist.com/media/Mobile-advertising-infographics.jpg" alt="" width="620" height="2600" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/great-collection-of-mobile-ui-resources">
-        <!-- <span class=post-title-accent>></span> -->Great collection of mobile UI resources
-      </a>
-    </h1>
-
-    <span class="post-date">31 Jan 2012</span>
-    <hr>
-
-    <p>A compilation of mobile UI resources:</p>
-
-<ul>
-<li>
-<h3><a href="http://www.pttrns.com/" target="_blank">http://www.pttrns.com</a></h3>
-</li>
-<li>
-<h3><a href="http://www.lovelyui.com/" target="_blank">http://www.LovelyUI.com</a></h3>
-</li>
-<li>
-<h3><a href="http://www.mobileawesomeness.com/" target="_blank">http://www.mobileawesomeness.<wbr>com/</wbr></a></h3>
-</li>
-<li>
-<h3><a href="http://mobile-patterns.com/" target="_blank">http://mobile-patterns.com</a></h3>
-</li>
-</ul>
-
-<p>&nbsp;</p>
-
-<p>Enjoy! :)</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/why-python-is-awesome">
-        <!-- <span class=post-title-accent>></span> -->Why Python is awesome :)
-      </a>
-    </h1>
-
-    <span class="post-date">25 Jan 2012</span>
-    <hr>
-
-    <p>Should I take a stab at Python and Django... It definitely looks like I should :)</p>
-
-<p><a src="http://inteist.com/media/why-python-is-awesome.png"><img src="http://inteist.com/media/why-python-is-awesome.png" alt="" title="why python is awesome" width="518" height="588" class="aligncenter size-full wp-image-668" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/developers-can-see-the-device-and-app-version-on-each-comment-on-android-market">
-        <!-- <span class=post-title-accent>></span> -->Developers can see the device and app version on each comment on Android Market
-      </a>
-    </h1>
-
-    <span class="post-date">25 Jan 2012</span>
-    <hr>
-
-    <p>Just noticed a nice update on developer facing Android Market panel. Now the developer can see the device user and the app version on each comment on Android Market. Which is a very nice addition to quite barren otherwise control panel. This will help to pinpoint problems more easily for the developers.</p>
-
-<p>Another things that I would personally (and probably many of other Android developer as well) like to see are:</p>
-
-<ul>
-<li>
-<h5><strong>Andriod OS version</strong></h5>
-</li>
-<li>
-<h5><strong>Possibility to answer to the comment - let the developer answer and send the answer to the user's email automatically</strong></h5>
-</li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-uninstall-and-reinstall-xcode-os-x-install-xcode-from-app-store">
-        <!-- <span class=post-title-accent>></span> -->How to uninstall and reinstall XCode os OS X
-      </a>
-    </h1>
-
-    <span class="post-date">21 Jan 2012</span>
-    <hr>
-
-    <p>If you want to remove XCode on OS X (aka Developer Tools) you can do the following:</p>
-
-<p><strong>If installed from the developer portal:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo /Developer/Library/uninstall-devtools –mode<span class="o">=</span>all 
-</code></pre></div>
-<p><strong>If installed via App Store it should be:</strong><br />
-
-```bash
-<br />
-sudo /Library/Developer/Shared/uninstall-devtools –mode=all<br />
-
-```
- </p>
-
-<p><strong>***NOTE</strong>:<br />
-To be able to install Developer Tools from the App Store, you need to delete Install XCode from your /Applications folder<br />
-something like this should work:<br />
-
-```bash
-<br />
-sudo rm -Rf /Applications/Install Xcode.app<br />
-
-```
- </p>
-
-<p>Then once you download the Xcode from the App Store, it is not installed yet. You need to go to the same place /Application/Install Xcode.app and run the installer.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/the-fiancee-of-sean-parker-naked-picture">
-        <!-- <span class=post-title-accent>></span> -->The fiancée of Sean Parker naked picture
-      </a>
-    </h1>
-
-    <span class="post-date">21 Jan 2012</span>
-    <hr>
-
-    <p>A bit of unusual post but this is the (almost) naked fiancee of Sean Parker Alexandra Lenas</p>
-
-<p><a src="http://inteist.com/media/Naked-Alexandra-Lenas.jpg"><img src="http://inteist.com/media/Naked-Alexandra-Lenas.jpg" alt="" title="Naked Alexandra Lenas" width="491" height="643" class="aligncenter size-full wp-image-645" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blackberry-os-distribution-january-2012">
-        <!-- <span class=post-title-accent>></span> -->BlackBerry OS distribution January 2012
-      </a>
-    </h1>
-
-    <span class="post-date">19 Jan 2012</span>
-    <hr>
-
-    <p>Last year I've put some stats for BB OS distribution here: [link id='540']</p>
-
-<p>Beginning 2012 I was wondering what is the OS distribution now with the BB OS 7.0 devices in the wild and especially since I wanted to do updates only for the devices running BB OS 5.0 and up.</p>
-
-<p>So the distribution looks like this:</p>
-
-<p><a src="http://inteist.com/media/BB-OS-distribution.jpg"><img class="aligncenter size-full wp-image-639" title="BB-OS-distribution" src="http://inteist.com/media/BB-OS-distribution.jpg" alt="" width="389" height="343" /></a></p>
-
-<p>Making devices that run OS below 5.0 to be about 5-6% of all the devices. Of course this data is based on the users who use this specific app, but I am almost positive that this is pretty close to the generalized numbers.</p>
-
-<p>The numbers look like this:<br />
-<a src="http://inteist.com/media/BB-OS-distribution-by-numbers.png"><img src="http://inteist.com/media/BB-OS-distribution-by-numbers.png" alt="" title="BB-OS-distribution-by-numbers" width="622" height="331" class="aligncenter size-full wp-image-640" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ios-vs-android-vs-blackberry-vs-windows-phones">
-        <!-- <span class=post-title-accent>></span> -->iOS vs. Android vs. BlackBerry vs. Windows Phones
-      </a>
-    </h1>
-
-    <span class="post-date">18 Jan 2012</span>
-    <hr>
-
-    <p>Here's the chart of smartphones market share according to market research firm <a href="http://www.npd.com">NPD</a></p>
-
-<p>Quite interesting trend can be seen by the end of the year with huge spike in iOS sales. This of course can be attributed to the iPhone 4S and the holiday season. Apple products are still considered luxury and make great gifts as opposed to say Android which is considered more of a necessity.</p>
-
-<p><a src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-vs.-Windows-Phones.png"><img src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-vs.-Windows-Phones.png" alt="" title="iOS vs. Android vs. BlackBerry vs. Windows Phones" width="617" height="366" class="aligncenter size-full wp-image-630" /></a></p>
-
-<p><strong>UPDATE:</strong><br />
-Additional source (showing the same trend though) from <a href="http://blog.nielsen.com/nielsenwire/consumer/more-us-consumers-choosing-smartphones-as-apple-closes-the-gap-on-android/">Nielsen</a><br />
-***Note the shift in timeline. Otherwise the graphs correlate.</p>
-
-<p><a src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-2011-Nielsen.png"><img src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-2011-Nielsen.png" alt="" title="iOS vs. Android vs. BlackBerry 2011 Nielsen" width="557" height="452" class="aligncenter size-full wp-image-633" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/windows-phone-wp7-stats-for-2011-infographics">
-        <!-- <span class=post-title-accent>></span> -->Windows Phone (WP7) stats for 2011 infographics
-      </a>
-    </h1>
-
-    <span class="post-date">18 Jan 2012</span>
-    <hr>
-
-    <p>An interesting infographics was published on the <a href="http://windowsteamblog.com/windows_phone/b/wpdev/archive/2012/01/11/windows-phone-2011-retrospective.aspx" target="_blank">WP7 developer blog</a>.</p>
-
-<p>The most interesgint points that we saw are that 56% of the users can purchase apps via carrier billing which is amazing number for a young platform. Android did not have carrier billing for at least a year into its existence if not two years. Which was a significant barrier for selling paid apps since billing mechanism was not oiled like on Apple's iOS platform where all the users have iTunes setup with their billing information.</p>
-
-<p>Surprising enough the Games category is not as huge as we'd expect it to be. Taking a little smaller percentage than the Entertainment apps in the app to category distribution. But in the paid apps category Games are far ahead of any other category in purchases which of course should not be surprising, although this trend is not so prominent on other platforms.</p>
-
-<p>Overall it seems pretty good info and quite useful for developers. Enjoy!</p>
-
-<p><a src="http://inteist.com/media/Wp7-2011-stats-infographics.jpeg"><img class="aligncenter size-large wp-image-624" title="Wp7 2011 stats infographics" src="http://inteist.com/media/Wp7-2011-stats-infographics-505x1024.jpg" alt="" width="505" height="1024" /></a></p>
+<p><a title="https://code.google.com/p/android-apktool/" href="https://code.google.com/p/android-apktool/">https://code.google.com/p/android-apktool/</a></p>
 
   </div>
   

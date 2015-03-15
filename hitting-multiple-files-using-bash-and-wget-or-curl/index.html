@@ -11,7 +11,7 @@
 
   <title>
     
-      Hitting multiple files using bash and wget or curl &middot; Inteist
+      Hitting Multiple Files Using Bash and Wget or Curl &middot; Inteist
     
   </title>
 
@@ -55,8 +55,6 @@
         
       
         
-      
-        
           
         
       
@@ -384,6 +382,50 @@
       
         
       
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
         
       
         
@@ -408,8 +450,10 @@
       
 
 
-      <a class="sidebar-nav-item" href="/tags">Tags</a>
-      <a class="sidebar-nav-item" href="/archive">Archive</a>
+        <a class="sidebar-nav-item" href="/tags">Tags</a>
+
+        <a class="sidebar-nav-item" href="/archive">Archive</a>
+
 
     </nav>
 
@@ -420,87 +464,425 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Hitting multiple files using bash and wget or curl</h1>
+  <h1 class="post-title">Hitting Multiple Files Using Bash and Wget or Curl</h1>
   <span class="post-date">25 Oct 2013</span>
   <p>I needed to hit a number of files on a remote HTTP server with an index ranging from 1 to 150 and my first instinct was to use wget with some sort of a loop (bash script seemed like the most logical thing to do).</p>
 
-<p>Then I realized that I can do the same thing in a simple oneliner using 'curl'</p>
+<p>Then I realized that I can do the same thing in a simple oneliner using &#39;curl&#39;</p>
 
-<p>It's super easy using the following info:</p>
+<p>It&#39;s super easy using the following info:</p>
 
-<p>
-```bash
-<br />
-You can specify multiple URLs or parts of URLs by writing part sets within braces as in:</p>
-<p>http://site.{one,two,three}.com</p>
-<p>or you can get sequences of alphanumeric series by using [] as in:</p>
-<p>ftp://ftp.numericals.com/file[1-100].txt<br />
-ftp://ftp.numericals.com/file[001-100].txt (with leading zeros)<br />
-ftp://ftp.letters.com/file[a-z].txt</p>
+<p>You can specify multiple URLs or parts of URLs by writing part sets within braces as in:</p>
+
+<p><code>http://site.{one,two,three}.com</code>
+or you can get sequences of alphanumeric series by using <code>[]</code> as in:</p>
+
+<p><code>ftp://ftp.numericals.com/file[1-100].txt
+ftp://ftp.numericals.com/file[001-100].txt (with leading zeros)
+ftp://ftp.letters.com/file[a-z].txt
+</code></p>
+
 <p>Nested sequences are not supported, but you can use several ones next to each other:</p>
-<p>http://any.org/archive[1996-1999]/vol[1-4]/part{a,b,c}.html</p>
-<p>You can specify any amount of URLs on the command line. They will be fetched in a sequential manner<br />
-in the specified order.</p>
-<p>You can specify a step counter for the ranges to get every Nth number or letter:</p>
-<p>http://www.numericals.com/file[1-100:10].txt<br />
-http://www.letters.com/file[a-z:2].txt</p>
-<p>
-```
-</p>
+
+<p><code>http://any.org/archive[1996-1999]/vol[1-4]/part{a,b,c}.html</code></p>
+
+<p>You can specify any amount of URLs on the command line. They will be fetched in a sequential manner in the specified order.
+You can specify a step counter for the ranges to get every Nth number or letter:</p>
+
+<p>yo</p>
+
+<p><code>http://www.numericals.com/file[1-100:10].txt http://www.letters.com/file[a-z:2].txt</code></p>
 
 </div>
 
+<!-- SIMILAR POSTS -->
 <div class="related">
-  <h2>Related Posts</h2>
+      
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+      
+</div>
+
+
+<!-- LATEST POSTS -->
+<div class="related">
+  <h3>Latest Posts</h3>
   <ul class="related-posts">
     
       <li>
-        <h3>
+        <h4>
+          <a href="/individual-google-play-services">
+            Individual Google Play Services for Android with Gradle
+          </a>
+            <small>15 Mar 2015</small>
+        </43>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/facebook-sdk-as-gradle-dependency">
+            Including Facebook SDK to Android project via Gradle
+          </a>
+            <small>15 Mar 2015</small>
+        </43>
+      </li>
+    
+      <li>
+        <h4>
           <a href="/wordpress-jekyll-switch-migration">
-            Switching From Wordpress to Jekyll in 20 minutes
+            Switching From Wordpress to Jekyll in 20 Minutes
           </a>
             <small>07 Mar 2015</small>
-        </h3>
+        </43>
       </li>
     
       <li>
-        <h3>
+        <h4>
           <a href="/jekyll-redirect-http-equiv-not-working">
-            Jekyll Redirect Plugin <http equiv> forcing a file download
+            Jekyll Redirect Plugin <http Equiv> Forcing a File Download
           </a>
             <small>07 Mar 2015</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/switching-to-fabric">
-            Switching to Fabric from Crashlytics
-          </a>
-            <small>05 Mar 2015</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/google-wave-vs-slack-hipchat">
-            Google Wave had so much more potential than Slack, HipChat, FlowDoc and Co.
-          </a>
-            <small>02 Mar 2015</small>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/xcode-themes-collection">
-            Xcode themes collection
-          </a>
-            <small>23 Nov 2014</small>
-        </h3>
+        </43>
       </li>
     
   </ul>
 </div>
+
+
+
+
+
+
+
 
     </div>
 
