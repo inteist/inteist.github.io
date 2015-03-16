@@ -448,6 +448,10 @@
           
         
       
+        
+          
+        
+      
 
 
         <a class="sidebar-nav-item" href="/tags">Tags</a>
@@ -552,6 +556,43 @@ Google Cloud Messaging  </p>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.+&#39;</span>
 </code></pre></div>
 <p>which will pull any update up to major being <strong>4</strong></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/dns-flush-cache-os-x-linux-windows">
+        <!-- <span class=post-title-accent>></span> -->DNS FLush Cache for OS X, Linux, and Windows
+      </a>
+    </h1>
+
+    <span class="post-date">15 Mar 2015</span>
+    <hr>
+
+    <h3 id="osx-10.10">OSX 10.10</h3>
+
+<p><code>sudo discoveryutil udnsflushcaches</code></p>
+
+<h3 id="osx-10.9">OSX 10.9</h3>
+
+<p>dscacheutil -flushcache; sudo killall -HUP mDNSResponder</p>
+
+<h3 id="osx-10.7-–-10.8">OSX 10.7  – 10.8</h3>
+
+<p><code>sudo killall -HUP mDNSResponder</code></p>
+
+<h3 id="osx-10.5-–-10.6">OSX 10.5 – 10.6</h3>
+
+<p><code>sudo dscacheutil -flushcache</code></p>
+
+<h3 id="windows">Windows</h3>
+
+<p><code>ipconfig /flushdns</code></p>
+
+<h3 id="linux-(depending-on-what-you’re-running-for-dns-resolver)">Linux (depending on what you’re running for DNS resolver)</h3>
+
+<p><code>/etc/init.d/named restart</code><br>
+<code>/etc/init.d/nscd restart</code></p>
 
   </div>
   
@@ -995,22 +1036,6 @@ Google Cloud Messaging  </p>
 <li>The <em>Service</em> may block the Main Thread of the application.</li>
 <li>The <em>IntentService</em> cannot run tasks in parallel. Hence all the consecutive intents will go into the message queue for the worker thread and will execute sequentially.</li>
 </ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/os-x-uninstall-plex-media-server">
-        <!-- <span class=post-title-accent>></span> -->OS X Uninstall Plex Media Server
-      </a>
-    </h1>
-
-    <span class="post-date">07 May 2014</span>
-    <hr>
-
-    <p>You can follow the official directions <a href="https://support.plex.tv/hc/en-us/articles/201941078-Uninstall-Plex-Media-Server">here</a></p>
-
-<p>Or you can just use <a href="http://freemacsoft.net/appcleaner/">AppCleaner</a> and drag the Plex Media Server app from the Applications folder and the AppCleaner will remove all the same files and folders for you in an instant!</p>
 
   </div>
   

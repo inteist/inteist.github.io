@@ -448,6 +448,10 @@
           
         
       
+        
+          
+        
+      
 
 
         <a class="sidebar-nav-item" href="/tags">Tags</a>
@@ -467,369 +471,385 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/cleaning-up-and-removing-unused-ports-in-your-macports">
-        <!-- <span class=post-title-accent>></span> -->Cleaning Up and Removing Unused Ports in Your MacPorts
+      <a href="/ios-url-schemas-for-settings">
+        <!-- <span class=post-title-accent>></span> -->iOS URL schemas for Settings
       </a>
     </h1>
 
-    <span class="post-date">23 Oct 2012</span>
+    <span class="post-date">05 May 2013</span>
     <hr>
 
-    <p>To remove inactive ports: </p>
-
-<pre>
-sudo port uninstall inactive 
-</pre>
-
-<p>To remove downloaded distfiles with: </p>
-
-<pre>
-sudo port clean --all installed 
-</pre>
-
-<p>To remove orphaned (not referenced and not anymore used ports) you can use an external tool <strong>port_cutleaves</strong></p>
-
-<p>First install the tool using MacPorts</p>
-
-<pre>
-sudo port install port_cutleaves 
-</pre>
-
-<p>Then run it</p>
-
-<pre>
-sudo port_cutleaves 
-</pre>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/a-quote">
-        <!-- <span class=post-title-accent>></span> -->A Quote -- Dave Barry
-      </a>
-    </h1>
-
-    <span class="post-date">19 Sep 2012</span>
-    <hr>
-
-    <blockquote>
-<p>“Meetings are an addictive, highly self-indulgent activity that corporations and other large organizations habitually engage in only because they cannot masturbate”</p>
-</blockquote>
-
-<p style="text-align: right; margin-top: -20px;"><b>- Dave Barry</b></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/nullpointerexception-in-webviewdatabase-getcachetotalsize-fix">
-        <!-- <span class=post-title-accent>></span> -->NullPointerException in WebViewDatabase.getCacheTotalSize Fix
-      </a>
-    </h1>
-
-    <span class="post-date">14 Sep 2012</span>
-    <hr>
-
-    <p>The following crash was cripping into the reports. There is no usage of the webview directly, but there is a usage of the webview and thus related stuff in the ads.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">NullPointerException</span>
-    <span class="n">at</span> <span class="n">android</span><span class="o">.</span><span class="na">webkit</span><span class="o">.</span><span class="na">WebViewDatabase</span><span class="o">.</span><span class="na">getCacheTotalSize</span><span class="o">(</span><span class="n">WebViewDatabase</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">815</span><span class="o">)</span>
-    <span class="n">at</span> <span class="n">android</span><span class="o">.</span><span class="na">webkit</span><span class="o">.</span><span class="na">CacheManager</span><span class="o">.</span><span class="na">trimCacheIfNeeded</span><span class="o">(</span><span class="n">CacheManager</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">548</span><span class="o">)</span>
-    <span class="n">at</span> <span class="n">android</span><span class="o">.</span><span class="na">webkit</span><span class="o">.</span><span class="na">WebViewWorker</span><span class="o">.</span><span class="na">handleMessage</span><span class="o">(</span><span class="n">WebViewWorker</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">190</span><span class="o">)</span>
-    <span class="n">at</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Handler</span><span class="o">.</span><span class="na">dispatchMessage</span><span class="o">(</span><span class="n">Handler</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">99</span><span class="o">)</span>
-    <span class="n">at</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">Looper</span><span class="o">.</span><span class="na">loop</span><span class="o">(</span><span class="n">Looper</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">123</span><span class="o">)</span>
-    <span class="n">at</span> <span class="n">android</span><span class="o">.</span><span class="na">os</span><span class="o">.</span><span class="na">HandlerThread</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">HandlerThread</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="mi">60</span><span class="o">)</span>
-</code></pre></div>
-<p>The problem is the following code:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="kt">long</span> <span class="nf">getCacheTotalSize</span><span class="o">()</span> <span class="o">{</span>
-        <span class="kt">long</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        <span class="n">Cursor</span> <span class="n">cursor</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
-        <span class="kd">final</span> <span class="n">String</span> <span class="n">query</span> <span class="o">=</span> <span class="s">&quot;SELECT SUM(contentlength) as sum FROM cache&quot;</span><span class="o">;</span>
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="n">cursor</span> <span class="o">=</span> <span class="n">mCacheDatabase</span><span class="o">.</span><span class="na">rawQuery</span><span class="o">(</span><span class="n">query</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">cursor</span><span class="o">.</span><span class="na">moveToFirst</span><span class="o">())</span> <span class="o">{</span>
-                <span class="n">size</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-            <span class="o">}</span>
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IllegalStateException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">LOGTAG</span><span class="o">,</span> <span class="s">&quot;getCacheTotalSize&quot;</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">cursor</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-                <span class="n">cursor</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-        <span class="o">}</span>
-        <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
-    <span class="o">}</span>
-</code></pre></div>
-<p>The NullPointerException that happens should in general not happen but sometimes the storage gets corrupted and then the cache database is null when it is called and it crashes.</p>
-
-<p>The fix would be to check for this problem and then only use WebView and/or call the ads if there is no problem with the WebViewDatabase</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="n">WebViewDatabase</span> <span class="n">webViewDB</span> <span class="o">=</span> <span class="n">WebViewDatabase</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">webViewDB</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// do what you wanted to do with the WebView</span>
-    <span class="o">}</span>
+    <p>List of known URLs for the iOS &#8220;Settings&#8221; app:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">prefs:root=General&amp;#038;path=About
+prefs:root=General&amp;#038;path=ACCESSIBILITY
+prefs:root=AIRPLANE_MODE
+prefs:root=General&amp;#038;path=AUTOLOCK
+prefs:root=General&amp;#038;path=USAGE/CELLULAR_USAGE
+prefs:root=Brightness
+prefs:root=General&amp;#038;path=Bluetooth
+prefs:root=General&amp;#038;path=DATE_AND_TIME
+prefs:root=FACETIME
+prefs:root=General
+prefs:root=General&amp;#038;path=Keyboard
+prefs:root=CASTLE
+prefs:root=CASTLE&amp;#038;path=STORAGE_AND_BACKUP
+prefs:root=General&amp;#038;path=INTERNATIONAL
+prefs:root=LOCATION_SERVICES
+prefs:root=ACCOUNT_SETTINGS
+prefs:root=MUSIC
+prefs:root=MUSIC&amp;#038;path=EQ
+prefs:root=MUSIC&amp;#038;path=VolumeLimit
+prefs:root=General&amp;#038;path=Network
+prefs:root=NIKE_PLUS_IPOD
+prefs:root=NOTES
+prefs:root=NOTIFICATIONS_ID
+prefs:root=Phone
+prefs:root=Photos
+prefs:root=General&amp;#038;path=ManagedConfigurationList
+prefs:root=General&amp;#038;path=Reset
+prefs:root=Sounds&amp;#038;path=Ringtone
+prefs:root=Safari
+prefs:root=General&amp;#038;path=Assistant
+prefs:root=Sounds
+prefs:root=General&amp;#038;path=SOFTWARE_UPDATE_LINK
+prefs:root=STORE
+prefs:root=TWITTER
+prefs:root=General&amp;#038;path=USAGE
+prefs:root=VIDEO
+prefs:root=General&amp;#038;path=Network/VPN
+prefs:root=Wallpaper
+prefs:root=WIFI
+prefs:root=INTERNET_TETHERING
 </code></pre></div>
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/apple-iphone-5-presentation-keynote-2012-in-one-word">
-        <!-- <span class=post-title-accent>></span> -->Apple iPhone 5 Presentation Keynote 2012 in One Word
+      <a href="/inspiring-presentations">
+        <!-- <span class=post-title-accent>></span> -->Inspiring Presentations
       </a>
     </h1>
 
-    <span class="post-date">14 Sep 2012</span>
+    <span class="post-date">05 May 2013</span>
     <hr>
 
-    <h1 style="text-align: center;">.:  GAY  :.</h1>
+    <h1 id="android">Android</h1>
 
-<h1 style="text-align: center;"></h1>
+<p>Mastering Android Drawables by Cyril Mottier  </p>
+
+<h1 id="web">Web</h1>
+
+<p>Design for Performance by Lara Swanson</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/the-2080-rule-a-wider-perspective">
-        <!-- <span class=post-title-accent>></span> -->The 20/80 Rule - a Wider Perspective
+      <a href="/android-3d-party-usb-vendor-ir-list-for-adb-ini">
+        <!-- <span class=post-title-accent>></span> -->Android 3d Party USB Vendor IR List for adb.ini
       </a>
     </h1>
 
-    <span class="post-date">06 Sep 2012</span>
+    <span class="post-date">05 May 2013</span>
     <hr>
 
-    <p>Most people heard about the 80/20 rule.</p>
+    <h3 id="you-can-edit-your-current-~/.android/adb_usb.ini">You can edit your current ~/.android/adb_usb.ini</h3>
 
-<p>For those who didn't it basically says that you do 80% of work in 20% time and then 80% of time is spent on the remaining 20% to finish the project/product/service.</p>
+<pre><div class="codecolorer-container php vibrant" style="overflow:auto;white-space:nowrap;width:100%;">
+  <div class="php codecolorer">
+    ANDROID 3RD PARTY USB VENDOR ID <a href="http://www.php.net/list"><span class="kw3">LIST</span></a> <span class="sy0">--</span> <span class="kw1">DO</span> NOT EDIT<span class="sy0">.</span><br />
+    <span class="co2"># USE 'android update adb' TO GENERATE.<br />
+    </span><span class="co2"># 1 USB VENDOR ID PER LINE.<br />
+    </span><span class="co2"># Acer<br />
+    </span><span class="nu12">0x0502</span><br />
+    <span class="co2"># Amazon Kindle<br />
+    </span><span class="nu12">0x1949</span><br />
+    <span class="co2"># ASUS<br />
+    </span><span class="nu12">0x0B05</span><br />
+    <span class="co2"># Dell<br />
+    </span><span class="nu12">0x413C</span><br />
+    <span class="co2"># Foxconn<br />
+    </span><span class="nu12">0x0489</span><br />
+    <span class="co2"># Fujitsu<br />
+    </span><span class="nu12">0x04C5</span><br />
+    <span class="co2"># Fujitsu Toshiba<br />
+    </span><span class="nu12">0x04C5</span><br />
+    <span class="co2"># Garmin-Asus<br />
+    </span><span class="nu12">0x091E</span><br />
+    <span class="co2"># Google<br />
+    </span><span class="nu12">0x18D1</span><br />
+    <span class="co2"># Hisense<br />
+    </span><span class="nu12">0x109B</span><br />
+    <span class="co2"># HTC<br />
+    </span><span class="nu12">0x0BB4</span><br />
+    <span class="co2"># Huawei<br />
+    </span><span class="nu12">0x12D1</span><br />
+    <span class="co2"># K-Touch<br />
+    </span><span class="nu12">0x24E3</span><br />
+    <span class="co2"># KT Tech<br />
+    </span><span class="nu12">0x2116</span><br />
+    <span class="co2"># Kyocera<br />
+    </span><span class="nu12">0x0482</span><br />
+    <span class="co2"># Lenevo<br />
+    </span><span class="nu12">0x17EF</span><br />
+    <span class="co2"># LG<br />
+    </span><span class="nu12">0x1004</span><br />
+    <span class="co2"># Motorola<br />
+    </span><span class="nu12">0x22B8</span><br />
+    <span class="co2"># NEC<br />
+    </span><span class="nu12">0x0409</span><br />
+    <span class="co2"># Nook<br />
+    </span><span class="nu12">0x2080</span><br />
+    <span class="co2"># Nvidia<br />
+    </span><span class="nu12">0x0955</span><br />
+    <span class="co2"># OTGV<br />
+    </span><span class="nu12">0x2257</span><br />
+    <span class="co2"># Pantech<br />
+    </span><span class="nu12">0x10A9</span><br />
+    <span class="co2"># Pegatron<br />
+    </span><span class="nu12">0x1D4D</span><br />
+    <span class="co2"># Philips<br />
+    </span><span class="nu12">0x0471</span><br />
+    <span class="co2"># PMC-Sierra<br />
+    </span><span class="nu12">0x04DA</span><br />
+    <span class="co2"># Qualcomm<br />
+    </span><span class="nu12">0x05C6</span><br />
+    <span class="co2"># SK Telesys<br />
+    </span><span class="nu12">0x1F53</span><br />
+    <span class="co2"># Samsung<br />
+    </span><span class="nu12">0x04E8</span><br />
+    <span class="co2"># Sharp<br />
+    </span><span class="nu12">0x04DD</span><br />
+    <span class="co2"># Sony<br />
+    </span><span class="nu12">0x054C</span><br />
+    <span class="co2"># Sony Ericsson<br />
+    </span><span class="nu12">0x0FCE</span><br />
+    <span class="co2"># Teleepoch<br />
+    </span><span class="nu12">0x2340</span><br />
+    <span class="co2"># Toshiba<br />
+    </span><span class="nu12">0x0930</span><br />
+    <span class="co2"># ZTE<br />
+    </span><span class="nu12">0x19D2</span>
+  </div>
+</div>
 
-<p><strong>BUT</strong></p>
-
-<p>It is these 20% of polish that will ultimately get you the 80% of the market. Because the teams that spent 80% (or even more) on the last 20% of polish to their product and/or service are the teams that usually produce the product/service that wins the major of the market. And this is all that usually matters – to own the majority of the market, to be the leader or in the leader pack  in the market.</p>
-
-<p>This is not a recipe for success of course. There are polished and good products that fail. Speaking in math terms, this is rather the necessary, than  sufficient condition for a successful product and/or service.</p>
+</pre>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/eclipse-ini-garbage-collector-gc-settings">
-        <!-- <span class=post-title-accent>></span> -->Eclipse.ini Garbage Collector (GC) Settings
+      <a href="/programming-fonts">
+        <!-- <span class=post-title-accent>></span> -->Programming Fonts
       </a>
     </h1>
 
-    <span class="post-date">06 Sep 2012</span>
+    <span class="post-date">19 Apr 2013</span>
     <hr>
 
-    <h2>Garbage collection in Eclipse</h2>
+    <p>It is a matter of preference, no doubt, but most developers I know prefer <a href="http://en.wikipedia.org/wiki/Monospaced_font">monospaced fonts</a>. So what are the best ones to be used?</p>
 
-<p><strong>There are several GC options available for eclipse's optimization. Try which one works best for you</strong></p>
+<p>Over the years, I've tried numerous fonts and the few that work good are Monaco, Menlo, and finally Ubuntu Mono. Menlo is a great font that comes with OS X and is used in X-Code. It is also the best font so far that <a href="/fixing-eclipse-fonts-on-os-x">I found</a></p>
 
-<p>The <em>(original) copying collector</em> (Enabled by default). When this collector kicks in, all application threads are stopped, and the copying collection proceeds using one thread (which means only one CPU even if on a multi-CPU machine). This is known as a stop-the-world collection, because basically the JVM pauses everything else until the collection is completed.</p>
+<p>I have recently tried to work with <a href="http://www.sublimetext.com/2">Sublime Text 2</a>. I have used <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a> before but Sublime seems so much more powerful out of the box. I read somewhere that it is possible to setup TextWrangler with various plugins and extensions to make it quite powerful too, but Sublime Text comes already quite powerful out of the box and just feels more natural. TextWrangler never really felt natural to me but it was the best option I had so far as it had more options than Smultron.</p>
 
-<p>The <em>parallel copying collector</em> (Enabled using -XX:+UseParNewGC). Like the original copying collector, this is a stop-the-world collector. However this collector parallelizes the copying collection over multiple threads, which is more efficient than the original single-thread copying collector for multi-CPU machines (though not for single-CPU machines). This algorithm potentially speeds up young generation collection by a factor equal to the number of CPUs available, when compared to the original singly-threaded copying collector.</p>
+<p>So I tried Ubuntu Mono with Sublime Text but it looks almost the same as Menlo and since I am using Menlo with Eclipse already (Ubuntu Mono regular was horrible in Eclipse) I decided to keep using Menlo despite many praises towards Ubuntu Mono. But Ubuntu might be a good alternative for other OSes that do not have the Menlo bundled with it.</p>
 
-<p>The <em>parallel scavenge collector</em> (Enabled using -XX:UseParallelGC). This is like the previous parallel copying collector, but the algorithm is tuned for gigabyte heaps (over 10GB) on multi-CPU machines. This collection algorithm is designed to maximize throughput while minimizing pauses. It has an optional adaptive tuning policy which will automatically resize heap spaces. If you use this collector, you can only use the the original mark-sweep collector in the old generation (i.e. the newer old generation concurrent collector cannot work with this young generation collector).</p>
-
-<h2>Speeding up Eclipse</h2>
-
-<p>If you want more information on how to speed up eclipse on OS X – read this post: [link id='240' text='How To speed up Eclipse on OS X']</p>
+<p>Happy coding!</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/android-and-apple-fun">
-        <!-- <span class=post-title-accent>></span> -->Android and Apple Fun
+      <a href="/using-jackson-json-parser-in-android-project">
+        <!-- <span class=post-title-accent>></span> -->Using Jackson JSON Parser in Android Project
       </a>
     </h1>
 
-    <span class="post-date">04 Sep 2012</span>
+    <span class="post-date">01 Mar 2013</span>
     <hr>
 
-    <p style="text-align: left;">
-<p style="text-align: left;">Let's have some fun within the Android (Samsung) vs. Apple battle</p>
-
-<p style="text-align: center;"><a src="http://inteist.com/media/android-and-apple-fun1.jpeg"><img class="aligncenter  wp-image-963" title="android and apple fun" src="http://inteist.com/media/android-and-apple-fun1.jpeg" alt="" width="596" height="221" /></a></p>
+    <p>After some research around JSON libraries I reached conclusion that Jackson would be the first choice, both because it is much more used then Gson and it seems to have performance edge over Gson as well. Unfortunately though, adding just the <strong>core</strong> and the <strong>databind</strong> jars, without using ProGuard inflates the size of the final APK by a whooping <strong>600Kb</strong>.</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/easily-generate-change-set-between-releases-using-git">
-        <!-- <span class=post-title-accent>></span> -->Easily Generate Change Set Between Releases Using Git
+      <a href="/android-ics-style-buttons-for-a-dialog">
+        <!-- <span class=post-title-accent>></span> -->Android ICS Style Buttons for a Dialog
       </a>
     </h1>
 
-    <span class="post-date">03 Sep 2012</span>
+    <span class="post-date">27 Jan 2013</span>
     <hr>
 
-    <p>If you are using Git as your version control system, it can be very helpful in generating the changeset between releases.</p>
+    <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- OK/Cancel buttons.  --&gt;</span>
 
-<p>First step is to find the last commit where you started the new (or the next) release that you want the changeset for. It can be easily achieved by something like this:</p>
+<span class="nt">&lt;linearlayout</span>
+<span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+<span class="na">android:divider=</span><span class="s">&quot;?android:attr/dividerHorizontal&quot;</span>
+<span class="na">android:showdividers=</span><span class="s">&quot;beginning&quot;</span>
+<span class="na">android:paddingtop=</span><span class="s">&quot;16dip&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;linearlayout</span>
+    <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarStyle&quot;</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
+    <span class="na">android:measurewithlargestchild=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;linearlayout</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/leftSpacer&quot;</span>
+        <span class="na">android:layout_weight=</span><span class="s">&quot;0.25&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
+        <span class="na">android:visibility=</span><span class="s">&quot;gone&quot;</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;button</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/cancel_button&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:layout_gravity=</span><span class="s">&quot;left&quot;</span>
+        <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">android:text=</span><span class="s">&quot;@string/cancel&quot;</span>
+        <span class="na">android:maxlines=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarButtonStyle&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;/button&gt;</span>
+
+    <span class="nt">&lt;button</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/ok_button&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:layout_gravity=</span><span class="s">&quot;right&quot;</span>
+        <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">android:text=</span><span class="s">&quot;@string/install&quot;</span>
+        <span class="na">android:maxlines=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">android:filtertoucheswhenobscured=</span><span class="s">&quot;true&quot;</span>
+        <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarButtonStyle&quot;</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;linearlayout</span>
+            <span class="na">android:id=</span><span class="s">&quot;@+id/rightSpacer&quot;</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+            <span class="na">android:layout_weight=</span><span class="s">&quot;0.25&quot;</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+            <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
+            <span class="na">android:visibility=</span><span class="s">&quot;gone&quot;</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/linearlayout&gt;</span>
+<span class="nt">&lt;/linearlayout&gt;</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/git-wizardry-easy-way-to-get-the-change-set-from-git">
+        <!-- <span class=post-title-accent>></span> -->Git Wizardry - Easy Way to Get the Change Set From Git
+      </a>
+    </h1>
+
+    <span class="post-date">12 Dec 2012</span>
+    <hr>
+
+    <p>There is a pretty way way to get the Git commits between versions which can be used to build the change set log.</p>
+
+<p>Below are the basic commands that should give you just that. But these commands are even more useful than this. This is almost too easy, this is why I call it wizardry :)</p>
+
+<p>The only requirement is that you somehow know what is the commit of the latest release you did (if that's where you want to start your change set)</p>
+
+<p>To find a specific commit (if you had a meaningful commit message)</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h - %an, %ar : %s&quot;</span> <span class="p">|</span> grep <span class="s2">&quot;RELEASE: X.X.X&quot;</span>
 </code></pre></div>
-<p>Then you just do:</p>
+<p>or you can just use tag (if you have tagged the commit that preceded the release) and see where it points to or any other way you use to find the latest release commit where you want to start.</p>
+
+<p>Once you found it, it's as easy as for example:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h - %an, %ar : %s&quot;</span> b9c28fc..
 </code></pre></div>
-<p>The formatting options can be altered of course. You can find many more options in the "Pretty formats" section in the <a href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html">git log man pages</a></p>
+<p>***The revision is in <since>..<until> revision and the last parameter defaults to HEAD if omitted (http://www.kernel.org/pub/software/scm/git/docs/git-log.html)</p>
+
+<p>Enjoy :)</until></since></p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/githubs-octocat">
-        <!-- <span class=post-title-accent>></span> -->Github's Octocat
+      <a href="/git-tags-cheat-sheet">
+        <!-- <span class=post-title-accent>></span> -->Git Tags Cheat Sheet
       </a>
     </h1>
 
-    <span class="post-date">31 Aug 2012</span>
+    <span class="post-date">03 Dec 2012</span>
     <hr>
 
-    <p>The funny octocat by Github<br />
-<a src="http://inteist.com/media/baracktocat.jpeg"><img class="aligncenter size-medium wp-image-951" title="baracktocat" src="http://inteist.com/media/baracktocat-300x300.jpeg" alt="" width="300" height="300" /></a></p>
+    <p>A short list of most useful Git commands to work with git tags. These should cover 90% of your needs.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">### TAGS</span>
+<span class="c">#create tag (annotated = with extra meta information)</span>
+git tag -a ver1.4 -m <span class="s1">&#39;my version 1.4&#39;</span>
 
-<p>For more funny and creative octocats check out : http://octodex.github.com/</p>
+<span class="c">#list tags</span>
+git tag
+
+<span class="c">#delete tag</span>
+git tag -d XXX
+
+<span class="c">#delete remote tag</span>
+<span class="c">#You just need to push an &#39;empty&#39; reference to the remote tag name:</span>
+git push origin :tagname
+
+<span class="c">#push tags to remote</span>
+<span class="c">#specific tag:</span>
+git push origin v1.5
+
+<span class="c">#all tags:</span>
+git push origin --tags
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/skype-clever-upgrade-marketing">
+        <!-- <span class=post-title-accent>></span> -->Skype - Clever Upgrade Marketing :)
+      </a>
+    </h1>
+
+    <span class="post-date">15 Nov 2012</span>
+    <hr>
+
+    <p>&nbsp;</p>
+
+<p><a src="http://inteist.com/media/skype-clever-upgrade-marketing-message1.png"><img class="aligncenter size-full wp-image-1022" title="skype clever upgrade marketing message" src="http://inteist.com/media/skype-clever-upgrade-marketing-message1.png" alt="" width="618" height="420" /></a></p>
+
+<p>&nbsp;</p>
+
+<h3 style="text-align: center;">Quite clever and funny upgrade marketing message from Skype</h3>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/git-adding-a-new-remote-branch-detailed-but-simple-example">
-        <!-- <span class=post-title-accent>></span> -->Git Adding a New Remote Branch - Detailed but Simple Example
+      <a href="/proguard-keep-entire-package-different-variations">
+        <!-- <span class=post-title-accent>></span> -->ProGuard - Keep Entire Package (Different Variations)
       </a>
     </h1>
 
-    <span class="post-date">28 Aug 2012</span>
+    <span class="post-date">01 Nov 2012</span>
     <hr>
 
-    <p>Initial checkout (to ~/branchtest folder) since it was not specified</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~max<span class="nv">$ </span>git clone git@bitbucket.org:inteist/branchtest.git
+    <p>Keeps the names of all public classes in the specified package:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">myapp</span><span class="o">.</span><span class="na">customcomponents</span><span class="o">.*</span>
 </code></pre></div>
-<p>Let's create a file named "master.txt"</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~max<span class="nv">$ </span><span class="nb">echo </span>This is master branch <span class="p">&amp;</span>gt<span class="p">;</span> master.txt
+<p>The following configuration keeps the names of all public classes in the specified package and its subpackages:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">myapp</span><span class="o">.</span><span class="na">customcomponents</span><span class="o">.**</span>
 </code></pre></div>
-<p>Now let's add the file to track changes</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git add .
-apollo:branchtest max<span class="nv">$ </span>git status
-<span class="c"># On branch master</span>
-<span class="c">#</span>
-<span class="c"># Initial commit</span>
-<span class="c">#</span>
-<span class="c"># Changes to be committed:</span>
-<span class="c">#   (use &quot;git rm --cached ...&quot; to unstage)</span>
-<span class="c">#</span>
-<span class="c">#   new file:   master.txt</span>
+<p>The following configuration keeps the names of all public/protected classes/fields/methods in the specified package and its subpackages:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">-</span><span class="n">keep</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">com</span><span class="o">.</span><span class="na">myapp</span><span class="o">.</span><span class="na">customcomponents</span><span class="o">.**</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">protected</span> <span class="o">*;</span>
+<span class="o">}</span>
 </code></pre></div>
-<p>Now let's push the file to the master branch (until now there were no refs). The "-u" switch adds upstream tracking<br />
-apollo:branchtest max$ git push -u origin master</p>
-
-<p>Now let's create a new branch and name it "new". The "-b" switch makes us immediately switch to the "new" branch</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git checkout -b new
-Switched to a new branch <span class="s1">&#39;new&#39;</span>
-</code></pre></div>
-<p>Make sure we are on the "new" branch. Indeed we are.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git status
-<span class="c"># On branch new</span>
-nothing to commit <span class="o">(</span>working directory clean<span class="o">)</span>
-</code></pre></div>
-<p>Let's add a file "new.txt"</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span><span class="nb">echo </span>New addition <span class="p">&amp;</span>gt<span class="p">;</span> new.txt
-</code></pre></div>
-<p>It's on the file system.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>ls
-master.txt  new.txt
-</code></pre></div>
-<p>But is untracked by Git just yet</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git status
-<span class="c"># On branch new</span>
-<span class="c"># Untracked files:</span>
-<span class="c">#   (use &quot;git add ...&quot; to include in what will be committed)</span>
-<span class="c">#</span>
-<span class="c">#   new.txt</span>
-nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> to track<span class="o">)</span>
-</code></pre></div>
-<p>Let's add the file to be tracked</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git add .
-apollo:branchtest max<span class="nv">$ </span>git commit -m <span class="s2">&quot;Adding the new file while on the new branch&quot;</span>
-<span class="o">[</span>new 67f764e<span class="o">]</span> Adding the new file <span class="k">while</span> on the new branch
- <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
- create mode <span class="m">100644</span> new.txt
-</code></pre></div>
-<p>Let's switch back to "master" branch. The "new.txt" is not there. It is tracked under the new branch.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git checkout master
-Switched to branch <span class="s1">&#39;master&#39;</span>
-apollo:branchtest max<span class="nv">$ </span>ls
-master.txt
-</code></pre></div>
-<p>Let's switch back to the "new" branch</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git checkout new
-Switched to branch <span class="s1">&#39;new&#39;</span>
-apollo:branchtest max<span class="nv">$ </span>ls
-master.txt  new.txt
-</code></pre></div>
-<p>Now with the "master" branch pushed and the the "new" branch created locally but not pushed to the central repository, let's clone the repository to a different folder.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:max<span class="nv">$ </span>git clone git@bitbucket.org:inteist/branchtest.git branchtestNEW
-Cloning into <span class="s1">&#39;branchtestNEW&#39;</span>...
-remote: Counting objects: 3, <span class="k">done</span>.
-remote: Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
-</code></pre></div>
-<p>We checked out the "master" branch, which has the "master.txt" as expected</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>branchtestNEW/
-<span class="nv">$ </span>ls
-master.txt
-</code></pre></div>
-<p>Let's see if the "new" branch is present:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEW max<span class="nv">$ </span>git checkout new
-error: pathspec <span class="s1">&#39;new&#39;</span> did not match any file<span class="o">(</span>s<span class="o">)</span> known to git.
-</code></pre></div>
-<p>Nop, it is not, of course, since we did not push it yet.</p>
-
-<p>Now let's push the the "new" local branch to the remote repository. Just to make a case, I will name it "newremote" on the remote.<br />
-This is not required. If the second parameter is omitted, then the local and remote names are the same.<br />
-We are going to have the "-u" switch so it is tracked in the upstream</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git push -u origin new:newremote
-Counting objects: 4, <span class="k">done</span>.
-Delta compression using up to <span class="m">4</span> threads.
-Compressing objects: 100% <span class="o">(</span>2/2<span class="o">)</span>, <span class="k">done</span>.
-Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">305</span> bytes, <span class="k">done</span>.
-Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-remote: bb/acl: inteist is allowed. accepted payload.
-To ssh://git@bitbucket.org/inteist/branchtest.git
- * <span class="o">[</span>new branch<span class="o">]</span>      new -<span class="p">&amp;</span>gt<span class="p">;</span> newremote
-Branch new <span class="nb">set </span>up to track remote branch newremote from origin.
-</code></pre></div>
-<p>Let's clone the repository to yet another folder.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~ max<span class="nv">$ </span>git clone git@bitbucket.org:inteist/branchtest.git branchtestNEWREMOTE
-Cloning into <span class="s1">&#39;branchtestNEWREMOTE&#39;</span>...
-remote: Counting objects: 6, <span class="k">done</span>.
-remote: Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
-remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
-</code></pre></div>
-<p>Let's see if there is the "new" branch now.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~ max<span class="nv">$ </span><span class="nb">cd </span>branchtestNEWREMOTE/
-apollo:branchtestNEWREMOTE max<span class="nv">$ </span>git checkout new
-error: pathspec <span class="s1">&#39;new&#39;</span> did not match any file<span class="o">(</span>s<span class="o">)</span> known to git.
-</code></pre></div>
-<p>Surprise? No. There is no "new" branch of course because we named it "newremote" on the remote and this is how it was checked out.</p>
-
-<p>Was it?</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEWREMOTE max<span class="nv">$ </span>git checkout newremote
-Branch newremote <span class="nb">set </span>up to track remote branch newremote from origin.
-Switched to a new branch <span class="s1">&#39;newremote&#39;</span>
-</code></pre></div>
-<p>Yes, it was :)</p>
-
-<p>Let's see what's there:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEWREMOTE max<span class="nv">$ </span>ls
-master.txt  new.txt
-</code></pre></div>
-<p>And what about the "master" branch?</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEWREMOTE max<span class="nv">$ </span>git checkout master
-Switched to branch <span class="s1">&#39;master&#39;</span>
-apollo:branchtestNEWREMOTE max<span class="nv">$ </span>ls
-master.txt
-</code></pre></div>
-<p>Surely enough there is only what was tracked under the "master" branch</p>
-
   </div>
   
 </div>

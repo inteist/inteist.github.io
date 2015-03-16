@@ -448,6 +448,10 @@
           
         
       
+        
+          
+        
+      
 
 
         <a class="sidebar-nav-item" href="/tags">Tags</a>
@@ -467,597 +471,399 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/how-to-do-a-remote-programming-interview-with-code-review">
-        <!-- <span class=post-title-accent>></span> -->How to Do a Remote Programming Interview With Code Review
+      <a href="/ant-fixing-cant-locate-tools-jar-file-error">
+        <!-- <span class=post-title-accent>></span> -->Apache Ant - Fixing "Can't Locate tools.jar" Error
       </a>
     </h1>
 
-    <span class="post-date">17 Mar 2010</span>
+    <span class="post-date">03 Jun 2010</span>
     <hr>
 
-    <p>I've just read a post at Coding Horror - Jeff Atwood's popular blog where he goes into the problem that many candidates applying for a programming job simply can not program. He claims that it's almost all of the applicants, which I find hard to believe. I tend to think that their resume evaluation techniques are just not good enough, which is surprising since Jeff is good friends with Joel Spolsky who had an interesting article about <a href="http://www.joelonsoftware.com/articles/SortingResumes.html" target="_blank">screening resumes</a>.</p>
+    <p>If you have "can't locate tools.jar" error when trying to run "ant", you've come to the right place. The fix is apparently very easy, you have to properly set up the "JAVA_HOME" environment variable to Java JDK. The <strong>tools.jar</strong> is found in the bin folder of the JDK but you only need to point the JAVA_HOME to your JAVA SDK installation and you should be all set!</p>
 
-<p>Anyways, Jeff's article is not about that. It's about a little nifty tool that will allow you to see other person type. It's very simple you give your interviewee a link and open a link in your browser and can see everything the other person types with a couple seconds lag. This tool is definitely nice, but hell, why not just use google wave? It's easy, many technical people should already have it. If the programmer applying doesn't have it and doesn't have a good reason as to why this is so you should think twice about putting further time and effort in the interview process.</p>
+<p>Easy, right? Go get them!</p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/new-england-blackberry-developer-meetup-group-first-meetup-notes">
-        <!-- <span class=post-title-accent>></span> -->New England BlackBerry Developer Meetup Group - First Meetup Notes
+      <a href="/how-to-speed-up-eclipse-on-os-x-10-6-snow-leopard">
+        <!-- <span class=post-title-accent>></span> -->How to Speed Up Eclipse on OS X 10.6 Snow Leopard
       </a>
     </h1>
 
-    <span class="post-date">17 Mar 2010</span>
+    <span class="post-date">28 May 2010</span>
     <hr>
 
-    <p>Last night I have attended local <a href="http://www.meetup.com/New-England-BlackBerry-Developers/" target="_blank">New England BlackBerry developer meetup group</a>. It was a great event with nice turnout of about 50 developers with special guest - Mike Kirkup - director of developer relations at RIM.</p>
+    <p>If you've been experiencing horrendous performance of Eclipse on OS X, or maybe you even did not know that Eclipse actually can run very fast, you'd be surprised to learn that apparently it is very easy to make Eclipse run 4-5 times faster  on OS X with proper settings to your eclipse.ini file.</p>
 
-<p>Mike is a great speaker and a great guy in general. BlackBerry developers are truly blessed with Mike in that sense. So much has been done to ease up on the [intlink id="75" type="post"] hurdles of BlackBerry development[/intlink] recently that it is becoming cool to be BlackBerry developer once again.</p>
+<p style="text-align: left;">First I will give you a bit of  background. If you want the gist of it or how to make it fly - just go the end of the post.  So a few days ago, PSU fried on my main desktop development machine. It is a newer Quad Core i5 2.6 machine with 4GB 1066Mhz memory and a standard 7200 RPM drive. Since the machine is dead and I am waiting for a replacement power supply, I had to move to my new and shiny MacBook Pro, which I have recently purchased and which is from the latest batch of the updated MacBooks and is quite powerful. It is also i5 (only dual core though) with the same 4GB of 1066Mhz memory and 5400 HD.</p>
 
-<p>The meetup was hosted by a local software development company - <a href="http://www.softartisans.com" target="_blank">SoftArtisans</a>. They develop <a href="http://silverdust.softartisans.com">SharePoint solutions for BlackBerry</a>.</p>
+<p style="text-align: center;"><a src="http://inteist.com/media/Screen-shot-2010-05-28-at-1.41.40-AM.png"><img class="size-full wp-image-242 aligncenter" style="border: 0px initial initial;" title="Screen shot 2010-05-28 at 1.41.40 AM" src="http://inteist.com/media/Screen-shot-2010-05-28-at-1.41.40-AM.png" alt="" width="242" height="62" /></a></p>
 
-<p>Mike was give the stage and he went over the BlackBerry super app concept which was similar to the [intlink id="136" type="post"]BlackBerry super app concept webcast[/intlink] he gave recently but a little different of course with some stuff oriented more towards developers.</p>
+<p style="text-align: left;">So, yeah, I would say that the systems are pretty close right. Nevertheless, working with Eclipse on OS X felt horrendously slow! I had already noticed this nuance in the past and I thought that the Eclipse is just not meant to fly on Mac-s (oh well...), especially when there are so many different distributions for OS X, it signals that the project is in a shifting phase basically (it is shifting from Carbon to Cocoa) and that you should expect all kinds of problems.</p>
 
-<p>The highlight was of course the free panel Q&amp;A session which was afterwards. Mike, as usual, did a very nice job answering the questions of the many developers who brought up interesting questions.</p>
+<p><!--more--><br />
+I bet many people not having experience with Eclipse on other platforms would think this is normal. It's Java, so it is supposed to be slow and they just go and hate it and sing how X-Code is great. The thing is, they probably never experienced the full potential of Eclipse - a pity. Hopefully this post can change your mind and help you experience the wonderful world of Eclipse (ok, I am being a little dramatic here). Ok, let's dive into that.</p>
 
-<h3>Upcoming Products</h3>
+<p style="text-align: left;">&nbsp;</p>
 
-<ul>
-<li><a href="http://na.blackberry.com/eng/services/business/server/express/" target="_blank">BES Express</a> (or BESX) which is the <strong>free</strong>, striped down version of the BES server. This will allow smaller businesses to put their employees on BESX without hesitation which originated from the costs of licensing associated with putting employees on BES.</li>
-<li>[intlink id="168" type="post"]Upcoming WebKit browser[/intlink] which will be <strong>blazing fast</strong> and <strong>super blazing fast</strong> for JavaScript.</li>
-<li>There will be no iPad like device.</li>
-</ul>
+<p style="text-align: left;">Since I am pretty heavy user of Eclipse [intlink id="75" type="post"]developing both for Android and BlackBerry[/intlink] the slowness of Eclipse quickly grew on me and I started looking for ways to try and do something about it.</p>
 
-<blockquote><p>"No iPad, no BlackPad, BluePad, RedPad etc..."</p></blockquote>
+<p style="text-align: left;">&nbsp;</p>
 
-<ul>
-<li>Advertising APIs. Right now RIM is conducting a closed beta with their partners and should be soon available to all independent developers. There is no cap on the volume, meaning pretty much anyone would be able to integrate advertising in their apps.</li>
-<li><a href="http://devblog.blackberry.com/2010/03/introducing-blackberry-push-services-to-developers/" target="_blank">Push APIs</a> (well this is not an upcoming event actually, it went live today at 9am). Push API is available to everyone now and is <strong>free!</strong></li>
-<li>App World 2.0 will soon be launched. The next version of the app world will support not only the PayPal but also the carrier and credit cards. The share of developers will most likely be different across all the optios and across the different network operators as well. PayPal option will remain 20/80% split with 80% going to the developers.</li>
-<li>In a few weeks the new Eclipse plugin for BlackBerry development version 1.1 should be released, which will address many issues existing in the older 1.0 browser. The official release of 1.1 which should go out of beta will be fully supporting 64 bit systems.</li>
-</ul>
+<p style="text-align: left;">In the past while experiencing slowness with Eclipse on Windows, I played with the memory allocation within it to increase the memory cap and this usually helped a bit. Being desperate, I decided to try that and off I went to try that. But, that was not so easy. I wandered a bit around the eclipse folder looking for the location of the eclipse.ini but it was nowhere to be found. So I tried searching for it - nop, no luck there as well.</p>
 
-<h3>Upcoming Events</h3>
+<p style="text-align: left;"><strong>Apparently eclipse.ini is packaged </strong>inside the eclipse app so what you need to do is to get inside the eclipse.app package</p>
 
-<ul>
-<li>Very soon we would have "fast simulator experience" so painful to many developers that when announced, it was followed by applause storm. So fast simulator experience means no more restarting the simulator to load the newly compiled version. (Yey!)</li>
-<li>More aggressive promotion of the App World. Mike mentioned that RIM intentionally kept the App World low profile for the first year letting the carriers figure out their distribution strategies.</li>
-<li>Super App competition. The super app competition will be carried out with a different prize distribution model than previously. RIM decided instead of rewarding a few leading application with big bonuses, reward more developers with moderate bonuses. Mike mentioned that they expect 3000-4000 apps submitted to the contest (both new and existing apps can be submitted) and if your app passes the first criteria of actually being a super app, then you are already entitled to something. Mike threw out "a free device" in the air but I guess it is not yet decided. They may go with a free device or maybe discounted developer conference or maybe we could choose. Let us know in the comments what <strong>you </strong>would prefer. The prizes will be handed out at BB Dev Con in San-Francisco at fall and the submission deadline will most likely be July 1-st but this is not confirmed yet.</li>
-</ul>
+<p style="text-align: center;"><img class="size-full wp-image-244 aligncenter" style="border: 0px initial initial;" title="Opening Eclipse app package contents on OS X 10.6" src="http://inteist.com/media/Screen-shot-2010-05-28-at-2.58.31-AM.png.jpg" alt="" width="356" height="114" /></p>
 
-<p>The painful question of over the air (OTA) OS upgrade was raised and Mike said that carriers feel  fairly confident with pushing OTA OS update starting with OS 4.6 since 4.5 being the first OS where OTA OS was introduced had some issues and bugs. He mentioned that from carrier's experience OTA updates have a very high conversion rate. In the 80%-s while even the through browser+USB update is less than 20% conversion rate. Until most of the devices are 4.6 and up and carriers are more aggressive pushing updates to the devices, we will be stuck with the need to support older devices as old as 4.2.1. Which leads us to further interesting figures:</p>
+<p style="text-align: left;">after that edit <strong>eclipse.ini </strong>which you will find in Contents-&gt;MacOS folder<strong> </strong>and increase the memory limits for the following directives:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">-Xms***m
+-Xmx***m
+</code></pre></div>
+<p>replace the *** with whatever memory you think should work for you as a rule of the thumb, just try to double it at first.</p>
 
-<div id="_mcePaste">as of October 2009 the OS distribution is as follows:</div>
+<p>While this is good, this is NOT what will actually make your Eclipse fly. The most important part here is the:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">-Dosgi.requiredJavaVersion<span class="o">=</span>1.5
+</code></pre></div>
+<p>now, you have to switch that to 1.6 and make it</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">-Dosgi.requiredJavaVersion<span class="o">=</span>1.6
+</code></pre></div>
+<p>
+Now THAT will make your Eclipse really shine! Just make sure you actually HAVE the JDK 1.6 installed. You can validate this by running "<em>java -version</em>" in the terminal. If you got 10.6 - Snow Leopard though, you are most likely covered.</p>
 
-<div id="_mcePaste">4.2.1       97%</div>
+<p>
+If you already had that in the eclipse.ini file - well, unfortunately this already has been optimized for you and the only thing you can try from there that we know of is to play with the memmory limits.</p>
 
-<div id="_mcePaste">4.5         50-60%   - over the air update</div>
-
-<div id="_mcePaste">4.6         30%</div>
-
-<div id="_mcePaste">4.7         15%</div>
-
-<div id="_mcePaste">5.0         5-6%</div>
-
-<div>meaning supporting 4.2.1 will get you almost all the devices, while jumping to 4.5 and up will only give you about 50-60% and by going further up to 4.6, you will loose up to 30% of devices (this is due to huge number of older Curves and Pearls).</div>
-
-<div>I will be wrapping up since this post is already quite long. Leave your thought in the comments!</div>
-
-<h3>Update</h3>
-
-<p>You can read additional notes summary at <a href="http://chriswongdevblog.blogspot.com/2010/03/notes-from-blackberry-meetup.html" target="_blank">Chris Wong's blog</a></p>
-
-<p>You can download the <a src="http://inteist.com/media/Super-Apps-Webcast-February-2010v2.pdf">Super Apps slides by Mike Kirkup </a>which were presented at the meetup.</p>
+<p>
+<strong>If you know any other tips and tricks, please let me know in the comments!</strong></p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blackberry-upcoming-webkit-browser">
-        <!-- <span class=post-title-accent>></span> -->BlackBerry Upcoming WebKit Browser
+      <a href="/motorola-droid-driver-for-windows-7-64-bit">
+        <!-- <span class=post-title-accent>></span> -->Motorola Droid Driver for Windows 7 64 Bit
       </a>
     </h1>
 
-    <span class="post-date">17 Mar 2010</span>
+    <span class="post-date">23 May 2010</span>
     <hr>
 
-    <p>RIM has unveiled the new upcoming BlackBerry browser based on the new WebKit engine.</p>
+    <p>I've got the Motorola Droid from Google through their device seeding program a while ago. Which is nice although Nexus One would be much better since then I would have been actually using as my phone. The Droid has to be tied to Verizon and I am a T-Mobile lad all the way.</p>
 
-<p>At the New England BlackBerry meetup, Mike Kirkup mentioned that they are doing some neat tricks with precompiling JavaScript through MDS which makes the JavaScript <strong>blazing fast</strong>. You can see it for yourself in the embedded video.</p>
+<p>Anyways, I've tried a few times to get adb debugging talk to my Droid on my Win7 64 bit and I could not get it to work for a long long time. I tried to search around for the solution, but none of the drivers that I've found worked until today I started the search again and found the Win7 64 bit Droid drivers from Motorola <a href="http://developer.motorola.com/docstools/USB_Drivers/Handset_USB_Driver_64/" target="_blank">here</a> which worked perfectly fine!</p>
+
+<p>Don't forget to go to "Settings-&gt;Applications-&gt;Development" and enable "USB Debugging"</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/chrome-os-and-the-ipad">
+        <!-- <span class=post-title-accent>></span> -->Chrome OS and the iPad
+      </a>
+    </h1>
+
+    <span class="post-date">13 May 2010</span>
+    <hr>
+
+    <p>People that are fascinated by Apple usually don't look around for other things, they like the polished products that just work. But for other people and technologists it's not like that. We usually are looking for the best tool for the job. So my point here is that not many Apple fans even heard of Chrome OS. Yes, they probably heard about Chrome browser (and this was <strong>very</strong> smart move by Google by the way, first to release the browser by the same name for many reasons, but one reason is that people are getting used to the Chrome web experience).</p>
+
+<p>Anyways, the question that I really wanted to address here is: was the development of Chrome OS and the Chromium project in general a response to the iPhone OS thread and the coming (now released) iPad or maybe it was exactly the other way around?</p>
+
+<p>So Google started <strong>actively</strong> working on the Android OS about 2 years ago while iPhone was already available but doing the first baby steps. The pace of development of Android was quite fast and at the moment these rival operating systems  are somewhat comparable in futures stability and usability. Some are lacking on Android and some are lacking on the iPhone. Last year Google started working on the Chrome OS which is essentially an operating system inside the browser and just about a month ago Apple released the iPad to the public. While there are already a few tablets running on spin offs of Android OS, Google is rumored to be soon releasing its own tablet and what it will run is yet unclear.</p>
+
+<p>Anyway however, it seems that Google is targeting the same space that the iPad does right now with its Chrome OS. Simple operating system. Or is it an operating system and can it be compared with the iPhone OS which is actually an operating system. Very limited at that but still. If the Chrome OS would be the strictly in browser OS it is questionable how it will stack up against iPad. Users are used to having free access to their file system and being able to install software rather than use webapps. In that sense the iPad is revolutionizing and laying out the ground for the change of computing paradigm we got used to so far.</p>
+
+<p>It is not clear what came first (as the concept) and what was developed first but it would be sure very interesting to watch this evolution of computing in the near future.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/how-to-use-apache-2-0-in-commercial-products-explained-in-simple-terms">
+        <!-- <span class=post-title-accent>></span> -->How to Use Apache 2.0 License in Commercial Products, Explained in Simple Terms
+      </a>
+    </h1>
+
+    <span class="post-date">05 May 2010</span>
+    <hr>
+
+    <p>If you were wondering whether you can use  apache licensed code in your commercial applications and what do you need to do in order to comply with the license here's the unofficial simple ans short answer.</p>
+
+<p><strong>You can use Apache 2.0 licensed source code in your project as long as you include the copy of the license in your distribution and provide attribution in an applicable way in your distribution. </strong></p>
+
+<p>The slightly lengthier and detailed (but still very simple explanation) is below, taken from <a href="http://www.apache.org/foundation/licence-FAQ.html" target="_blank">Apache license FAQ</a></p>
+
+<p><!--more-->Describing legal documents in non-legalese is fraught with potential     for misinterpretation.  Notwithstanding the text that follows, the     actual text of the <a href="http://www.apache.org/foundation/licence-FAQ.html#License">license</a> itself is legally     binding and authoritative.</p>
+
+<p>That said, here's what the Apache license says in layman's terms:</p>
+
+<p>It <strong>allows</strong> you to:</p>
+
+<ul>
+<li>freely download and use Apache software, in whole or       in part, for personal, company internal, or commercial purposes;</li>
+<li>use Apache software in packages or distributions that       you create.</li>
+</ul>
+
+<p>It <strong>forbids</strong> you to:</p>
+
+<ul>
+<li>redistribute any piece of Apache-originated software       without proper attribution;</li>
+<li>use any marks owned by The Apache Software Foundation in       any way that might state or imply that the Foundation endorses       your distribution;</li>
+<li>use any marks owned by The Apache Software Foundation in       any way that might state or imply that you created the Apache       software in question.</li>
+</ul>
+
+<p>It <strong>requires</strong> you to:</p>
+
+<ul>
+<li>include a copy of the <a href="http://www.apache.org/foundation/licence-FAQ.html#License">license</a> in any       redistribution you may make that includes Apache software;</li>
+<li>provide clear attribution to The Apache Software Foundation       for any distributions that include Apache software.</li>
+</ul>
+
+<p>It <strong>does not require</strong> you to:</p>
+
+<ul>
+<li>include the source of the Apache software itself, or of any       modifications you may have made to it, in any redistribution       you may assemble that includes it;</li>
+<li>submit changes that you make to the software back to the  Apache       Software Foundation (though such feedback <em>is</em> encouraged).</li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/using-amazon-s3-to-serve-jad-files-for-blackberry-ota-distribution">
+        <!-- <span class=post-title-accent>></span> -->Using Amazon S3 to Serve JAD Files for BlackBerry OTA Distribution
+      </a>
+    </h1>
+
+    <span class="post-date">04 Apr 2010</span>
+    <hr>
+
+    <p>If you don't want the preamble of why I wanted to serve JAD files from Amazon S3, skip to the second paragraph.</p>
+
+<p>I have recently came across the need to push OTA update of the <a href="http://www.comitic.com/blackberry/dailyhoroscope-application/" target="_blank">DailyHoroscope application for BlackBerry</a>. I conjectured that OTA updates have different behavior and thus different impact on the web server. There are still many people using their smartphones in general and BlackBerries in particular over the slower EDGE connections as opposed to 3G, not to mention 4G and/or WiMax. So to download 300K file over EDGE connection in the real usage example can take anywhere between 10 seconds to couple minutes. All this time the webserver's thread serving this specific client will remain running. So it seems like you (or rather your server) can be in a nasty situation when 1000 users simultaneously or almost simultaneously decide to do the OTA update. Also quick calculation with Amazon WS calculator shows that serving files from S3 would be rather cheap even comparing to renting a cheap VPS for that purpose. My estimate was that the whole upgrade process (considering the fact that almost all the users update from S3) will cost me about $15. And this is independent of the time span. For $15 you could get a very cheap VPS for one month (if you are lucky). So it seemed like a no brainer. It indeed was until I faced a few problems with setting this up which I will cover here so that you don't have to spend much time looking for solutions if you want to do the same.</p>
+
+<p>Setting up S3 is a breeze. Using it - not so much. It is just like any other service pretty much - when you want to sign up and call sales you are answered immediately but if you have a problem and need customer service, well, you can be on hold quite a while. If you have Amazon account already set up, you can use this account. You will have the option to opt for the payment to any of the payment options (now it seems that this is only credit cards) already on file with Amazon or you could add a new credit card so that your S3 bill is billed separately.</p>
+
+<p><!--more--></p>
+
+<p>When you signed up, you are almost ready to begin using S3. Once you receive confirmation email which can take a few minutes until your request is processed and billing information verified, you are set to go.</p>
+
+<ul>
+<li>Open your <a href="http://aws.amazon.com/account/" target="_blank">Amazon account dashboard</a> and login with your Amazon account you had or just created</li>
+<li>Click on <strong>Security Credentials</strong></li>
+<li>Under the <strong>Access Credentials</strong> table, look at the first tab - <strong>Access Keys</strong></li>
+<li>Next to your access key, will be a column <strong>Secret Access Key </strong>which will have the secret key hidden from the screen.</li>
+<li>Press the <strong>Show</strong> and your secret access key will be revealed</li>
+</ul>
+
+<p>Now you can use this information to log in to S3 and start uploading files. To access S3 you can use S3Fox from any platform since it is FireFox plugin. You can use <a href="http://cyberduck.ch/" target="_blank">CyberDuck </a>if you are on Mac which is an excellent free general purpose FTP client which also supports WebDav and SFTP. If you are on Windows, there is also free and feature rich client <a href="http://cloudberrylab.com/?page=cloudberry-explorer-amazon-s3" target="_blank">CloudBerry</a>. S3Fox is very nice and fast and you do not have to install anything on the system, only plugin for FireFox, but I will be using CloudBerry since we will need to set custom Content-Type for the JAD and COD files and CloudBerry is more feature rich than S3Fox.</p>
+
+<ul>
+<li>Open CloudBerry</li>
+<li><strong>Enter your credentials</strong> and open your S3 account</li>
+<li><strong>Create a bucket</strong> - it has to have unique system wide name like a domain name (actually subdomain, because after it is created it is references by http://yourUniqueName.s3.amazonaws.com)</li>
+<li>Enter into the bucket and <strong>create folders, or just upload the files</strong> you want to serve. If you like me want to serve OTA BlackBerry application, you probably want to create a separate folder for each release</li>
+<li>After you create the folder, use the ACL (access control levels/list) menu button <a src="http://inteist.com/media/cloudberry-acl-button.png"><img class="alignnone size-full wp-image-213" style="border: 0pt none;" title="cloudberry-acl-button" src="http://inteist.com/media/cloudberry-acl-button.png" alt="" width="43" height="30" /></a>to open the ACL controls</li>
+</ul>
+
+<p style="text-align: center;"><a src="http://inteist.com/media/cloudberry-acl-controls1.png"><img class="size-full wp-image-210 aligncenter" style="border: 0pt none;" title="cloudberry-acl-controls" src="http://inteist.com/media/cloudberry-acl-controls1.png" alt="" width="469" height="129" /></a></p>
+
+<p style="text-align: center;">
+<ul>
+<li>Using the ACL controls, give <strong>"Read" access to "All Users</strong>" (note that if you place  check mark on the bottom "Apply for all subfolders and files" the  permissions will propagate down the tree)</li>
+</ul>
+<p>Now the whole world can read the files you uploaded. The problem with BlackBerry OTA distribution is that Amazon does not send the right mime-types in the HTML Content-type header. And this is something that you will need to get fixed before people can actually install your application over the air directly from S3.</p>
+
+<p>The right content types for the the JAD and COD are:</p>
+
+<ul>
+<li>
+<div>jad -  <strong> text/vnd.sun.j2me.app-descriptor</strong></div>
+</li>
+<li>
+<div>cod - <strong>application/vnd.rim.cod</strong></div>
+</li>
+</ul>
+
+<p>So using the custom HTTP headers menu button <a src="http://inteist.com/media/cloudberry-custom-http-headers-for-s3-menu-butto.png"><img class="alignnone size-full wp-image-216" style="border: 0pt none;" title="cloudberry-custom-http-headers-for-s3-menu-butto" src="http://inteist.com/media/cloudberry-custom-http-headers-for-s3-menu-butto.png" alt="" width="131" height="32" /></a> we will be setting those types for JAD file and <strong>all </strong>the COD files respectively.</p>
+
+<ul>
+<li>Select your JAD file and click on "Set HTTP Headers" button</li>
+</ul>
+
+<p>You will get the custom HTTP headers dialog:</p>
+
+<p style="text-align: center;"><a src="http://inteist.com/media/cloudberry-custom-http-headers-dialog.png"><img class="size-full wp-image-217 aligncenter" style="border: 0pt none;" title="cloudberry-custom-http-headers-dialog" src="http://inteist.com/media/cloudberry-custom-http-headers-dialog.png" alt="" width="507" height="198" /></a></p>
+
+<ul>
+<li>Select the <strong>"Content-Type"</strong> field and replace it with the <strong>text/vnd.sun.j2me.app-descriptor</strong> for the value</li>
+</ul>
+
+<p>Now you can repeat the above step for each COD file individually, or you can select all the COD files and set the headers at once but then you would need to add the <strong>"Content-Type" </strong>header manually for the right COD mime type - <strong>application/vnd.rim.cod</strong>.<strong> </strong>Just use "Add" and in the HTTP-Header enter "Content-Type" and in the Value enter "application/vnd.rim.cod". You should see something like the following dialog</p>
+
+<p style="text-align: center;"><a src="http://inteist.com/media/cloudberry-custom-http-headers-dialog-manual-add-filled.png"><img class="size-full wp-image-220 aligncenter" style="border: 0pt none;" title="cloudberry-custom-http-headers-dialog-manual-add-filled" src="http://inteist.com/media/cloudberry-custom-http-headers-dialog-manual-add-filled.png" alt="" width="504" height="442" /></a></p>
+
+<p><strong>***IMPORTANT to check the "Keep existing headers" </strong>or you will loose all your default defined headers which is not good in most cases.</p>
+
+<p>That's it, you are DONE! Check that you did everything right by pointing your BB browser to http://yourUniqueName.s3.amazonaws.com/yourReleaseFolder/AppName.jad and make sure that you can install the application from there. If you did everything right it should work.</p>
+
+<p>Overall S3 seems like a very nice (and apparently very cheap) service and anyone who serves lots of static content should consider using it for that purpose. But not everything seems so pink in the world of S3 and I am sure you will face many other small problems and nuances while setting it up as I did for my task. But hopefully if serving BlackBerry application is all you want, you should now have everything to get you started.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blackberry-eclipse-plugin-1-1-will-fix-some-of-the-annoying-problems">
+        <!-- <span class=post-title-accent>></span> -->BlackBerry Eclipse Plugin 1.1 Will Fix Some of the Annoying Problems
+      </a>
+    </h1>
+
+    <span class="post-date">29 Mar 2010</span>
+    <hr>
+
+    <p>The next version of the BlackBerry Eclipse plugin will fix most of the [intlink id="75" type="post"]annoying things about blackberry development[/intlink].</p>
+
+<p>Some of the most important things are:<strong></strong></p>
+
+<p><strong>1) No need to restart emulator for new build to be loaded to the emulator (Hallelujah!!!)</strong></p>
+
+<p>The<strong> </strong>new build should be just loaded onto the already started simulator, pretty much as on Android and iPhone.</p>
+
+<p><strong>2) Ability to add external libraries i.e. <em>*.jar</em> files to the project</strong></p>
+
+<p>This is actually pretty peculiar since RIM was pushing hard 3-d party (external library) integration as one of important concepts and obviously it would be very beneficial for the BlackBerry ecosystem but if you did not want to use JDE, there was pretty much no clean way to add external library. That is until the 1.1 plugin comes out from beta, or at least that what was promised at the [intlink id="167" type="post"]New England BlackBerry developers meetup[/intlink].</p>
+
+<p><strong>3) The BlackBerry plugin would follow the "Eclipse way"</strong></p>
+
+<p>The 1.1 plugin is very different from previous version. Instead of following the "JDE way" it will be much more the natural "Eclipse way". This is both good and bad. This is very good for developers that have experience with Eclipse and just now start to develop for BlackBerry. This will however be somewhat painful for the seasoned developers who got used to the old plugin and will need to discover many things from scratch. (I personally felt quite lost with the new 1.1 plugin and decided to stick with the old one until 1.1 comes out of beta).</p>
+
+<p>You can download the beta of 1.1 from <a href="http://na.blackberry.com/eng/developers/devbetasoftware/javaplugin.jsp" target="_blank">here</a> (you would need to have BlackBerry developer account which is <strong>free</strong> and can be obtained with simple sign up immediately)</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/super-app-webcast-questions-answered-follow-up">
+        <!-- <span class=post-title-accent>></span> -->Super App Webcast Q&A Follow-Up
+      </a>
+    </h1>
+
+    <span class="post-date">29 Mar 2010</span>
+    <hr>
+
+    <p>During the [intlink id="136" type="post"]Super App webcast[/intlink] Mike Kirkup covered many questions from the attendees. I have gathered many of those in the webcast summary. He did not get through all of the questions and promised to answer all of the questions on <a href="http://supportforums.blackberry.com/t5/BlackBerry-Development/ct-p/BlackBerryDevelopment" target="_blank">blackberry development forum</a>. He did just that and here is the Q&amp;A extracted:</p>
+
+<p><strong>[Q] The problem I found with a super app that was tightly  integrated with the address book is that people were looking to see an  icon and not something that was just part of the existing BlackBerry UI.</strong></p>
+
+<p>[A] A good point.  Many users will still expect a simple icon for the  application whether only to provide information on how to leverage the  application or how to manipulate settings.  Fixmo is a really good  example of this point.</p>
+
+<p><strong>[Q] Is there a way for my app to get notified when new  notifications are shown on the device?</strong></p>
+
+<p>[A] Unfortunately, no.  But this sounds like a great feature request  you should log via the <a rel="nofollow" href="http://www.blackberry.com/developers/issuetracker" target="_self">BlackBerry Issue Tracker</a>.</p>
+
+<p><strong>[Q] Is there a way to include full camera control in the  application?</strong></p>
+
+<p>[A] Yes.  Check out JSR 135 (MMAPI) for more information on how to  include the camera field within your application including the ability  to modify zoom and flash settings.</p>
+
+<p><strong>[Q] With the definition of a "Super App" being one that you  cannot live without, can a game be a super app?</strong></p>
+
+<p>[A] Great question!  Yes, a game definitely can be a "Super App" or  take on many of the characteristics of a Super App including being  notification driven, contextual (even location based), integrated with  other applications and so on.  It isn't hard to imagine having a game  that you love so much that you can't live without it.</p>
+
+<p><strong>[Q] Can I make a Super App by developing a BlackBerry Widget?</strong></p>
+
+<p>[A] Yes, definitely.  One of the most important attributes of the our  Widget technology is that you can fully integrate your Widget into all  of the same APIs that are available to Java applications whether exposed  already through Javascript APIs or through your ability to write  Javascript to Java APIs.</p>
+
+<p><strong>[Q] Do you plan on setting up a program to certify  applications as Super Apps?</strong></p>
+
+<p>[A] No, we do not currently have any plans for certifying  applications as a Super App today.  The concept here is to help people  really understand not only the capabilities of the BlackBerry platform  but also the possibilities on better engaging your users.</p>
+
+<p><strong>[Q] We have developed a collaboration application which works  on a "pull" basis.  How can we leverage push?</strong></p>
+
+<p>[A] Check out our newly launched <a rel="nofollow" href="http://na.blackberry.com/eng/developers/javaappdev/pushapi.jsp" target="_self">Push Services page</a> for more  information on how you can start leveraging push in your application  whether for the enterprise or consumers.</p>
+
+<p><strong>[Q] Is it possible to add a custom menu item in any third  party application? </strong></p>
+
+<p>[A] Yes, although not in a granular fashion today.  As part of the  ApplicationMenuItem API you can specify that you want your menu item  included in all applications on the device but you do not get to pick  which applications if you don't want all apps.  Can you submit a feature  request in the <a rel="nofollow" href="http://www.blackberry.com/developers/issuetracker" target="_self">Developer Issue Tracker</a> if you think this is a good  use case.</p>
+
+<p><strong>[Q] Suppose the application flow is such that screen 1 pushes  screen 2, screen 2 pushes screen 3 and from screen 3 the user needs to  go to screen 1.  Should the application push screen 1 again or pop  screens to get to screen1?</strong></p>
+
+<p>[A] You should definitely maintain the proper ordering of the screens  on the stack for the user such that your application will automatically  pop off the top screen on the stack when the user presses the escape  key.  So, in this case, it depends on your ultimate goal of the screens.</p>
+
+<p><strong>[Q] This is a great presentation but it gives very little to  seasoned developers.  Will you have additional presentations with more  details and more code samples? (Editor: <em>this, I think is actually my question slightly rephrased</em>)<br />
+</strong></p>
+
+<p>[A] Yes, definitely.  This is the introduction to the concept of  Super Apps and you will see additional webinar presentations that go  into substantially more detail on all of the key aspects of bringing  Super Apps characteristics to your application.  The Big Ideas, Little  Screens UI Webinar from Brian this month is a perfect example of more  involved webinars.</p>
+
+<p><strong>[Q] What are the OS or device requirements for the Javascript  examples provided?</strong></p>
+
+<p>[A] These are part of the new <a rel="nofollow" href="http://na.blackberry.com/eng/developers/devbetasoftware/widgetsdk.jsp" target="_self">BlackBerry Widget technology</a> and  require v5.0 handheld software.</p>
+
+<p><strong>[Q] You mentioned the Super Apps website.  Where is that?</strong></p>
+
+<p>[A] <a rel="nofollow" href="http://www.blackberry.com/developers/superapps" target="_self">www.blackberry.com/developers/superapps</a></p>
+
+<p>He also promised to keep posting answers so see the original forum thread <a href="http://supportforums.blackberry.com/t5/Java-Development/BlackBerry-Super-Apps-Webinar-Follow-up/td-p/466845" target="_blank">here</a> for more information</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/building-secure-mobile-applications-att-free-webcast">
+        <!-- <span class=post-title-accent>></span> -->Building Secure Mobile Applications - AT&T Free Webcast
+      </a>
+    </h1>
+
+    <span class="post-date">29 Mar 2010</span>
+    <hr>
+
+    <p>AT&amp;T will host a webcast about building secure mobile applications on April 1-st. It's interesting to see how the mobile ecosystem is going crazy right now, every brand  trying to get as much people involved as possible.</p>
+
+<p>The <a href="https://developer.motorola.com/" target="_blank">MotoDev</a>, <a href="http://developer.verizon.com/jsps/devCenters/wireless/index.jsp" target="_blank">Verizon Developers portal</a> and <a href="http://developer.att.com/" target="_blank">AT&amp;T developer center</a> being promoted to potential developers very aggressively lately. Those companies (carriers, manufacturers etc...) understand that the platform value shifted to having quality consumer applications. Those, supplied by small companies and <a href="http://www.comitic.com" target="_blank">indie mobile developers</a>.</p>
+
+<p><strong>The webcast  info: </strong></p>
+
+<p><strong>Who Should Attend</strong>:<br />
+Developers who are building applications with networking or messaging  functionality.</p>
+
+<p><strong>When:</strong><br />
+Thursday, April 1, 10:00-11:00 AM Pacific Time</p>
+
+<p><strong>What you will learn:</strong></p>
+
+<ul>
+<li>Evaluate threats to your mobile applications</li>
+<li>Prioritize security features that should be enabled in your  applications</li>
+<li>Minimize risks to your applications</li>
+</ul>
+
+<p>You can <a href="http://developer.att.com/developer/index.jsp?page=webcast&amp;id=6.3_v1_9700346" target="_blank">sign up here for the webcast</a></p>
+
+<p>As an added bonus AT&amp;T smartphone will get drawn between participants in the webcast.</p>
+
+<blockquote><p>
+All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be notified via email after the Webcast.</p></blockquote>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/dont-be-afraid-to-push-the-envelope">
+        <!-- <span class=post-title-accent>></span> -->Don't Be Afraid to Push the Envelope
+      </a>
+    </h1>
+
+    <span class="post-date">28 Mar 2010</span>
+    <hr>
+
+    <p>Another interesting short excerpt from the 99% conference. With the summary that we should not be afraid to push the envelope. Everyone - creative artists and more technical <span style="text-decoration: line-through;">people</span> artists.</p>
 
 <p><center><br />
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="90%" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/FIbHsrCiez8&amp;hl=en_US&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="90%" height="385" src="http://www.youtube.com/v/FIbHsrCiez8&amp;hl=en_US&amp;fs=1&amp;" allowscriptaccess="always" allowfullscreen="true"></embed></object><br />
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="510" height="380" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=10437697&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="510" height="380" src="http://vimeo.com/moogaloop.swf?clip_id=10437697&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=00ADEF&amp;fullscreen=1" allowscriptaccess="always" allowfullscreen="true"></embed></object><br />
 </center></p>
-
-<p>The new WebKit browser will be available in the next OS release but the upgrade will be limited on per device manner since WebKit browser is quite resource demanding.</p>
-
-<p>Anyways, it's great news and good job RIM!</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/firefox-3-6-fix-the-tab-order-to-open-at-the-end-of-the-tabs">
-        <!-- <span class=post-title-accent>></span> -->Firefox 3.6 Fix the Tab Order to Open at the End of the Tabs
-      </a>
-    </h1>
-
-    <span class="post-date">13 Mar 2010</span>
-    <hr>
-
-    <p>Just upgraded to Firefox 3.6 and I am a little annoyed by the new "feature" of tabs opening next to the tab where you open the new tab from. While this might be convenient to some people, I got used to the "old" way of handling tabs and find myself constantly wondering where this new tab is. I might give it a few more days to see whether I get used to it but in case you are annoyed by that too and want to "fix" this here is how you can disable the new “Insert Related Tab  After Current” tweak in Firefox 3.6.</p>
-
-<ul>
-<li>Type<strong> about:config</strong> in the address bar. Then, if needed click the  “I’ll be careful, I promise!” button.</li>
-<li>In the filter box – type in: <strong><em>tabs.insertRelatedAfterCurrent</em></strong>
-<ul></ul>
-</li>
-<li>Right-click that <strong>about:config</strong> entry, and choose “Toggle”</li>
-</ul>
-
-<p>This will convert Firefox back to opening a new tab from a  web page on the far right of the tab bar, rather than right next to the  tab you opened it from.</p>
-
-<p>If you decide that you actually like it and want to switch back, follow these same steps and toggle the “false” back  to “true”.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/successful-people-ship-or-what-makes-successful-enterpreneurs">
-        <!-- <span class=post-title-accent>></span> -->Successful People SHIP
-      </a>
-    </h1>
-
-    <span class="post-date">10 Mar 2010</span>
-    <hr>
-
-    <p>I've seen this video by <a href="http://sethgodin.typepad.com/" target="_blank">Seth Godin</a>, who is without any doubt a great thinker and visioner. This presentation by Seth, besides being very informational and interesting is quite extraordinary as well. I can not remember when I've seen a better presentation lately. Great usage of visuals and associations!</p>
-
-<p><center><br />
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="500" height="350" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=5895898&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=e91c6b&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="500" height="350" src="http://vimeo.com/moogaloop.swf?clip_id=5895898&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=e91c6b&amp;fullscreen=1" allowscriptaccess="always" allowfullscreen="true"></embed></object><br />
-</center></p>
-
-<p>The presentation made me think about people that are successful and people who are not. And this is absolutely true - successful people ship. I've known this for all this time, but this simple 3 words "slogan" so to say never formulated in my head. Intuitively I always felt this but after this presentation it just formed.</p>
-
-<p>Borrowing analogy from Math, shipping is a required condition but not satisfactory, meaning that just shipping you will not necessarily make successful, but if you DO NOT ship you will most definitely NOT be successful.</p>
-
-<p>Again, very inspiring presentation that may be an eye opener for some. Enjoy!</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/what-makes-blackberry-app-a-super-app-summary-of-webcast">
-        <!-- <span class=post-title-accent>></span> -->What Makes Blackberry App a Super App - Summary of Webcast
-      </a>
-    </h1>
-
-    <span class="post-date">25 Feb 2010</span>
-    <hr>
-
-    <div>
-<p>What makes a Blackberry appliactoin to be a super app? This is the question that Mike Kirkup - head of developer relations at RIM tried to answer today in a free webcast. There has been an obsession recently with <a href="http://techcrunch.com/2010/01/07/super-duper-phone/" target="_blank">super phones</a> and super apps as it seems. And why phones and/or apps have to be necessarily super?</p>
-<p>So there seem to be two definitions of super apps according to Mike Kirkup.</p>
-<blockquote><p>If you take the blackberry phone from the user and he misses this app - then it is a super app since it provides an inherent value for the end user.</p></blockquote>
-<p>Another "definition" is more technical - so what are the main components that make a BlackBerry app a super app:</p>
-<ul>
-<li>
-<div>Always on experience</div>
-</li>
-<li>
-<div>Seamless integration with 3d party apps</div>
-</li>
-<li>
-<div>Notification driven</div>
-</li>
-</ul>
-<div>Not sure about you, but I see here a small misconception. On one side Mike says that if the application is extremely useful up to the point where if taken away from the user he will surely miss it but on the other hand there are specific points which actually make an app to be a super app. So what if the app is very useful to many people to the extent that they will surely miss it if taken away such as for example <a href="http://www.androidz.info/2009/07/dailyhoroscope-for-blackberry-officially-worldwide/" target="_blank">DailyHoroscope application for BlackBerry</a>. Because many users of DailyHoroscope application are going crazy and <a href="http://www.comitic.com/dailyhoroscope-recent-downtimes-exlpanation/" target="_blank">flood us with mails</a> in case we experience even minimal downtime. So the application is extremely useful to its users and certainly has value for them but according to the bullet points, DailyHoroscope is not a super app.</div>
-<div>The source of confusion I think is that Mike meant if you take away <strong>BlackBerry </strong>device from the user, then other devices that may have similar apps will not be able to fill the gap. That's what makes any BlackBerry app a <strong>super app</strong> I would guess. The push mechanism and the multitasking and deep integration is something that does not exist on iPhone and/or iPod Touch, but similar things exist on Android and WebOS and Maemo are also actively developed and progressing  towards richer and richer platform.</div>
-<p>So what makes specifically BlackBerry platform a super app enabler platform accodring to RIM? The first and the point which was put most of the emphasis was the “multi-threaded <acronym title="Operating System">OS</acronym> with background apps”. Other enablers mentioned were:</p>
-<ul>
-<li>
-<div>Contextual integration with apps</div>
-</li>
-<li>
-<div>Rich event based notification model that integrates deeply in the system</div>
-</li>
-<li>
-<div>Efficient push services</div>
-</li>
-<li>
-<div>Integrated LBS and Mapping</div>
-</li>
-</ul>
-<p>Mike argued that the possibility of deep native integration allows easier “native” application integration in a cohesive manner into the system. The main point seems to be that since the applications do not have to invent everything from scratch by using built in components/services etc, the applications can deliver unified user experience which lowers the learning curve for the applications and eliminates most of the confusion in mastering a new app.</p>
-<p>Starting from <acronym title="Operating System">OS</acronym> 5.0 RIM introduced (or better say exposed to 3d party developers) much richer built in components such as <strong>autocomplete</strong>, <strong>file picker</strong>, <strong>map field</strong>, <strong>browserfield</strong>, <strong>media player components</strong> (<a href="http://java.sun.com/javame/reference/apis/jsr135/" target="_blank">JSR 135</a> or MMAPI)</p>
-<p>The power of push. Mike mentioned that RIM invented the push and were running it in production for more than 10 years and they know exactly what they are doing. (hear that Apple? haha... ). The push limitation for BIS is 8KB while for BES it is much higher and is specified by BES administrator but is hard limited (by I think 1MB in the older BES versions with much higher limit value in BES 5.0 - I think around 10Mb)</p>
-<p>Overall it was an interesting webcast and Mike did a great job talking about all the things that are great about BlackBerry platform. I personally was a little disappointed since I expected much more technical session.</p>
-<h3 style="text-align: center;">Q/A Session:</h3>
-<p>Q&amp;A session was quite interesting. Mike zipped through more than 200 questions in less than 40 minutes with great and to the point answers. Thank you Mike! I documented the most interesting Q&amp;As to my taste and the ones that are most likely to be interesting to other developers.</p>
-<ul>
-<li>
-<div>When advertising will be available?</div>
-</li>
-<li>
-<div>For BB alliance the beta will be opening very soon. For the rest of the publishers - the time line promised by Mike was approximately 2 month</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Time for application approval?</div>
-</li>
-<li>
-<div>Depends on the type of the application submitted. In general it is about 10 days but they are supposedly getting at about 48 hours time</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Is the PUSH service free for all the developers?</div>
-</li>
-<li>
-<div>It is free for almost all the alliance partners but they are working on releasing it to all the developers</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>All those super apps running in the background will make the devices slow - what about more resources for the devices?</div>
-</li>
-<li>
-<div>Mike said that they will continue to innovate in the device area but the overall answer was extremely vague</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>More tutorials and code?</div>
-</li>
-<li>
-<div>There is a lot of tutorials and code currently available online but it is hard to find it. Current knowledge base will be restructured and reorganized and mostly replaced by developer resources which is some new knowledge base.</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Book for developers from RIM?</div>
-</li>
-<li>
-<div>Working on that with authors and the community RIM is unlikely to release the book of its own.</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Developers competition for super apps? Is it something that is coming?</div>
-</li>
-<li>
-<div>RIM is planning to run super app development challenge in 4 regions very soon and pick up the best super apps and showcase them in BBDevCon in the end of September</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>When 5.0 JDE will be out of Beta?</div>
-</li>
-<li>
-<div>5.0 JDE will be out of beta soon and will finally NOT require simulator restart to push the new build to the simulator (YEY!!! Great news, hopefully Eclipse will mirror that as well)</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>UI tools for <acronym title="Graphical User Interface">GUI</acronym> building</div>
-</li>
-<li>
-<div>Working on UI tool which will be drag and drop tool that will generate Java code for you (That would be a blessing, although knowing how RIM executes development tools projects, the tool might very likely be quite unusable for anything more serious than placing a label field with "Hello World")</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Paid applications worldwide timeline?</div>
-</li>
-<li>
-<div>Worldwide is particularly difficult since RIM is supporting more than 150 countries. Support will be rolled out increasingly</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Is JDE going to be phased out in favor of Eclipe?</div>
-</li>
-<li>
-<div>Not right now. When RIM will feel that Eclipse has matured enough it will happen, but in general Eclipse is destined to replace the JDE</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Are other development platforms going to be supported except Windows?</div>
-</li>
-<li>
-<div>Mac is in the pipeline and support is likely to appear until the end of the year</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>App World is not as advertised as Apple's App Store</div>
-</li>
-<li>
-<div>Rim will start being much more aggressive about promoting App World in the future but this is highly dependent on RIMS relations with carriers since RIM is tightly integrated with carriers and they rub each other's shoulder. (well, of course...)</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Payments through carriers as opposed to payment through PayPal</div>
-</li>
-<li>
-<div>App World 2.0 will have options to pay with either credit card, PayPal or through the carrier</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Is Verizon's store going to compete with App World?</div>
-</li>
-<li>
-<div>Not really as RIM is not competing with any of the 3d party stores like Handango, GetJar etc...</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Are subscription based payments going to be supported in App World 2.0?</div>
-</li>
-<li>
-<div>It is not clear exactly what it is going to be, but some sort of subscription payment will be available</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>What is the best cross framework to use for developing for BB? PhoneGap</div>
-</li>
-<li>
-<div>PhoneGap is great but the apps built with those cross platform frameworks will not be super apps! This is not possible since those frameworks are targeting the lowest common denominator.</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Suggested books?</div>
-</li>
-<li>
-<div>There are 2 good books John Wargo which is more like a reference manual. Anthony Rizk is more smooth read book and is less like reference.</div>
-</li>
-</ul>
-<table border="0" align="center">
-<tbody>
-<tr>
-<td>[amazon-product]0321647424[/amazon-product]</td>
-<td>[amazon-product]1430230150[/amazon-product]</td>
-<td>[amazon-product]1430272252[/amazon-product]</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<div>What is the <acronym title="Operating System">OS</acronym> version to use as the lowest common denominator for development of super apps?</div>
-</li>
-<li>
-<div>4.6</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Can I create a super app with <acronym title="Software Development Kit">SDK</acronym> prior to 4.6</div>
-</li>
-<li>
-<div>Yes you certainly can - many of the capabilities are available in the prior versions of the platforms</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>What is the process of migrating a simple app into a super app?</div>
-</li>
-<li>
-<div>Think about how your simple app can take advantage of all the mentioned components that comprise a super app. Start thinking about your application and you will most likely realize that there are many ways to improve</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Monitoring f uninstall of your own app - will it possible?</div>
-</li>
-<li>
-<div>This is something that should be available in the next version of the next version.</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Are free apps going to be able to use payments for donations?</div>
-</li>
-<li>
-<div>Certainly - using in app payments is possible for that</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Is advertising network be available worldwide?</div>
-</li>
-<li>
-<div>Yes at the launch the advertising service will be available worldwide and then local advertising agencies will be added locally</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>What are you doing for developer training especially in Asia and Africa?</div>
-</li>
-<li>
-<div>RIM will run BlackBerry developer days around the world. Follow our development blog for more details and updates.</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Knowledge base is broken, I can not find any information there</div>
-</li>
-<li>
-<div>The KB will be phased out and replaced with BB resource center</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>When normal developers will be able to use BIS?</div>
-</li>
-<li>
-<div>This is something that RIM will be doing soon</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Samples of a super apps?</div>
-</li>
-<li>
-<div>Poynt app that was highlighted through MWC definitely have several characteristics of a super app</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Are there any security risks with all this deep integration of the apps into the system</div>
-</li>
-<li>
-<div>There is a</div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Where do I start with blackberry super apps development and information</div>
-</li>
-<li>
-<div><a title="http://na.blackberry.com/eng/developers/started/super_apps.jsp" rel="nofollow" href="http://na.blackberry.com/eng/developers/started/super_apps.jsp">http://na.blackberry.com/eng/developers/started/super_apps.jsp</a></div>
-</li>
-</ul>
-<ul>
-<li>
-<div>Any battery drain issues with the application always on interfacing with different system components?</div>
-</li>
-<li>
-<div>RIM will release a simulator that will be able to simulate battery drain of the applications</div>
-</li>
-</ul>
-</div>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/word-wrapped-preformatted-text-in-dokuwiki">
-        <!-- <span class=post-title-accent>></span> -->Word Wrapped Preformatted Text in DokuWiki
-      </a>
-    </h1>
-
-    <span class="post-date">12 Feb 2010</span>
-    <hr>
-
-    <p>I am using <a href="http://www.dokuwiki.org/dokuwiki" target="_blank">DokuWiki</a> quite extensively lately to keep documentation of various things. Using wiki is quite useful in general and some people opt for using local wiki such as <a href="http://wikidpad.sourceforge.net/" target="_blank">WikiPad</a> but for my needs, I opted for online wiki since I often times need to access it from various places. Maybe in the future I will post why I chose DokuWiki and some of my (objective) thoughts about comparison to other wikis and some of my likes and hates about DokuWiki (although there are much more "likes" than "hates" :) ). This post would be short and not about it.</p>
-
-<p>Several times I just wanted to put a plain (preformatted) text into the wiki for whatever reasons but I ran into a problem that DokuWiki isn't really ready to support this. One option is to use &lt;code&gt; but then the lines are not word wrapped and for text it looks just weird. So at those various occasions I tried to search for a solution with little success until I just took xterm plugin and modified it slightly (mostly the style CSS file) which took me about 5 minutes to do  (and took me about 30 minutes to write this post, and the corresponding DokuWiki Plugin page and test the browsers) and now we have a wpre plugin for DokuWiki for word wrapped preformatted text which seem to work on all recent major browsers. You can dowload it from here<a rel="attachment wp-att-125" href="http://www.inteist.com/2010/02/word-wrapped-preformatted-text-in-dokuwiki/wpre/"> <a src="http://inteist.com/media/wpre.zip">wpre plugin for DokuWiki</a></a> (the page on DokuWiki references this file)</p>
-
-<p>Supported browsers:</p>
-
-<p>(I just tested whatever I had installed on my machine and all are pretty recent. I suspect many much older versions should be supported as well)</p>
-
-<ul>
-<li>FireFox 3.5.7</li>
-<li>Safari 4.0.4 for Windows</li>
-<li> Opera 10.10</li>
-<li>Internet Explorer 8.0</li>
-<li> Chrome 4.0</li>
-</ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/google-buzz-a-step-forward-to-google-wave">
-        <!-- <span class=post-title-accent>></span> -->Google Buzz a Step Forward to Google Wave?
-      </a>
-    </h1>
-
-    <span class="post-date">10 Feb 2010</span>
-    <hr>
-
-    <p>Today many people that will open their gmail will be faced with the dialog about Google buzz. This is a new service from Google that in a sense makes your gmail inbox into twitter like account. But it is more than twitter like account. It includes conversations and embeddings from other sites like Picasa, Flickr, Youtube etc...</p>
-
-<p>The interesting question marks that raised in my head are:</p>
-
-<ol>
-<li>Is Google trying to compete with huge success of Twitter? (They are not trying to compete per se, they want the realtime information that's available on Twitter and is not (yet???) available to Google.</li>
-<li>Is this a step forward to <a href="http://wave.google.com" target="_blank">Google Wave</a>?</li>
-</ol>
-
-<p>Maybe it's actually both 1 and 2 and something else that we can not yet see in the big picture :)</p>
-
-<p>Google Buzz is also available on Mobile:</p>
-
-<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://www.youtube.com/v/m-kcVDNi6eg&amp;rel=0&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/m-kcVDNi6eg&amp;rel=0&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-
-<p>And here's the <a href="http://googleblog.blogspot.com/2010/02/introducing-google-buzz.html" target="_blank">announcement of Google Buzz on the official Google blog</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/some-web-server-administration-tips-on-centos-and-cpanel-but-not-only">
-        <!-- <span class=post-title-accent>></span> -->Some Web Server Administration Tips on CentOS and cPanel (But Not Only)
-      </a>
-    </h1>
-
-    <span class="post-date">26 Jan 2010</span>
-    <hr>
-
-    <p>This is more of a personal notes for myself but I am sure others will find it useful.</p>
-
-<p><strong>Apache:</strong></p>
-
-<p><strong>/usr/local/apache/logs/error_log</strong></p>
-
-<p>All exceptions caught by httpd, along with standard error output form CGI applications are logged here.  The first place you should look when httpd crashes, or you incur errors when accessing a website.</p>
-
-<p><strong> /usr/local/apache/logs/suexec_log</strong></p>
-
-<p>Contains auditing information reported by suexec each time a CGI applicaiton is executed.  If you receive an internal server error, with no relevant information being reported to the Apache error_log, check here for potential suexec policy violations.</p>
-
-<p>Domain specific access logs are located here:</p>
-
-<p><strong>/usr/local/apache/domlogs/</strong></p>
-
-<p><strong>PHP</strong></p>
-
-<p>To find out which php.ini is used for PHP configuration (to save you frustration of editing a non active php.ini) find it with the following simple command:<br />
-<strong>php -i | grep php.ini</strong></p>
-
-<p>where -i switch is used to give you PHP information (obviously). To see other useful switches run</p>
-
-<p><strong>php -h</strong></p>
-
-<p>to locate where php is use:</p>
-
-<p><strong>which php</strong></p>
-
-<p>(but you already knew this - right ? :)  )</p>
-
-<p>*** Some of these tips are applicable not only to CentOS and cPanel configuration.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/problems-running-blackberry-simulator-fledge-on-windows-7-64-bit">
-        <!-- <span class=post-title-accent>></span> -->Problems Running BlackBerry Simulator (Fledge) on Windows 7 64 Bit
-      </a>
-    </h1>
-
-    <span class="post-date">22 Jan 2010</span>
-    <hr>
-
-    <p>As I already wrote, [intlink id="75" type="post"]BlackBerry development is not a lot of fun[/intlink].  Not only you basically can not develop in Linux and OS X (although there are some workarounds, it makes the process even more painful than it already is). But you will also have problems with 64 bit operating systems. RIM is in a position that they do not officially support 64 bit systems.</p>
-
-<p>The main problem with 64 bit Windows 7 for me was that I can not close the simulator (or actually the "fledge" application that runs the simulators). There are 2 possible solutions to this problem:</p>
-
-<ol>
-<li>Kill the task through task manager</li>
-<li>The simulator should close if you are in debug mode and you disconnect the debug session</li>
-</ol>
-
-<p>There is also another inconvenience which is caused by your cautiously guarding Windows system. It will warn you every time that (Oh my!) fledge will change something on your computer. You know - the standard User Control Account message. To avoid that message always popping up, you will have to adjust your setting in User Control Account panel. Hit "Windows" then just type UCA, you will get it. Adjust it to the minimum and you'r good to go.</p>
 
   </div>
   
