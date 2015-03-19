@@ -11,7 +11,7 @@
 
   <title>
     
-      Eclipse.ini Garbage Collector (GC) Settings &middot; Inteist
+      How to Remove Pushed Pods Folder from Git Repository &middot; Inteist
     
   </title>
 
@@ -472,21 +472,21 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Eclipse.ini Garbage Collector (GC) Settings</h1>
-  <span class="post-date">06 Sep 2012</span>
-  <h2>Garbage collection in Eclipse</h2>
+  <h1 class="post-title">How to Remove Pushed Pods Folder from Git Repository</h1>
+  <span class="post-date">19 Mar 2015</span>
+  <p>If you (or someone else) have pushed a <code>/Pods</code> folder into the repository (or any other file that is not supposed to be there) by mistake, there&#39;s a way to permanently remove the file(s) from the repo. The <code>filter-branch</code> option may be a little more complicated than ding rebase but it is very effective and will remove the files from all the branches.</p>
 
-<p><strong>There are several GC options available for eclipse's optimization. Try which one works best for you</strong></p>
+<p>Here&#39;s the recipe to remove the <code>Pods</code> folder. You can change the file/path matching and also limit the command for range of commits</p>
 
-<p>The <em>(original) copying collector</em> (Enabled by default). When this collector kicks in, all application threads are stopped, and the copying collection proceeds using one thread (which means only one CPU even if on a multi-CPU machine). This is known as a stop-the-world collection, because basically the JVM pauses everything else until the collection is completed.</p>
-
-<p>The <em>parallel copying collector</em> (Enabled using -XX:+UseParNewGC). Like the original copying collector, this is a stop-the-world collector. However this collector parallelizes the copying collection over multiple threads, which is more efficient than the original single-thread copying collector for multi-CPU machines (though not for single-CPU machines). This algorithm potentially speeds up young generation collection by a factor equal to the number of CPUs available, when compared to the original singly-threaded copying collector.</p>
-
-<p>The <em>parallel scavenge collector</em> (Enabled using -XX:UseParallelGC). This is like the previous parallel copying collector, but the algorithm is tuned for gigabyte heaps (over 10GB) on multi-CPU machines. This collection algorithm is designed to maximize throughput while minimizing pauses. It has an optional adaptive tuning policy which will automatically resize heap spaces. If you use this collector, you can only use the the original mark-sweep collector in the old generation (i.e. the newer old generation concurrent collector cannot work with this young generation collector).</p>
-
-<h2>Speeding up Eclipse</h2>
-
-<p>If you want more information on how to speed up eclipse on OS X – read this post: [link id='240' text='How To speed up Eclipse on OS X']</p>
+<h3 id="step-1:-filter-branch">Step 1: filter-branch</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git filter-branch --index-filter <span class="se">\</span>
+    <span class="s1">&#39;git rm --cached --ignore-unmatch Pods/*&#39;</span> <span class="se">\</span>
+    --tag-name-filter cat -- --all 
+</code></pre></div>
+<h3 id="step-2:-push---force">Step 2: push --force</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git push --force
+</code></pre></div>
+<p>This will clean the unwanted <code>Pods</code> folder or any other file/folder from the repository.</p>
 
 </div>
 
@@ -498,33 +498,25 @@
           
               
                   
-              
+                      
+                      <h3>Similar Posts</h3>
+                      <ul class="related-posts">
+                      
+                        <li>
+                          <h4>
+                            <a href="/os-x-special-characters">
+                              OS X Special Characters - Images and Unicode Codes
+                            </a>
+                              <small>19 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
                   
               
                   
               
           
-              
-                  
-              
-                  
-              
-                  
-              
-          
-      
-          
-          
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
               
                   
               
@@ -539,19 +531,7 @@
               
                   
               
-                  
-              
           
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
               
                   
               
@@ -563,11 +543,13 @@
               
                   
               
-                  
-              
           
               
                   
+              
+                  
+              
+          
               
                   
               
@@ -582,19 +564,7 @@
               
                   
               
-                  
-              
           
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
               
                   
               
@@ -606,11 +576,13 @@
               
                   
               
-                  
-              
           
               
                   
+              
+                  
+              
+          
               
                   
               
@@ -625,19 +597,13 @@
               
                   
               
-                  
-              
           
               
                   
               
                   
               
-                  
-              
           
-              
-                  
               
                   
               
@@ -652,6 +618,10 @@
               
                   
               
+          
+              
+                  
+              
                   
               
           
@@ -660,19 +630,7 @@
               
                   
               
-                  
-              
           
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
               
                   
               
@@ -690,6 +648,10 @@
               
                   
               
+          
+              
+                  
+              
                   
               
           
@@ -698,19 +660,7 @@
               
                   
               
-                  
-              
           
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
               
                   
               
@@ -725,19 +675,13 @@
               
                   
               
-                  
-              
           
               
                   
               
                   
               
-                  
-              
           
-              
-                  
               
                   
               
@@ -752,19 +696,13 @@
               
                   
               
-                  
-              
           
               
                   
               
                   
               
-                  
-              
           
-              
-                  
               
                   
               
@@ -772,6 +710,29 @@
               
           
       
+          
+          
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+          
+      
+      
+          </ul>
       
 </div>
 

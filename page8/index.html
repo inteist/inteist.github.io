@@ -475,6 +475,50 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/singletons">
+        <!-- <span class=post-title-accent>></span> -->Singletons
+      </a>
+    </h1>
+
+    <span class="post-date">10 Aug 2012</span>
+    <hr>
+
+    <h2 style="text-align: center;"></h2>
+
+<h2 style="text-align: center;"></h2>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2 style="text-align: center;"></h2>
+
+<h2 style="text-align: center;"></h2>
+
+<h2 style="text-align: center;">All Globals are bad</h2>
+
+<h2 style="text-align: center;">+</h2>
+
+<h2 style="text-align: center;">All singletons are (for this purpose) Globals</h2>
+
+<h1 style="text-align: center;">=</h1>
+
+<h1 style="text-align: center;">Therefore all Singletons are bad.</h1>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/how-to-upgrade-eclipse-indigo-to-eclipse-juno-4-2">
         <!-- <span class=post-title-accent>></span> -->How to Upgrade Eclipse Indigo to Eclipse Juno 4.2
       </a>
@@ -707,46 +751,6 @@ Google has released an <a href="http://developer.android.com/guide/topics/ui/act
 <p>It's basically <strong>Settings-&gt;General-&gt;Confirm window to open project in</strong></p>
 
 <p><a src="http://inteist.com/media/Screen-Shot-2012-07-10-at-6.08.46-PM.png"><img class="aligncenter size-full wp-image-826" title="PHPStorm Open in a New Window default setting ask again" src="http://inteist.com/media/Screen-Shot-2012-07-10-at-6.08.46-PM.png" alt="" width="381" height="168" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/add-gestures-and-gesture-control-to-your-windows-phone-7-application">
-        <!-- <span class=post-title-accent>></span> -->Add Gestures to Your Windows Phone 7 Application
-      </a>
-    </h1>
-
-    <span class="post-date">08 Jul 2012</span>
-    <hr>
-
-    <p>As it turns out, it is extremely easy to add gestures to your Windows Phone app. All you need to do is add a reference to the Silverlight Toolkit</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml">xmlns:toolkit=&quot;clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit&quot;
-</code></pre></div>
-<p>Then add the following code to any UI element (button, textbox etc...) that you want the gesture to be applied to and implement the listeners in your  .cs file</p>
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;toolkit:gestureservice.gesturelistener&gt;</span>
-     <span class="nt">&lt;toolkit:GestureListener</span> 
-         <span class="na">DoubleTap=</span><span class="s">&quot;GestureListenerDoubleTap&quot;</span>
-         <span class="na">Hold=</span><span class="s">&quot;GestureListenerHold&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/toolkit:gestureservice.gesturelistener&gt;</span>
-</code></pre></div>
-<p>Last step is the implementation of the listeners:</p>
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">void</span> <span class="nf">GestureListenerDoubleTap</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">GestureEventArgs</span> <span class="n">e</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Double tap gesture&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>and</p>
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">private</span> <span class="k">void</span> <span class="nf">GestureListenerHold</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">GestureEventArgs</span> <span class="n">e</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Hold gesture&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p><center> </p>
-
-<h3>That's it. It is <strong>THAT</strong> simple </h3>
-
-<p></center></p>
 
   </div>
   

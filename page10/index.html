@@ -475,6 +475,170 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/os-x-how-to-install-mongodb-for-php">
+        <!-- <span class=post-title-accent>></span> -->OS X How to Install MongoDB for PHP
+      </a>
+    </h1>
+
+    <span class="post-date">15 Mar 2012</span>
+    <hr>
+
+    <h1>Installing MongoDB</h1>
+
+<p>This tutorial will use MacPorts, so please first of all make sure you have XCode installed as it will be needed for MacPorts (and many other things too if you are a developer and you probably are if you are reading this) </p>
+
+<p>You can see how to install MacPorts <a href="http://www.macports.org/install.php">here</a></p>
+
+<p><strong>Let's install MongoDB</strong>. It's one easy command with MacPorts</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo port install mongodb
+</code></pre></div>
+<p>***If you had MacPorts installed before, consider updating it</p>
+
+<h4>Create Mongo config file</h4>
+
+<p><!--more--></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo vim /etc/mongodb.conf
+</code></pre></div>
+<p>*** you can use nano instead of vim if you prefer
+<pre>sudo nano /etc/mongodb.conf</pre>
+<p>Paste the following into the
+<pre>mongodb.conf</pre>
+<p> and save the file.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># This is an example config file for MongoDB.</span>
+<span class="c"># Place it at /etc/mongodb.conf</span>
+<span class="c"># Based on a sample provided at</span>
+<span class="c"># http://www.mongodb.org/display/DOCS/File+Based+Configuration</span>
+<span class="nv">dbpath</span> <span class="o">=</span> /var/lib/mongodb
+<span class="nv">bind_ip</span> <span class="o">=</span> 127.0.0.1
+<span class="nv">noauth</span> <span class="o">=</span> <span class="nb">true</span>
+</code></pre></div>
+<p>After you are finished installing MongoDB via MacPorts, you should see the following notice:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">###########################################################</span>
+<span class="c"># A startup item has been generated that will aid in</span>
+<span class="c"># starting mongodb with launchd. It is disabled</span>
+<span class="c"># by default. Execute the following command to start it,</span>
+<span class="c"># and to cause it to launch at startup:</span>
+<span class="c">#</span>
+<span class="c"># sudo port load mongodb</span>
+<span class="c">###########################################################</span>
+</code></pre></div>
+<p>so running </p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo port load mongodb
+</code></pre></div>
+<p>should get you setup with automatic start of mongo.</p>
+
+<p>To start it manually you should create the following file:</p>
+
+<pre>/Library/LaunchDaemons/org.mongo.mongod.plist</pre>
+
+<p>and populate it with the following:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+<span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;&lt;string&gt;</span>org.macports.mongodb<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;array&gt;</span>
+        <span class="nt">&lt;string&gt;</span>/opt/local/bin/daemondo<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>--label=mongodb<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>--start-cmd<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>sudo<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>-u<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>_mongo<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>/opt/local/bin/mongod<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>--dbpath<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>/opt/local/var/db/mongodb<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>--logpath<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>/opt/local/var/log/mongodb/mongodb.log<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>--logappend<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>;<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>--pid=exec<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/array&gt;</span>
+<span class="nt">&lt;key&gt;</span>Debug<span class="nt">&lt;/key&gt;&lt;false</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;key&gt;</span>Disabled<span class="nt">&lt;/key&gt;&lt;true</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;key&gt;</span>KeepAlive<span class="nt">&lt;/key&gt;&lt;true</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</code></pre></div>
+<p><strong>to launch MongoDB on demand you will need run:</strong></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo launchctl load /Library/LaunchDaemons/org.mongo.mongod.plist
+</code></pre></div>
+<p>once you've done the above and MongoDB is either autostarted or you created the start script and started it manually, you should be able to run
+<pre>mongo</pre>
+<p>to get to the MongoDB shell:<br />
+<img src="http://inteist.com/media/mongo-shell-on-os-x-how-to-install-mongodb-on-osx.png" alt="MongoDB shell" /></p>
+
+<h1>Installing MongoDB PHP Driver</h1>
+
+<h4>Installing <strong>wget</strong></h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo port install wget
+</code></pre></div>
+<h4>Installing PHP PEAR</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> /tmp
+<span class="nv">$ </span>wget http://pear.php.net/go-pear.phar
+<span class="nv">$ </span>sudo php -d <span class="nv">detect_unicode</span><span class="o">=</span><span class="m">0</span> go-pear.phar
+</code></pre></div>
+<h4>Configuring PHP PEAR</h4>
+
+<p>You will see the following prompt:</p>
+
+<pre>
+       1. Installation base ($prefix)                   : /Users/Admin/pear
+       2. Temporary directory for processing            : /tmp/pear/install
+       3. Temporary directory for downloads             : /tmp/pear/install
+       4. Binaries directory                            : /Users/Admin/pear/bin
+       5. PHP code directory ($php_dir)                 : /Users/Admin/pear/share/pear
+       6. Documentation directory                       : /Users/Admin/pear/docs
+       7. Data directory                                : /Users/Admin/pear/data
+       8. User-modifiable configuration files directory : /Users/Admin/pear/cfg
+       9. Public Web Files directory                    : /Users/Admin/pear/www
+      10. Tests directory                               : /Users/Admin/pear/tests
+      11. Name of configuration file                    : /Users/Admin/.pearrc
+
+      1-11, 'all' or Enter to continue:
+</pre>
+
+<p>Type <strong>1</strong> and then type <strong>/usr/local/pear</strong></p>
+
+<p>You will get the previous prompt but with different path values</p>
+
+<pre>
+       1. Installation base ($prefix)                   : /usr/local/pear
+       2. Temporary directory for processing            : /tmp/pear/install
+       3. Temporary directory for downloads             : /tmp/pear/install
+       4. Binaries directory                            : /usr/local/pear/bin
+       5. PHP code directory ($php_dir)                 : /usr/local/pear/share/pear
+       6. Documentation directory                       : /usr/local/pear/docs
+       7. Data directory                                : /usr/local/pear/data
+       8. User-modifiable configuration files directory : /usr/local/pear/cfg
+       9. Public Web Files directory                    : /usr/local/pear/www
+      10. Tests directory                               : /usr/local/pear/tests
+      11. Name of configuration file                    : /Users/Admin/.pearrc
+
+      1-11, 'all' or Enter to continue:
+</pre>
+
+<p>Type <strong>1</strong> and then type <strong>/etc/pearrc</strong></p>
+
+<p>Now type <strong><enter /></strong> the script will ask whether you want to change your <strong>php.ini</strong>. Answer <strong>Yes</strong> to this.</p>
+
+<p>Now you need to run:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo /usr/local/pear/bin/pecl install mongo
+</code></pre></div>
+<p>Configure the system PHP to load MongoDB extension.<br />
+Add this line to your php.ini:</p>
+
+<pre>extension=mongo.so</pre>
+
+<p>Restart Apache:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>sudo apachectl graceful
+</code></pre></div>
+<p>You should be all set to go... Enjoy!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/os-x-setup-textwrangler-as-your-default-editor-for-git">
         <!-- <span class=post-title-accent>></span> -->OS X Setup TextWrangler as Your Default Editor for Git
       </a>
@@ -710,36 +874,6 @@
 <h5><strong>Possibility to answer to the comment - let the developer answer and send the answer to the user's email automatically</strong></h5>
 </li>
 </ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-uninstall-and-reinstall-xcode-os-x-install-xcode-from-app-store">
-        <!-- <span class=post-title-accent>></span> -->How to Uninstall and Reinstall XCode Os OS X
-      </a>
-    </h1>
-
-    <span class="post-date">21 Jan 2012</span>
-    <hr>
-
-    <p>If you want to remove XCode on OS X (aka Developer Tools) you can do the following:</p>
-
-<p><strong>If installed from the developer portal:</strong></p>
-
-<p><code>sudo /Developer/Library/uninstall-devtools –mode=all</code></p>
-
-<p><strong>If installed via App Store it should be:</strong></p>
-
-<p><code>sudo /Library/Developer/Shared/uninstall-devtools –mode=all</code></p>
-
-<p><strong>NOTE:</strong>
-To be able to install Developer Tools from the App Store, you need to delete Install XCode from your /Applications folder
-something like this should work:</p>
-
-<p><code>sudo rm -Rf /Applications/Install Xcode.app</code></p>
-
-<p>Then once you download the Xcode from the App Store, it is not installed yet. You need to go to the same place /Application/Install Xcode.app and run the installer.</p>
 
   </div>
   

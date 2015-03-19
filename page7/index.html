@@ -475,6 +475,28 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/easily-generate-change-set-between-releases-using-git">
+        <!-- <span class=post-title-accent>></span> -->Easily Generate Change Set Between Releases Using Git
+      </a>
+    </h1>
+
+    <span class="post-date">03 Sep 2012</span>
+    <hr>
+
+    <p>If you are using Git as your version control system, it can be very helpful in generating the changeset between releases.</p>
+
+<p>First step is to find the last commit where you started the new (or the next) release that you want the changeset for. It can be easily achieved by something like this:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h - %an, %ar : %s&quot;</span> <span class="p">|</span> grep <span class="s2">&quot;RELEASE: X.X.X&quot;</span>
+</code></pre></div>
+<p>Then you just do:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h - %an, %ar : %s&quot;</span> b9c28fc..
+</code></pre></div>
+<p>The formatting options can be altered of course. You can find many more options in the "Pretty formats" section in the <a href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html">git log man pages</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/githubs-octocat">
         <!-- <span class=post-title-accent>></span> -->Github's Octocat
       </a>
@@ -835,50 +857,6 @@ Do it, but be smart about it. Use your brain. Think about what make the most sen
     <hr>
 
     <h3 style="text-align: center;">Did you know that there are more than 40 synonyms for "crafty" in English language... We have so many words to describe people's trickiness. There must be a good reason for that.</h3>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/singletons">
-        <!-- <span class=post-title-accent>></span> -->Singletons
-      </a>
-    </h1>
-
-    <span class="post-date">10 Aug 2012</span>
-    <hr>
-
-    <h2 style="text-align: center;"></h2>
-
-<h2 style="text-align: center;"></h2>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<h2 style="text-align: center;"></h2>
-
-<h2 style="text-align: center;"></h2>
-
-<h2 style="text-align: center;">All Globals are bad</h2>
-
-<h2 style="text-align: center;">+</h2>
-
-<h2 style="text-align: center;">All singletons are (for this purpose) Globals</h2>
-
-<h1 style="text-align: center;">=</h1>
-
-<h1 style="text-align: center;">Therefore all Singletons are bad.</h1>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-<p>&nbsp;</p>
 
   </div>
   
