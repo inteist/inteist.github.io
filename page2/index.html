@@ -475,6 +475,59 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/android-intentservice-vs-service">
+        <!-- <span class=post-title-accent>></span> -->Android IntentService vs. Service
+      </a>
+    </h1>
+
+    <span class="post-date">19 May 2014</span>
+    <hr>
+
+    <p>Android has often more than one way of doing something but it is not because of a poor design, rather because of the many possibilities that are available to Android developer and it is important to understand the nuances between various options to achieve something and choose the right tool for the job.</p>
+
+<p>Let's look at services:</p>
+
+<h3 style="text-align: center;">IntentService vs. Service</h3>
+
+<p><strong>When to use?</strong></p>
+
+<ul style="color: #000000;">
+<li>The <em>Service</em> can be used in tasks with no UI, but shouldn't be too long. If you need to perform long tasks, you must use threads within Service.</li>
+<li>The <em>IntentService</em> can be used in long tasks usually with no communication to Main Thread. If communication is required, can use Main Thread handler or broadcast intents. Another case of use is when callbacks are needed (Intent triggered tasks).</li>
+</ul>
+
+<p><strong>How to trigger?</strong></p>
+
+<ul style="color: #000000;">
+<li>The <em>Service</em> is triggered calling to method onStartService().</li>
+<li>The <em>IntentService</em> is triggered using an Intent, it spawns a new worker thread and the method onHandleIntent() is called on this thread.</li>
+</ul>
+
+<p><strong>Triggered From</strong></p>
+
+<ul style="color: #000000;">
+<li>The <em>Service</em> may be triggered from any thread.</li>
+<li>The <em>IntentService</em> must be triggered from Main Thread.</li>
+</ul>
+
+<p><strong>Runs On</strong></p>
+
+<ul style="color: #000000;">
+<li>The <em>Service</em> runs in background but it runs on the Main Thread of the application.</li>
+<li>The <em>IntentService</em> runs on a separate worker thread.</li>
+</ul>
+
+<p><strong>Limitations / Drawbacks</strong></p>
+
+<ul style="color: #000000;">
+<li>The <em>Service</em> may block the Main Thread of the application.</li>
+<li>The <em>IntentService</em> cannot run tasks in parallel. Hence all the consecutive intents will go into the message queue for the worker thread and will execute sequentially.</li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/os-x-uninstall-plex-media-server">
         <!-- <span class=post-title-accent>></span> -->OS X Uninstall Plex Media Server
       </a>
@@ -684,29 +737,6 @@
 <li><a href="http://docs.meteor.com/" target="_blank">Official Meteor docs</a> and <a href="https://github.com/oortcloud/unofficial-meteor-faq" target="_blank">unofficial Meteor FAQ</a></li>
 </ul>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/php-remove-curly-smart-quotes-from-string-data">
-        <!-- <span class=post-title-accent>></span> -->PHP Remove Curly (Smart) Quotes From String Data
-      </a>
-    </h1>
-
-    <span class="post-date">25 Oct 2013</span>
-    <hr>
-
-    <p>Here's a simple function that will remove curly quotes aka smart quotes from your strings.  Very useful if you enter data from MS Word files or other sources that may use weird unicode characters. Use it as an input cleaning step before saving the string data.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">function</span> <span class="nf">remove_curly_quotes</span><span class="o">(</span><span class="n">$text</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// First, replace UTF-8 characters.</span>
-    <span class="n">$text</span> <span class="o">=</span> <span class="n">str_replace</span><span class="o">(</span><span class="n">array</span><span class="o">(</span><span class="s">&quot;\xe2\x80\x98&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x99&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x9c&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x9d&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x93&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x94&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\xa6&quot;</span><span class="o">),</span> <span class="n">array</span><span class="o">(</span><span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;-&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">--</span><span class="err">&#39;</span><span class="o">,</span>
-        <span class="err">&#39;</span><span class="o">...</span><span class="err">&#39;</span><span class="o">),</span> <span class="n">$text</span><span class="o">);</span>
-    <span class="c1">// Next, replace their Windows-1252 equivalents.</span>
-    <span class="n">$text</span> <span class="o">=</span> <span class="n">str_replace</span><span class="o">(</span><span class="n">array</span><span class="o">(</span><span class="n">chr</span><span class="o">(</span><span class="mi">145</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">146</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">147</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">148</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">150</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">151</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">133</span><span class="o">)),</span> <span class="n">array</span><span class="o">(</span><span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;-&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">--</span><span class="err">&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">...</span><span class="err">&#39;</span><span class="o">),</span> <span class="n">$text</span><span class="o">);</span>
-
-    <span class="k">return</span> <span class="n">$text</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div>
   </div>
   
 </div>

@@ -475,6 +475,29 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/php-remove-curly-smart-quotes-from-string-data">
+        <!-- <span class=post-title-accent>></span> -->PHP Remove Curly (Smart) Quotes From String Data
+      </a>
+    </h1>
+
+    <span class="post-date">25 Oct 2013</span>
+    <hr>
+
+    <p>Here's a simple function that will remove curly quotes aka smart quotes from your strings.  Very useful if you enter data from MS Word files or other sources that may use weird unicode characters. Use it as an input cleaning step before saving the string data.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">function</span> <span class="nf">remove_curly_quotes</span><span class="o">(</span><span class="n">$text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// First, replace UTF-8 characters.</span>
+    <span class="n">$text</span> <span class="o">=</span> <span class="n">str_replace</span><span class="o">(</span><span class="n">array</span><span class="o">(</span><span class="s">&quot;\xe2\x80\x98&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x99&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x9c&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x9d&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x93&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\x94&quot;</span><span class="o">,</span> <span class="s">&quot;\xe2\x80\xa6&quot;</span><span class="o">),</span> <span class="n">array</span><span class="o">(</span><span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;-&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">--</span><span class="err">&#39;</span><span class="o">,</span>
+        <span class="err">&#39;</span><span class="o">...</span><span class="err">&#39;</span><span class="o">),</span> <span class="n">$text</span><span class="o">);</span>
+    <span class="c1">// Next, replace their Windows-1252 equivalents.</span>
+    <span class="n">$text</span> <span class="o">=</span> <span class="n">str_replace</span><span class="o">(</span><span class="n">array</span><span class="o">(</span><span class="n">chr</span><span class="o">(</span><span class="mi">145</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">146</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">147</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">148</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">150</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">151</span><span class="o">),</span> <span class="n">chr</span><span class="o">(</span><span class="mi">133</span><span class="o">)),</span> <span class="n">array</span><span class="o">(</span><span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="s">&quot;&#39;&quot;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;&quot;&#39;</span><span class="o">,</span> <span class="sc">&#39;-&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">--</span><span class="err">&#39;</span><span class="o">,</span> <span class="err">&#39;</span><span class="o">...</span><span class="err">&#39;</span><span class="o">),</span> <span class="n">$text</span><span class="o">);</span>
+
+    <span class="k">return</span> <span class="n">$text</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/hitting-multiple-files-using-bash-and-wget-or-curl">
         <!-- <span class=post-title-accent>></span> -->Hitting Multiple Files Using Bash and Wget or Curl
       </a>
@@ -652,22 +675,6 @@ You can specify a step counter for the ranges to get every Nth number or letter:
 <p>Check out the video of <a href="https://play.google.com/store/apps/details?id=com.twotoasters.clusterkraf.sample">sample application</a> in action</p>
 
 <p><iframe src="http://www.youtube.com/embed/We1kVxh2WFI" height="315" width="560" allowfullscreen="" frameborder="0"></iframe></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/nice-sliding-menu-with-unique-color-fade-effect-by-romain-guy">
-        <!-- <span class=post-title-accent>></span> -->Nice Sliding Menu With Unique Color Fade Effect by Romain Guy
-      </a>
-    </h1>
-
-    <span class="post-date">27 May 2013</span>
-    <hr>
-
-    <p>This <a href="http://www.curious-creature.org/2012/12/14/android-recipe-3-sliding-menu-layers-and-filters/#more-1676">nice sliding menu</a> is supported in its full glory with API level 14. But can be degraded gracefully on earlier version of the OS too.</p>
-
-<p>Tip from Romain:  use the drawing cache instead with View.setDrawingCacheEnabled.</p>
 
   </div>
   

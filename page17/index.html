@@ -475,6 +475,51 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/some-web-server-administration-tips-on-centos-and-cpanel-but-not-only">
+        <!-- <span class=post-title-accent>></span> -->Some Web Server Administration Tips on CentOS and cPanel (But Not Only)
+      </a>
+    </h1>
+
+    <span class="post-date">26 Jan 2010</span>
+    <hr>
+
+    <p>This is more of a personal notes for myself but I am sure others will find it useful.</p>
+
+<p><strong>Apache:</strong></p>
+
+<p><strong>/usr/local/apache/logs/error_log</strong></p>
+
+<p>All exceptions caught by httpd, along with standard error output form CGI applications are logged here.  The first place you should look when httpd crashes, or you incur errors when accessing a website.</p>
+
+<p><strong> /usr/local/apache/logs/suexec_log</strong></p>
+
+<p>Contains auditing information reported by suexec each time a CGI applicaiton is executed.  If you receive an internal server error, with no relevant information being reported to the Apache error_log, check here for potential suexec policy violations.</p>
+
+<p>Domain specific access logs are located here:</p>
+
+<p><strong>/usr/local/apache/domlogs/</strong></p>
+
+<p><strong>PHP</strong></p>
+
+<p>To find out which php.ini is used for PHP configuration (to save you frustration of editing a non active php.ini) find it with the following simple command:<br />
+<strong>php -i | grep php.ini</strong></p>
+
+<p>where -i switch is used to give you PHP information (obviously). To see other useful switches run</p>
+
+<p><strong>php -h</strong></p>
+
+<p>to locate where php is use:</p>
+
+<p><strong>which php</strong></p>
+
+<p>(but you already knew this - right ? :)  )</p>
+
+<p>*** Some of these tips are applicable not only to CentOS and cPanel configuration.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/problems-running-blackberry-simulator-fledge-on-windows-7-64-bit">
         <!-- <span class=post-title-accent>></span> -->Problems Running BlackBerry Simulator (Fledge) on Windows 7 64 Bit
       </a>
@@ -693,24 +738,6 @@ I hope the robots remember those us that helped make them what they are and keep
 <p>Now we getting to the present where online advertising seems to be outgrowing the current model and requiring additional layer of aggregation. That's where the ad aggregation and mediation networks come into play. Those networks do what ad networks did in the past. They aggregate advertisers and publishers, but instead of direct aggregatio, those mediator networks aggregate another ad networks. Those are essentially meta ad networks.</p>
 
 <p>It would be interesting to see how successful those meta networks will become with time. Right now it is too soon to tell.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/jealous-husbands-problem-puzzle">
-        <!-- <span class=post-title-accent>></span> -->Jealous Husbands Problem Puzzle
-      </a>
-    </h1>
-
-    <span class="post-date">16 Jan 2009</span>
-    <hr>
-
-    <p>This problem is similar to the <a href="http://www.inteist.com/2009/01/missionaries-and-cannibals-puzzle/">missionaries and cannibals problem puzzle</a>. One additional twist to the missionaries and cannibal problem in this problem is the fact that rather than being all the same, men and women have roles and although it appears to complicate the solution, it really does not.</p>
-
-<p><strong>Problem:</strong></p>
-
-<p>Three jealous husbands and their wives need to cross a       river. They find a small boat that can contain no more than two       persons. Find the simplest schedule of crossings that will permit       all six people to cross the river so that none of the women shall       be left in company with any of the men, unless her husband is       present. It is assumed that all passengers on the boat unboard       before the next trip and at least one person has to be in the       boat for each crossing.</p>
 
   </div>
   

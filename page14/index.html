@@ -475,6 +475,32 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/windows-phone-7-how-reset-clean-emulator">
+        <!-- <span class=post-title-accent>></span> -->Windows Phone 7 – How to Reset Emulator
+      </a>
+    </h1>
+
+    <span class="post-date">26 Oct 2010</span>
+    <hr>
+
+    <p>I needed recently to basically remove my app installation from the Windows Phone 7 emulator. I could not find how you can remove the app from the emulator, but I found a way to reset and force the Windows Phone 7 emulator to cold boot.</p>
+
+<p>You can clear the windows phone emulator state, by deleting the saved state file in:</p>
+
+<blockquote><p>%ProgramData%\Microsoft\XDE\*.dess</p></blockquote>
+
+<p>You can just hit the windows key on your keyboard and paste this "%ProgramData%\Microsoft\XDE\" and you will be taken to the right location.</p>
+
+<p>Delete the *.dess files. This will force the emulator to reset and run the cold boot sequence.</p>
+
+<p>Too bad, it's not possible to do simulator reset right from the development tools. Here's hoping that Windows Phone Tools development team will improve that situation in the future releases.</p>
+
+<p>Please share your thought in comments.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/some-notes-on-qnx-the-new-blackberry-playbook-os">
         <!-- <span class=post-title-accent>></span> -->Some Notes on QNX - the New BlackBerry PlayBook OS
       </a>
@@ -732,35 +758,6 @@
 <p>There is another caveat with GPU - it's the slow bus connection. The bus is too slow for the speeds of GPU and there is nothing you can do about it at the moment. One thing that can be done since GPU has so much computing power in parallel, is to compress the data that is passed between the GPU and the rest of the system. 1 to 10 ratio is the standard compression ratio of text, so you can increase the throughput of the bus by a factor of 10 using compression. Of course there is still some overhead and you should make an experiment and see whether this is beneficial in your setup.</p>
 
 <p>Overall though, it seems pretty exciting area at the moment and the true technoratis should definitely pay attention to that area.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/this-is-broken-or-why-you-have-to-eat-your-own-dog-food">
-        <!-- <span class=post-title-accent>></span> -->This Is Broken or why You Have to "Eat Your Own Dog Food
-      </a>
-    </h1>
-
-    <span class="post-date">19 Jul 2010</span>
-    <hr>
-
-    <p>It's been long advocated by software developer luminaries that you have to "eat your own dog food" which means you have to use the software you are producing as extensively as possible to realize the shortcomings and things that are broken. This is the "I am not a fish" category as explained by Seth in the series of the following 3 videos. Extremely valuable series for anyone dealing with user experience.</p>
-
-<p><center><br />
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="90%" height="380" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/5VJT3D_RzJo&amp;hl=en_US&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="90%" height="380" src="http://www.youtube.com/v/5VJT3D_RzJo&amp;hl=en_US&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-
-<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="90%" height="380" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/RbXsD3FnIZs&amp;hl=en_US&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="90%" height="380" src="http://www.youtube.com/v/RbXsD3FnIZs&amp;hl=en_US&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-
-<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="90%" height="380" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/h984thGOYrM&amp;hl=en_US&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="90%" height="380" src="http://www.youtube.com/v/h984thGOYrM&amp;hl=en_US&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
-
-<h3><strong>UPDATE:</strong></h3>
-
-<p><strong></strong><strong>I found the following video on google video as one video</strong></p>
-
-<p><object id="VideoPlayback" style="width: 400px; height: 326px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100" height="100" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://video.google.com/googleplayer.swf?docid=-4101280286098310645&amp;hl=en&amp;fs=true" /><param name="allowfullscreen" value="true" /><embed id="VideoPlayback" style="width: 400px; height: 326px;" type="application/x-shockwave-flash" width="100" height="100" src="http://video.google.com/googleplayer.swf?docid=-4101280286098310645&amp;hl=en&amp;fs=true" allowfullscreen="true"></embed></object></p>
-
-<p></center></p>
 
   </div>
   
