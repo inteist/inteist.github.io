@@ -474,6 +474,7 @@
       <div class="post">
   <h1 class="post-title">Pull Screenshot From Android With One Liner Using 'Adb'</h1>
   <span class="post-date">12 Mar 2014</span>
+  <!-- <hr> -->
   <div class="highlight"><pre><code class="language-bash" data-lang="bash">adb shell screencap -p <span class="p">|</span> perl -pe <span class="s1">&#39;s/\x0D\x0A/\x0A/g&#39;</span> &gt; screenshot.png
 </code></pre></div>
 </div>

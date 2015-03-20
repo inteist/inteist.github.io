@@ -68,3 +68,24 @@ line-height: 1.4;
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fjalla One', sans-serif;
 }
+
+
+.post-date {
+    margin-bottom: 2rem;
+}
+
+.posts > .post {
+    margin-bottom: 10em;
+}
+.post {
+    margin-bottom: 2em;
+}
+
+
+
+.posts > .spacer,
+.post > .spacer {
+    margin-bottom: 2rem;
+}
+
+

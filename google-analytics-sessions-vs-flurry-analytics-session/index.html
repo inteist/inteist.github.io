@@ -474,6 +474,7 @@
       <div class="post">
   <h1 class="post-title">Google Analytics Sessions vs. Flurry Analytics Session</h1>
   <span class="post-date">26 May 2013</span>
+  <!-- <hr> -->
   <p>Every time a start session is called using Flurry SDK, a new session is registered <strong>unless</strong> the call was made within 20 seconds [for the same user] of the previous call, in which case these consequent sessions simply extend the existing one.</p>
 
 <p>For Google Analytics, it is different. Google Analytics will group hits (any analytics API call you make is considered a hit in Google analytics) that are received within 30 minutes of one another [for the same user] into the same session.</p>
