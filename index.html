@@ -475,6 +475,34 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/git-remove-pods-folder-from-pushed-repository-how-to">
+        <!-- <span class=post-title-accent>></span> -->How to Remove Pushed Pods Folder from Git Repository
+      </a>
+    </h1>
+
+    <span class="post-date">19 Mar 2015</span>
+    <hr>
+
+    <p>If you (or someone else) have pushed a <code>/Pods</code> folder into the repository (or any other file that is not supposed to be there) by mistake, there&#39;s a way to permanently remove the file(s) from the repo. The <code>filter-branch</code> option may be a little more complicated than doing rebase but it is very effective and will remove the files from all the branches.</p>
+
+<p>Here&#39;s the recipe to remove the <code>Pods</code> folder. You can change the file/path matching and also limit the command for range of commits</p>
+
+<h3 id="step-1:-filter-branch">Step 1: filter-branch</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git filter-branch --index-filter <span class="se">\</span>
+    <span class="s1">&#39;git rm --cached --ignore-unmatch Pods/*&#39;</span> <span class="se">\</span>
+    --tag-name-filter cat -- --all 
+</code></pre></div>
+<h3 id="step-2:-push---force">Step 2: push --force</h3>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">git push --force
+</code></pre></div>
+<p>This will clean the unwanted <code>Pods</code> folder from the repository.</p>
+
+<p>***Losely based on: <a href="https://help.github.com/articles/remove-sensitive-data/">https://help.github.com/articles/remove-sensitive-data/</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/os-x-special-characters">
         <!-- <span class=post-title-accent>></span> -->OS X Special Characters - Images and Unicode Codes
       </a>
@@ -628,34 +656,6 @@
 <td>U+233D</td>
 </tr>
 </tbody></table>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/git-remove-pods-folder-from-pushed-repository-how-to">
-        <!-- <span class=post-title-accent>></span> -->How to Remove Pushed Pods Folder from Git Repository
-      </a>
-    </h1>
-
-    <span class="post-date">19 Mar 2015</span>
-    <hr>
-
-    <p>If you (or someone else) have pushed a <code>/Pods</code> folder into the repository (or any other file that is not supposed to be there) by mistake, there&#39;s a way to permanently remove the file(s) from the repo. The <code>filter-branch</code> option may be a little more complicated than doing rebase but it is very effective and will remove the files from all the branches.</p>
-
-<p>Here&#39;s the recipe to remove the <code>Pods</code> folder. You can change the file/path matching and also limit the command for range of commits</p>
-
-<h3 id="step-1:-filter-branch">Step 1: filter-branch</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git filter-branch --index-filter <span class="se">\</span>
-    <span class="s1">&#39;git rm --cached --ignore-unmatch Pods/*&#39;</span> <span class="se">\</span>
-    --tag-name-filter cat -- --all 
-</code></pre></div>
-<h3 id="step-2:-push---force">Step 2: push --force</h3>
-<div class="highlight"><pre><code class="language-sh" data-lang="sh">git push --force
-</code></pre></div>
-<p>This will clean the unwanted <code>Pods</code> folder from the repository.</p>
-
-<p>***Losely based on: <a href="https://help.github.com/articles/remove-sensitive-data/">https://help.github.com/articles/remove-sensitive-data/</a></p>
 
   </div>
   
