@@ -484,7 +484,18 @@
 
     <p>This is how you can easily throttle Android networking interface on the emulator. You can go via telnet or netcat.  </p>
 
-<h4 id="latency">Latency</h4>
+<h2 id="tl;dr">TL;DR</h2>
+
+<p>To set the network interface to have throughput of 6000 bits/s (0.7 KB/s) and 2000 ms latency you would use these commands (for the first emulator that usually defaults to port 5554)</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network delay 2000&quot;</span> <span class="p">|</span> nc localhost 5554
+<span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<p>For more details and samples read on...</p>
+
+<h2 id="latency">Latency</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<h6 id="sample-output:">Sample output:</h6>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
@@ -499,7 +510,10 @@ Current network status:
   maximum latency:  <span class="m">8000</span> ms
 OK
 </code></pre></div>
-<h4 id="throughput">Throughput</h4>
+<h2 id="throughput">Throughput</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<h6 id="sample-output:">Sample output:</h6>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
@@ -514,7 +528,7 @@ Current network status:
   maximum latency:  <span class="m">8000</span> ms
 OK
 </code></pre></div>
-<h4 id="list-of-network-commands">List of network commands</h4>
+<h2 id="list-of-network-commands">List of network commands</h2>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
@@ -527,7 +541,7 @@ available sub-commands:
     delay            change network latency
     capture          dump network packets to file
 </code></pre></div>
-<h4 id="all-available-commands">All available commands</h4>
+<h2 id="all-available-commands">All available commands</h2>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;help&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
