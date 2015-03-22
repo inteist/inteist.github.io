@@ -475,6 +475,35 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/git-wizardry-easy-way-to-get-the-change-set-from-git">
+        Git Wizardry - Easy Way to Get the Change Set From Git
+      </a>
+    </h1>
+
+    <span class="post-date">12 Dec 2012</span>
+
+    <p>There is a pretty way way to get the Git commits between versions which can be used to build the change set log.</p>
+
+<p>Below are the basic commands that should give you just that. But these commands are even more useful than this. This is almost too easy, this is why I call it wizardry :)</p>
+
+<p>The only requirement is that you somehow know what is the commit of the latest release you did (if that's where you want to start your change set)</p>
+
+<p>To find a specific commit (if you had a meaningful commit message)</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h - %an, %ar : %s&quot;</span> <span class="p">|</span> grep <span class="s2">&quot;RELEASE: X.X.X&quot;</span>
+</code></pre></div>
+<p>or you can just use tag (if you have tagged the commit that preceded the release) and see where it points to or any other way you use to find the latest release commit where you want to start.</p>
+
+<p>Once you found it, it's as easy as for example:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git log --pretty<span class="o">=</span>format:<span class="s2">&quot;%h - %an, %ar : %s&quot;</span> b9c28fc..
+</code></pre></div>
+<p>***The revision is in <since>..<until> revision and the last parameter defaults to HEAD if omitted (http://www.kernel.org/pub/software/scm/git/docs/git-log.html)</p>
+
+<p>Enjoy :)</until></since></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/git-tags-cheat-sheet">
         Git Tags Cheat Sheet
       </a>
@@ -704,31 +733,6 @@ sudo port_cutleaves
 <p>It is these 20% of polish that will ultimately get you the 80% of the market. Because the teams that spent 80% (or even more) on the last 20% of polish to their product and/or service are the teams that usually produce the product/service that wins the major of the market. And this is all that usually matters – to own the majority of the market, to be the leader or in the leader pack  in the market.</p>
 
 <p>This is not a recipe for success of course. There are polished and good products that fail. Speaking in math terms, this is rather the necessary, than  sufficient condition for a successful product and/or service.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/eclipse-ini-garbage-collector-gc-settings">
-        Eclipse.ini Garbage Collector (GC) Settings
-      </a>
-    </h1>
-
-    <span class="post-date">06 Sep 2012</span>
-
-    <h2>Garbage collection in Eclipse</h2>
-
-<p><strong>There are several GC options available for eclipse's optimization. Try which one works best for you</strong></p>
-
-<p>The <em>(original) copying collector</em> (Enabled by default). When this collector kicks in, all application threads are stopped, and the copying collection proceeds using one thread (which means only one CPU even if on a multi-CPU machine). This is known as a stop-the-world collection, because basically the JVM pauses everything else until the collection is completed.</p>
-
-<p>The <em>parallel copying collector</em> (Enabled using -XX:+UseParNewGC). Like the original copying collector, this is a stop-the-world collector. However this collector parallelizes the copying collection over multiple threads, which is more efficient than the original single-thread copying collector for multi-CPU machines (though not for single-CPU machines). This algorithm potentially speeds up young generation collection by a factor equal to the number of CPUs available, when compared to the original singly-threaded copying collector.</p>
-
-<p>The <em>parallel scavenge collector</em> (Enabled using -XX:UseParallelGC). This is like the previous parallel copying collector, but the algorithm is tuned for gigabyte heaps (over 10GB) on multi-CPU machines. This collection algorithm is designed to maximize throughput while minimizing pauses. It has an optional adaptive tuning policy which will automatically resize heap spaces. If you use this collector, you can only use the the original mark-sweep collector in the old generation (i.e. the newer old generation concurrent collector cannot work with this young generation collector).</p>
-
-<h2>Speeding up Eclipse</h2>
-
-<p>If you want more information on how to speed up eclipse on OS X – read this post: [link id='240' text='How To speed up Eclipse on OS X']</p>
 
   </div>
   

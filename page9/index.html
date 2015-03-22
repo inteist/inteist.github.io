@@ -475,6 +475,25 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/free-git-repository-hosting-plus-bug-tracking">
+        Free Git Repository Hosting Plus Bug Tracking
+      </a>
+    </h1>
+
+    <span class="post-date">12 Jul 2012</span>
+
+    <p>If you were in need of Git hosting and you did not like Github for some reason (I am personally not that crazy about them). You can get free Git hosting at <a href="http://www.bitbucket.org">Bitbucket</a>. Not only they give you a free hosting of personal repositories but they also provide a nice wiki and a bug tracking. These are the same guys who develop Jira – a widely used bug tracking system. Although the bug tracking that you get with BitBucket repository is pretty basic, it is enough for most small to medium projects.</p>
+
+<p>But the goodies do not stop here. They offer unlimited accounts for educational purposes and otherwise very reasonably priced accounts.</p>
+
+<p>Oh and actually they offer both HG (Mercurial) or Git hosting through the same interface/website/account :)</p>
+
+<p>Check them out!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/phpstorm-change-default-open-in-a-new-frame">
         PHPStorm Change Default Open in a New Frame
       </a>
@@ -728,33 +747,6 @@
 <p>Here's a nice website that will help your company to transfer to mobile space: <a href="http://www.howtogomo.com/">http://www.howtogomo.com/</a></p>
 
 <p>They even have a <a title="gomometer" href="http://www.howtogomo.com/en/d/test-your-site/#gomo-meter">gomometer</a> which will analyze your site and give an advice on how to improve it so it is more "mobile friendly"</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/import-svn-repository-to-git">
-        Import SVN Repository to Git
-      </a>
-    </h1>
-
-    <span class="post-date">05 Apr 2012</span>
-
-    <p>To import an SVN repository into git, you can use the <strong>git svn</strong> command.</p>
-
-<p>If you want to just import your SVN repository into Git as is, you can run the following sequence of commands:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git svn clone SVN_REPO_URL LOCAL_DIR
-<span class="nv">$ </span><span class="nb">cd </span>LOCAL_DIR
-<span class="nv">$ </span>git remote add origin git@example.com:USER_NAME/REPO_NAME.git
-<span class="nv">$ </span>git push origin master
-</code></pre></div>
-<p>If you repository is setup in a standard way and you want the <strong>git svn</strong> command to be smart about it, you should add the <strong>-s</strong> flag to the first command:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git svn clone -s SVN_REPO_URL LOCAL_DIR
-<span class="nv">$ </span><span class="nb">cd </span>LOCAL_DIR
-<span class="nv">$ </span>git remote add origin git@example.com:USER_NAME/REPO_NAME.git
-<span class="nv">$ </span>git push origin master
-</code></pre></div>
-<p>Which basically says to <strong>git svn</strong> that your repository is in a standard layout.</p>
 
   </div>
   

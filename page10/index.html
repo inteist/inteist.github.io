@@ -475,6 +475,33 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/import-svn-repository-to-git">
+        Import SVN Repository to Git
+      </a>
+    </h1>
+
+    <span class="post-date">05 Apr 2012</span>
+
+    <p>To import an SVN repository into git, you can use the <strong>git svn</strong> command.</p>
+
+<p>If you want to just import your SVN repository into Git as is, you can run the following sequence of commands:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git svn clone SVN_REPO_URL LOCAL_DIR
+<span class="nv">$ </span><span class="nb">cd </span>LOCAL_DIR
+<span class="nv">$ </span>git remote add origin git@example.com:USER_NAME/REPO_NAME.git
+<span class="nv">$ </span>git push origin master
+</code></pre></div>
+<p>If you repository is setup in a standard way and you want the <strong>git svn</strong> command to be smart about it, you should add the <strong>-s</strong> flag to the first command:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git svn clone -s SVN_REPO_URL LOCAL_DIR
+<span class="nv">$ </span><span class="nb">cd </span>LOCAL_DIR
+<span class="nv">$ </span>git remote add origin git@example.com:USER_NAME/REPO_NAME.git
+<span class="nv">$ </span>git push origin master
+</code></pre></div>
+<p>Which basically says to <strong>git svn</strong> that your repository is in a standard layout.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/aprils-fool-2012-by-bitbucket">
         April's Fool 2012 by BitBucket
       </a>
@@ -844,21 +871,6 @@ Add this line to your php.ini:</p>
 <p>&nbsp;</p>
 
 <p>Enjoy! :)</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/why-python-is-awesome">
-        Why Python Is Awesome :)
-      </a>
-    </h1>
-
-    <span class="post-date">25 Jan 2012</span>
-
-    <p>Should I take a stab at Python and Django... It definitely looks like I should :)</p>
-
-<p><a src="http://inteist.com/media/why-python-is-awesome.png"><img src="http://inteist.com/media/why-python-is-awesome.png" alt="" title="why python is awesome" width="518" height="588" class="aligncenter size-full wp-image-668" /></a></p>
 
   </div>
   

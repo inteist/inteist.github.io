@@ -475,6 +475,31 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/eclipse-ini-garbage-collector-gc-settings">
+        Eclipse.ini Garbage Collector (GC) Settings
+      </a>
+    </h1>
+
+    <span class="post-date">06 Sep 2012</span>
+
+    <h2>Garbage collection in Eclipse</h2>
+
+<p><strong>There are several GC options available for eclipse's optimization. Try which one works best for you</strong></p>
+
+<p>The <em>(original) copying collector</em> (Enabled by default). When this collector kicks in, all application threads are stopped, and the copying collection proceeds using one thread (which means only one CPU even if on a multi-CPU machine). This is known as a stop-the-world collection, because basically the JVM pauses everything else until the collection is completed.</p>
+
+<p>The <em>parallel copying collector</em> (Enabled using -XX:+UseParNewGC). Like the original copying collector, this is a stop-the-world collector. However this collector parallelizes the copying collection over multiple threads, which is more efficient than the original single-thread copying collector for multi-CPU machines (though not for single-CPU machines). This algorithm potentially speeds up young generation collection by a factor equal to the number of CPUs available, when compared to the original singly-threaded copying collector.</p>
+
+<p>The <em>parallel scavenge collector</em> (Enabled using -XX:UseParallelGC). This is like the previous parallel copying collector, but the algorithm is tuned for gigabyte heaps (over 10GB) on multi-CPU machines. This collection algorithm is designed to maximize throughput while minimizing pauses. It has an optional adaptive tuning policy which will automatically resize heap spaces. If you use this collector, you can only use the the original mark-sweep collector in the old generation (i.e. the newer old generation concurrent collector cannot work with this young generation collector).</p>
+
+<h2>Speeding up Eclipse</h2>
+
+<p>If you want more information on how to speed up eclipse on OS X – read this post: [link id='240' text='How To speed up Eclipse on OS X']</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/android-and-apple-fun">
         Android and Apple Fun
       </a>
@@ -834,23 +859,6 @@ Do it, but be smart about it. Use your brain. Think about what make the most sen
 
 <p>While your Android phone is in USB debugging mode (this may not apply to all the phones but it certainly applies to Galaxy Nexus), android file transfer does not recognize it. Once you turn off the USB debugging mode, android file transfer should start recognizing the device once again.</p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/easily-retrace-proguard-obfuscated-android-code">
-        Easily Retrace Proguard Obfuscated Android Code
-      </a>
-    </h1>
-
-    <span class="post-date">17 Aug 2012</span>
-
-    <p>To be able easily read the Proguard obfuscated code, you can use the retrace script supplied with the Android SDK. In order not to provide the full path, you can add an alias. If you are using bash you can do it as follows:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">retrace</span><span class="o">=</span><span class="s1">&#39;~/ANDROID_SDK/tools/proguard/bin/retrace.sh&#39;</span>
-</code></pre></div>
-<p>If you are not using bash, then it's pretty similar. Then you just issue the retrace command.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">Usage: java proguard.ReTrace <span class="o">[</span>-verbose<span class="o">]</span> &lt;mapping_file&gt; <span class="o">[</span>&lt;stacktrace_file&gt;<span class="o">]</span>
-</code></pre></div>
   </div>
   
 </div>

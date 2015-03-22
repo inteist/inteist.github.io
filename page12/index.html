@@ -475,6 +475,38 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/installing-updating-blackberry-eclipse-sdk-problem-with-authentication">
+        Installing/Updating BlackBerry Eclipse SDK - Problem With Authentication
+      </a>
+    </h1>
+
+    <span class="post-date">14 Dec 2011</span>
+
+    <p>If you are getting an error similar to the error below while trying to install and/or update BlackBerry SDK as a plugin for Eclipse</p>
+
+<p><code><br />
+An error occurred while collecting items to be installed session context was:<br />
+(profile=AppceleratorProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).<br />
+Unable to read repository at:<br />
+Unable to read repository at https://swdownloads.blackberry.com/Downloads/auth/contactFormPreload.do?code=<br />
+...<br />
+</code></p>
+
+<p>You are in luck!</p>
+
+<p>Your problems are over as you found the solution. All you need to do is to clear the "Secure Storage" contents. To do that go to</p>
+
+<p><strong>Windows -> Preferences</strong></p>
+
+<p>Type <em>secure</em>, drill down to find the <em>org.eclipse.equinox.p2.repository</em>, expand this, and you will see the <em>swdownloads.blackberry.com</em>. Select this entry and delete it. This should resolve the issue next time you try to update/install the plugin you should be asked again for your credentials to the BlackBerry developer portal and once you put them in the installation should proceed normally.</p>
+
+<p style="text-align: center;">Here's how it looks in Eclipse:<br />
+<a src="http://inteist.com/media/secure-storage-equinox.png"><img class="aligncenter size-full wp-image-596" title="secure storage equinox" src="http://inteist.com/media/secure-storage-equinox.png" alt="" width="595" height="421" /></a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/eclipse-marking-svn-changes-like-netbeans">
         Eclipse Marking SVN Changes Like Netbeans
       </a>
@@ -709,40 +741,6 @@
 
 <pre><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">
 </span></pre>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/rules-of-simple-design-by-eric-raymond">
-        Rules of Simple Design by Eric Raymond
-      </a>
-    </h1>
-
-    <span class="post-date">09 Feb 2011</span>
-
-    <p>Great collection of design rules by Eric S. Raymond<br />
-<a title="Eric S. Raymond" href="http://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a></p>
-
-<ul>
-<li>Rule of Modularity: Write simple parts connected by clean interfaces.</li>
-<li>Rule of Clarity: Clarity is better than cleverness.</li>
-<li>Rule of Composition: Design programs to be connected to other programs.</li>
-<li>Rule of Separation: Separate policy from mechanism; separate interfaces from engines.</li>
-<li>Rule of Simplicity: Design for simplicity; add complexity only where you must.</li>
-<li>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.</li>
-<li>Rule of Transparency: Design for visibility to make inspection and debugging easier.</li>
-<li>Rule of Robustness: Robustness is the child of transparency and simplicity.</li>
-<li>Rule of Representation: Fold knowledge into data so program logic can be stupid and robust.</li>
-<li>Rule of Least Surprise: In interface design, always do the least surprising thing.</li>
-<li>Rule of Silence: When a program has nothing surprising to say, it should say nothing.</li>
-<li>Rule of Repair: When you must fail, fail noisily and as soon as possible.</li>
-<li>Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.</li>
-<li>Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.</li>
-<li>Rule of Optimization: Prototype before polishing. Get it working before you optimize it.</li>
-<li>Rule of Diversity: Distrust all claims for "one true way".</li>
-<li>Rule of Extensibility: Design for the future, because it will be here sooner than you think.</li>
-</ul>
 
   </div>
   
