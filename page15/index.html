@@ -475,6 +475,30 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/load-cod-file-to-blackberry-using-javaloader">
+        Load Cod File to BlackBerry Using JavaLoader
+      </a>
+    </h1>
+
+    <span class="post-date">05 Sep 2010</span>
+
+    <p>It is simple to load a BlackBerry application packaged as cod file to your device using JavaLoader.exe. With JavaLoader, you do not have to install the desktop manager if you just want to have an ability to quickly load applications to your blackberry</p>
+
+<ol>
+<li>Connect your BlackBerry to your computer through USB</li>
+<li>Open command prompt and navigate to the location of JavaLoader.exe</li>
+<li>Run <code>JavaLoader.exe -u=USB load path_to_your_cod_file</code> command and you should be all set</li>
+</ol>
+
+<p>It is easier if you have the JavaLoader and the COD files in the same dir because then the command is simply</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">JavaLoader.exe -u<span class="o">=</span>USB load path_to_your_cod_file
+</code></pre></div>
+<p><strong>UPDATE: </strong>The JavaLoader command will not work if you don't have the BlackBerry desktop manager installed. You will get an error that the port can not be open.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/the-future-of-gpu-computing">
         The Future of GPU Computing
       </a>
@@ -788,70 +812,6 @@ If you already had that in the eclipse.ini file - well, unfortunately this alrea
 <p>The 1.1 plugin is very different from previous version. Instead of following the "JDE way" it will be much more the natural "Eclipse way". This is both good and bad. This is very good for developers that have experience with Eclipse and just now start to develop for BlackBerry. This will however be somewhat painful for the seasoned developers who got used to the old plugin and will need to discover many things from scratch. (I personally felt quite lost with the new 1.1 plugin and decided to stick with the old one until 1.1 comes out of beta).</p>
 
 <p>You can download the beta of 1.1 from <a href="http://na.blackberry.com/eng/developers/devbetasoftware/javaplugin.jsp" target="_blank">here</a> (you would need to have BlackBerry developer account which is <strong>free</strong> and can be obtained with simple sign up immediately)</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/super-app-webcast-questions-answered-follow-up">
-        Super App Webcast Q&A Follow-Up
-      </a>
-    </h1>
-
-    <span class="post-date">29 Mar 2010</span>
-
-    <p>During the [intlink id="136" type="post"]Super App webcast[/intlink] Mike Kirkup covered many questions from the attendees. I have gathered many of those in the webcast summary. He did not get through all of the questions and promised to answer all of the questions on <a href="http://supportforums.blackberry.com/t5/BlackBerry-Development/ct-p/BlackBerryDevelopment" target="_blank">blackberry development forum</a>. He did just that and here is the Q&amp;A extracted:</p>
-
-<p><strong>[Q] The problem I found with a super app that was tightly  integrated with the address book is that people were looking to see an  icon and not something that was just part of the existing BlackBerry UI.</strong></p>
-
-<p>[A] A good point.  Many users will still expect a simple icon for the  application whether only to provide information on how to leverage the  application or how to manipulate settings.  Fixmo is a really good  example of this point.</p>
-
-<p><strong>[Q] Is there a way for my app to get notified when new  notifications are shown on the device?</strong></p>
-
-<p>[A] Unfortunately, no.  But this sounds like a great feature request  you should log via the <a rel="nofollow" href="http://www.blackberry.com/developers/issuetracker" target="_self">BlackBerry Issue Tracker</a>.</p>
-
-<p><strong>[Q] Is there a way to include full camera control in the  application?</strong></p>
-
-<p>[A] Yes.  Check out JSR 135 (MMAPI) for more information on how to  include the camera field within your application including the ability  to modify zoom and flash settings.</p>
-
-<p><strong>[Q] With the definition of a "Super App" being one that you  cannot live without, can a game be a super app?</strong></p>
-
-<p>[A] Great question!  Yes, a game definitely can be a "Super App" or  take on many of the characteristics of a Super App including being  notification driven, contextual (even location based), integrated with  other applications and so on.  It isn't hard to imagine having a game  that you love so much that you can't live without it.</p>
-
-<p><strong>[Q] Can I make a Super App by developing a BlackBerry Widget?</strong></p>
-
-<p>[A] Yes, definitely.  One of the most important attributes of the our  Widget technology is that you can fully integrate your Widget into all  of the same APIs that are available to Java applications whether exposed  already through Javascript APIs or through your ability to write  Javascript to Java APIs.</p>
-
-<p><strong>[Q] Do you plan on setting up a program to certify  applications as Super Apps?</strong></p>
-
-<p>[A] No, we do not currently have any plans for certifying  applications as a Super App today.  The concept here is to help people  really understand not only the capabilities of the BlackBerry platform  but also the possibilities on better engaging your users.</p>
-
-<p><strong>[Q] We have developed a collaboration application which works  on a "pull" basis.  How can we leverage push?</strong></p>
-
-<p>[A] Check out our newly launched <a rel="nofollow" href="http://na.blackberry.com/eng/developers/javaappdev/pushapi.jsp" target="_self">Push Services page</a> for more  information on how you can start leveraging push in your application  whether for the enterprise or consumers.</p>
-
-<p><strong>[Q] Is it possible to add a custom menu item in any third  party application? </strong></p>
-
-<p>[A] Yes, although not in a granular fashion today.  As part of the  ApplicationMenuItem API you can specify that you want your menu item  included in all applications on the device but you do not get to pick  which applications if you don't want all apps.  Can you submit a feature  request in the <a rel="nofollow" href="http://www.blackberry.com/developers/issuetracker" target="_self">Developer Issue Tracker</a> if you think this is a good  use case.</p>
-
-<p><strong>[Q] Suppose the application flow is such that screen 1 pushes  screen 2, screen 2 pushes screen 3 and from screen 3 the user needs to  go to screen 1.  Should the application push screen 1 again or pop  screens to get to screen1?</strong></p>
-
-<p>[A] You should definitely maintain the proper ordering of the screens  on the stack for the user such that your application will automatically  pop off the top screen on the stack when the user presses the escape  key.  So, in this case, it depends on your ultimate goal of the screens.</p>
-
-<p><strong>[Q] This is a great presentation but it gives very little to  seasoned developers.  Will you have additional presentations with more  details and more code samples? (Editor: <em>this, I think is actually my question slightly rephrased</em>)<br />
-</strong></p>
-
-<p>[A] Yes, definitely.  This is the introduction to the concept of  Super Apps and you will see additional webinar presentations that go  into substantially more detail on all of the key aspects of bringing  Super Apps characteristics to your application.  The Big Ideas, Little  Screens UI Webinar from Brian this month is a perfect example of more  involved webinars.</p>
-
-<p><strong>[Q] What are the OS or device requirements for the Javascript  examples provided?</strong></p>
-
-<p>[A] These are part of the new <a rel="nofollow" href="http://na.blackberry.com/eng/developers/devbetasoftware/widgetsdk.jsp" target="_self">BlackBerry Widget technology</a> and  require v5.0 handheld software.</p>
-
-<p><strong>[Q] You mentioned the Super Apps website.  Where is that?</strong></p>
-
-<p>[A] <a rel="nofollow" href="http://www.blackberry.com/developers/superapps" target="_self">www.blackberry.com/developers/superapps</a></p>
-
-<p>He also promised to keep posting answers so see the original forum thread <a href="http://supportforums.blackberry.com/t5/Java-Development/BlackBerry-Super-Apps-Webinar-Follow-up/td-p/466845" target="_blank">here</a> for more information</p>
 
   </div>
   

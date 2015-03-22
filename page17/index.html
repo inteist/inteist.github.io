@@ -475,6 +475,33 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/word-wrapped-preformatted-text-in-dokuwiki">
+        Word Wrapped Preformatted Text in DokuWiki
+      </a>
+    </h1>
+
+    <span class="post-date">12 Feb 2010</span>
+
+    <p>I am using <a href="http://www.dokuwiki.org/dokuwiki" target="_blank">DokuWiki</a> quite extensively lately to keep documentation of various things. Using wiki is quite useful in general and some people opt for using local wiki such as <a href="http://wikidpad.sourceforge.net/" target="_blank">WikiPad</a> but for my needs, I opted for online wiki since I often times need to access it from various places. Maybe in the future I will post why I chose DokuWiki and some of my (objective) thoughts about comparison to other wikis and some of my likes and hates about DokuWiki (although there are much more "likes" than "hates" :) ). This post would be short and not about it.</p>
+
+<p>Several times I just wanted to put a plain (preformatted) text into the wiki for whatever reasons but I ran into a problem that DokuWiki isn't really ready to support this. One option is to use &lt;code&gt; but then the lines are not word wrapped and for text it looks just weird. So at those various occasions I tried to search for a solution with little success until I just took xterm plugin and modified it slightly (mostly the style CSS file) which took me about 5 minutes to do  (and took me about 30 minutes to write this post, and the corresponding DokuWiki Plugin page and test the browsers) and now we have a wpre plugin for DokuWiki for word wrapped preformatted text which seem to work on all recent major browsers. You can dowload it from here<a rel="attachment wp-att-125" href="http://www.inteist.com/2010/02/word-wrapped-preformatted-text-in-dokuwiki/wpre/"> <a src="http://inteist.com/media/wpre.zip">wpre plugin for DokuWiki</a></a> (the page on DokuWiki references this file)</p>
+
+<p>Supported browsers:</p>
+
+<p>(I just tested whatever I had installed on my machine and all are pretty recent. I suspect many much older versions should be supported as well)</p>
+
+<ul>
+<li>FireFox 3.5.7</li>
+<li>Safari 4.0.4 for Windows</li>
+<li> Opera 10.10</li>
+<li>Internet Explorer 8.0</li>
+<li> Chrome 4.0</li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/google-buzz-a-step-forward-to-google-wave">
         Google Buzz a Step Forward to Google Wave?
       </a>
@@ -700,33 +727,6 @@ I hope the robots remember those us that helped make them what they are and keep
 <p>WebOS is supposed to be at least as appealing as Android and iPhone. I personally like much more Android development than the iPhone development, but this is probably due to openness of the Android and the fact that I actually have quite successful application for Android, while iPhone development didn't result in end user product just yet. I am not even mentioning the Blackberry development...</p>
 
 <p>You can submit the application <a title="Early SDK pick program for WebOS developers" href="http://sdkapplication.palm.com/sdkapplication/" target="_blank">here</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/android-development-vs-blackberry-development">
-        Android Development vs. Blackberry Development
-      </a>
-    </h1>
-
-    <span class="post-date">11 Apr 2009</span>
-
-    <p>I was contemplating quite a lot about the title for this post. Originally I wanted to give it the title of "Why developing for Blackberry sucks" but then I thought it might be too harsh and does not really reflect the content of the post which is about comparing the experience of developing for Android and experience of developing for Blackberry and settled for the current title. There were other titles revolving in my head, but all of them were just variations of  the original "why developing for Blackberry sucks"</p>
-
-<p>I have been developing for Android for some time and lately I have been working on developing for Blackberry and I must say development for Android wins hands down in all aspects. Many times, especially frustrated with Blackberry buggy IDE or other cumbersome experience I wanted to write this post, but I had to find the time for it.</p>
-
-<p>So what is so bad about Blackberry development? It starts at the very basics - development environment. Google has developed a very nice plugin for Eclipse which works very well and even has the basics of support for visual editing of user iterface screens. RIM - the company behind Blackberry for a long time had their own development environment - JDE. Written using basic SWING components, there's no need to mention how bare boned and outdated it looked. They have recently introduced Eclipse plugin as well, but it is pretty buggy and half baked. It is hundreds times better than the first version of the plugin, but it is still from being stable and feature rich.</p>
-
-<p>Then we have the emulators - gosh, why do I have to restart the emulator everytime I want to test a new build? It can take up to a few minutes to restart the emulators for the more advanced models. To feel the pain, just imagine the nightmare of programming the UI for Blackberry in that setup. And no, there is no visual helper that can show the layout quickly, not to mention visual builder.</p>
-
-<p>The compiler, or more exactly the packager - "rapc" has many times weird problems and behaves like a whiny child with lots of attitude problems. Same goes for the MDS server emulator.</p>
-
-<p>Compared to Android, this can be nightmare. Yes I've had some issues and observed buggy behavior with aapt while developing for Android, but it was quite easy to resolve. For the UI part of the development, Android beats Blackberry as well. Constructing layout using XML is much easier than writing actual Java code. (Apple had actually went one step furthergiving the developers visual tools.)</p>
-
-<p>Localization is much easier in Android as well. Besides conceptually being easy, the support of the Eclipse plugin for localization is half baked and buggy and what's most important, it is not that easy to find documentation on how to implement localization for Blackberry in Eclipse.</p>
-
-<p>The last but not the least (and in fact probably most important) is the vibrant, enthusiastic and active community of the Android platform. It is so much easier to find answers to any problems you have while developing for Android. I was a little considered about Android being all open source in a sense that there is no central authority with central responsibility for certain things, and Blackberry has all this and it turns out that what many enthusiasts can do, easily outweighs any size company organized or not.</p>
 
   </div>
   

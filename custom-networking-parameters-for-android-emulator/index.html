@@ -11,7 +11,7 @@
 
   <title>
     
-      Building Secure Mobile Applications - AT&T Free Webcast &middot; Inteist
+      Throttling Android Simulator via Custom Networking Parameters &middot; Inteist
     
   </title>
 
@@ -472,36 +472,79 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Building Secure Mobile Applications - AT&T Free Webcast</h1>
-  <span class="post-date">29 Mar 2010</span>
+  <h1 class="post-title">Throttling Android Simulator via Custom Networking Parameters</h1>
+  <span class="post-date">22 Mar 2015</span>
   <!-- <hr> -->
-  <p>AT&amp;T will host a webcast about building secure mobile applications on April 1-st. It's interesting to see how the mobile ecosystem is going crazy right now, every brand  trying to get as much people involved as possible.</p>
+  <p>This is how you can easily throttle Android networking interface on the emulator. You can go via telnet or netcat.  </p>
 
-<p>The <a href="https://developer.motorola.com/" target="_blank">MotoDev</a>, <a href="http://developer.verizon.com/jsps/devCenters/wireless/index.jsp" target="_blank">Verizon Developers portal</a> and <a href="http://developer.att.com/" target="_blank">AT&amp;T developer center</a> being promoted to potential developers very aggressively lately. Those companies (carriers, manufacturers etc...) understand that the platform value shifted to having quality consumer applications. Those, supplied by small companies and <a href="http://www.comitic.com" target="_blank">indie mobile developers</a>.</p>
+<h4 id="latency">Latency</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+OK
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network status&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+Current network status:
+  download speed:          <span class="m">0</span> bits/s <span class="o">(</span>0.0 KB/s<span class="o">)</span>
+  upload speed:            <span class="m">0</span> bits/s <span class="o">(</span>0.0 KB/s<span class="o">)</span>
+  minimum latency:  <span class="m">8000</span> ms
+  maximum latency:  <span class="m">8000</span> ms
+OK
+</code></pre></div>
+<h4 id="throughput">Throughput</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+OK
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network status&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+Current network status:
+  download speed:       <span class="m">6000</span> bits/s <span class="o">(</span>0.7 KB/s<span class="o">)</span>
+  upload speed:         <span class="m">6000</span> bits/s <span class="o">(</span>0.7 KB/s<span class="o">)</span>
+  minimum latency:  <span class="m">8000</span> ms
+  maximum latency:  <span class="m">8000</span> ms
+OK
+</code></pre></div>
+<h4 id="list-of-network-commands">List of network commands</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+allows you to manage the settings related to the network data connection of the
+emulated device.
 
-<p><strong>The webcast  info: </strong></p>
+available sub-commands:
+    status           dump network status
+    speed            change network speed
+    delay            change network latency
+    capture          dump network packets to file
+</code></pre></div>
+<h4 id="all-available-commands">All available commands</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;help&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+Android console <span class="nb">command help</span>:
 
-<p><strong>Who Should Attend</strong>:<br />
-Developers who are building applications with networking or messaging  functionality.</p>
+    <span class="nb">help</span><span class="p">|</span>h<span class="p">|</span>?         print a list of commands
+    event            simulate hardware events
+    geo              Geo-location commands
+    gsm              GSM related commands
+    cdma             CDMA related commands
+    <span class="nb">kill             kill </span>the emulator instance
+    network          manage network settings
+    power            power related commands
+    quit<span class="p">|</span><span class="nb">exit        </span>quit control session
+    redir            manage port redirections
+    sms              SMS related commands
+    avd              control virtual device execution
+    window           manage emulator window
+    qemu             QEMU-specific commands
+    sensor           manage emulator sensors
 
-<p><strong>When:</strong><br />
-Thursday, April 1, 10:00-11:00 AM Pacific Time</p>
-
-<p><strong>What you will learn:</strong></p>
-
-<ul>
-<li>Evaluate threats to your mobile applications</li>
-<li>Prioritize security features that should be enabled in your  applications</li>
-<li>Minimize risks to your applications</li>
-</ul>
-
-<p>You can <a href="http://developer.att.com/developer/index.jsp?page=webcast&amp;id=6.3_v1_9700346" target="_blank">sign up here for the webcast</a></p>
-
-<p>As an added bonus AT&amp;T smartphone will get drawn between participants in the webcast.</p>
-
-<blockquote><p>
-All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be notified via email after the Webcast.</p></blockquote>
-
+try <span class="s1">&#39;help &lt;command&gt;&#39;</span> <span class="k">for</span> <span class="nb">command</span>-specific <span class="nb">help</span>
+OK
+</code></pre></div>
 </div>
 
 <!-- SIMILAR POSTS -->
@@ -519,27 +562,11 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
                   
               
           
               
                   
-              
-                  
-              
-                  
-              
-                  
-              
-          
               
                   
               
@@ -556,36 +583,20 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
                   
               
                   
-              
-                  
-              
-          
-      
-          
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
+                      
+                      <h3>Similar Posts</h3>
+                      <ul class="related-posts">
+                      
+                        <li>
+                          <h4>
+                            <a href="/git-remove-pods-folder-from-pushed-repository-how-to">
+                              How to Remove Pushed Pods Folder from Git Repository
+                            </a>
+                              <small>19 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
                   
               
                   
@@ -602,7 +613,11 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
+                  
+              
           
+              
+                  
               
                   
               
@@ -625,7 +640,86 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
+                  
+              
           
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/individual-google-play-services">
+                              Individual Google Play Services for Android with Gradle
+                            </a>
+                              <small>15 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
               
                   
               
@@ -648,14 +742,6 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
                   
               
           
@@ -668,6 +754,20 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
           
               
                   
@@ -678,7 +778,74 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
+                  
+              
           
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/dns-flush-cache-os-x-linux-windows">
+                              DNS FLush Cache for OS X, Linux, and Windows
+                            </a>
+                              <small>15 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
               
                   
               
@@ -701,27 +868,11 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
                   
               
           
               
                   
-              
-                  
-              
-                  
-              
-                  
-              
-          
               
                   
               
@@ -740,26 +891,17 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
                   
               
                   
-              
-          
-      
-          
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
+                      
+                        <li>
+                          <h4>
+                            <a href="/wordpress-jekyll-switch-migration">
+                              Switching From Wordpress to Jekyll in 20 Minutes
+                            </a>
+                              <small>07 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
                   
               
                   
@@ -767,57 +909,6 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
           
               
                   
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-      
-          
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
               
                   
               
@@ -843,14 +934,6 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
                   
               
           
@@ -863,7 +946,74 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
+                  
+              
           
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/switching-to-fabric">
+                              Switching to Fabric From Crashlytics
+                            </a>
+                              <small>05 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
               
                   
               
@@ -886,17 +1036,35 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
                   
               
           
+              
+                  
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/sublime-text-shortcuts">
+                              Sublime Text Shortcuts
+                            </a>
+                              <small>15 Jan 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
               
                   
               
@@ -908,6 +1076,8 @@ All actual attendees can enter to win an AT&amp;T Smartphone.  Winner  will be n
               
           
       
+      
+          </ul>
       
 </div>
 

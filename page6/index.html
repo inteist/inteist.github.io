@@ -475,6 +475,39 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/git-tags-cheat-sheet">
+        Git Tags Cheat Sheet
+      </a>
+    </h1>
+
+    <span class="post-date">03 Dec 2012</span>
+
+    <p>A short list of most useful Git commands to work with git tags. These should cover 90% of your needs.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">### TAGS</span>
+<span class="c">#create tag (annotated = with extra meta information)</span>
+git tag -a ver1.4 -m <span class="s1">&#39;my version 1.4&#39;</span>
+
+<span class="c">#list tags</span>
+git tag
+
+<span class="c">#delete tag</span>
+git tag -d XXX
+
+<span class="c">#delete remote tag</span>
+<span class="c">#You just need to push an &#39;empty&#39; reference to the remote tag name:</span>
+git push origin :tagname
+
+<span class="c">#push tags to remote</span>
+<span class="c">#specific tag:</span>
+git push origin v1.5
+
+<span class="c">#all tags:</span>
+git push origin --tags
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/skype-clever-upgrade-marketing">
         Skype - Clever Upgrade Marketing :)
       </a>
@@ -696,22 +729,6 @@ sudo port_cutleaves
 <h2>Speeding up Eclipse</h2>
 
 <p>If you want more information on how to speed up eclipse on OS X – read this post: [link id='240' text='How To speed up Eclipse on OS X']</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/android-and-apple-fun">
-        Android and Apple Fun
-      </a>
-    </h1>
-
-    <span class="post-date">04 Sep 2012</span>
-
-    <p style="text-align: left;">
-<p style="text-align: left;">Let's have some fun within the Android (Samsung) vs. Apple battle</p>
-
-<p style="text-align: center;"><a src="http://inteist.com/media/android-and-apple-fun1.jpeg"><img class="aligncenter  wp-image-963" title="android and apple fun" src="http://inteist.com/media/android-and-apple-fun1.jpeg" alt="" width="596" height="221" /></a></p>
 
   </div>
   

@@ -475,6 +475,87 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/custom-networking-parameters-for-android-emulator">
+        Throttling Android Simulator via Custom Networking Parameters
+      </a>
+    </h1>
+
+    <span class="post-date">22 Mar 2015</span>
+
+    <p>This is how you can easily throttle Android networking interface on the emulator. You can go via telnet or netcat.  </p>
+
+<h4 id="latency">Latency</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+OK
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network status&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+Current network status:
+  download speed:          <span class="m">0</span> bits/s <span class="o">(</span>0.0 KB/s<span class="o">)</span>
+  upload speed:            <span class="m">0</span> bits/s <span class="o">(</span>0.0 KB/s<span class="o">)</span>
+  minimum latency:  <span class="m">8000</span> ms
+  maximum latency:  <span class="m">8000</span> ms
+OK
+</code></pre></div>
+<h4 id="throughput">Throughput</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+OK
+</code></pre></div><div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network status&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+Current network status:
+  download speed:       <span class="m">6000</span> bits/s <span class="o">(</span>0.7 KB/s<span class="o">)</span>
+  upload speed:         <span class="m">6000</span> bits/s <span class="o">(</span>0.7 KB/s<span class="o">)</span>
+  minimum latency:  <span class="m">8000</span> ms
+  maximum latency:  <span class="m">8000</span> ms
+OK
+</code></pre></div>
+<h4 id="list-of-network-commands">List of network commands</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+allows you to manage the settings related to the network data connection of the
+emulated device.
+
+available sub-commands:
+    status           dump network status
+    speed            change network speed
+    delay            change network latency
+    capture          dump network packets to file
+</code></pre></div>
+<h4 id="all-available-commands">All available commands</h4>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;help&quot;</span> <span class="p">|</span> nc localhost 5554
+Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
+OK
+Android console <span class="nb">command help</span>:
+
+    <span class="nb">help</span><span class="p">|</span>h<span class="p">|</span>?         print a list of commands
+    event            simulate hardware events
+    geo              Geo-location commands
+    gsm              GSM related commands
+    cdma             CDMA related commands
+    <span class="nb">kill             kill </span>the emulator instance
+    network          manage network settings
+    power            power related commands
+    quit<span class="p">|</span><span class="nb">exit        </span>quit control session
+    redir            manage port redirections
+    sms              SMS related commands
+    avd              control virtual device execution
+    window           manage emulator window
+    qemu             QEMU-specific commands
+    sensor           manage emulator sensors
+
+try <span class="s1">&#39;help &lt;command&gt;&#39;</span> <span class="k">for</span> <span class="nb">command</span>-specific <span class="nb">help</span>
+OK
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/git-remove-pods-folder-from-pushed-repository-how-to">
         How to Remove Pushed Pods Folder from Git Repository
       </a>
@@ -666,7 +747,7 @@
 
     <span class="post-date">15 Mar 2015</span>
 
-    <p>Google Play services API split by individual service</p>
+    <h4 id="google-play-services-api-split-by-individual-service">Google Play services API split by individual service</h4>
 
 <p>Google+</p>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-plus:6.5.+&#39;</span>
@@ -711,6 +792,40 @@
 Google Analytics<br>
 Google Cloud Messaging  </p>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-base:6.5.+&#39;</span>
+</code></pre></div>
+<h4 id="source-block:">Source block:</h4>
+
+<p>Copy and uncomment the ones that you need</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Google+</span>
+<span class="c1">// compile &quot;com.google.android.gms:play-services-plus:6.5.+&quot;</span>
+<span class="c1">// Google Account Login</span>
+<span class="c1">// compile &quot;com.google.android.gms:play-services-identity:6.5.+&quot;</span>
+<span class="c1">// Google Activity Recognition</span>
+<span class="c1">// compile &quot;com.google.android.gms:play-services-location:6.5.+&quot;</span>
+<span class="c1">// Google App Indexing</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-appindexing:6.5.+&quot;</span>
+<span class="c1">// Google Cast</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-cast:6.5.+&quot;</span>
+<span class="c1">// Google Drive</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-drive:6.5.+&quot;</span>
+<span class="c1">// Google Fit</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-fitness:6.5.+&quot;</span>
+<span class="c1">// Google Maps</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-maps:6.5.+&quot;</span>
+<span class="c1">// Google Mobile Ads</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-ads:6.5.+&quot;</span>
+<span class="c1">// Google Panorama Viewer</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-panorama:6.5.+&quot;</span>
+<span class="c1">// Google Play Game services</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-games:6.5.+&quot;</span>
+<span class="c1">// Google Wallet</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-wallet:6.5.+&quot;</span>
+<span class="c1">// Android Wear</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-wearable:6.5.+&quot;</span>
+<span class="c1">// Google Actions</span>
+<span class="c1">// Google Analytics</span>
+<span class="c1">// Google Cloud Messaging</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-base:6.5.+&quot;</span>
 </code></pre></div>
   </div>
   
@@ -871,271 +986,6 @@ Google Cloud Messaging  </p>
 <p>It even had the bot functionality back then and many more features which were apparently waaay ahead of its time. It took 5 years and a company that only does that (that would be Slack) to get everyone who&#39;s anyone to drink their cool aid. </p>
 
 <h4 id="google-wave---rip...">Google Wave - RIP...</h4>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/sublime-text-shortcuts">
-        Sublime Text Shortcuts
-      </a>
-    </h1>
-
-    <span class="post-date">15 Jan 2015</span>
-
-    <h2 id="⌘-=-command"><code>⌘ = command</code></h2>
-
-<h2 id="⌥-=-option"><code>⌥ = option</code></h2>
-
-<h2 id="=-⇧"><code>= ⇧</code></h2>
-
-<h2 id="⌃-=-control"><code>⌃ = control</code></h2>
-
-<h3 id="open/goto">Open/Goto</h3>
-
-<table><thead>
-<tr>
-<th><strong>Shortcut</strong></th>
-<th><strong>Action</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>⌘</strong> T</td>
-<td>go to file</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> <strong>⌃</strong> P</td>
-<td>go to project</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> R</td>
-<td>go to methods</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> ⇧  P</td>
-<td>command prompt</td>
-</tr>
-<tr>
-<td><strong>⌃</strong>  G</td>
-<td>go to line</td>
-</tr>
-<tr>
-<td><strong>⌃</strong>  `</td>
-<td>Python console</td>
-</tr>
-</tbody></table>
-
-<h3 id="editing">Editing</h3>
-
-<table><thead>
-<tr>
-<th><strong>Shortcut</strong></th>
-<th><strong>Action</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>⌘</strong> L</td>
-<td>select line (repeat select next lines)</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> D</td>
-<td>select word </br>repeat to select others or multiple editing</td>
-</tr>
-<tr>
-<td><strong>⌃</strong> ⇧  M</td>
-<td>select content into brackets</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> ⇧  Enter</td>
-<td>insert line before</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> Enter</td>
-<td>inter line after</td>
-</tr>
-<tr>
-<td><strong>⌃</strong> ⇧  K</td>
-<td>delete line</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> K-K</td>
-<td>delete from cursor to end of line</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> K-Delete</td>
-<td>delete from cursor to start of line</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> ⇧ D</td>
-<td>duplicate line(s)</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> J</td>
-<td>join lines</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> K-U</td>
-<td>upper case</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> k-L</td>
-<td>lower case</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> /</td>
-<td>comment -&gt; line or selection</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> <strong>⌥</strong> /</td>
-<td>block comment</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> Y</td>
-<td>redo or repeat</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> ⇧  Z</td>
-<td>paste and ident</td>
-</tr>
-<tr>
-<td><strong>⌃</strong> Space</td>
-<td>autocomplete <br>repeat to select next suggestion</td>
-</tr>
-<tr>
-<td><strong>⌃</strong> M</td>
-<td>jump to matching brackets</td>
-</tr>
-</tbody></table>
-
-<h3 id="xml/html">XML/HTML</h3>
-
-<table><thead>
-<tr>
-<th><strong>Shortcut</strong></th>
-<th><strong>Action</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>⌘</strong> <strong>⇧</strong> A</td>
-<td>select content into tag</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>  <strong>⌥</strong>  .</td>
-<td>close tag</td>
-</tr>
-</tbody></table>
-
-<h3 id="find/replace">Find/Replace</h3>
-
-<table><thead>
-<tr>
-<th><strong>Shortcut</strong></th>
-<th><strong>Action</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>⌘</strong>  F</td>
-<td>find</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>  <strong>⌥</strong> F</td>
-<td>replace</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>  <strong>⌥</strong>  G</td>
-<td>find next occurrence of current word</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>  <strong>⌃</strong> G</td>
-<td>select all occurrences of current word <br> (multiple editing)</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>  <strong>⇧</strong> F</td>
-<td>find in files</td>
-</tr>
-</tbody></table>
-
-<h3 id="splits/tabs">Splits/Tabs</h3>
-
-<table><thead>
-<tr>
-<th><strong>Shortcut</strong></th>
-<th><strong>Action</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>⌘</strong>   <strong>⌥</strong>   1</td>
-<td>Single column</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>   <strong>⌥</strong>   2</td>
-<td>Two columns</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>   <strong>⌥</strong>   5</td>
-<td>Grid (4 groups)</td>
-</tr>
-<tr>
-<td><strong>⌃</strong>  [1,2,3,4]</td>
-<td>Focus group</td>
-</tr>
-<tr>
-<td><strong>⌃</strong>  ⇧[1,2,3,4]</td>
-<td>Move file to group</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>  [1,2,3...]</td>
-<td>Select tab</td>
-</tr>
-</tbody></table>
-
-<h3 id="bookmarks">Bookmarks</h3>
-
-<table><thead>
-<tr>
-<th><strong>Shortcut</strong></th>
-<th><strong>Action</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>⌘</strong>  F2</td>
-<td>Toggle bookmark</td>
-</tr>
-<tr>
-<td>F2</td>
-<td>next bookmark</td>
-</tr>
-<tr>
-<td>⇧  F2</td>
-<td>previous bookmark</td>
-</tr>
-<tr>
-<td><strong>⌘</strong>  ⇧  F2</td>
-<td>clear bookmarks</td>
-</tr>
-</tbody></table>
-
-<h3 id="marks">Marks</h3>
-
-<table><thead>
-<tr>
-<th><strong>Shortcut</strong></th>
-<th><strong>Action</strong></th>
-</tr>
-</thead><tbody>
-<tr>
-<td><strong>⌘</strong> K-W</td>
-<td>delete from cursor to mark</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> K-A</td>
-<td>select from cursor to mark</td>
-</tr>
-<tr>
-<td><strong>⌘</strong> K-G</td>
-<td>clear mark</td>
-</tr>
-</tbody></table>
 
   </div>
   
