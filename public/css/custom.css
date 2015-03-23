@@ -5,7 +5,7 @@ dummy_rule_to_make_formatter_happy {
 }
 pre code {
     padding: 0;
-    font-size: 80%;
+    font-size: 75%;
     color: inherit;
     background-color: transparent;
 }
@@ -80,4 +80,8 @@ img {
     max-width: 100%;
     margin: 0 0 1rem;
     border-radius: 7px;
+}
+
+a {
+    transition: color ease 0.25s;
 }
