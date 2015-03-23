@@ -479,6 +479,45 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/restore-a-file-deleted-from-git">
+        Restore a File Deleted From Git
+      </a>
+    </h1>
+
+    <span class="post-date">12 Jul 2012</span>
+
+    <pre><strong> git rev-list -n 1 HEAD -- &lt;file_path&gt; </strong></pre>
+
+<p>Which will give you the commit hash and then</p>
+
+<pre><strong> git checkout &lt;deleting_commit&gt;^ -- &lt;file_path&gt; </strong></pre>
+
+<p>Or you can do it in one command using a variable for the filepath</p>
+
+<p>Assuming you are using bash, setup an environment var:</p>
+
+<pre><strong> export gitfile=&lt;file_path&gt; and then </strong></pre>
+
+<pre><strong> git checkout $(git rev-list -n 1 HEAD -- "$gitfile")^ -- "$gitfile" </strong></pre>
+
+<p>You can use</p>
+
+<pre><strong> echo $gitfile </strong></pre>
+
+<p>To make sure that the variable was set correctly.</p>
+
+<p>For other shells you would use it's own mechanism like</p>
+
+<pre><strong> setenv </strong></pre>
+
+<p>etc...</p>
+
+<p>Hope this helps!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/backward-compatible-action-bar-for-android">
         Backward Compatible Action Bar for Android
       </a>
@@ -745,19 +784,6 @@ Google has released an <a href="http://developer.android.com/guide/topics/ui/act
 <p>&nbsp;</p>
 
 <p>that's the hidden (or not so much) assumption what lies in the <strong>TDD</strong> (or Test Driven Development) methodology</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/nosql-is-the-future-or-is-it">
-        NoSQL Is the future... or Is It? )
-      </a>
-    </h1>
-
-    <span class="post-date">14 Jun 2012</span>
-
-    <p style="text-align: center;"><a src="http://inteist.com/media/NoSQL-is-the-future.jpeg"><img class="aligncenter  wp-image-764" title="NoSQL is the future" src="http://inteist.com/media/NoSQL-is-the-future.jpeg" alt="" width="640" height="906" /></a></p>
 
   </div>
   

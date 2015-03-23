@@ -479,6 +479,20 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/words-of-wisdom-on-how-to-start-a-business-from-github-co-founder">
+        Words of Wisdom on How to Start a Business From GitHub Co-Founder
+      </a>
+    </h1>
+
+    <span class="post-date">22 Aug 2012</span>
+
+    <p><strong>What advice do you have for someone considering starting a business?</strong><br />
+Do it, but be smart about it. Use your brain. Think about what make the most sense for you. Worry about every dollar you spend before (and even after) you’re profitable. Focus on the things that matter and don’t waste time endlessly redesigning your site or tinkering with new technologies. There’ll be plenty of time for that later.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/android-file-transfer-stooped-recognizing-galaxy-nexus-on-os-x">
         Android File Transfer Stooped Recognizing Galaxy Nexus on OS X
       </a>
@@ -691,45 +705,6 @@
     <span class="post-date">13 Jul 2012</span>
 
     <p><a src="http://inteist.com/media/The-future-is-here-it-is-just-not-evenly-distributed.png"><img class="aligncenter size-full wp-image-852" title="The-future-is-here-it-is-just-not-evenly-distributed" src="http://inteist.com/media/The-future-is-here-it-is-just-not-evenly-distributed.png" alt="" width="450" height="450" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/restore-a-file-deleted-from-git">
-        Restore a File Deleted From Git
-      </a>
-    </h1>
-
-    <span class="post-date">12 Jul 2012</span>
-
-    <pre><strong> git rev-list -n 1 HEAD -- &lt;file_path&gt; </strong></pre>
-
-<p>Which will give you the commit hash and then</p>
-
-<pre><strong> git checkout &lt;deleting_commit&gt;^ -- &lt;file_path&gt; </strong></pre>
-
-<p>Or you can do it in one command using a variable for the filepath</p>
-
-<p>Assuming you are using bash, setup an environment var:</p>
-
-<pre><strong> export gitfile=&lt;file_path&gt; and then </strong></pre>
-
-<pre><strong> git checkout $(git rev-list -n 1 HEAD -- "$gitfile")^ -- "$gitfile" </strong></pre>
-
-<p>You can use</p>
-
-<pre><strong> echo $gitfile </strong></pre>
-
-<p>To make sure that the variable was set correctly.</p>
-
-<p>For other shells you would use it's own mechanism like</p>
-
-<pre><strong> setenv </strong></pre>
-
-<p>etc...</p>
-
-<p>Hope this helps!</p>
 
   </div>
   

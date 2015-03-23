@@ -479,6 +479,31 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/firefox-3-6-fix-the-tab-order-to-open-at-the-end-of-the-tabs">
+        Firefox 3.6 Fix the Tab Order to Open at the End of the Tabs
+      </a>
+    </h1>
+
+    <span class="post-date">13 Mar 2010</span>
+
+    <p>Just upgraded to Firefox 3.6 and I am a little annoyed by the new "feature" of tabs opening next to the tab where you open the new tab from. While this might be convenient to some people, I got used to the "old" way of handling tabs and find myself constantly wondering where this new tab is. I might give it a few more days to see whether I get used to it but in case you are annoyed by that too and want to "fix" this here is how you can disable the new “Insert Related Tab  After Current” tweak in Firefox 3.6.</p>
+
+<ul>
+<li>Type<strong> about:config</strong> in the address bar. Then, if needed click the  “I’ll be careful, I promise!” button.</li>
+<li>In the filter box – type in: <strong><em>tabs.insertRelatedAfterCurrent</em></strong>
+<ul></ul>
+</li>
+<li>Right-click that <strong>about:config</strong> entry, and choose “Toggle”</li>
+</ul>
+
+<p>This will convert Firefox back to opening a new tab from a  web page on the far right of the tab bar, rather than right next to the  tab you opened it from.</p>
+
+<p>If you decide that you actually like it and want to switch back, follow these same steps and toggle the “false” back  to “true”.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/successful-people-ship-or-what-makes-successful-enterpreneurs">
         Successful People SHIP
       </a>
@@ -995,32 +1020,6 @@ I hope the robots remember those us that helped make them what they are and keep
 <p><img class="size-full wp-image-94 alignnone" style="margin: 10px;" title="ff-old-icon" src="http://inteist.com/media/ff-old-icon.png" alt="ff-old-icon" width="307" height="307" /><img class="size-full wp-image-95 alignnone" style="margin: 10px;" title="ff-new-icon" src="http://inteist.com/media/ff-new-icon.png" alt="ff-new-icon" width="307" height="307" /></p>
 
 <p>Find the differences :)</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/showing-a-dialog-or-screen-from-a-background-thread-on-blackberry">
-        Showing a Dialog (Or Screen) From a Background Thread on BlackBerry
-      </a>
-    </h1>
-
-    <span class="post-date">09 Jun 2009</span>
-
-    <p>If you need to pop up a dialog or any screen actually from a process that runs in background on BlackBerry, it is fairly easy to do, unfortunately it is (as pretty much everything with BlackBerry development)  easy to <strong>figure out</strong> how to do.</p>
-
-<p>The following piece of code should do the trick:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">synchronized</span> <span class="o">(</span><span class="n">Application</span><span class="o">.</span><span class="na">getEventLock</span><span class="o">())</span>
-<span class="o">{</span>
-    <span class="n">Ui</span><span class="o">.</span><span class="na">getUiEngine</span><span class="o">().</span><span class="na">pushGlobalScreen</span><span class="o">(</span><span class="k">new</span> <span class="nf">CLAScreen</span><span class="o">(),</span> <span class="mi">1</span><span class="o">,</span> <span class="n">UiEngine</span><span class="o">.</span><span class="na">GLOBAL_QUEUE</span><span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div>
-<p>There are also a few things you should be aware of when using this code:</p>
-
-<ol>
-<li> Your backgroud process should implement <span id="konasapn0"> UiEngine. Easy way is to </span>extend Application.</li>
-<li>If you <span id="konasapn0">change UiEngine.GLOBAL_QUEUE to UiEngine.GLOBAL_MODAL, the dialog will block your thread until it is closed</span></li>
-</ol>
 
   </div>
   

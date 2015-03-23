@@ -479,6 +479,43 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/how-to-fix-android-debug-certificate-expire-error">
+        How to Fix Android Debug Certificate Expire Error
+      </a>
+    </h1>
+
+    <span class="post-date">19 Nov 2010</span>
+
+    <h3><strong>Problem:</strong></h3>
+
+<p>You are getting the following error:</p>
+
+<blockquote><p><strong>android Error generating final archive: Debug certificate expired on ...</strong></p></blockquote>
+
+<p>One day when you opened your Eclipse with Android tool chain installed, suddenly you see this error, which may seem weird because you know that Eclipse uses just some random certificate for debugging and so why is it expired and what to do.</p>
+
+<h3><strong>The Solution: </strong></h3>
+
+<p><strong></strong>Simply delete the keystore file which is located in</p>
+
+<blockquote><p><strong>%USERHOME%/.android/debug.keystore</strong> (on Windows)</p></blockquote>
+
+<p>or</p>
+
+<blockquote><p><strong>~/.android/debug.keystore </strong>(on Linux and OS X)</p></blockquote>
+
+<p>Restart your eclipse and you are all set.</p>
+
+<h3><strong>Why this happens</strong>:</h3>
+
+<p>The reason to this is that the debug certificate is set to expire every year or 365 days.</p>
+
+<p>If you do not wish to be bothered by this again in a year, you can use the <strong>keytool</strong> executable from the Android tool chain to generate a certificate with a longer expiration period.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blackberry-playbook-vs-apple-ipad-browser-comparison">
         BlackBerry PlayBook vs. Apple iPad - Browser Comparison
       </a>
@@ -675,38 +712,6 @@
 <p>I will be looking for cues as to whether RIM will be able to at least [intlink id="285" type="post"]maintain its current user base[/intlink] and improve his ways in treating smaller indie developers.</p>
 
 <p>There have been rummors about BB Tablet - BlackPad, to be announced during the BB DevCon 2010. I am personally very skeptical about it, but we will see. Also - it is almost clear to everyone that RIM will announce it's advertising API availability to the public - not great news though. They have the worst performing advertising so far, and this is one of the major points for me personally, if there is no promising (I am not even wishing for bright) future on the horizon, BlackBerry will be the last platform to receive any attention on my list.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/facebook-is-down-funny-tweets-collection">
-        Facebook Is Down - Funny Tweets Collection
-      </a>
-    </h1>
-
-    <span class="post-date">23 Sep 2010</span>
-
-    <p style="text-align: left;">Apparently today Facebook was down for 2 hours and for some even more... I did not pick up long time on this since I do not use Facebook, but just accidentally I wanted something and I tried to load it and boom I got:</p>
-
-<p style="text-align: center;"><a src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.47.09-PM1.png"><img class="size-full wp-image-294 aligncenter" style="border: 0px;" title="Screen shot 2010-09-23 at 4.47.09 PM" src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.47.09-PM1.png" alt="" width="477" height="180" /></a></p>
-
-<p style="text-align: left;">Not sure whether this is a localized event I went to twitter to see if others had this problem and man I was in for some good laughs. Here's the collection of funniest tweets during the time that the Facebook was down:</p>
-
-<p><a src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.52.40-PM.png"><img class="size-full wp-image-295  alignleft" style="border: 0px;" title="Screen shot 2010-09-23 at 4.52.40 PM" src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.52.40-PM.png" alt="" width="531" height="103" /></a></p>
-
-<p style="text-align: left;"><a src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.53.37-PM.png"><img class="size-full wp-image-298 alignright" style="border: 0px;" title="Screen shot 2010-09-23 at 4.53.37 PM" src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.53.37-PM.png" alt="" width="528" height="71" /></a></p>
-
-<p style="text-align: left;"><a src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.53.05-PM.png"><img class="size-full wp-image-297 alignleft" style="border: 0px;" title="Screen shot 2010-09-23 at 4.53.05 PM" src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.53.05-PM.png" alt="" width="544" height="87" /></a><a src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.52.54-PM.png"><img class="size-full wp-image-296 alignright" style="border: 0px;" title="Screen shot 2010-09-23 at 4.52.54 PM" src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.52.54-PM.png" alt="" width="529" height="88" /></a><a src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.54.07-PM.png"><img class="aligncenter size-full wp-image-299" style="border: 0px;" title="Screen shot 2010-09-23 at 4.54.07 PM" src="http://inteist.com/media/Screen-shot-2010-09-23-at-4.54.07-PM.png" alt="" width="524" height="83" /></a></p>
-
-<p style="text-align: left;">
-<p style="text-align: left;">Ant check out the Twitter trends. How "DNS Failure" sounds to you as a trend - huh?</p>
-
-<p style="text-align: center;"><a src="http://inteist.com/media/Screen-shot-2010-09-23-at-5.38.57-PM.png"><img class="aligncenter size-full wp-image-308" style="border: 0px;" title="Screen shot 2010-09-23 at 5.38.57 PM" src="http://inteist.com/media/Screen-shot-2010-09-23-at-5.38.57-PM.png" alt="" width="195" height="251" /></a></p>
-
-<p style="text-align: left;"><strong>UPDATE: </strong> Apparently it wasn't just my "original" idea to collect funny tweets, many other websites did so as well, what is interesting that there are about 20-30 different tweets overall which just keep repeating from site to site. Are we short of funny twitter-ers? People obviously do care. Maybe they are just afraid Facebook coming after them in revenge? (just kidding of course, or am I?). Let me know what you think in comments.</p>
-
-<p><p style="text-align: left;"></p>
 
   </div>
   

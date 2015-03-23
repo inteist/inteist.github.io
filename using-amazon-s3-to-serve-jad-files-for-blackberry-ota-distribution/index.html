@@ -478,7 +478,6 @@
       <div class="post">
   <h1 class="post-title">Using Amazon S3 to Serve JAD Files for BlackBerry OTA Distribution</h1>
   <span class="post-date">04 Apr 2010</span>
-  <!-- <hr> -->
   <p>If you don't want the preamble of why I wanted to serve JAD files from Amazon S3, skip to the second paragraph.</p>
 
 <p>I have recently came across the need to push OTA update of the <a href="http://www.comitic.com/blackberry/dailyhoroscope-application/" target="_blank">DailyHoroscope application for BlackBerry</a>. I conjectured that OTA updates have different behavior and thus different impact on the web server. There are still many people using their smartphones in general and BlackBerries in particular over the slower EDGE connections as opposed to 3G, not to mention 4G and/or WiMax. So to download 300K file over EDGE connection in the real usage example can take anywhere between 10 seconds to couple minutes. All this time the webserver's thread serving this specific client will remain running. So it seems like you (or rather your server) can be in a nasty situation when 1000 users simultaneously or almost simultaneously decide to do the OTA update. Also quick calculation with Amazon WS calculator shows that serving files from S3 would be rather cheap even comparing to renting a cheap VPS for that purpose. My estimate was that the whole upgrade process (considering the fact that almost all the users update from S3) will cost me about $15. And this is independent of the time span. For $15 you could get a very cheap VPS for one month (if you are lucky). So it seemed like a no brainer. It indeed was until I faced a few problems with setting this up which I will cover here so that you don't have to spend much time looking for solutions if you want to do the same.</p>
@@ -576,6 +575,27 @@
                   
               
           
+      
+          
+          
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+          
               
                   
               
@@ -821,9 +841,6 @@
               
                   
               
-          
-      
-          
           
       
       
@@ -834,6 +851,15 @@
 <div class="related">
   <h3>Latest Posts</h3>
   <ul class="related-posts">
+    
+      <li>
+        <h4>
+          <a href="/us-states-resources-for-android">
+            US States Resource for Android
+          </a>
+            <small>23 Mar 2015</small>
+        </43>
+      </li>
     
       <li>
         <h4>
@@ -859,15 +885,6 @@
             Throttling Android Simulator via Custom Networking Parameters
           </a>
             <small>22 Mar 2015</small>
-        </43>
-      </li>
-    
-      <li>
-        <h4>
-          <a href="/git-remove-pods-folder-from-pushed-repository-how-to">
-            How to Remove Pushed Pods Folder from Git Repository
-          </a>
-            <small>19 Mar 2015</small>
         </43>
       </li>
     

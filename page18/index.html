@@ -479,6 +479,32 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/showing-a-dialog-or-screen-from-a-background-thread-on-blackberry">
+        Showing a Dialog (Or Screen) From a Background Thread on BlackBerry
+      </a>
+    </h1>
+
+    <span class="post-date">09 Jun 2009</span>
+
+    <p>If you need to pop up a dialog or any screen actually from a process that runs in background on BlackBerry, it is fairly easy to do, unfortunately it is (as pretty much everything with BlackBerry development)  easy to <strong>figure out</strong> how to do.</p>
+
+<p>The following piece of code should do the trick:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">synchronized</span> <span class="o">(</span><span class="n">Application</span><span class="o">.</span><span class="na">getEventLock</span><span class="o">())</span>
+<span class="o">{</span>
+    <span class="n">Ui</span><span class="o">.</span><span class="na">getUiEngine</span><span class="o">().</span><span class="na">pushGlobalScreen</span><span class="o">(</span><span class="k">new</span> <span class="nf">CLAScreen</span><span class="o">(),</span> <span class="mi">1</span><span class="o">,</span> <span class="n">UiEngine</span><span class="o">.</span><span class="na">GLOBAL_QUEUE</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>There are also a few things you should be aware of when using this code:</p>
+
+<ol>
+<li> Your backgroud process should implement <span id="konasapn0"> UiEngine. Easy way is to </span>extend Application.</li>
+<li>If you <span id="konasapn0">change UiEngine.GLOBAL_QUEUE to UiEngine.GLOBAL_MODAL, the dialog will block your thread until it is closed</span></li>
+</ol>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/will-windows-eventually-loose-portables-war-thanks-to-many-arm-powered-netbooks-coming">
         Will Windows Eventually Loose Portables War Thanks to Many ARM Powered Netbooks coming?
       </a>
@@ -686,31 +712,6 @@
 <p>Every CS student has heard at least once during his career "Recursion is cool,  however - DON'T use it!". Some might wonder well, why is it so? Well - in fact  the recursion is cool indeed, BUT is slow as hell! I have compared just for fun  some code that was using a recursion versus non recursive code, and it appeared  that non recursive code was about 10 times (!!!!) faster for significant amount  of computation. And when I say significant, I mean several hours of  runtime.</p>
 
 <p>One must ask - but why? And the answer would be - this is due to stack frames  allocations of course. It turns out that it is quite costly to open a new stack  frame. I believe there are other reasons as well, which maybe depend on the  programming language, but this would be the most obvious one. So kids, don't say  I didn't warn you - don't try this at home!</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/getting-one-third-probability-by-tossing-coins-puzzle-solution">
-        Getting 1/3 Probability by Tossing Coins -- Solution
-      </a>
-    </h1>
-
-    <span class="post-date">15 Jan 2009</span>
-
-    <p><strong>Problem:</strong></p>
-
-<p><strong>How can we choose one out of 3 christmass presents with equal probabability?  Or in other words how to obtain 1/3 probability by using one unbiased coin ?</strong></p>
-
-<p><strong>Solution:</strong></p>
-
-<p>1. The coin is UNbiased: toss the coin twice. Let TH, HT and HH correspond to each of the presents. In case of HH - repeat from the beginning.</p>
-
-<p>2. The coin is biased, then we notice that TH and HT would occur with equal probability but this will only give us 2 possible outcomes with equal probability and we need 3.  Then we would have to use 4 tosses which will give us 16 possible combinations. The question is which ones we should choose to represent the presents (or outcomes). The only condition is that the number of H and T should be the same to ensure equal probability for each outcome and thus selecting each present with the same probability. One option would be to assign HTHT, THTH and HTTH to the three choices, with other  13 possible 4-toss outcomes being rejected.</p>
-
-<p><strong>Discussion:</strong></p>
-
-<p>So the obvious problem is that we need some way to extrapolate tosses of a single coin to (possibly) arbitrary number of outcomes with equal probability to obtain each outcome.  So obviously we will need several tosses to match the number of outcomes we need. However we need to pay careful attention to the fact that the toss sequences we are using have the same combined probability such as HHTT and HTHT</p>
 
   </div>
   

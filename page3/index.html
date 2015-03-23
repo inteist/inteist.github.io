@@ -479,6 +479,19 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/pull-screenshot-from-android-with-one-liner-using-adb">
+        Pull Screenshot From Android With One Liner Using 'Adb'
+      </a>
+    </h1>
+
+    <span class="post-date">12 Mar 2014</span>
+
+    <div class="highlight"><pre><code class="language-bash" data-lang="bash">adb shell screencap -p <span class="p">|</span> perl -pe <span class="s1">&#39;s/\x0D\x0A/\x0A/g&#39;</span> &gt; screenshot.png
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/evernote-account-limits-in-perspective">
         Evernote Account Limits in Perspective
       </a>
@@ -703,21 +716,6 @@ You can specify a step counter for the ranges to get every Nth number or letter:
 
 <span class="o">}</span>
 </code></pre></div>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/great-infografic-on-ios-vs-android-app-monetization">
-        Great Infografic on iOS vs. Android App Monetization
-      </a>
-    </h1>
-
-    <span class="post-date">07 Aug 2013</span>
-
-    <p style="text-align: center;"><a src="http://inteist.com/media/ios_vs_android_revenue_opportunity_comparisson.jpg"><img class="aligncenter  wp-image-1221" alt="ios_vs_android_revenue_opportunity_comparisson" src="http://inteist.com/media/ios_vs_android_revenue_opportunity_comparisson.jpg" width="600" height="5980" /></a></p>
-
-<h2 style="text-align: center;">Enjoy!</h2>
-
   </div>
   
 </div>

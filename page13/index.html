@@ -479,6 +479,62 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/ota-on-blackberry-how-to-detect-os-version-from-the-browser-user-agent">
+        OTA on BlackBerry - How to Detect OS Version From the Browser User Agent
+      </a>
+    </h1>
+
+    <span class="post-date">04 Mar 2011</span>
+
+    <p>I do an OTA (over the air) distribution for BlackBerry. Some time ago, I wrote here how to [link id='206' text='setup the mime types for the OTA distribution on Amazon S3']. Luckily now, S3 has got a new and very useful web interface, as well as improved mime type detection. They still get the file types not exactly right, but close enough so that the OTA installation for BlackBerry works on "autodetect" settings just fine.</p>
+
+<p>This is however not about S3, this is about detecting the proper OS version of the BlackBerry OS from the user agent of the browser using a few very simple regular expressions.  The code is tailored to PHP, but you can easily adapt it to any language that supports Perl style regular expressions, or you can adapt the reg. expressions as well based on this simple idea:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">       $agent = //get user agent raw string</span>
+
+<span class="x">        if (preg_match(&quot;/BlackBerry/i&quot;, $agent)) {</span>
+
+<span class="x">            if (preg_match(&quot;/6\.0\../i&quot;, $agent)) {</span>
+<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;6.0&quot;;                </span>
+<span class="x">            }            </span>
+<span class="x">            if (preg_match(&quot;/5\.0\../i&quot;, $agent)) {</span>
+<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;5.0&quot;;                </span>
+<span class="x">            }</span>
+<span class="x">            if (preg_match(&quot;/4\.7\../i&quot;, $agent)) {</span>
+<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.7&quot;;</span>
+<span class="x">            }</span>
+<span class="x">            if (preg_match(&quot;/4\.6\../i&quot;, $agent)) {</span>
+<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.6&quot;;</span>
+<span class="x">            }</span>
+<span class="x">            if (preg_match(&quot;/4\.5\../i&quot;, $agent)) {</span>
+<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.5&quot;;</span>
+<span class="x">            }</span>
+<span class="x">            if (preg_match(&quot;/4\.3\../i&quot;, $agent)) {</span>
+<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.3&quot;;</span>
+<span class="x">            }</span>
+<span class="x">            if (preg_match(&quot;/4\.2\.1/i&quot;, $agent)) {</span>
+<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.2.1&quot;;</span>
+<span class="x">            }</span>
+
+<span class="x">            //Form your download URL here</span>
+
+<span class="x">        } else {</span>
+<span class="x">            //This is not BlackBerry user agent</span>
+<span class="x">        }</span>
+</code></pre></div>
+<p>Nothing complicated, but this should give a start point to any one tying to serve appropriate bundle via OTA.</p>
+
+<p>&nbsp;</p>
+
+<p>If you were to use S3, then it would basically be:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">// The main link to S3</span>
+<span class="x">$downloadURL = &quot;https://s3.amazonaws.com/YOUR_BUCKET/releases/&quot; . $newRelease[&#39;version_folder&#39;] . &quot;/&quot; . $newRelease[&#39;os_folder&#39;] . &quot;/YourAppName.jad&quot;;</span>
+</code></pre></div>
+<p>Post your thoughts/corrections in the comments!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/convert-argb-to-int-value-java">
         Convert ARGB to Int Value (Java)
       </a>
@@ -1149,43 +1205,6 @@ brightcove.createExperiences();<br />
 <p>folder.</p>
 
 <p>But since the Android 2.3 (or API 9) the /<strong>tools</strong> folder was renamed to /<strong>platform-tools </strong>folder, so if you are wondering why suddenly your <em>&gt;adb </em>command does not work - this is the reason and updating the PATH should fix it.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-fix-android-debug-certificate-expire-error">
-        How to Fix Android Debug Certificate Expire Error
-      </a>
-    </h1>
-
-    <span class="post-date">19 Nov 2010</span>
-
-    <h3><strong>Problem:</strong></h3>
-
-<p>You are getting the following error:</p>
-
-<blockquote><p><strong>android Error generating final archive: Debug certificate expired on ...</strong></p></blockquote>
-
-<p>One day when you opened your Eclipse with Android tool chain installed, suddenly you see this error, which may seem weird because you know that Eclipse uses just some random certificate for debugging and so why is it expired and what to do.</p>
-
-<h3><strong>The Solution: </strong></h3>
-
-<p><strong></strong>Simply delete the keystore file which is located in</p>
-
-<blockquote><p><strong>%USERHOME%/.android/debug.keystore</strong> (on Windows)</p></blockquote>
-
-<p>or</p>
-
-<blockquote><p><strong>~/.android/debug.keystore </strong>(on Linux and OS X)</p></blockquote>
-
-<p>Restart your eclipse and you are all set.</p>
-
-<h3><strong>Why this happens</strong>:</h3>
-
-<p>The reason to this is that the debug certificate is set to expire every year or 365 days.</p>
-
-<p>If you do not wish to be bothered by this again in a year, you can use the <strong>keytool</strong> executable from the Android tool chain to generate a certificate with a longer expiration period.</p>
 
   </div>
   

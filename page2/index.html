@@ -479,6 +479,26 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/jekyll-redirect-http-equiv-not-working">
+        Jekyll Redirect Plugin <http Equiv> Forcing a File Download
+      </a>
+    </h1>
+
+    <span class="post-date">07 Mar 2015</span>
+
+    <h4 id="problem">Problem</h4>
+
+<p>The redirect was not working. It was forcing a file download but was not redirecting the page. Turns out Jekyll does not correctly parse the case where the <strong>redirect_from</strong> </p>
+
+<h4 id="solution">Solution</h4>
+
+<p>You need to add a trailing slat to the <code>redirect_from:URL</code> i.e. <code>redirect_from: /old_slug/</code> not
+<code>redirect_from: /old_slug</code>. Note the trailing slash. This is how it is supposed to be done.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/switching-to-fabric">
         Switching to Fabric From Crashlytics
       </a>
@@ -937,19 +957,6 @@
 </code></pre></div>
 <p>to put your display to sleep after 5 minutes of idling and your computer after 15 minutes of idling.</p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/pull-screenshot-from-android-with-one-liner-using-adb">
-        Pull Screenshot From Android With One Liner Using 'Adb'
-      </a>
-    </h1>
-
-    <span class="post-date">12 Mar 2014</span>
-
-    <div class="highlight"><pre><code class="language-bash" data-lang="bash">adb shell screencap -p <span class="p">|</span> perl -pe <span class="s1">&#39;s/\x0D\x0A/\x0A/g&#39;</span> &gt; screenshot.png
-</code></pre></div>
   </div>
   
 </div>

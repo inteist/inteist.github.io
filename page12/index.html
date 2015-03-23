@@ -479,6 +479,26 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/wp7-what-makes-live-tile-unique">
+        WP7 - What Makes Live Tile Unique?
+      </a>
+    </h1>
+
+    <span class="post-date">10 Jan 2012</span>
+
+    <p>If you were playing with the "Live Tiles" from the latest (at the moment) OS update to the Windows Phone code named "Mango", you might have been wondering what makes Live tiles unique and how many live tiles can be placed on the home screen of the user. Accidentally I found out that what makes the live tile unique is the tile reference or the tile URI</p>
+
+<p>a usual way to create a tile would be:</p>
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">ShellTile</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="k">new</span> <span class="n">Uri</span><span class="p">(</span><span class="s">&quot;/GotoPage.xaml?param1=value1&amp;param2=value2, UriKind.Relative), tileData);</span>
+</code></pre></div>
+<p>so whenever you change the value1 and value 2, a new live tile can be created.</p>
+
+<p>Happy coding and have fun with the live tiles!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/wp7-deployment-error-failed-to-connect-to-device-as-it-is-pin-locked">
         WP7 Deployment Error: Failed to Connect to Device as It Is Pin Locked
       </a>
@@ -668,62 +688,6 @@ Unable to read repository at https://swdownloads.blackberry.com/Downloads/auth/c
 <p><a src="http://inteist.com/media/Screen-shot-2011-04-28-at-12.12.36-AM.png"><img class="aligncenter size-medium wp-image-541" title="BlackBerry OS distribution March 3d 2011" src="http://inteist.com/media/Screen-shot-2011-04-28-at-12.12.36-AM-300x196.png" alt="" width="300" height="196" /></a>And below is the distribution I have compiled from the data for the month of April 2011 (a month worth of data)</p>
 
 <p><a src="http://inteist.com/media/BlackBerry-OS-distribution-April-2011.png"><img class="aligncenter size-medium wp-image-542" title="BlackBerry OS distribution April 2011" src="http://inteist.com/media/BlackBerry-OS-distribution-April-2011-300x286.png" alt="" width="300" height="286" /></a>The breakdown by OS version is not identical but the picture is pretty much similar, except that <del>my chart is much nicer</del> I've got 6.1 devices (hmmm!) and the 5.0 OS section is a bit larger for my statistics than it is for the official statistics. But again, the official statistics are pretty much 2 month old now and actually since the rest of the sections pretty much coincide with the official statistics, I would assume that the number of OS 5.0 just got larger in these 2 month; which by itself is great news for BB developers. Hooray to that and I will try to keep up with statistics to see how the distribution shifts, maybe another post in couple month or when something interesting happens. Let me know in the comments if you'd like to see something like that in the future and whether it was useful for you.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ota-on-blackberry-how-to-detect-os-version-from-the-browser-user-agent">
-        OTA on BlackBerry - How to Detect OS Version From the Browser User Agent
-      </a>
-    </h1>
-
-    <span class="post-date">04 Mar 2011</span>
-
-    <p>I do an OTA (over the air) distribution for BlackBerry. Some time ago, I wrote here how to [link id='206' text='setup the mime types for the OTA distribution on Amazon S3']. Luckily now, S3 has got a new and very useful web interface, as well as improved mime type detection. They still get the file types not exactly right, but close enough so that the OTA installation for BlackBerry works on "autodetect" settings just fine.</p>
-
-<p>This is however not about S3, this is about detecting the proper OS version of the BlackBerry OS from the user agent of the browser using a few very simple regular expressions.  The code is tailored to PHP, but you can easily adapt it to any language that supports Perl style regular expressions, or you can adapt the reg. expressions as well based on this simple idea:</p>
-<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">       $agent = //get user agent raw string</span>
-
-<span class="x">        if (preg_match(&quot;/BlackBerry/i&quot;, $agent)) {</span>
-
-<span class="x">            if (preg_match(&quot;/6\.0\../i&quot;, $agent)) {</span>
-<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;6.0&quot;;                </span>
-<span class="x">            }            </span>
-<span class="x">            if (preg_match(&quot;/5\.0\../i&quot;, $agent)) {</span>
-<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;5.0&quot;;                </span>
-<span class="x">            }</span>
-<span class="x">            if (preg_match(&quot;/4\.7\../i&quot;, $agent)) {</span>
-<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.7&quot;;</span>
-<span class="x">            }</span>
-<span class="x">            if (preg_match(&quot;/4\.6\../i&quot;, $agent)) {</span>
-<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.6&quot;;</span>
-<span class="x">            }</span>
-<span class="x">            if (preg_match(&quot;/4\.5\../i&quot;, $agent)) {</span>
-<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.5&quot;;</span>
-<span class="x">            }</span>
-<span class="x">            if (preg_match(&quot;/4\.3\../i&quot;, $agent)) {</span>
-<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.3&quot;;</span>
-<span class="x">            }</span>
-<span class="x">            if (preg_match(&quot;/4\.2\.1/i&quot;, $agent)) {</span>
-<span class="x">                $newRelease[&#39;os_folder&#39;] = &quot;4.2.1&quot;;</span>
-<span class="x">            }</span>
-
-<span class="x">            //Form your download URL here</span>
-
-<span class="x">        } else {</span>
-<span class="x">            //This is not BlackBerry user agent</span>
-<span class="x">        }</span>
-</code></pre></div>
-<p>Nothing complicated, but this should give a start point to any one tying to serve appropriate bundle via OTA.</p>
-
-<p>&nbsp;</p>
-
-<p>If you were to use S3, then it would basically be:</p>
-<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">// The main link to S3</span>
-<span class="x">$downloadURL = &quot;https://s3.amazonaws.com/YOUR_BUCKET/releases/&quot; . $newRelease[&#39;version_folder&#39;] . &quot;/&quot; . $newRelease[&#39;os_folder&#39;] . &quot;/YourAppName.jad&quot;;</span>
-</code></pre></div>
-<p>Post your thoughts/corrections in the comments!</p>
 
   </div>
   
