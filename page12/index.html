@@ -456,6 +456,10 @@
           
         
       
+        
+          
+        
+      
 
 
         <a class="sidebar-nav-item" href="/tags">Tags</a>
@@ -472,6 +476,25 @@
 
     <div class="content container">
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/wp7-deployment-error-failed-to-connect-to-device-as-it-is-pin-locked">
+        WP7 Deployment Error: Failed to Connect to Device as It Is Pin Locked
+      </a>
+    </h1>
+
+    <span class="post-date">10 Jan 2012</span>
+
+    <p>If you are getting the:</p>
+
+<p><strong>"failed to connect to device as it is pin locked"</strong></p>
+
+<p>when trying to deploy your app to a windows phone 7 device no worries. Just make sure to disable the "screen lock" or "screensaver" whatever it is called. That's what it is all about!</p>
+
+<p>I was lucky to figure this one immediately but if you got here means you got stuck with it and had to look it up. Hopefully this will help you with that problem.</p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -701,46 +724,6 @@ Unable to read repository at https://swdownloads.blackberry.com/Downloads/auth/c
 <span class="x">$downloadURL = &quot;https://s3.amazonaws.com/YOUR_BUCKET/releases/&quot; . $newRelease[&#39;version_folder&#39;] . &quot;/&quot; . $newRelease[&#39;os_folder&#39;] . &quot;/YourAppName.jad&quot;;</span>
 </code></pre></div>
 <p>Post your thoughts/corrections in the comments!</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/convert-argb-to-int-value-java">
-        Convert ARGB to Int Value (Java)
-      </a>
-    </h1>
-
-    <span class="post-date">26 Feb 2011</span>
-
-    <p>In some Java implementations/SDKs the <em>Color </em>class does not have the</p>
-
-<blockquote><p><strong>int Color.argb(int, int, int, int)</strong></p></blockquote>
-
-<p>method.</p>
-
-<p>One SDK that, as far as I know, does not have this method is the [link id='75' text='BlackBerry SDK'].</p>
-
-<p>This code snippet can be used to perform just that:</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ColorBB</span> <span class="o">{</span>
-
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">argb</span><span class="o">(</span><span class="kt">int</span> <span class="n">A</span><span class="o">,</span> <span class="kt">int</span> <span class="n">R</span><span class="o">,</span> <span class="kt">int</span> <span class="n">G</span><span class="o">,</span> <span class="kt">int</span> <span class="n">B</span><span class="o">){</span>     
-        <span class="kt">byte</span><span class="o">[]</span> <span class="n">colorByteArr</span> <span class="o">=</span> <span class="o">{</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="n">A</span><span class="o">,</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="n">R</span><span class="o">,</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="n">G</span><span class="o">,</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="n">B</span> <span class="o">};</span>
-        <span class="k">return</span> <span class="nf">byteArrToInt</span><span class="o">(</span><span class="n">colorByteArr</span><span class="o">);</span>
-    <span class="o">}</span>
-
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="nf">byteArrToInt</span><span class="o">(</span><span class="kt">byte</span><span class="o">[]</span> <span class="n">colorByteArr</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="o">(</span><span class="n">colorByteArr</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span><span class="o">)</span> <span class="o">+</span> <span class="o">((</span><span class="n">colorByteArr</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="o">)</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="o">)</span> <span class="o">+</span> <span class="o">((</span><span class="n">colorByteArr</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="o">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">colorByteArr</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="o">);</span>
-    <span class="o">}</span>
-
-<span class="o">}</span>
-</code></pre></div>
-<pre><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">Let me know in the comments if you have any improvement/modification ideas.</span></pre>
-
-<pre><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">
-</span></pre>
 
   </div>
   

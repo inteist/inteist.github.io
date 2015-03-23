@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/aliases-for-most-useful-android-emulator-commands</loc>
+    <lastmod>2015-03-22T14:45:30-04:00</lastmod>
+  </url>
+  <url>
     <loc>/gradle-included-libraries-in-android-studio</loc>
     <lastmod>2015-03-22T13:27:21-04:00</lastmod>
   </url>
@@ -722,18 +726,18 @@
   </url>
   <url>
     <loc>/404.html</loc>
-    <lastmod>2015-03-22T17:29:27-04:00</lastmod>
+    <lastmod>2015-03-22T19:56:43-04:00</lastmod>
   </url>
   <url>
     <loc>/archive/</loc>
-    <lastmod>2015-03-22T17:29:27-04:00</lastmod>
+    <lastmod>2015-03-22T19:56:43-04:00</lastmod>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2015-03-22T17:29:27-04:00</lastmod>
+    <lastmod>2015-03-22T19:56:43-04:00</lastmod>
   </url>
   <url>
     <loc>/tags/</loc>
-    <lastmod>2015-03-22T17:29:27-04:00</lastmod>
+    <lastmod>2015-03-22T19:56:43-04:00</lastmod>
   </url>
 </urlset>

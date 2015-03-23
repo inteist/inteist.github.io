@@ -1,17 +1,11 @@
 
-code {
+dummy_rule_to_make_formatter_happy {
 
-    font-size: 85%;
-
-    color: #bf616a;
-
-    background-color: #f9f9f9;
-
-    border-radius: 3px;
+    padding: 0;
 }
 pre code {
     padding: 0;
-    font-size: 90%;
+    font-size: 80%;
     color: inherit;
     background-color: transparent;
 }
@@ -68,24 +62,21 @@ line-height: 1.4;
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fjalla One', sans-serif;
 }
-
-
 .post-date {
     margin-bottom: 2rem;
 }
-
 .posts > .post {
     margin-bottom: 10em;
 }
 .post {
     margin-bottom: 2em;
 }
-
-
-
-.posts > .spacer,
-.post > .spacer {
+.posts > .spacer, .post > .spacer {
     margin-bottom: 2rem;
 }
-
-
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 1rem;
+    border-radius: 7px;
+}

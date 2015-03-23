@@ -456,6 +456,10 @@
           
         
       
+        
+          
+        
+      
 
 
         <a class="sidebar-nav-item" href="/tags">Tags</a>
@@ -472,6 +476,26 @@
 
     <div class="content container">
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/aliases-for-most-useful-android-emulator-commands">
+        Aliases for Most Useful Android Emulator Commands
+      </a>
+    </h1>
+
+    <span class="post-date">22 Mar 2015</span>
+
+    <p>I have recently posted about how to <a href="/custom-networking-parameters-for-android-emulator">throttle android emulator via custom networking parameters.</a> However it may be quite tedious to type that every time we want to throttle the networking. Aliases to the help!</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span>android-network-throttle<span class="o">=</span><span class="s2">&quot;echo &#39;network delay 4000&#39; | nc localhost 5554 &amp;&amp; echo &#39;network speed 6 6&#39; | nc localhost 5554&quot;</span>
+
+<span class="nb">alias </span>android-network-reset<span class="o">=</span><span class="s2">&quot;echo &#39;network delay 0&#39; | nc localhost 5554 &amp;&amp; echo &#39;network speed 0&#39; | nc localhost 5554&quot;</span>
+
+<span class="nb">alias </span>android-network-status<span class="o">=</span><span class="s2">&quot;echo &#39;network status&#39; | nc localhost 5554&quot;</span>
+</code></pre></div>
+<p>With <a href="http://ohmyz.sh">ohmyzsh</a> which will complete the aliases it&#39;s pure delight.</p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -934,8 +958,48 @@ Google Cloud Messaging  </p>
 
     <span class="post-date">07 Mar 2015</span>
 
-    <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> f in *<span class="p">;</span> <span class="k">do</span> ruby process.rb <span class="nv">$f</span><span class="p">;</span> <span class="k">done</span>  
+    <p>First I needed to redirect my old <code>/YYYY/MM/TITLE</code>  structure to the new structure without any date prefix. Jekyll by default will let you do that easily with <code>permalink: /:title</code>. But that does not solve the problem of having inbound links redirect to the right place on the new blog. It is pretty easy to solve with the <strong>redirect_from</strong> &quot;native&quot; jekyll plugin. The only thing that remains now is to add the <code>redirect_from:/old_uri_with_date</code> to each new post.</p>
+
+<p>For that I whipped the following short ruby script and to run over all the files I just used some bash.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> f in *<span class="p">;</span> <span class="k">do</span> ruby process.rb <span class="nv">$f</span><span class="p">;</span> <span class="k">done</span>  
 </code></pre></div>
+<p>Where <code>process.rb</code> is:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">ARGV</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="sr">/^\d+/</span><span class="o">]</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="n">a</span>
+
+    <span class="n">text</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">new_contents</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/^redirect_from:(.*)/</span><span class="p">,</span> <span class="s2">&quot;redirect_from: </span><span class="si">#{</span><span class="vg">$1</span><span class="si">}#{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># To merely print the contents of the file, use:</span>
+    <span class="nb">puts</span> <span class="n">new_contents</span>
+
+    <span class="c1"># To write changes to the file, use:</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">file</span><span class="o">|</span> <span class="n">file</span><span class="o">.</span><span class="n">puts</span> <span class="n">new_contents</span> <span class="p">}</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>That gets us about 80% of the transition covered. If you heavily customized your WP content with various plugins to pull this may create issues because the imported would probably not be able to convert them in an intelligent way.</p>
+
+<p>The things that still remained for me were</p>
+
+<ul>
+<li>images</li>
+<li>code blocks</li>
+</ul>
+
+<p>So...</p>
+
+<ul>
+<li>For images I moved all the images to the <code>/media</code> folder and used regex magic to update the paths. </li>
+<li>For code blocks I also used some regex magic. </li>
+</ul>
+
+<p>Sublime Editor made it very easy to test and apply the regex. Using Git to track the changes and revert if I blew it proved useful too. </p>
+
+<p>Below you can find some of the regex I used:</p>
+
 <p>S: <code>^redirect_from: (\d+)-(\d+)-(\d+)-(.*).md$</code></p>
 
 <p>R: <code>redirect_from: /$1/$2/$4/</code></p>
@@ -977,27 +1041,6 @@ Google Cloud Messaging  </p>
 
 <p>You need to add a trailing slat to the <code>redirect_from:URL</code> i.e. <code>redirect_from: /old_slug/</code> not
 <code>redirect_from: /old_slug</code>. Note the trailing slash. This is how it is supposed to be done.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/switching-to-fabric">
-        Switching to Fabric From Crashlytics
-      </a>
-    </h1>
-
-    <span class="post-date">05 Mar 2015</span>
-
-    <p>I had a weird Java error appear after updating to <a href="http://fabric.io">Fabric</a>. It turned out the problem was - I forgot to remove the <code>crashlytics.jar</code> from the libs folder and there were still a few libraries there and the whole folder was getting compiled so when Fabric got added through <code>aarr</code> file, I ended up with 2 copies of the library, which created the problem.</p>
-
-<p>The initialization for <a href="http://fabric.io">Fabric</a> is a little different now too.</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Fabric</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="nf">Crashlytics</span><span class="o">(),</span> <span class="k">new</span> <span class="nf">Twitter</span><span class="o">(</span><span class="n">authConfig</span><span class="o">),</span> <span class="k">new</span> <span class="nf">MoPub</span><span class="o">());</span>
-</code></pre></div>
-<p>or</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Fabric</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="k">new</span> <span class="nf">Crashlytics</span><span class="o">());</span>
-</code></pre></div>
-<p>if you only use Crashlytics</p>
 
   </div>
   

@@ -456,6 +456,10 @@
           
         
       
+        
+          
+        
+      
 
 
         <a class="sidebar-nav-item" href="/tags">Tags</a>
@@ -472,6 +476,77 @@
 
     <div class="content container">
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/android-ics-style-buttons-for-a-dialog">
+        Android ICS Style Buttons for a Dialog
+      </a>
+    </h1>
+
+    <span class="post-date">27 Jan 2013</span>
+
+    <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- OK/Cancel buttons.  --&gt;</span>
+
+<span class="nt">&lt;linearlayout</span>
+<span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+<span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+<span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+<span class="na">android:divider=</span><span class="s">&quot;?android:attr/dividerHorizontal&quot;</span>
+<span class="na">android:showdividers=</span><span class="s">&quot;beginning&quot;</span>
+<span class="na">android:paddingtop=</span><span class="s">&quot;16dip&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;linearlayout</span>
+    <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarStyle&quot;</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+    <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
+    <span class="na">android:measurewithlargestchild=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;linearlayout</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/leftSpacer&quot;</span>
+        <span class="na">android:layout_weight=</span><span class="s">&quot;0.25&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
+        <span class="na">android:visibility=</span><span class="s">&quot;gone&quot;</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;button</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/cancel_button&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:layout_gravity=</span><span class="s">&quot;left&quot;</span>
+        <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">android:text=</span><span class="s">&quot;@string/cancel&quot;</span>
+        <span class="na">android:maxlines=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarButtonStyle&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;/button&gt;</span>
+
+    <span class="nt">&lt;button</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/ok_button&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:layout_gravity=</span><span class="s">&quot;right&quot;</span>
+        <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span>
+        <span class="na">android:text=</span><span class="s">&quot;@string/install&quot;</span>
+        <span class="na">android:maxlines=</span><span class="s">&quot;2&quot;</span>
+        <span class="na">android:filtertoucheswhenobscured=</span><span class="s">&quot;true&quot;</span>
+        <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarButtonStyle&quot;</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;linearlayout</span>
+            <span class="na">android:id=</span><span class="s">&quot;@+id/rightSpacer&quot;</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
+            <span class="na">android:layout_weight=</span><span class="s">&quot;0.25&quot;</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+            <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
+            <span class="na">android:visibility=</span><span class="s">&quot;gone&quot;</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/linearlayout&gt;</span>
+<span class="nt">&lt;/linearlayout&gt;</span>
+</code></pre></div>
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -712,27 +787,6 @@ sudo port_cutleaves
     <h1 style="text-align: center;">.:  GAY  :.</h1>
 
 <h1 style="text-align: center;"></h1>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/the-2080-rule-a-wider-perspective">
-        The 20/80 Rule - a Wider Perspective
-      </a>
-    </h1>
-
-    <span class="post-date">06 Sep 2012</span>
-
-    <p>Most people heard about the 80/20 rule.</p>
-
-<p>For those who didn't it basically says that you do 80% of work in 20% time and then 80% of time is spent on the remaining 20% to finish the project/product/service.</p>
-
-<p><strong>BUT</strong></p>
-
-<p>It is these 20% of polish that will ultimately get you the 80% of the market. Because the teams that spent 80% (or even more) on the last 20% of polish to their product and/or service are the teams that usually produce the product/service that wins the major of the market. And this is all that usually matters – to own the majority of the market, to be the leader or in the leader pack  in the market.</p>
-
-<p>This is not a recipe for success of course. There are polished and good products that fail. Speaking in math terms, this is rather the necessary, than  sufficient condition for a successful product and/or service.</p>
 
   </div>
   

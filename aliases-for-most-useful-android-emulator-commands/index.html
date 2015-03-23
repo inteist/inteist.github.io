@@ -11,7 +11,7 @@
 
   <title>
     
-      Some Notes on QNX - the New BlackBerry PlayBook OS &middot; Inteist
+      Aliases for Most Useful Android Emulator Commands &middot; Inteist
     
   </title>
 
@@ -476,43 +476,17 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Some Notes on QNX - the New BlackBerry PlayBook OS</h1>
-  <span class="post-date">30 Sep 2010</span>
+  <h1 class="post-title">Aliases for Most Useful Android Emulator Commands</h1>
+  <span class="post-date">22 Mar 2015</span>
   <!-- <hr> -->
-  <div id="_mcePaste">
-<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #ffffff; font: normal normal normal 13px/19px Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-family: Times; line-height: normal; font-size: small; padding: 0.6em; margin: 0px;">
-<div id="_mcePaste">
-<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #ffffff; font: normal normal normal 13px/19px Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; background-position: initial initial; background-repeat: initial initial; padding: 0.6em; margin: 0px;">
-<div id="_mcePaste">
-<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #ffffff; font: normal normal normal 13px/19px Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-family: Times; line-height: normal; font-size: small; padding: 0.6em; margin: 0px;">
-<p>So, as you probably already know, the coming BlackBerry table will be powered by the QNX pronounced almost like Unix - "ku-nee-ks". So what is QNX?</p>
-<div></div>
-<p>Below are some notes from the session delivered for developers right after the tablet was introduced during the keynote speech at the DevCon2010.</p>
-<div>QNX - is a highly distributed, self healing POSIX compliant, real time operating system.</div>
-<div></div>
-<p>Real time here basically means preemptive partitioning, which in turn means patented scheduling mechanism for dynamic resource allocation. Here we are talking about CPU as the main resource.</p>
-<div></div>
-<p>Self Healing - since the system is based on POSIX - message passing, only the core kernel (0.1 million lines of code in total, compared to 70+ million lines in Windows and 9+ million lines in Linux kernels) and the process manager are at the core, all the other processes, can be hot restarted. The key issue here to take home is that QNX is highly modular system unlike the much more monolithic Windows and Linux systems. The monolithic kernel only consists of the microkernel and the process manager - a small partition of all OS code which can be highly optimized and is easier to monitor for bugs. All the rest of the OS systems are "hot pluggable" modules which run in their own processes and can be restarted without taking down the whole system. This is the main point of QNX being highly resilient system and the term used by Dan Dodge the co-founder and the CEO of QNX systems - self healing.</p>
-<div></div>
-<p>QNX will support Adobe mobile Air and Flash for start and is fully capable of running the Java JVM which should enable the table to run any Java applications written with native BlackBerry SDK for OS 6.0 (and probably anything above level 6.0 SDK). There is also an option of a native C/C++ development for QNX. Momentics - the native developer environment - an Eclipse plugin. QNX is apparently company #3 to join the Eclipse project early on - at the Eclipse 1.0 stage and the main contributor to the C/C++ CDT project. The Momentics environment has a rich set of tooling for coding, debugging and profiling the natively written applications for the QNX.</p>
-<p>If you are interested in the latest updates, you should head to the following resources:</p>
-<div>
-<ul>
-<li>The official <a href="http://na.blackberry.com/eng/developers/tablet.jsp" target="_blank">blackberry resource for the developers interested in tablet OS</a></li>
-<li>The official <a href="http://labs.adobe.com/technologies/flash/blackberrytabos/" target="_blank">Adobe resource for the developers interested in BlackBerry tablet OS</a></li>
-</ul>
-</div>
+  <p>I have recently posted about how to <a href="/custom-networking-parameters-for-android-emulator">throttle android emulator via custom networking parameters.</a> However it may be quite tedious to type that every time we want to throttle the networking. Aliases to the help!</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span>android-network-throttle<span class="o">=</span><span class="s2">&quot;echo &#39;network delay 4000&#39; | nc localhost 5554 &amp;&amp; echo &#39;network speed 6 6&#39; | nc localhost 5554&quot;</span>
 
-<p></div>
-</div>
-<div>
-<ul></ul>
-</div>
-</div>
-</div>
-<div></div>
-</div>
-</div></p>
+<span class="nb">alias </span>android-network-reset<span class="o">=</span><span class="s2">&quot;echo &#39;network delay 0&#39; | nc localhost 5554 &amp;&amp; echo &#39;network speed 0&#39; | nc localhost 5554&quot;</span>
+
+<span class="nb">alias </span>android-network-status<span class="o">=</span><span class="s2">&quot;echo &#39;network status&#39; | nc localhost 5554&quot;</span>
+</code></pre></div>
+<p>With <a href="http://ohmyz.sh">ohmyzsh</a> which will complete the aliases it&#39;s pure delight.</p>
 
 </div>
 
@@ -530,9 +504,20 @@
                   
               
                   
-              
-          
-              
+                      
+                      <h3>Similar Posts</h3>
+                      <ul class="related-posts">
+                      
+                        <li>
+                          <h4>
+                            <a href="/gradle-included-libraries-in-android-studio">
+                              Gradle Libraries that Actually Get Included in Android Studio
+                            </a>
+                              <small>22 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
                   
               
                   
@@ -551,20 +536,6 @@
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
                   
               
                   
@@ -578,10 +549,6 @@
                   
               
                   
-              
-                  
-              
-          
               
                   
               
@@ -604,33 +571,6 @@
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-      
-          
-          
-              
-                  
-              
                   
               
                   
@@ -646,9 +586,17 @@
                   
               
                   
-              
-          
-              
+                      
+                        <li>
+                          <h4>
+                            <a href="/custom-networking-parameters-for-android-emulator">
+                              Throttling Android Simulator via Custom Networking Parameters
+                            </a>
+                              <small>22 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
                   
               
                   
@@ -658,6 +606,12 @@
                   
               
           
+              
+                  
+              
+                  
+              
+                  
               
                   
               
@@ -677,13 +631,6 @@
               
                   
               
-          
-      
-          
-          
-              
-                  
-              
                   
               
                   
@@ -697,30 +644,6 @@
                   
               
                   
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
               
                   
               
@@ -743,23 +666,6 @@
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-      
-          
-          
-              
-                  
-              
                   
               
                   
@@ -767,6 +673,12 @@
                   
               
           
+              
+                  
+              
+                  
+              
+                  
               
                   
               
@@ -786,33 +698,6 @@
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-      
-          
-          
-              
-                  
-              
                   
               
                   
@@ -829,20 +714,6 @@
               
                   
               
-          
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-                  
-              
                   
               
                   
@@ -850,6 +721,12 @@
                   
               
           
+              
+                  
+              
+                  
+              
+                  
               
                   
               
@@ -872,6 +749,59 @@
               
                   
               
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/individual-google-play-services">
+                              Individual Google Play Services for Android with Gradle
+                            </a>
+                              <small>15 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
           
               
                   
@@ -882,6 +812,12 @@
               
                   
               
+                  
+              
+                  
+              
+                  
+              
           
               
                   
@@ -892,7 +828,35 @@
               
                   
               
+                  
+              
+                  
+              
+                  
+              
           
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
               
                   
               
@@ -915,6 +879,28 @@
               
                   
               
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
           
               
                   
@@ -925,6 +911,12 @@
               
                   
               
+                  
+              
+                  
+              
+                  
+              
           
               
                   
@@ -935,7 +927,153 @@
               
                   
               
+                  
+              
+                  
+              
+                  
+              
           
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
               
                   
               
@@ -950,6 +1088,75 @@
           
           
       
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+      
+          </ul>
       
 </div>
 

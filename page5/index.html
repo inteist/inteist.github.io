@@ -456,6 +456,10 @@
           
         
       
+        
+          
+        
+      
 
 
         <a class="sidebar-nav-item" href="/tags">Tags</a>
@@ -472,6 +476,28 @@
 
     <div class="content container">
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/technical-references">
+        Technical References
+      </a>
+    </h1>
+
+    <span class="post-date">05 May 2013</span>
+
+    <ul>
+<li><h4 id="visual-studio-express-tips-and-keyboard-shortcuts"><a href="http://www.inteist.com/technical-references/microsoft-visual-studio-express-tips-and-shortcuts/">Visual Studio Express Tips and Keyboard shortcuts</a></h4></li>
+<li><h4 id="list-of-facebook-errors"><a href="http://www.inteist.com/technical-references/list-of-all-facebook-api-errors/">List of Facebook errors</a></h4></li>
+</ul>
+
+<h2 id="android">Android</h2>
+
+<ul>
+<li>#### <a href="http://www.inteist.com/technical-references/useful-proguard-configurations-for-android-projects/">Useful ProGuard configurations for Android projects</a></li>
+</ul>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -6047,77 +6073,6 @@ prefs:root=INTERNET_TETHERING
 
     <p>After some research around JSON libraries I reached conclusion that Jackson would be the first choice, both because it is much more used then Gson and it seems to have performance edge over Gson as well. Unfortunately though, adding just the <strong>core</strong> and the <strong>databind</strong> jars, without using ProGuard inflates the size of the final APK by a whooping <strong>600Kb</strong>.</p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/android-ics-style-buttons-for-a-dialog">
-        Android ICS Style Buttons for a Dialog
-      </a>
-    </h1>
-
-    <span class="post-date">27 Jan 2013</span>
-
-    <div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="c">&lt;!-- OK/Cancel buttons.  --&gt;</span>
-
-<span class="nt">&lt;linearlayout</span>
-<span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
-<span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-<span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
-<span class="na">android:divider=</span><span class="s">&quot;?android:attr/dividerHorizontal&quot;</span>
-<span class="na">android:showdividers=</span><span class="s">&quot;beginning&quot;</span>
-<span class="na">android:paddingtop=</span><span class="s">&quot;16dip&quot;</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;linearlayout</span>
-    <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarStyle&quot;</span>
-    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
-    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-    <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
-    <span class="na">android:measurewithlargestchild=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-
-    <span class="nt">&lt;linearlayout</span>
-        <span class="na">android:id=</span><span class="s">&quot;@+id/leftSpacer&quot;</span>
-        <span class="na">android:layout_weight=</span><span class="s">&quot;0.25&quot;</span>
-        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
-        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-        <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
-        <span class="na">android:visibility=</span><span class="s">&quot;gone&quot;</span><span class="nt">/&gt;</span>
-
-    <span class="nt">&lt;button</span>
-        <span class="na">android:id=</span><span class="s">&quot;@+id/cancel_button&quot;</span>
-        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
-        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-        <span class="na">android:layout_gravity=</span><span class="s">&quot;left&quot;</span>
-        <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span>
-        <span class="na">android:text=</span><span class="s">&quot;@string/cancel&quot;</span>
-        <span class="na">android:maxlines=</span><span class="s">&quot;2&quot;</span>
-        <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarButtonStyle&quot;</span><span class="nt">&gt;</span>
-
-    <span class="nt">&lt;/button&gt;</span>
-
-    <span class="nt">&lt;button</span>
-        <span class="na">android:id=</span><span class="s">&quot;@+id/ok_button&quot;</span>
-        <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
-        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-        <span class="na">android:layout_gravity=</span><span class="s">&quot;right&quot;</span>
-        <span class="na">android:layout_weight=</span><span class="s">&quot;1&quot;</span>
-        <span class="na">android:text=</span><span class="s">&quot;@string/install&quot;</span>
-        <span class="na">android:maxlines=</span><span class="s">&quot;2&quot;</span>
-        <span class="na">android:filtertoucheswhenobscured=</span><span class="s">&quot;true&quot;</span>
-        <span class="na">style=</span><span class="s">&quot;?android:attr/buttonBarButtonStyle&quot;</span><span class="nt">&gt;</span>
-
-        <span class="nt">&lt;linearlayout</span>
-            <span class="na">android:id=</span><span class="s">&quot;@+id/rightSpacer&quot;</span>
-            <span class="na">android:layout_width=</span><span class="s">&quot;0dip&quot;</span>
-            <span class="na">android:layout_weight=</span><span class="s">&quot;0.25&quot;</span>
-            <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
-            <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span>
-            <span class="na">android:visibility=</span><span class="s">&quot;gone&quot;</span><span class="nt">/&gt;</span>
-
-    <span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/linearlayout&gt;</span>
-<span class="nt">&lt;/linearlayout&gt;</span>
-</code></pre></div>
   </div>
   
 </div>
