@@ -488,6 +488,14 @@
 <p>Here&#39;s a bonus oneliner that is Jekyll specific to build and deploy the blog. Just adding the build command in front</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span>blog-delploy<span class="o">=</span><span class="s2">&quot;jekyll build &amp;&amp; cd ._site &amp;&amp; git add -A &amp;&amp; git commit -m &#39;blog-delploy UPDATE&#39; &amp; git push&quot;</span>
 </code></pre></div>
+<p>Alternatively with <a href="http://ohmyz.sh">zsh</a> you can do it in a much nicer format</p>
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="k">function</span> blog-delploy<span class="o">()</span> <span class="o">{</span>
+    jekyll build <span class="o">&amp;&amp;</span>
+    <span class="nb">cd </span>_site <span class="o">&amp;&amp;</span>
+    git add -A <span class="o">&amp;&amp;</span> git commit -m <span class="s1">&#39;blog-delploy UPDATE&#39;</span> <span class="o">&amp;&amp;</span>
+    git push
+<span class="o">}</span>
+</code></pre></div>
 </div>
 
 <!-- SIMILAR POSTS -->
