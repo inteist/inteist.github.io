@@ -1,26 +1,8 @@
 
-dummy_rule_to_make_formatter_happy {
+.dummy_rule_to_make_formatter_happy {
 
     padding: 0;
 }
-pre code {
-    padding: 0;
-    font-size: 75%;
-    color: inherit;
-}
-/* Code */
-
-code, pre {
-    font-family: Menlo, Monaco, "Courier New", monospace;
-}
-code {
-    padding: 0em 0em;
-    font-size: 80%;
-    color: #bf616a;
-    border-radius: 3px;
-}
-
-
 /*Need to only make it for the archive and tags*/
 
 .sidebar-nav ul, .related ul, #archive ul, #tags ul {
@@ -37,7 +19,6 @@ code {
 .sidebar a:hover {
     color: #fff;
 }
-
 /*The subtitle of the blog*/
 
 .lead {
@@ -66,16 +47,14 @@ img {
     margin: 0 0 1rem;
     border-radius: 7px;
 }
-
 a {
     transition: color ease 0.25s;
 }
-
 .reading-time {
-  position: absolute;
-  top: 20px;
-  right: 15px;
-  font-size: 85%;
-  color: #636363;
-  z-index: 10;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 85%;
+    color: #636363;
+    z-index: 10;
 }

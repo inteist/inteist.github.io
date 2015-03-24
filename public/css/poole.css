@@ -126,31 +126,34 @@ abbr[title] {
 code, pre {
     font-family: Menlo, Monaco, "Courier New", monospace;
 }
+
 code {
     padding: .25em .5em;
-    font-size: 65%;
+    font-size: 80%;
+    color: #bf616a;
     border-radius: 3px;
 }
-
 pre {
     display: block;
     margin-top: 0;
     margin-bottom: 1rem;
-    padding: 0;
     font-size: .85rem;
     line-height: 1.4;
     white-space: pre;
-    white-space: pre-wrap;
+    /*white-space: pre-wrap;*/
     /*word-break: break-all;*/
     /*word-wrap: break-word;*/
 }
 
-pre code {
-    padding: 0;
-    font-size: 100%;
+pre > code {
+
+    padding-right: 1em;
+    font-size: 75%;
     color: inherit;
-    /*background-color: transparent;*/
+    background-color: transparent;
 }
+
+
 /* Pygments via Jekyll */
 
 .highlight {
@@ -185,7 +188,7 @@ pre code {
 /* Quotes */
 
 blockquote {
-    padding: .5rem 1rem;
+    padding: 1rem 1rem;
     margin: .8rem 0;
     color: #7a7a7a;
     border-left: .25rem solid #e5e5e5;
