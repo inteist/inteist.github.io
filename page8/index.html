@@ -482,6 +482,148 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/git-adding-a-new-remote-branch-detailed-but-simple-example">
+        Git Adding a New Remote Branch - Detailed but Simple Example
+      </a>
+    </h1>
+
+    <span class="post-date">28 Aug 2012</span>
+
+    <p>Initial checkout (to ~/branchtest folder) since it was not specified</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~max<span class="nv">$ </span>git clone git@bitbucket.org:inteist/branchtest.git
+</code></pre></div>
+<p>Let's create a file named "master.txt"</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~max<span class="nv">$ </span><span class="nb">echo </span>This is master branch <span class="p">&amp;</span>gt<span class="p">;</span> master.txt
+</code></pre></div>
+<p>Now let's add the file to track changes</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git add .
+apollo:branchtest max<span class="nv">$ </span>git status
+<span class="c"># On branch master</span>
+<span class="c">#</span>
+<span class="c"># Initial commit</span>
+<span class="c">#</span>
+<span class="c"># Changes to be committed:</span>
+<span class="c">#   (use &quot;git rm --cached ...&quot; to unstage)</span>
+<span class="c">#</span>
+<span class="c">#   new file:   master.txt</span>
+</code></pre></div>
+<p>Now let's push the file to the master branch (until now there were no refs). The "-u" switch adds upstream tracking<br />
+apollo:branchtest max$ git push -u origin master</p>
+
+<p>Now let's create a new branch and name it "new". The "-b" switch makes us immediately switch to the "new" branch</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git checkout -b new
+Switched to a new branch <span class="s1">&#39;new&#39;</span>
+</code></pre></div>
+<p>Make sure we are on the "new" branch. Indeed we are.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git status
+<span class="c"># On branch new</span>
+nothing to commit <span class="o">(</span>working directory clean<span class="o">)</span>
+</code></pre></div>
+<p>Let's add a file "new.txt"</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span><span class="nb">echo </span>New addition <span class="p">&amp;</span>gt<span class="p">;</span> new.txt
+</code></pre></div>
+<p>It's on the file system.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>ls
+master.txt  new.txt
+</code></pre></div>
+<p>But is untracked by Git just yet</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git status
+<span class="c"># On branch new</span>
+<span class="c"># Untracked files:</span>
+<span class="c">#   (use &quot;git add ...&quot; to include in what will be committed)</span>
+<span class="c">#</span>
+<span class="c">#   new.txt</span>
+nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> to track<span class="o">)</span>
+</code></pre></div>
+<p>Let's add the file to be tracked</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git add .
+apollo:branchtest max<span class="nv">$ </span>git commit -m <span class="s2">&quot;Adding the new file while on the new branch&quot;</span>
+<span class="o">[</span>new 67f764e<span class="o">]</span> Adding the new file <span class="k">while</span> on the new branch
+ <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+ create mode <span class="m">100644</span> new.txt
+</code></pre></div>
+<p>Let's switch back to "master" branch. The "new.txt" is not there. It is tracked under the new branch.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git checkout master
+Switched to branch <span class="s1">&#39;master&#39;</span>
+apollo:branchtest max<span class="nv">$ </span>ls
+master.txt
+</code></pre></div>
+<p>Let's switch back to the "new" branch</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git checkout new
+Switched to branch <span class="s1">&#39;new&#39;</span>
+apollo:branchtest max<span class="nv">$ </span>ls
+master.txt  new.txt
+</code></pre></div>
+<p>Now with the "master" branch pushed and the the "new" branch created locally but not pushed to the central repository, let's clone the repository to a different folder.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:max<span class="nv">$ </span>git clone git@bitbucket.org:inteist/branchtest.git branchtestNEW
+Cloning into <span class="s1">&#39;branchtestNEW&#39;</span>...
+remote: Counting objects: 3, <span class="k">done</span>.
+remote: Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+</code></pre></div>
+<p>We checked out the "master" branch, which has the "master.txt" as expected</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>branchtestNEW/
+<span class="nv">$ </span>ls
+master.txt
+</code></pre></div>
+<p>Let's see if the "new" branch is present:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEW max<span class="nv">$ </span>git checkout new
+error: pathspec <span class="s1">&#39;new&#39;</span> did not match any file<span class="o">(</span>s<span class="o">)</span> known to git.
+</code></pre></div>
+<p>Nop, it is not, of course, since we did not push it yet.</p>
+
+<p>Now let's push the the "new" local branch to the remote repository. Just to make a case, I will name it "newremote" on the remote.<br />
+This is not required. If the second parameter is omitted, then the local and remote names are the same.<br />
+We are going to have the "-u" switch so it is tracked in the upstream</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtest max<span class="nv">$ </span>git push -u origin new:newremote
+Counting objects: 4, <span class="k">done</span>.
+Delta compression using up to <span class="m">4</span> threads.
+Compressing objects: 100% <span class="o">(</span>2/2<span class="o">)</span>, <span class="k">done</span>.
+Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">305</span> bytes, <span class="k">done</span>.
+Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+remote: bb/acl: inteist is allowed. accepted payload.
+To ssh://git@bitbucket.org/inteist/branchtest.git
+ * <span class="o">[</span>new branch<span class="o">]</span>      new -<span class="p">&amp;</span>gt<span class="p">;</span> newremote
+Branch new <span class="nb">set </span>up to track remote branch newremote from origin.
+</code></pre></div>
+<p>Let's clone the repository to yet another folder.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~ max<span class="nv">$ </span>git clone git@bitbucket.org:inteist/branchtest.git branchtestNEWREMOTE
+Cloning into <span class="s1">&#39;branchtestNEWREMOTE&#39;</span>...
+remote: Counting objects: 6, <span class="k">done</span>.
+remote: Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
+</code></pre></div>
+<p>Let's see if there is the "new" branch now.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:~ max<span class="nv">$ </span><span class="nb">cd </span>branchtestNEWREMOTE/
+apollo:branchtestNEWREMOTE max<span class="nv">$ </span>git checkout new
+error: pathspec <span class="s1">&#39;new&#39;</span> did not match any file<span class="o">(</span>s<span class="o">)</span> known to git.
+</code></pre></div>
+<p>Surprise? No. There is no "new" branch of course because we named it "newremote" on the remote and this is how it was checked out.</p>
+
+<p>Was it?</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEWREMOTE max<span class="nv">$ </span>git checkout newremote
+Branch newremote <span class="nb">set </span>up to track remote branch newremote from origin.
+Switched to a new branch <span class="s1">&#39;newremote&#39;</span>
+</code></pre></div>
+<p>Yes, it was :)</p>
+
+<p>Let's see what's there:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEWREMOTE max<span class="nv">$ </span>ls
+master.txt  new.txt
+</code></pre></div>
+<p>And what about the "master" branch?</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">apollo:branchtestNEWREMOTE max<span class="nv">$ </span>git checkout master
+Switched to branch <span class="s1">&#39;master&#39;</span>
+apollo:branchtestNEWREMOTE max<span class="nv">$ </span>ls
+master.txt
+</code></pre></div>
+<p>Surely enough there is only what was tracked under the "master" branch</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/detect-if-google-play-android-market-com-android-vending-package-is-installed-on-a-device">
         Detect if Google Play/Android Market (com.android.vending Package) Is Installed on a Device
       </a>
@@ -749,58 +891,6 @@ Do it, but be smart about it. Use your brain. Think about what make the most sen
 <p>After the update</p>
 
 <p><code>http://download.eclipse.org/eclipse/updates/4.2</code> had been added<code>http://download.eclipse.org/eclipse/updates/3.7</code> had been disabled<code>http://download.eclipse.org/tools/cdt/releases/indigo</code> had been disabled</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blackberry-os-distribution-july-2012">
-        BlackBerry OS Distribution - July 2012
-      </a>
-    </h1>
-
-    <span class="post-date">28 Jul 2012</span>
-
-    <p>&nbsp;</p>
-
-<p>BlackBerry is quickly loosing its market share. Besides that it is failing to innovate, which is actually mostly the reason it is loosing its once lion market share so fast to Android, iOS and even to Windows Phone 7. Let's check out how the OS distribution changed since January 2012. Here's the post about [link id='637' text='BlackBerry OS distribution in January 2012']</p>
-
-<p>And here's the BlackBerry OS distribution in January 2012.</p>
-
-<p><a src="http://inteist.com/media/bb-os-distribution-July-2012-chart.png"><img class="aligncenter size-full wp-image-877" title="bb-os-distribution-July-2012-chart" src="http://inteist.com/media/bb-os-distribution-July-2012-chart.png" alt="" width="335" height="280" /></a></p>
-
-<p>*</p>
-
-<p><a src="http://inteist.com/media/bb-os-distribution-numbers-July-2012.png"><img class="aligncenter size-full wp-image-878" title="bb os distribution-numbers July 2012" src="http://inteist.com/media/bb-os-distribution-numbers-July-2012.png" alt="" width="638" height="345" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>***Note: This is not an official information or official numbers. These is a sample from one of the apps that run on BlackBerry and  have enough users so that it is statistically significant.</p>
-
-<p>&nbsp;</p>
-
-<p>It is interesting to see that there is almost no change (well, no surprise here there were not many changes/upgrades in the realm of BlackBerry). It is interesting to see though that the 7.0 OS's pie has slightly increased, surprisingly cutting the 5.0 OS's pie. Or maybe actually it is not at all surprising. The 5.0 people have upgraded to 7.0 devices while 6.0 people did not bother (or could not) upgrade their OS to 7.0.</p>
-
-<p>&nbsp;</p>
-
-<p>Here are the charts side by side:</p>
-
-<table border="0" align="center">
-<tbody>
-<tr>
-<td><a src="http://inteist.com/media/bb-os-distribution-July-2012-chart1.png"><img class="aligncenter size-medium wp-image-879" title="bb-os-distribution-July-2012-chart" src="http://inteist.com/media/bb-os-distribution-July-2012-chart1-300x250.png" alt="" width="300" height="250" /></a></td>
-<td><a src="http://inteist.com/media/BB-OS-distribution-January-2012.jpg"><img class="aligncenter size-medium wp-image-880" title="BB-OS-distribution-January-2012" src="http://inteist.com/media/BB-OS-distribution-January-2012-300x264.jpg" alt="" width="300" height="264" /></a></td>
-</tr>
-<tr>
-<td align="center"><strong>July 2012</strong></td>
-<td align="center"><strong>January 2012</strong></td>
-</tr>
-</tbody>
-</table>
-
-<p>&nbsp;</p>
-
-<p>Let me know in the comments what you think!</p>
 
   </div>
   

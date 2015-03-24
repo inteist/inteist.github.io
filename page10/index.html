@@ -482,6 +482,31 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/how-to-determine-theme-background-color-on-windows-phone">
+        How to Determine Theme Background Color on Windows Phone
+      </a>
+    </h1>
+
+    <span class="post-date">08 Jul 2012</span>
+
+    <div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Determine the visibility of the dark background.</span>
+<span class="n">Visibility</span> <span class="n">darkBackgroundVisibility</span> <span class="p">=</span>
+    <span class="p">(</span><span class="n">Visibility</span><span class="p">)</span><span class="n">Application</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Resources</span><span class="p">[</span><span class="s">&quot;PhoneDarkThemeVisibility&quot;</span><span class="p">];</span>
+
+<span class="c1">// Write the theme background value.</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">darkBackgroundVisibility</span> <span class="p">==</span> <span class="n">Visibility</span><span class="p">.</span><span class="n">Visible</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">textBlock1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;background = dark&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="n">textBlock1</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;background = light&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/node-js">
         Node.js
       </a>
@@ -833,54 +858,6 @@ Add this line to your php.ini:</p>
 <p>To make Git play nice (or should I rather say TextWrangler play nice with Git), we need to properly set it up as the default editor for Git. And luckily it's as easy as</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global core.editor <span class="s2">&quot;edit --wait --resume &quot;</span><span class="nv">$@</span><span class="s2">&quot;&quot;</span>
 </code></pre></div>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/how-to-debug-apps-on-kindle-fire-on-os-x">
-        How to Debug Apps on Kindle Fire on OS X
-      </a>
-    </h1>
-
-    <span class="post-date">16 Feb 2012</span>
-
-    <p>So you bought the Kindle Fire and you want to start running and debugging your apps on it but when you connected it, you realized that it is not recognized automatically like other Android devices on OS X.</p>
-
-<p>No worries, it takes 2 minutes to set it up.</p>
-
-<p>You need to:</p>
-
-<ul>
-<li>add 2 lines to the "adb_usb.ini" file</li>
-<li>restart the ADB server</li>
-</ul>
-
-<p>Open up the terminal and edit the "adb_usb.ini" (you can use nano instead of vim): <strong>vim ~/.android/adb_usb.ini</strong></p>
-
-<p>add the following 2 lines to the file each on a separate line:</p>
-
-<p><a src="http://inteist.com/media/debugging-on-kindle-fire-the-adb_usb.ini-file-update.png"><img class="aligncenter size-full wp-image-708" title="debugging on kindle fire the adb_usb.ini file update" src="http://inteist.com/media/debugging-on-kindle-fire-the-adb_usb.ini-file-update.png" alt="" width="478" height="98" /></a></p>
-
-<p>now you need to restart the ADB server and you should be all set.</p>
-
-<p>The whole sequence of commands looks like this:</p>
-
-<p><a src="http://inteist.com/media/debugging-on-kindle-fire-command-sequence.png"><img class="aligncenter size-full wp-image-709" title="debugging on kindle fire command sequence" src="http://inteist.com/media/debugging-on-kindle-fire-command-sequence.png" alt="" width="426" height="148" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>Now you should also see the device while running your app from Eclipse</p>
-
-<p><a src="http://inteist.com/media/debugging-with-kindle-fire-available-for-selection-in-running-devices1.png"><img class="aligncenter size-full wp-image-714" title="debugging with kindle fire available for selection in running devices" src="http://inteist.com/media/debugging-with-kindle-fire-available-for-selection-in-running-devices1.png" alt="" width="613" height="156" /></a></p>
-
-<p>&nbsp;</p>
-
-<p>For the official directions in case you need them and for directions for other OS besides OS X, you can check out <a href="http://g-ecx.images-amazon.com/images/G/01/sdk/Connecting_your_Kindle_Fire_to_ADB.pdf">this PDF</a></p>
-
-<p><strong>Important tip:</strong></p>
-
-<p>The networking will not work until you "disconnect" the device from USB - just click on "Disconnect" don't worry it will only cancel the "file transfer mode". You will still be able to deploy and now actually run apps that require networking.</p>
-
   </div>
   
 </div>

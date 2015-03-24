@@ -482,6 +482,21 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/os-x-uninstall-plex-media-server">
+        OS X Uninstall Plex Media Server
+      </a>
+    </h1>
+
+    <span class="post-date">07 May 2014</span>
+
+    <p>You can follow the official directions <a href="https://support.plex.tv/hc/en-us/articles/201941078-Uninstall-Plex-Media-Server">here</a></p>
+
+<p>Or you can just use <a href="http://freemacsoft.net/appcleaner/">AppCleaner</a> and drag the Plex Media Server app from the Applications folder and the AppCleaner will remove all the same files and folders for you in an instant!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/custom-fonts-on-android">
         Custom fonts on Android
       </a>
@@ -682,44 +697,6 @@
     <span class="k">return</span> <span class="n">$text</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div>
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/hitting-multiple-files-using-bash-and-wget-or-curl">
-        Hitting Multiple Files Using Bash and Wget or Curl
-      </a>
-    </h1>
-
-    <span class="post-date">25 Oct 2013</span>
-
-    <p>I needed to hit a number of files on a remote HTTP server with an index ranging from 1 to 150 and my first instinct was to use wget with some sort of a loop (bash script seemed like the most logical thing to do).</p>
-
-<p>Then I realized that I can do the same thing in a simple oneliner using &#39;curl&#39;</p>
-
-<p>It&#39;s super easy using the following info:</p>
-
-<p>You can specify multiple URLs or parts of URLs by writing part sets within braces as in:</p>
-
-<p><code>http://site.{one,two,three}.com</code>
-or you can get sequences of alphanumeric series by using <code>[]</code> as in:</p>
-
-<p><code>ftp://ftp.numericals.com/file[1-100].txt
-ftp://ftp.numericals.com/file[001-100].txt (with leading zeros)
-ftp://ftp.letters.com/file[a-z].txt
-</code></p>
-
-<p>Nested sequences are not supported, but you can use several ones next to each other:</p>
-
-<p><code>http://any.org/archive[1996-1999]/vol[1-4]/part{a,b,c}.html</code></p>
-
-<p>You can specify any amount of URLs on the command line. They will be fetched in a sequential manner in the specified order.
-You can specify a step counter for the ranges to get every Nth number or letter:</p>
-
-<p>yo</p>
-
-<p><code>http://www.numericals.com/file[1-100:10].txt http://www.letters.com/file[a-z:2].txt</code></p>
-
   </div>
   
 </div>

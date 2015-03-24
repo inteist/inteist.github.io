@@ -482,6 +482,97 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/individual-google-play-services">
+        Individual Google Play Services for Android with Gradle
+      </a>
+    </h1>
+
+    <span class="post-date">15 Mar 2015</span>
+
+    <h4 id="google-play-services-api-split-by-individual-service">Google Play services API split by individual service</h4>
+
+<p>Google+</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-plus:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Account Login</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-identity:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Activity Recognition</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-location:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google App Indexing</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-appindexing:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Cast</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-cast:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Drive</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-drive:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Fit</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-fitness:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Maps</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-maps:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Mobile Ads</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-ads:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Panorama Viewer</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-panorama:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Play Game services</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-games:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Wallet</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-wallet:6.5.+&#39;</span>
+</code></pre></div>
+<p>Android Wear</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-wearable:6.5.+&#39;</span>
+</code></pre></div>
+<p>Google Actions<br>
+Google Analytics<br>
+Google Cloud Messaging  </p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-base:6.5.+&#39;</span>
+</code></pre></div>
+<h4 id="source-block:">Source block:</h4>
+
+<p>Copy and uncomment the ones that you need</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Google+</span>
+<span class="c1">// compile &quot;com.google.android.gms:play-services-plus:6.5.+&quot;</span>
+<span class="c1">// Google Account Login</span>
+<span class="c1">// compile &quot;com.google.android.gms:play-services-identity:6.5.+&quot;</span>
+<span class="c1">// Google Activity Recognition</span>
+<span class="c1">// compile &quot;com.google.android.gms:play-services-location:6.5.+&quot;</span>
+<span class="c1">// Google App Indexing</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-appindexing:6.5.+&quot;</span>
+<span class="c1">// Google Cast</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-cast:6.5.+&quot;</span>
+<span class="c1">// Google Drive</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-drive:6.5.+&quot;</span>
+<span class="c1">// Google Fit</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-fitness:6.5.+&quot;</span>
+<span class="c1">// Google Maps</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-maps:6.5.+&quot;</span>
+<span class="c1">// Google Mobile Ads</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-ads:6.5.+&quot;</span>
+<span class="c1">// Google Panorama Viewer</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-panorama:6.5.+&quot;</span>
+<span class="c1">// Google Play Game services</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-games:6.5.+&quot;</span>
+<span class="c1">// Google Wallet</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-wallet:6.5.+&quot;</span>
+<span class="c1">// Android Wear</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-wearable:6.5.+&quot;</span>
+<span class="c1">// Google Actions</span>
+<span class="c1">// Google Analytics</span>
+<span class="c1">// Google Cloud Messaging</span>
+<span class="c1">//compile &quot;com.google.android.gms:play-services-base:6.5.+&quot;</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/facebook-sdk-as-gradle-dependency">
         Including Facebook SDK to Android project via Gradle
       </a>
@@ -1020,21 +1111,6 @@
 <li>The <em>Service</em> may block the Main Thread of the application.</li>
 <li>The <em>IntentService</em> cannot run tasks in parallel. Hence all the consecutive intents will go into the message queue for the worker thread and will execute sequentially.</li>
 </ul>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/os-x-uninstall-plex-media-server">
-        OS X Uninstall Plex Media Server
-      </a>
-    </h1>
-
-    <span class="post-date">07 May 2014</span>
-
-    <p>You can follow the official directions <a href="https://support.plex.tv/hc/en-us/articles/201941078-Uninstall-Plex-Media-Server">here</a></p>
-
-<p>Or you can just use <a href="http://freemacsoft.net/appcleaner/">AppCleaner</a> and drag the Plex Media Server app from the Applications folder and the AppCleaner will remove all the same files and folders for you in an instant!</p>
 
   </div>
   

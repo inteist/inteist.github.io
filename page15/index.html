@@ -482,6 +482,52 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/some-notes-on-qnx-the-new-blackberry-playbook-os">
+        Some Notes on QNX - the New BlackBerry PlayBook OS
+      </a>
+    </h1>
+
+    <span class="post-date">30 Sep 2010</span>
+
+    <div id="_mcePaste">
+<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #ffffff; font: normal normal normal 13px/19px Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-family: Times; line-height: normal; font-size: small; padding: 0.6em; margin: 0px;">
+<div id="_mcePaste">
+<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #ffffff; font: normal normal normal 13px/19px Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; background-position: initial initial; background-repeat: initial initial; padding: 0.6em; margin: 0px;">
+<div id="_mcePaste">
+<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #ffffff; font: normal normal normal 13px/19px Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-family: Times; line-height: normal; font-size: small; padding: 0.6em; margin: 0px;">
+<p>So, as you probably already know, the coming BlackBerry table will be powered by the QNX pronounced almost like Unix - "ku-nee-ks". So what is QNX?</p>
+<div></div>
+<p>Below are some notes from the session delivered for developers right after the tablet was introduced during the keynote speech at the DevCon2010.</p>
+<div>QNX - is a highly distributed, self healing POSIX compliant, real time operating system.</div>
+<div></div>
+<p>Real time here basically means preemptive partitioning, which in turn means patented scheduling mechanism for dynamic resource allocation. Here we are talking about CPU as the main resource.</p>
+<div></div>
+<p>Self Healing - since the system is based on POSIX - message passing, only the core kernel (0.1 million lines of code in total, compared to 70+ million lines in Windows and 9+ million lines in Linux kernels) and the process manager are at the core, all the other processes, can be hot restarted. The key issue here to take home is that QNX is highly modular system unlike the much more monolithic Windows and Linux systems. The monolithic kernel only consists of the microkernel and the process manager - a small partition of all OS code which can be highly optimized and is easier to monitor for bugs. All the rest of the OS systems are "hot pluggable" modules which run in their own processes and can be restarted without taking down the whole system. This is the main point of QNX being highly resilient system and the term used by Dan Dodge the co-founder and the CEO of QNX systems - self healing.</p>
+<div></div>
+<p>QNX will support Adobe mobile Air and Flash for start and is fully capable of running the Java JVM which should enable the table to run any Java applications written with native BlackBerry SDK for OS 6.0 (and probably anything above level 6.0 SDK). There is also an option of a native C/C++ development for QNX. Momentics - the native developer environment - an Eclipse plugin. QNX is apparently company #3 to join the Eclipse project early on - at the Eclipse 1.0 stage and the main contributor to the C/C++ CDT project. The Momentics environment has a rich set of tooling for coding, debugging and profiling the natively written applications for the QNX.</p>
+<p>If you are interested in the latest updates, you should head to the following resources:</p>
+<div>
+<ul>
+<li>The official <a href="http://na.blackberry.com/eng/developers/tablet.jsp" target="_blank">blackberry resource for the developers interested in tablet OS</a></li>
+<li>The official <a href="http://labs.adobe.com/technologies/flash/blackberrytabos/" target="_blank">Adobe resource for the developers interested in BlackBerry tablet OS</a></li>
+</ul>
+</div>
+
+<p></div>
+</div>
+<div>
+<ul></ul>
+</div>
+</div>
+</div>
+<div></div>
+</div>
+</div></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/android-expands-support-for-paid-application-to-more-countries-and-developers">
         Android Expands Support for Paid Application to More Countries and Developers
       </a>
@@ -712,21 +758,6 @@
 <p><object id="VideoPlayback" style="width: 400px; height: 326px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100" height="100" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://video.google.com/googleplayer.swf?docid=-4101280286098310645&amp;hl=en&amp;fs=true" /><param name="allowfullscreen" value="true" /><embed id="VideoPlayback" style="width: 400px; height: 326px;" type="application/x-shockwave-flash" width="100" height="100" src="http://video.google.com/googleplayer.swf?docid=-4101280286098310645&amp;hl=en&amp;fs=true" allowfullscreen="true"></embed></object></p>
 
 <p></center></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ant-fixing-cant-locate-tools-jar-file-error">
-        Apache Ant - Fixing "Can't Locate tools.jar" Error
-      </a>
-    </h1>
-
-    <span class="post-date">03 Jun 2010</span>
-
-    <p>If you have "can't locate tools.jar" error when trying to run "ant", you've come to the right place. The fix is apparently very easy, you have to properly set up the "JAVA_HOME" environment variable to Java JDK. The <strong>tools.jar</strong> is found in the bin folder of the JDK but you only need to point the JAVA_HOME to your JAVA SDK installation and you should be all set!</p>
-
-<p>Easy, right? Go get them!</p>
 
   </div>
   

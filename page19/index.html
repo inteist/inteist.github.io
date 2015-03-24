@@ -482,6 +482,45 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/missionaries-and-cannibals-puzzle-solution">
+        Missionaries and Cannibals Puzzle -- Solution
+      </a>
+    </h1>
+
+    <span class="post-date">16 Jan 2009</span>
+
+    <p>As I've mentioned in the <a href="http://www.inteist.com/2009/01/missionaries-and-cannibals-puzzle/">problem statement</a>, this problem is quite hard for  humans and might be very easy for a machine to solve (with the right  formalization of course). The reason is that this problem can contain infinitely  many repeated states. If we don't keep track of states we have been in, we could  easily end up going in rounds with the same man in the boat for infinity. Thus,  we have to keep track of states we have been in, and do not repeat them, since  getting back to them, means that all the "progress" we made has put us back, and  therefore was useless.</p>
+
+<p>Another thing to pay attention is that it really doesn't matter which one of  the missionaries will we get into the boat first/second or third. This is also  true regarding the cannibals. In fact this small note saves us a lot of states  space, making this problem very simple indeed, when treated  properly.</p>
+
+<p>Therefore, if you still want to try solve it, try drawing all possible  situations while not distinguishing any importance given to the order between  different missionaries and cannibals, and keeping track of repeated states as  well.</p>
+
+<p><strong>Solution:</strong></p>
+
+<p>MMMCCC  |   |</p>
+
+<p>Missioner and a Cannibal go, Missioner comes back</p>
+
+<p>MMMCC  |   |   MC      MMMCC   |   |  C</p>
+
+<p>Two Cannibals go, one comes back</p>
+
+<p>MMM  |   |   CCC    MMMC |    |  CC</p>
+
+<p>Two missioners go, Missioner and a Cannibal come back</p>
+
+<p>MC  |   |   CCMM     MMCC   |   |  CM</p>
+
+<p>Two missioners go, the cannibal brings the boat back</p>
+
+<p>CC  |   |   CMMM    CCC   |   |  MMM</p>
+
+<p>Now all the cannibals can get to the other shore easily one by one: two go,  one comes back.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/missionaries-and-cannibals-puzzle">
         Missionaries and Cannibals Puzzle
       </a>

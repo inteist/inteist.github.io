@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>/pygments-theme-for-jekyll-monokai</loc>
+    <lastmod>2015-03-24T01:44:00-04:00</lastmod>
+  </url>
+  <url>
     <loc>/reset-css-element-styling</loc>
     <lastmod>2015-03-24T00:12:00-04:00</lastmod>
   </url>
@@ -742,18 +746,18 @@
   </url>
   <url>
     <loc>/404.html</loc>
-    <lastmod>2015-03-24T01:02:02-04:00</lastmod>
+    <lastmod>2015-03-24T01:48:08-04:00</lastmod>
   </url>
   <url>
     <loc>/archive/</loc>
-    <lastmod>2015-03-24T01:02:02-04:00</lastmod>
+    <lastmod>2015-03-24T01:48:08-04:00</lastmod>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2015-03-24T01:02:02-04:00</lastmod>
+    <lastmod>2015-03-24T01:48:08-04:00</lastmod>
   </url>
   <url>
     <loc>/tags/</loc>
-    <lastmod>2015-03-24T01:02:02-04:00</lastmod>
+    <lastmod>2015-03-24T01:48:08-04:00</lastmod>
   </url>
 </urlset>

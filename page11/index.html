@@ -482,6 +482,54 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/how-to-debug-apps-on-kindle-fire-on-os-x">
+        How to Debug Apps on Kindle Fire on OS X
+      </a>
+    </h1>
+
+    <span class="post-date">16 Feb 2012</span>
+
+    <p>So you bought the Kindle Fire and you want to start running and debugging your apps on it but when you connected it, you realized that it is not recognized automatically like other Android devices on OS X.</p>
+
+<p>No worries, it takes 2 minutes to set it up.</p>
+
+<p>You need to:</p>
+
+<ul>
+<li>add 2 lines to the "adb_usb.ini" file</li>
+<li>restart the ADB server</li>
+</ul>
+
+<p>Open up the terminal and edit the "adb_usb.ini" (you can use nano instead of vim): <strong>vim ~/.android/adb_usb.ini</strong></p>
+
+<p>add the following 2 lines to the file each on a separate line:</p>
+
+<p><a src="http://inteist.com/media/debugging-on-kindle-fire-the-adb_usb.ini-file-update.png"><img class="aligncenter size-full wp-image-708" title="debugging on kindle fire the adb_usb.ini file update" src="http://inteist.com/media/debugging-on-kindle-fire-the-adb_usb.ini-file-update.png" alt="" width="478" height="98" /></a></p>
+
+<p>now you need to restart the ADB server and you should be all set.</p>
+
+<p>The whole sequence of commands looks like this:</p>
+
+<p><a src="http://inteist.com/media/debugging-on-kindle-fire-command-sequence.png"><img class="aligncenter size-full wp-image-709" title="debugging on kindle fire command sequence" src="http://inteist.com/media/debugging-on-kindle-fire-command-sequence.png" alt="" width="426" height="148" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>Now you should also see the device while running your app from Eclipse</p>
+
+<p><a src="http://inteist.com/media/debugging-with-kindle-fire-available-for-selection-in-running-devices1.png"><img class="aligncenter size-full wp-image-714" title="debugging with kindle fire available for selection in running devices" src="http://inteist.com/media/debugging-with-kindle-fire-available-for-selection-in-running-devices1.png" alt="" width="613" height="156" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>For the official directions in case you need them and for directions for other OS besides OS X, you can check out <a href="http://g-ecx.images-amazon.com/images/G/01/sdk/Connecting_your_Kindle_Fire_to_ADB.pdf">this PDF</a></p>
+
+<p><strong>Important tip:</strong></p>
+
+<p>The networking will not work until you "disconnect" the device from USB - just click on "Disconnect" don't worry it will only cancel the "file transfer mode". You will still be able to deploy and now actually run apps that require networking.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/fixing-eclipse-fonts-on-os-x">
         Fixing Eclipse Fonts on OS X
       </a>
@@ -688,30 +736,6 @@ something like this should work:</p>
     <p>A bit of unusual post but this is the (almost) naked fiancee of Sean Parker Alexandra Lenas</p>
 
 <p><a src="http://inteist.com/media/Naked-Alexandra-Lenas.jpg"><img src="http://inteist.com/media/Naked-Alexandra-Lenas.jpg" alt="" title="Naked Alexandra Lenas" width="491" height="643" class="aligncenter size-full wp-image-645" /></a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blackberry-os-distribution-january-2012">
-        BlackBerry OS Distribution January 2012
-      </a>
-    </h1>
-
-    <span class="post-date">19 Jan 2012</span>
-
-    <p>Last year I've put some stats for BB OS distribution here: [link id='540']</p>
-
-<p>Beginning 2012 I was wondering what is the OS distribution now with the BB OS 7.0 devices in the wild and especially since I wanted to do updates only for the devices running BB OS 5.0 and up.</p>
-
-<p>So the distribution looks like this:</p>
-
-<p><a src="http://inteist.com/media/BB-OS-distribution.jpg"><img class="aligncenter size-full wp-image-639" title="BB-OS-distribution" src="http://inteist.com/media/BB-OS-distribution.jpg" alt="" width="389" height="343" /></a></p>
-
-<p>Making devices that run OS below 5.0 to be about 5-6% of all the devices. Of course this data is based on the users who use this specific app, but I am almost positive that this is pretty close to the generalized numbers.</p>
-
-<p>The numbers look like this:<br />
-<a src="http://inteist.com/media/BB-OS-distribution-by-numbers.png"><img src="http://inteist.com/media/BB-OS-distribution-by-numbers.png" alt="" title="BB-OS-distribution-by-numbers" width="622" height="331" class="aligncenter size-full wp-image-640" /></a></p>
 
   </div>
   

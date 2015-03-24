@@ -482,6 +482,21 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/google-analytics-sessions-vs-flurry-analytics-session">
+        Google Analytics Sessions vs. Flurry Analytics Session
+      </a>
+    </h1>
+
+    <span class="post-date">26 May 2013</span>
+
+    <p>Every time a start session is called using Flurry SDK, a new session is registered <strong>unless</strong> the call was made within 20 seconds [for the same user] of the previous call, in which case these consequent sessions simply extend the existing one.</p>
+
+<p>For Google Analytics, it is different. Google Analytics will group hits (any analytics API call you make is considered a hit in Google analytics) that are received within 30 minutes of one another [for the same user] into the same session.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/a-useful-tool-to-work-with-android-apks">
         A Useful Tool to Work With Android APKs
       </a>
@@ -5996,59 +6011,6 @@
    Jean Dunoyer </p></p>
 </blockquote>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ios-url-schemas-for-settings">
-        iOS URL schemas for Settings
-      </a>
-    </h1>
-
-    <span class="post-date">05 May 2013</span>
-
-    <p>List of known URLs for the iOS &#8220;Settings&#8221; app:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">prefs:root=General&amp;#038;path=About
-prefs:root=General&amp;#038;path=ACCESSIBILITY
-prefs:root=AIRPLANE_MODE
-prefs:root=General&amp;#038;path=AUTOLOCK
-prefs:root=General&amp;#038;path=USAGE/CELLULAR_USAGE
-prefs:root=Brightness
-prefs:root=General&amp;#038;path=Bluetooth
-prefs:root=General&amp;#038;path=DATE_AND_TIME
-prefs:root=FACETIME
-prefs:root=General
-prefs:root=General&amp;#038;path=Keyboard
-prefs:root=CASTLE
-prefs:root=CASTLE&amp;#038;path=STORAGE_AND_BACKUP
-prefs:root=General&amp;#038;path=INTERNATIONAL
-prefs:root=LOCATION_SERVICES
-prefs:root=ACCOUNT_SETTINGS
-prefs:root=MUSIC
-prefs:root=MUSIC&amp;#038;path=EQ
-prefs:root=MUSIC&amp;#038;path=VolumeLimit
-prefs:root=General&amp;#038;path=Network
-prefs:root=NIKE_PLUS_IPOD
-prefs:root=NOTES
-prefs:root=NOTIFICATIONS_ID
-prefs:root=Phone
-prefs:root=Photos
-prefs:root=General&amp;#038;path=ManagedConfigurationList
-prefs:root=General&amp;#038;path=Reset
-prefs:root=Sounds&amp;#038;path=Ringtone
-prefs:root=Safari
-prefs:root=General&amp;#038;path=Assistant
-prefs:root=Sounds
-prefs:root=General&amp;#038;path=SOFTWARE_UPDATE_LINK
-prefs:root=STORE
-prefs:root=TWITTER
-prefs:root=General&amp;#038;path=USAGE
-prefs:root=VIDEO
-prefs:root=General&amp;#038;path=Network/VPN
-prefs:root=Wallpaper
-prefs:root=WIFI
-prefs:root=INTERNET_TETHERING
-</code></pre></div>
   </div>
   
 </div>
