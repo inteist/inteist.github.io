@@ -479,14 +479,14 @@
 
     <div class="content container">
       <div class="reading-time">
-  <p title="102 words">~ 
+  <p title="90 words">~ 
 
 
 
 
 
 
-0 min
+30 sec
  read</p>
 </div>
 
@@ -496,13 +496,11 @@
   <span class="post-date">23 Mar 2015</span>
   <p>To batch convert XML files to JSON a nodejs package can be used that does the job pretty well.</p>
 
-<p><code>blabla</code></p>
-
 <p>Install the package globally:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install xml-json -g
 </code></pre></div>
 <p>the format of the command is </p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">xml-json input.xml root_node_to_start_from_in_xml bla bla bla bla bla bla bla bla bla bla bla
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">xml-json input.xml root_node_to_start_from_in_xml
 </code></pre></div>
 <p>And so we use our friend inline loop with the basic command to batch process all the <code>*.xml</code> files in the current folder</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> f in *.xml<span class="p">;</span> <span class="k">do</span> xml-json <span class="nv">$f</span> root_node_name_here &gt; <span class="nv">$f</span>.json<span class="p">;</span> <span class="k">done</span>
