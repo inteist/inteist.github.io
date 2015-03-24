@@ -17,14 +17,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
-  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
   <link rel="stylesheet" href="/public/pygments-css/monokai.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/custom.css">
   <link href='http://fonts.googleapis.com/css?family=Arimo|Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -32,7 +35,6 @@
 
 
   <body>
-
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -480,6 +482,22 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/get-unix-epoch-time-on-android">
+        Get Unix Epoch Time on Android
+      </a>
+    </h1>
+
+    <span class="post-date">18 Jul 2012</span>
+
+    <p>To get a proper Unix epoch time on Android you should divide the current time by 1000 since <strong>Android will return the epoch in milliseconds</strong></p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">/</span> <span class="mi">1000</span>
+</code></pre></div>
+<p>The method name also hints about this ;)</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/android-text-clipboardmanager-and-content-clipboardmanager">
         Android text.ClipboardManager and content.ClipboardManager
       </a>
@@ -718,25 +736,6 @@ Google has released an <a href="http://developer.android.com/guide/topics/ui/act
 </code></pre></div>
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/node-js">
-        Node.js
-      </a>
-    </h1>
-
-    <span class="post-date">30 Jun 2012</span>
-
-    <p>An interesting podcast from the CEO of Joyent who is the largest user of Node and the current employer of the <a href="http://tinyclouds.org/">creator of Node</a>.</p>
-
-<p>The discussion revolved around what Node is good for and what it was not designed to do and why people who say that Node doesn't work for them are just not using it right. The rule of thumb - use the right tool for the job still remains right in software industry and will probably do so for a foreseeable future.</p>
-
-<p>&nbsp;</p>
-
-<p><iframe style="border: 0; outline: 0;" src="http://cdn.livestream.com/embed/gigaomstructure?layout=4&amp;clip=pla_1f93c688-c6ac-49d1-98ba-f9ba990fde23&amp;height=340&amp;width=560&amp;autoplay=false" frameborder="0" scrolling="no" width="560" height="340"></iframe></p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
@@ -751,7 +750,6 @@ Google has released an <a href="http://developer.android.com/guide/topics/ui/act
 </div>
 
     </div>
-
 
   
 <!-- Google Analytics -->

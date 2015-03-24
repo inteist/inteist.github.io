@@ -17,14 +17,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
-  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
   <link rel="stylesheet" href="/public/pygments-css/monokai.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/custom.css">
   <link href='http://fonts.googleapis.com/css?family=Arimo|Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -32,7 +35,6 @@
 
 
   <body>
-
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -480,6 +482,49 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/fixing-eclipse-fonts-on-os-x">
+        Fixing Eclipse Fonts on OS X
+      </a>
+    </h1>
+
+    <span class="post-date">16 Feb 2012</span>
+
+    <h2>Select the right font:</h2>
+
+<p><a src="http://inteist.com/media/osx_eclipse_font_setup.png"><img class="aligncenter size-full wp-image-697" title="osx_eclipse_font_setup" src="http://inteist.com/media/osx_eclipse_font_setup.png" alt="" width="629" height="535" /></a></p>
+
+<h2></h2>
+
+<p>&nbsp;</p>
+
+<h2>Turn off anti aliasing:</h2>
+
+<p>In the terminal run:</p>
+
+<pre><strong>defaults write org.eclipse.eclipse AppleAntiAliasingThreshold 20</strong></pre>
+
+<p>&nbsp;</p>
+
+<h2>Fix eclipse.ini:</h2>
+
+<p>edit $ECLIPSE_HOME » Eclipse.app » Contents » MacOS » eclipse.ini and remove the following line:</p>
+
+<pre><strong>-Dorg.eclipse.swt.internal.carbon.smallFonts</strong></pre>
+
+<p>&nbsp;<br />
+&nbsp;</p>
+
+<h2>End Result</h2>
+
+<p>The end result should look something like this:<br />
+&nbsp;<br />
+<a src="http://inteist.com/media/eclipse-font-setup-on-OS-X-end-result.png"><img src="http://inteist.com/media/eclipse-font-setup-on-OS-X-end-result.png" alt="" title="eclipse font setup on OS X end result" width="484" height="112" class="aligncenter size-full wp-image-705" /></a><br />
+&nbsp;&nbsp;</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/global-android-devcamp">
         Global Android DevCamp
       </a>
@@ -670,29 +715,6 @@ something like this should work:</p>
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/ios-vs-android-vs-blackberry-vs-windows-phones">
-        iOS vs. Android vs. BlackBerry vs. Windows Phones
-      </a>
-    </h1>
-
-    <span class="post-date">18 Jan 2012</span>
-
-    <p>Here's the chart of smartphones market share according to market research firm <a href="http://www.npd.com">NPD</a></p>
-
-<p>Quite interesting trend can be seen by the end of the year with huge spike in iOS sales. This of course can be attributed to the iPhone 4S and the holiday season. Apple products are still considered luxury and make great gifts as opposed to say Android which is considered more of a necessity.</p>
-
-<p><a src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-vs.-Windows-Phones.png"><img src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-vs.-Windows-Phones.png" alt="" title="iOS vs. Android vs. BlackBerry vs. Windows Phones" width="617" height="366" class="aligncenter size-full wp-image-630" /></a></p>
-
-<p><strong>UPDATE:</strong><br />
-Additional source (showing the same trend though) from <a href="http://blog.nielsen.com/nielsenwire/consumer/more-us-consumers-choosing-smartphones-as-apple-closes-the-gap-on-android/">Nielsen</a><br />
-***Note the shift in timeline. Otherwise the graphs correlate.</p>
-
-<p><a src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-2011-Nielsen.png"><img src="http://inteist.com/media/iOS-vs.-Android-vs.-BlackBerry-2011-Nielsen.png" alt="" title="iOS vs. Android vs. BlackBerry 2011 Nielsen" width="557" height="452" class="aligncenter size-full wp-image-633" /></a></p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
@@ -707,7 +729,6 @@ Additional source (showing the same trend though) from <a href="http://blog.niel
 </div>
 
     </div>
-
 
   
 <!-- Google Analytics -->

@@ -17,14 +17,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
-  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
   <link rel="stylesheet" href="/public/pygments-css/monokai.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/custom.css">
   <link href='http://fonts.googleapis.com/css?family=Arimo|Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -32,7 +35,6 @@
 
 
   <body>
-
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -480,6 +482,25 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/inspiring-presentations">
+        Inspiring Presentations
+      </a>
+    </h1>
+
+    <span class="post-date">05 May 2013</span>
+
+    <h1 id="android">Android</h1>
+
+<p>Mastering Android Drawables by Cyril Mottier  </p>
+
+<h1 id="web">Web</h1>
+
+<p>Design for Performance by Lara Swanson</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/android-3d-party-usb-vendor-ir-list-for-adb-ini">
         Android 3d Party USB Vendor IR List for adb.ini
       </a>
@@ -803,43 +824,6 @@ git push origin --tags
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/cleaning-up-and-removing-unused-ports-in-your-macports">
-        Cleaning Up and Removing Unused Ports in Your MacPorts
-      </a>
-    </h1>
-
-    <span class="post-date">23 Oct 2012</span>
-
-    <p>To remove inactive ports: </p>
-
-<pre>
-sudo port uninstall inactive 
-</pre>
-
-<p>To remove downloaded distfiles with: </p>
-
-<pre>
-sudo port clean --all installed 
-</pre>
-
-<p>To remove orphaned (not referenced and not anymore used ports) you can use an external tool <strong>port_cutleaves</strong></p>
-
-<p>First install the tool using MacPorts</p>
-
-<pre>
-sudo port install port_cutleaves 
-</pre>
-
-<p>Then run it</p>
-
-<pre>
-sudo port_cutleaves 
-</pre>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
@@ -854,7 +838,6 @@ sudo port_cutleaves
 </div>
 
     </div>
-
 
   
 <!-- Google Analytics -->

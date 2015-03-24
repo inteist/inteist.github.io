@@ -17,14 +17,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
-  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
   <link rel="stylesheet" href="/public/pygments-css/monokai.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/custom.css">
   <link href='http://fonts.googleapis.com/css?family=Arimo|Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -32,7 +35,6 @@
 
 
   <body>
-
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -477,6 +479,173 @@
 
     <div class="content container">
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/reset-css-element-styling">
+        Reset CSS Element Styling
+      </a>
+    </h1>
+
+    <span class="post-date">23 Mar 2015</span>
+
+    <p>A comprehensive way to reset a CSS element:</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.reset-this</span> <span class="p">{</span>
+    <span class="n">animation</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">delay</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="k">direction</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">duration</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="n">mode</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span> <span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">name</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">play</span><span class="o">-</span><span class="n">state</span> <span class="o">:</span> <span class="n">running</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span> <span class="o">:</span> <span class="n">ease</span><span class="p">;</span>
+    <span class="n">backface</span><span class="o">-</span><span class="k">visibility</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">background</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-attachment</span> <span class="o">:</span> <span class="k">scroll</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="k">clip</span> <span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+    <span class="k">background-color</span> <span class="o">:</span> <span class="k">transparent</span><span class="p">;</span>
+    <span class="k">background-image</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="n">origin</span> <span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+    <span class="k">background-position</span> <span class="o">:</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="o">-</span><span class="n">x</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="o">-</span><span class="n">y</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-repeat</span> <span class="o">:</span> <span class="k">repeat</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="k">size</span> <span class="o">:</span> <span class="k">auto</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">border</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-bottom</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-bottom-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">-</span><span class="k">left</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">-</span><span class="k">right</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-bottom-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-bottom-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border-collapse</span> <span class="o">:</span> <span class="k">separate</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">image</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-left</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-left-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-left-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-left-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-right</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="o">-</span><span class="k">color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="o">-</span><span class="k">width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border-spacing</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-top</span><span class="o">-</span><span class="k">left</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top</span><span class="o">-</span><span class="k">right</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-top-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">bottom</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">box</span><span class="o">-</span><span class="n">sizing</span> <span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+    <span class="k">caption-side</span> <span class="o">:</span> <span class="k">top</span><span class="p">;</span>
+    <span class="k">clear</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">clip</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="n">columns</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">count</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">fill</span> <span class="o">:</span> <span class="n">balance</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">gap</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span> <span class="o">:</span> <span class="k">medium</span> <span class="k">none</span> <span class="n">currentColor</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span><span class="o">-</span><span class="k">color</span> <span class="o">:</span> <span class="n">currentColor</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span><span class="o">-</span><span class="k">width</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">span</span> <span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="k">width</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">content</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">counter-increment</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">counter-reset</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">cursor</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">direction</span> <span class="o">:</span> <span class="k">ltr</span><span class="p">;</span>
+    <span class="k">display</span> <span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+    <span class="k">empty-cells</span> <span class="o">:</span> <span class="k">show</span><span class="p">;</span>
+    <span class="k">float</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">font</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">font-family</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">font-size</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">font-style</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">font-variant</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">font-weight</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">height</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">hyphens</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">left</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">letter-spacing</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">line-height</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">list-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">list-style-image</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">list-style-position</span> <span class="o">:</span> <span class="k">outside</span><span class="p">;</span>
+    <span class="k">list-style-type</span> <span class="o">:</span> <span class="k">disc</span><span class="p">;</span>
+    <span class="k">margin</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-bottom</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-left</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-right</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-top</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">max-height</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">max-width</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">min-height</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">min-width</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">opacity</span> <span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="k">orphans</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">outline</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">outline-color</span> <span class="o">:</span> <span class="k">invert</span><span class="p">;</span>
+    <span class="k">outline-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">outline-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">overflow</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">overflow-x</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">overflow-y</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">padding</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-bottom</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-left</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-right</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-top</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">page</span><span class="o">-</span><span class="n">break</span><span class="o">-</span><span class="n">after</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">page</span><span class="o">-</span><span class="n">break</span><span class="o">-</span><span class="n">before</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">page</span><span class="o">-</span><span class="n">break</span><span class="o">-</span><span class="k">inside</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">perspective</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">perspective</span><span class="o">-</span><span class="n">origin</span> <span class="o">:</span> <span class="m">50%</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">position</span> <span class="o">:</span> <span class="k">static</span><span class="p">;</span>
+    <span class="c">/* May need to alter quotes for different locales (e.g fr) */</span>
+    <span class="k">quotes</span> <span class="o">:</span> <span class="s1">&#39;\201C&#39;</span> <span class="s1">&#39;\201D&#39;</span> <span class="s1">&#39;\2018&#39;</span> <span class="s1">&#39;\2019&#39;</span><span class="p">;</span>
+    <span class="k">right</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">tab</span><span class="o">-</span><span class="k">size</span> <span class="o">:</span> <span class="m">8</span><span class="p">;</span>
+    <span class="k">table-layout</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">text-align</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="o">-</span><span class="n">last</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">text-decoration</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">-</span><span class="k">color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">-</span><span class="n">line</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="k">solid</span><span class="p">;</span>
+    <span class="k">text-indent</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">text-shadow</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">text-transform</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">top</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">transform</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="n">flat</span><span class="p">;</span>
+    <span class="n">transition</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">delay</span> <span class="o">:</span> <span class="m">0s</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">duration</span> <span class="o">:</span> <span class="m">0s</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">property</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span> <span class="o">:</span> <span class="n">ease</span><span class="p">;</span>
+    <span class="k">unicode-bidi</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">vertical-align</span> <span class="o">:</span> <span class="k">baseline</span><span class="p">;</span>
+    <span class="k">visibility</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">white-space</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">widows</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">width</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">word-spacing</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">z-index</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>&nbsp;</p>
+
+<p>Source: <a href="http://stackoverflow.com/questions/15901030/reset-remove-css-styles-for-element-only">StackOverflow</a> </p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -1005,37 +1174,6 @@ Google Cloud Messaging  </p>
 </code></pre></div>
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/facebook-sdk-as-gradle-dependency">
-        Including Facebook SDK to Android project via Gradle
-      </a>
-    </h1>
-
-    <span class="post-date">15 Mar 2015</span>
-
-    <p>It is much easier (finally, sigh) to setup Facebook SDK dependency via maven central dependency than local library dependency.</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">dependencies</span> <span class="p">{</span>
-    <span class="nx">compile</span> <span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.23.1&#39;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>If you feel adventurous, you can wildcard the version number (which is in general not recommended to avoid unexpected build results)</p>
-
-<p>but, it can be either one of these:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.23.+&#39;</span>
-</code></pre></div>
-<p>will pull any patch update</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.2+&#39;</span>
-</code></pre></div>
-<p>will pull any minor update smaller than <strong>30</strong></p>
-
-<p>or if you feel especially adventurous then even:</p>
-<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.+&#39;</span>
-</code></pre></div>
-<p>which will pull any update up to major being <strong>4</strong></p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
@@ -1048,7 +1186,6 @@ Google Cloud Messaging  </p>
 </div>
 
     </div>
-
 
   
 <!-- Google Analytics -->

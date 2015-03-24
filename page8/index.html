@@ -17,14 +17,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
-  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
   <link rel="stylesheet" href="/public/pygments-css/monokai.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/custom.css">
   <link href='http://fonts.googleapis.com/css?family=Arimo|Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -32,7 +35,6 @@
 
 
   <body>
-
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -480,6 +482,99 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/detect-if-google-play-android-market-com-android-vending-package-is-installed-on-a-device">
+        Detect if Google Play/Android Market (com.android.vending Package) Is Installed on a Device
+      </a>
+    </h1>
+
+    <span class="post-date">27 Aug 2012</span>
+
+    <p>It's fairly easy to determine whether there is an app that is registered to handle
+<pre>market://</pre>
+<p> requests.</p>
+
+<p>In most cases this will be enough and you can just use the "canHandleMarketURI()" but if you want absolutely make sure that the com.android.vending package is present on the device and is registered to handle the
+<pre>market://</pre>
+<p> URIs, then you can simply use "hasGooglePlayMarket()" method.</p>
+
+<p>This method seems to work very well for me.<br />
+Enjoy and let me know in the comments if you think this can be further improved.</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.pm.PackageManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.pm.ResolveInfo</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.net.Uri</span><span class="o">;</span>
+
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GooglePlayRedirector</span> <span class="o">{</span>
+
+
+    <span class="n">Context</span> <span class="n">_context</span><span class="o">;</span>
+
+
+    <span class="kd">public</span> <span class="nf">GooglePlayRedirector</span><span class="o">(</span><span class="n">Context</span> <span class="n">c</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">_context</span> <span class="o">=</span> <span class="n">c</span><span class="o">;</span>
+
+    <span class="o">}</span>
+
+
+    <span class="cm">/**</span>
+<span class="cm">     * Make sure that beside the apps that are registered to handle android market URI, there is the</span>
+<span class="cm">     * com.android.vending package, which means that the Google Play app (the Android market) is installed.</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasGooglePlayMarket</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">resolveinfo</span><span class="o">&gt;</span> <span class="n">marketHandlers</span> <span class="o">=</span> <span class="n">getMarketHandlers</span><span class="o">();</span>
+        <span class="k">for</span> <span class="o">(</span><span class="n">ResolveInfo</span> <span class="n">resolveInfo</span> <span class="o">:</span> <span class="n">marketHandlers</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">resolveInfo</span><span class="o">.</span><span class="na">activityInfo</span><span class="o">.</span><span class="na">packageName</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;com.android.vending&quot;</span><span class="o">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>                
+                <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="c1">//looked through all the handlers for the market://... URI and none were com.android.vending package</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+
+
+    <span class="cm">/**</span>
+<span class="cm">     * Check whether there is any app that is registered to handle android market URIs or not</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     *          - TRUE if someone can handle android market URI, false otherwise</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">canHandleMarketURI</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nf">getMarketHandlers</span><span class="o">().</span><span class="na">size</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+
+
+
+    <span class="cm">/**</span>
+<span class="cm">     * </span>
+<span class="cm">     * Pick up all the resolvers for android market URI</span>
+<span class="cm">     * </span>
+<span class="cm">     * @return</span>
+<span class="cm">     *          - List of resolvers who can handle the provided URI</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">resolveinfo</span><span class="o">&gt;</span> <span class="nf">getMarketHandlers</span><span class="o">()</span> <span class="o">{</span>
+
+        <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">Intent</span><span class="o">();</span>
+        <span class="n">intent</span><span class="o">.</span><span class="na">setAction</span><span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_VIEW</span><span class="o">);</span>
+        <span class="n">intent</span><span class="o">.</span><span class="na">setData</span><span class="o">(</span><span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">&quot;market://search?q=foo&quot;</span><span class="o">));</span>
+        <span class="n">PackageManager</span> <span class="n">pm</span> <span class="o">=</span> <span class="n">_context</span><span class="o">.</span><span class="na">getPackageManager</span><span class="o">();</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">resolveinfo</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="na">queryIntentActivities</span><span class="o">(</span><span class="n">intent</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/git-update-last-commit-with-changes-you-forgot-to-make">
         Git – Update Last Commit With Changes You Forgot to Make
       </a>
@@ -709,22 +804,6 @@ Do it, but be smart about it. Use your brain. Think about what make the most sen
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/get-unix-epoch-time-on-android">
-        Get Unix Epoch Time on Android
-      </a>
-    </h1>
-
-    <span class="post-date">18 Jul 2012</span>
-
-    <p>To get a proper Unix epoch time on Android you should divide the current time by 1000 since <strong>Android will return the epoch in milliseconds</strong></p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">/</span> <span class="mi">1000</span>
-</code></pre></div>
-<p>The method name also hints about this ;)</p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
@@ -739,7 +818,6 @@ Do it, but be smart about it. Use your brain. Think about what make the most sen
 </div>
 
     </div>
-
 
   
 <!-- Google Analytics -->

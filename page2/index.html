@@ -17,14 +17,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
-  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
   <link rel="stylesheet" href="/public/pygments-css/monokai.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/custom.css">
   <link href='http://fonts.googleapis.com/css?family=Arimo|Fjalla+One' rel='stylesheet' type='text/css'>
+
+  
+  
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -32,7 +35,6 @@
 
 
   <body>
-
     <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -477,6 +479,37 @@
 
     <div class="content container">
       <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/facebook-sdk-as-gradle-dependency">
+        Including Facebook SDK to Android project via Gradle
+      </a>
+    </h1>
+
+    <span class="post-date">15 Mar 2015</span>
+
+    <p>It is much easier (finally, sigh) to setup Facebook SDK dependency via maven central dependency than local library dependency.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">dependencies</span> <span class="p">{</span>
+    <span class="nx">compile</span> <span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.23.1&#39;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>If you feel adventurous, you can wildcard the version number (which is in general not recommended to avoid unexpected build results)</p>
+
+<p>but, it can be either one of these:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.23.+&#39;</span>
+</code></pre></div>
+<p>will pull any patch update</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.2+&#39;</span>
+</code></pre></div>
+<p>will pull any minor update smaller than <strong>30</strong></p>
+
+<p>or if you feel especially adventurous then even:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.+&#39;</span>
+</code></pre></div>
+<p>which will pull any update up to major being <strong>4</strong></p>
+
+  </div>
   
   <div class="post">
     <h1 class="post-title">
@@ -1005,22 +1038,6 @@
 
   </div>
   
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/custom-fonts-on-android">
-        Custom fonts on Android
-      </a>
-    </h1>
-
-    <span class="post-date">05 May 2014</span>
-
-    <p>This is how to load custom font and set it as a typeface for a TextView</p>
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">TextView</span> <span class="n">txt</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">custom_font</span><span class="o">);</span>  
-<span class="n">Typeface</span> <span class="n">font</span> <span class="o">=</span> <span class="n">Typeface</span><span class="o">.</span><span class="na">createFromAsset</span><span class="o">(</span><span class="n">getAssets</span><span class="o">(),</span> <span class="s">&quot;CUSTOM_FONT.ttf&quot;</span><span class="o">);</span>  
-<span class="n">txt</span><span class="o">.</span><span class="na">setTypeface</span><span class="o">(</span><span class="n">font</span><span class="o">);</span>
-</code></pre></div>
-  </div>
-  
 </div>
 
 <div class="pagination">
@@ -1035,7 +1052,6 @@
 </div>
 
     </div>
-
 
   
 <!-- Google Analytics -->

@@ -70,3 +70,12 @@ img {
 a {
     transition: color ease 0.25s;
 }
+
+.reading-time {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 85%;
+  color: #636363;
+  z-index: 10;
+}
