@@ -91,6 +91,7 @@ p {
 }
 strong {
     color: #303030;
+    padding: .2em;
 }
 /* Lists */
 
@@ -148,6 +149,7 @@ pre {
 /*word-wrap: break-word;*/
 }
 pre > code {
+    padding-left: 0em;
     padding-right: 1em;
     font-size: 75%;
     color: inherit;

@@ -7,6 +7,18 @@
         <atom:link href="http://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Further Speed Up Your Jekyll Blog by Compressing the HTML</title>
+                
+                
+                    <description>&lt;p&gt;Use &lt;a href=&quot;http://jch.penibelst.de&quot;&gt;Compress HTML Liquid plugin&lt;/a&gt;.&lt;/p&gt;
+</description>
+                
+                <pubDate>Tue, 24 Mar 2015 19:28:00 -0400</pubDate>
+                <link>http://inteist.com/speed-up-jekyll-blog-compress-html</link>
+                <guid isPermaLink="true">http://inteist.com/speed-up-jekyll-blog-compress-html</guid>
+            </item>
+        
+            <item>
                 <title>Pygments Theme for Jekyll - Monokai</title>
                 
                 
@@ -256,57 +268,6 @@
                 <pubDate>Sun, 23 Nov 2014 17:27:53 -0500</pubDate>
                 <link>http://inteist.com/xcode-themes-collection</link>
                 <guid isPermaLink="true">http://inteist.com/xcode-themes-collection</guid>
-            </item>
-        
-            <item>
-                <title>Android IntentService vs. Service</title>
-                
-                
-                    <description>&lt;p&gt;Android has often more than one way of doing something but it is not because of a poor design, rather because of the many possibilities that are available to Android developer and it is important to understand the nuances between various options to achieve something and choose the right tool for the job.&lt;/p&gt;
-
-&lt;p&gt;Let&#39;s look at services:&lt;/p&gt;
-
-&lt;h3 style=&quot;text-align: center;&quot;&gt;IntentService vs. Service&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;When to use?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul style=&quot;color: #000000;&quot;&gt;
-&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; can be used in tasks with no UI, but shouldn&#39;t be too long. If you need to perform long tasks, you must use threads within Service.&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; can be used in long tasks usually with no communication to Main Thread. If communication is required, can use Main Thread handler or broadcast intents. Another case of use is when callbacks are needed (Intent triggered tasks).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;How to trigger?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul style=&quot;color: #000000;&quot;&gt;
-&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; is triggered calling to method onStartService().&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; is triggered using an Intent, it spawns a new worker thread and the method onHandleIntent() is called on this thread.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Triggered From&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul style=&quot;color: #000000;&quot;&gt;
-&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; may be triggered from any thread.&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; must be triggered from Main Thread.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Runs On&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul style=&quot;color: #000000;&quot;&gt;
-&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; runs in background but it runs on the Main Thread of the application.&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; runs on a separate worker thread.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Limitations / Drawbacks&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul style=&quot;color: #000000;&quot;&gt;
-&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; may block the Main Thread of the application.&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; cannot run tasks in parallel. Hence all the consecutive intents will go into the message queue for the worker thread and will execute sequentially.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-                
-                <pubDate>Mon, 19 May 2014 11:29:03 -0400</pubDate>
-                <link>http://inteist.com/android-intentservice-vs-service</link>
-                <guid isPermaLink="true">http://inteist.com/android-intentservice-vs-service</guid>
             </item>
         
     </channel>
