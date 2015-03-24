@@ -7,7 +7,6 @@ pre code {
     padding: 0;
     font-size: 75%;
     color: inherit;
-    background-color: transparent;
 }
 /* Code */
 
@@ -18,24 +17,10 @@ code {
     padding: 0em 0em;
     font-size: 80%;
     color: #bf616a;
-    background-color: #f9f9f9;
     border-radius: 3px;
 }
-pre {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    padding: 0;
-    font-size: .85rem;
-    /*This controls the highlighted code block size*/
 
-line-height: 1.4;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: #f9f9f9;
-}
+
 /*Need to only make it for the archive and tags*/
 
 .sidebar-nav ul, .related ul, #archive ul, #tags ul {

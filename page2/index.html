@@ -17,7 +17,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
+  <!-- <link rel="stylesheet" href="/public/css/syntax.css"> -->
+  <link rel="stylesheet" href="/public/pygments-css/monokai.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="/public/css/custom.css">
   <link href='http://fonts.googleapis.com/css?family=Arimo|Fjalla+One' rel='stylesheet' type='text/css'>
@@ -1014,17 +1015,10 @@
     <span class="post-date">05 May 2014</span>
 
     <p>This is how to load custom font and set it as a typeface for a TextView</p>
-
-<pre><div class="codecolorer-container java vibrant" style="overflow:auto;white-space:nowrap;width:100%;">
-  <div class="java codecolorer">
-    TextView txt <span class="sy0">=</span> <span class="br0">&#40;</span>TextView<span class="br0">&#41;</span> findViewById<span class="br0">&#40;</span>R.<span class="me1">id</span>.<span class="me1">custom_font</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<br />
-    Typeface font <span class="sy0">=</span> Typeface.<span class="me1">createFromAsset</span><span class="br0">&#40;</span>getAssets<span class="br0">&#40;</span><span class="br0">&#41;</span>, <span class="st0">"CUSTOM_FONT.ttf"</span><span class="br0">&#41;</span><span class="sy0">;</span> &nbsp;<br />
-    txt.<span class="me1">setTypeface</span><span class="br0">&#40;</span>font<span class="br0">&#41;</span><span class="sy0">;</span>
-  </div>
-</div>
-
-</pre>
-
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">TextView</span> <span class="n">txt</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">custom_font</span><span class="o">);</span>  
+<span class="n">Typeface</span> <span class="n">font</span> <span class="o">=</span> <span class="n">Typeface</span><span class="o">.</span><span class="na">createFromAsset</span><span class="o">(</span><span class="n">getAssets</span><span class="o">(),</span> <span class="s">&quot;CUSTOM_FONT.ttf&quot;</span><span class="o">);</span>  
+<span class="n">txt</span><span class="o">.</span><span class="na">setTypeface</span><span class="o">(</span><span class="n">font</span><span class="o">);</span>
+</code></pre></div>
   </div>
   
 </div>
