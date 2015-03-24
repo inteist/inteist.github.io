@@ -479,6 +479,42 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/dns-flush-cache-os-x-linux-windows">
+        DNS FLush Cache for OS X, Linux, and Windows
+      </a>
+    </h1>
+
+    <span class="post-date">15 Mar 2015</span>
+
+    <h3 id="osx-10.10">OSX 10.10</h3>
+
+<p><code>sudo discoveryutil udnsflushcaches</code></p>
+
+<h3 id="osx-10.9">OSX 10.9</h3>
+
+<p>dscacheutil -flushcache; sudo killall -HUP mDNSResponder</p>
+
+<h3 id="osx-10.7-–-10.8">OSX 10.7  – 10.8</h3>
+
+<p><code>sudo killall -HUP mDNSResponder</code></p>
+
+<h3 id="osx-10.5-–-10.6">OSX 10.5 – 10.6</h3>
+
+<p><code>sudo dscacheutil -flushcache</code></p>
+
+<h3 id="windows">Windows</h3>
+
+<p><code>ipconfig /flushdns</code></p>
+
+<h3 id="linux-(depending-on-what-you’re-running-for-dns-resolver)">Linux (depending on what you’re running for DNS resolver)</h3>
+
+<p><code>/etc/init.d/named restart</code><br>
+<code>/etc/init.d/nscd restart</code></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/wordpress-jekyll-switch-migration">
         Switching From Wordpress to Jekyll in 20 Minutes
       </a>
@@ -988,22 +1024,6 @@
 </div>
 
 </pre>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/travel-inspiration">
-        Travel Inspiration
-      </a>
-    </h1>
-
-    <span class="post-date">04 Apr 2014</span>
-
-    <p><br />
-<blockquote><p>You&#39;ll always be able to make more money but you can not make more time. We&#39;ll all die but only a small select few are truly living</p></blockquote>
-<p>A truly inspirational video. It really made me want to sail around the world.</p>
-<p><iframe width="840" height="472" src="//www.youtube.com/embed/81DrG3Qy4BI" frameborder="0" allowfullscreen></iframe></p></p>
 
   </div>
   

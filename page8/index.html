@@ -479,6 +479,23 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/git-update-last-commit-with-changes-you-forgot-to-make">
+        Git – Update Last Commit With Changes You Forgot to Make
+      </a>
+    </h1>
+
+    <span class="post-date">26 Aug 2012</span>
+
+    <p>If you just did a commit and you then realized that something is wrong and you need to amend that commit to include your change, then you do:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git add .
+<span class="nv">$ </span>git commit --amend
+</code></pre></div>
+<p>that&#39;s all. Git will pick up all your changes that you want to the commit and add them to the last commit.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/ammend-or-change-previous-git-commit-message">
         Ammend/Change Previous Git Commit Message
       </a>
@@ -704,23 +721,6 @@ Do it, but be smart about it. Use your brain. Think about what make the most sen
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">/</span> <span class="mi">1000</span>
 </code></pre></div>
 <p>The method name also hints about this ;)</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/android-text-clipboardmanager-and-content-clipboardmanager">
-        Android text.ClipboardManager and content.ClipboardManager
-      </a>
-    </h1>
-
-    <span class="post-date">18 Jul 2012</span>
-
-    <p>So the text.ClipboardManager is deprecated and you should be using the content.ClipboardManager instead, BUT not so fast. If you are still supporting devices pre API level 11 which is 3.0 aka Honeycomb (note that 3.1 and 3.2 are API level 12 and API level 13 respectively) then you can't obviously use the content.ClipboardManager as it will fail on devices pre Honeycomb.</p>
-
-<p>&nbsp;</p>
-
-<p><a href="http://developer.android.com/reference/android/text/ClipboardManager.html">ClipBoardManager docs</a></p>
 
   </div>
   

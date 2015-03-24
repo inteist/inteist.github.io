@@ -479,6 +479,29 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/blackberry-development-with-eclipse-plugin-fixing-corrupted-jdp-file">
+        BlackBerry Development With Eclipse Plugin – Fixing Corrupted *.jdp File
+      </a>
+    </h1>
+
+    <span class="post-date">13 Aug 2009</span>
+
+    <p>It's not a secret that Eclipse plugin is very buggy and although it has improved a lot over the time, [intlink id="75" type="post"]the blackberry plugin still has a lot of issues and quirks[/intlink]. One of the problems that have been bugging me a lot was that sometimes the *.jdp file gets corrupted. This is the file where BB plugin for Eclipse saves most of the meta data for the project, including the files that are included in the project and consequently need to be compiled. So, many times I had problems with SVN meta data files corrupting this project, or sometimes perfectly legitimate *.java files that get stuck in the *.jdp file, but do not exist anymore.  The result of the *.jdp file being corrupted is that your application does no longer get compiled and redeployed when you run it. And the worst part, Eclipse would not explicitly let you know about this. It would silently fail and not re-deploy the app. So unless this is the first time you run the application, or the changes you made are not visually obvious, you would not know about this. But this is completely separate issue. One of the many issues with BB Eclipse plugin already covered.  Each time I have been struggling (sometimes for significant amount of times). Couple times I was able to manually delete files from the *.jdp file (although this is not recommended by RIM) and this solved the problem, but mostly I had to recreate the whole project from scratch, which if your project is large and, which is more important has dependencies on libraries, may become painful if you need to do this every few days.</p>
+
+<p>So the easiest way I found so far to solve this problem is:</p>
+
+<ol>
+<li>Delete the *.jdp file (you can just rename it to *.jdp.OLD)</li>
+<li>Delete the project from Eclipse (right click the project and choose delete). DO NOT however check the checkbox "delete the contents of the project from disk"</li>
+<li>Create a new project and point it to the same place.</li>
+</ol>
+
+<p>Since all the Eclipse project related files remain untouched, you should get your project exactly at the same state it was before it got corrupted, minus the corrupted part. Why - because when you re-create the project Eclipse plugin should re-create the *.jdp file.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/new-icon-for-firefox-3-5">
         New Icon for FireFox 3.5
       </a>
@@ -700,24 +723,6 @@
 <p>The problem has an elegant and pretty easy solution, yet it is usually hard  to humans because humans don't do a formalization of the problem which leads to  many repeated states. This issue is mainly why this problem is popular. Amarel  (1971) considered several representations of the problem and discussed criteria  whereby the following representation is preferred for purposes of AI and why  this problem is hard for humans.</p>
 
 <p style="text-align: center;"><a href="http://www.inteist.com/2009/01/missionaries-and-cannibals-puzzle-solution">Solution</a></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/publishing-your-article-scientific-joke">
-        Publishing Your Article — Scientific Joke
-      </a>
-    </h1>
-
-    <span class="post-date">15 Jan 2009</span>
-
-    <p>1) If you understand it and can prove it, then send it to a journal of  mathematics.<br />
-2) If you understand it, but can’t  prove it, then send it to a physics journal.<br />
-3)  If you can’t understand it, but can prove it, then send it to an economics  journal.<br />
-4) If you can neither understand it nor  prove it, then send it to a psychology journal.<br />
-5) If it attempts to make something important out of something  trivial, then send it to a journal of education.<br />
-6) If it attempts to make something trivial out of some-thing  important, send it to a journal of metaphysics.</p>
 
   </div>
   

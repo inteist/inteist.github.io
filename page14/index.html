@@ -479,6 +479,55 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/foursquare-use-of-mongodb">
+        Foursquare's Use of MongoDB
+      </a>
+    </h1>
+
+    <span class="post-date">15 Dec 2010</span>
+
+    <p><img class="aligncenter size-medium wp-image-422" title="Foursquare_logo" src="http://inteist.com/media/500px-Foursquare_logo.svg_-300x83.png" alt="" width="300" height="83" /><a src="http://inteist.com/media/1605635.png"><img class="aligncenter size-medium wp-image-421" title="MongoDB logo bright" src="http://inteist.com/media/1605635-300x100.png" alt="" width="300" height="100" /></a></p>
+
+<p>I have been to a presentation by Harry Heyman - the first non founder employee of Foursquare. He presented on the Foursquare's usage of <a href="http://www.mongodb.org/" target="_blank">MongoDB</a>, a rapidly gaining popularity NoSQL database. Quickly - the idea behind NoSQL database that it is not based on a relational model as most traditional databases but rather on a document model.</p>
+
+<p>Harry had many interesting things but the one thing that was especially interesting to me was that they <strong>basically run all the DB operations of FourSquare in RAM! </strong>Yes that's right. They employ the extra large memory instances on EC2, running with 64GB or RAM and they shard whenever they start approaching certain limits of RAM.</p>
+
+<p>The outages they had in early October were because they hit the memory limit and the databases started to page in and out the data from the hard drives to the memory and back and this quickly brought them down.</p>
+
+<p>He mentioned that this is however not Mongo's fault and this would have happened with any database they would have used. Which is interesting by itself because it means that the way the application is engineered - the requirements is that all the data that they operate has to be in RAM for the application to be fast enough. I bet there is a lot of smart engineers working at Foursquare and there has to be a good reason for that and in fact Harry mentioned that they basically have to have almost all the checkins available in memory due to the nature of the queries they have to perform on the data.  He also mentioned that when (this seemed more of a "when" rather than "if") they move to dedicated servers with solid state drives, they should not have that limit anymore because then the hard drives (SSDs) in that case will be fast enough.</p>
+
+<p>For me all this was very surprising and I am still a little puzzled about it and wonder whether there is/was no way of engineering the application so that they don't have to keep pretty much all their data (about 5 million users and 160 million checkins at the moment), all in RAM.</p>
+
+<p style="text-align: center;"><a href="http://bit.ly/e0p3b4" target="_blank">Slides of the presentation</a></p>
+
+<p style="text-align: left;"><strong>UPDATE (Dec 15 2010) a few related links:</strong></p>
+
+<p style="text-align: left;"><a href="http://blog.foursquare.com/2010/10/05/so-that-was-a-bummer/">Official blog from Foursquare</a></p>
+
+<p style="text-align: left;"><a href="http://news.ycombinator.com/item?id=1769761">Interesting discussion at YCombinator hacker news</a></p>
+
+<p style="text-align: left;"><a href=" http://nosql.mypopescu.com/post/1265191137/foursquare-mongodb-outage-post-mortem">Some notes of Alex Popescu from NoSQL blog</a></p>
+
+<p style="text-align: left;">
+<p style="text-align: left;">
+<p style="text-align: left;"><strong>UPDATE (Dec 17 2010) - 10gen posted the video of the meetup</strong></p>
+
+<p style="text-align: left;"><strong> </strong><a href="http://www.10gen.com/video/misc/foursquare">MongoDB and Foursquare video</a></p>
+
+<p><!--  This script tag will cause the Brightcove Players defined above it to be created as soon as the line is read by the browser. If you wish to have the player instantiated only after the rest of the HTML is processed and the page load is complete, remove the line. --><br />
+<script type="text/javascript">// <![CDATA[<br />
+brightcove.createExperiences();<br />
+// ]]></script></p>
+
+<p><!-- End of Brightcove Player --></p>
+
+<p style="text-align: left;">
+<p style="text-align: center;"><em>The foursquare and MongoDB logos are properties of their respected owners.</em></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/android-2-3-cant-find-my-adb">
         Android – Can’t Find my ADB
       </a>
@@ -693,27 +742,6 @@
 <p>Addition to support of paid application distribution is expanded to the developers in the following countries: Argentina, Australia, Belgium, Brazil, Canada, Denmark, Finland, Hong Kong, Ireland, Israel, Mexico, New Zealand, Norway, Portugal, Russia, Singapore, South Korea, Sweden, Switzerland and Taiwan.</p>
 
 <p>Android is closing the paid application gap with the iPhone quite fast, while BlackBerry still lags behind.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blackberry-developer-conference-subjective-notes-note-one">
-        BlackBerry Developer Conference - Subjective Notes - Note One
-      </a>
-    </h1>
-
-    <span class="post-date">27 Sep 2010</span>
-
-    <div id="_mcePaste">From the few sessions it was clear that RIM as a whole is still not getting it - the consumer market for smart phones has long surpassed the enterprise market. They are still trying to cater to weird enterprise scenarios and impress developers with these capabilities. RIM has to wake up and realize that the number of developers caring about enterprise features declines exponentially.</div>
-
-<div></div>
-
-<div>Same as with the networking which is a pure hell because there are at least 7 different ways to establish a network connection, they are trying to cater to different scenarios and have all these different ways of doing pretty much the same thing in 5 ways. Seriously - <strong>WHY??? </strong>Just give us <strong>one </strong>but <strong>RELIABLE</strong> way of doing something. Don't you get it that we - the developers don't want to implement something in more than one way and then debug it forever or yet, to have to implement something in 3 ways because you are not sure (and don't really have a good way of telling) which way will work for every specific user. You have to start repeating this every day as your daily mantra - the simpler it is, the less it breaks. This is a universal engineering fact. Would you please already get this? When you do it will make the life of developers so much easier.</div>
-
-<div></div>
-
-<div></div>
 
   </div>
   

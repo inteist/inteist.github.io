@@ -479,6 +479,28 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/convert-xml-files-to-json-with-xml-json-for-node">
+        Batch Convert XML Files to JSON with xml-json for Node and Terminal Magic
+      </a>
+    </h1>
+
+    <span class="post-date">23 Mar 2015</span>
+
+    <p>To batch convert XML files to JSON a nodejs package can be used that does the job pretty well.</p>
+
+<p>Install the package globally:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install xml-json -g
+</code></pre></div>
+<p>the format of the command is </p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">xml-json input.xml root_node_to_start_from_in_xml
+</code></pre></div>
+<p>And so we use our friend inline loop with the basic command to batch process all the <code>*.xml</code> files in the current folder</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> f in *.xml<span class="p">;</span> <span class="k">do</span> xml-json <span class="nv">$f</span> root_node_name_here &gt; <span class="nv">$f</span>.json<span class="p">;</span> <span class="k">done</span>
+</code></pre></div>
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/oneliner-to-have-jekyll-static-files-automatically-pushed">
         Oneliner to Have Jekyll or Any Other Staticly Generated Blog Pushed to Repository
       </a>
@@ -1010,42 +1032,6 @@ Google Cloud Messaging  </p>
 <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.+&#39;</span>
 </code></pre></div>
 <p>which will pull any update up to major being <strong>4</strong></p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/dns-flush-cache-os-x-linux-windows">
-        DNS FLush Cache for OS X, Linux, and Windows
-      </a>
-    </h1>
-
-    <span class="post-date">15 Mar 2015</span>
-
-    <h3 id="osx-10.10">OSX 10.10</h3>
-
-<p><code>sudo discoveryutil udnsflushcaches</code></p>
-
-<h3 id="osx-10.9">OSX 10.9</h3>
-
-<p>dscacheutil -flushcache; sudo killall -HUP mDNSResponder</p>
-
-<h3 id="osx-10.7-–-10.8">OSX 10.7  – 10.8</h3>
-
-<p><code>sudo killall -HUP mDNSResponder</code></p>
-
-<h3 id="osx-10.5-–-10.6">OSX 10.5 – 10.6</h3>
-
-<p><code>sudo dscacheutil -flushcache</code></p>
-
-<h3 id="windows">Windows</h3>
-
-<p><code>ipconfig /flushdns</code></p>
-
-<h3 id="linux-(depending-on-what-you’re-running-for-dns-resolver)">Linux (depending on what you’re running for DNS resolver)</h3>
-
-<p><code>/etc/init.d/named restart</code><br>
-<code>/etc/init.d/nscd restart</code></p>
 
   </div>
   

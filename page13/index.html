@@ -479,6 +479,23 @@
   
   <div class="post">
     <h1 class="post-title">
+      <a href="/textmate-go-to-last-edit-plugin">
+        TextMate Go to Last Edit Plugin
+      </a>
+    </h1>
+
+    <span class="post-date">03 May 2011</span>
+
+    <p>I have recently started using TextMate. It's been some time I wanted to give it a try and understand why so many people rave about it but every time I needed to use it, I usually wanted to do something very simple and sometimes I just got overwhelmed by all the options and sometimes I just didn't want to invest а lot of time into figuring out how to "use" TextMate beyond the most basic stuff.</p>
+
+<p>One of the options I missed and couldn't find an easy way to do was to go to the last edit. After some searching however I did find a plugin that does that. You can <a href="http://email.eva.mpg.de/~bibiko/downloads/textmate/TMGoToLastEdit.tmplugin.zip">download the go to last edit plugin for TextMate</a> plugin and once you install it, you will have the "go to last edit" awesomeness in your TextMate. Use the<span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; font-size: 12px; line-height: 18px; white-space: pre;"><strong>⌥⌘J</strong><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;"> combination to activate the plugin. It uses the "undo/redo" mechanism but this particular plugin solves some problems that some other apple scripts or other solutions that use undo/redo technique had.</span></span></p>
+
+<p>Enjoy this plugin and enjoy TextMate, although I actually like my MacVim better for most of the stuff I wanted to use TextMate for :). And actually I find Netbeans to be very good for JS, I started using TextMate for JS, but now I almost exclusively use Netbeans. Share your thoughts, opinions and experience  with TextMate plugins and with Mac editors in general in the comments.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
       <a href="/blackberry-os-distribution-marchapril-2011">
         BlackBerry OS Distribution March/April 2011
       </a>
@@ -1154,55 +1171,6 @@
 <h2>Summary</h2>
 
 <p>In summary, unfortunately, if you want to monetize your free application on BlackBerry - you better prepare yourself for the worst. I was hoping the official RIM advertising service will solve this problem, but unfortunately it didn't. It's a complete mess, as I mentioned and I don't think they are going to sort this out any time soon. If you are a developer that knows of a better service - please let me know, I would appreciate it. Hopefully my experience also helps you to save some of your time. If you are eager to try anyway, I plan to post the custom integration code that I wrote here so that you (again) can save some time reusing this code.</p>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/foursquare-use-of-mongodb">
-        Foursquare's Use of MongoDB
-      </a>
-    </h1>
-
-    <span class="post-date">15 Dec 2010</span>
-
-    <p><img class="aligncenter size-medium wp-image-422" title="Foursquare_logo" src="http://inteist.com/media/500px-Foursquare_logo.svg_-300x83.png" alt="" width="300" height="83" /><a src="http://inteist.com/media/1605635.png"><img class="aligncenter size-medium wp-image-421" title="MongoDB logo bright" src="http://inteist.com/media/1605635-300x100.png" alt="" width="300" height="100" /></a></p>
-
-<p>I have been to a presentation by Harry Heyman - the first non founder employee of Foursquare. He presented on the Foursquare's usage of <a href="http://www.mongodb.org/" target="_blank">MongoDB</a>, a rapidly gaining popularity NoSQL database. Quickly - the idea behind NoSQL database that it is not based on a relational model as most traditional databases but rather on a document model.</p>
-
-<p>Harry had many interesting things but the one thing that was especially interesting to me was that they <strong>basically run all the DB operations of FourSquare in RAM! </strong>Yes that's right. They employ the extra large memory instances on EC2, running with 64GB or RAM and they shard whenever they start approaching certain limits of RAM.</p>
-
-<p>The outages they had in early October were because they hit the memory limit and the databases started to page in and out the data from the hard drives to the memory and back and this quickly brought them down.</p>
-
-<p>He mentioned that this is however not Mongo's fault and this would have happened with any database they would have used. Which is interesting by itself because it means that the way the application is engineered - the requirements is that all the data that they operate has to be in RAM for the application to be fast enough. I bet there is a lot of smart engineers working at Foursquare and there has to be a good reason for that and in fact Harry mentioned that they basically have to have almost all the checkins available in memory due to the nature of the queries they have to perform on the data.  He also mentioned that when (this seemed more of a "when" rather than "if") they move to dedicated servers with solid state drives, they should not have that limit anymore because then the hard drives (SSDs) in that case will be fast enough.</p>
-
-<p>For me all this was very surprising and I am still a little puzzled about it and wonder whether there is/was no way of engineering the application so that they don't have to keep pretty much all their data (about 5 million users and 160 million checkins at the moment), all in RAM.</p>
-
-<p style="text-align: center;"><a href="http://bit.ly/e0p3b4" target="_blank">Slides of the presentation</a></p>
-
-<p style="text-align: left;"><strong>UPDATE (Dec 15 2010) a few related links:</strong></p>
-
-<p style="text-align: left;"><a href="http://blog.foursquare.com/2010/10/05/so-that-was-a-bummer/">Official blog from Foursquare</a></p>
-
-<p style="text-align: left;"><a href="http://news.ycombinator.com/item?id=1769761">Interesting discussion at YCombinator hacker news</a></p>
-
-<p style="text-align: left;"><a href=" http://nosql.mypopescu.com/post/1265191137/foursquare-mongodb-outage-post-mortem">Some notes of Alex Popescu from NoSQL blog</a></p>
-
-<p style="text-align: left;">
-<p style="text-align: left;">
-<p style="text-align: left;"><strong>UPDATE (Dec 17 2010) - 10gen posted the video of the meetup</strong></p>
-
-<p style="text-align: left;"><strong> </strong><a href="http://www.10gen.com/video/misc/foursquare">MongoDB and Foursquare video</a></p>
-
-<p><!--  This script tag will cause the Brightcove Players defined above it to be created as soon as the line is read by the browser. If you wish to have the player instantiated only after the rest of the HTML is processed and the page load is complete, remove the line. --><br />
-<script type="text/javascript">// <![CDATA[<br />
-brightcove.createExperiences();<br />
-// ]]></script></p>
-
-<p><!-- End of Brightcove Player --></p>
-
-<p style="text-align: left;">
-<p style="text-align: center;"><em>The foursquare and MongoDB logos are properties of their respected owners.</em></p>
 
   </div>
   
