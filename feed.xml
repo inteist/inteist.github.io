@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Inteist</title>
+        <description>I think therefore I am</description>
+        <link>http://inteist.com</link>
+        <atom:link href="http://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>Pygments Theme for Jekyll - Monokai</title>
+                
+                
+                    <description>&lt;h1 id=&quot;theme---monokai&quot;&gt;Theme - Monokai&lt;/h1&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;white-space&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wrap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* horizontal scrolling */&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;moz&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;padding-left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#202020&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#C1C2C3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+                
+                <pubDate>Tue, 24 Mar 2015 01:44:00 -0400</pubDate>
+                <link>http://inteist.com/pygments-theme-for-jekyll-monokai</link>
+                <guid isPermaLink="true">http://inteist.com/pygments-theme-for-jekyll-monokai</guid>
+            </item>
+        
+            <item>
+                <title>Reset CSS Element Styling</title>
+                
+                
+                    <description>&lt;p&gt;A comprehensive way to reset a CSS element:&lt;/p&gt;
+</description>
+                
+                <pubDate>Tue, 24 Mar 2015 00:12:00 -0400</pubDate>
+                <link>http://inteist.com/reset-css-element-styling</link>
+                <guid isPermaLink="true">http://inteist.com/reset-css-element-styling</guid>
+            </item>
+        
+            <item>
+                <title>Batch Convert XML Files to JSON with xml-json for Node and Terminal Magic</title>
+                
+                
+                    <description>&lt;p&gt;To batch convert XML files to JSON a nodejs package can be used that does the job pretty well.&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 23 Mar 2015 18:01:43 -0400</pubDate>
+                <link>http://inteist.com/convert-xml-files-to-json-with-xml-json-for-node</link>
+                <guid isPermaLink="true">http://inteist.com/convert-xml-files-to-json-with-xml-json-for-node</guid>
+            </item>
+        
+            <item>
+                <title>Oneliner to Have Jekyll or Any Other Staticly Generated Blog Pushed to Repository</title>
+                
+                
+                    <description>&lt;p&gt;Once your blog is generated, you can commit and push it to the origin to be deployed (if you are using Git as a deployment instrument of course)&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 23 Mar 2015 08:57:44 -0400</pubDate>
+                <link>http://inteist.com/oneliner-to-have-jekyll-static-files-automatically-pushed</link>
+                <guid isPermaLink="true">http://inteist.com/oneliner-to-have-jekyll-static-files-automatically-pushed</guid>
+            </item>
+        
+            <item>
+                <title>US States Resource for Android</title>
+                
+                
+                    <description>&lt;p&gt;Put this into &lt;code&gt;values&lt;/code&gt; folder and use in your code by referencing &lt;code&gt;us_states&lt;/code&gt;.&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 23 Mar 2015 07:28:19 -0400</pubDate>
+                <link>http://inteist.com/us-states-resources-for-android</link>
+                <guid isPermaLink="true">http://inteist.com/us-states-resources-for-android</guid>
+            </item>
+        
+            <item>
+                <title>Aliases for Most Useful Android Emulator Networking Commands</title>
+                
+                
+                    <description>&lt;p&gt;I have recently posted about how to &lt;a href=&quot;/custom-networking-parameters-for-android-emulator&quot;&gt;throttle android emulator via custom networking parameters.&lt;/a&gt; However it may be quite tedious to type that every time we want to throttle the networking. Aliases to the help!&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 22 Mar 2015 14:45:30 -0400</pubDate>
+                <link>http://inteist.com/aliases-for-most-useful-networking-commands-for-android-emulator</link>
+                <guid isPermaLink="true">http://inteist.com/aliases-for-most-useful-networking-commands-for-android-emulator</guid>
+            </item>
+        
+            <item>
+                <title>Gradle Libraries that Actually Get Included in Android Studio</title>
+                
+                
+                    <description>&lt;p&gt;It is very easy to see the actual libraries that are used for your project. You just go to &lt;code&gt;.idea&lt;/code&gt; folder and then to &lt;code&gt;libraries&lt;/code&gt; folder where the actual libraries will reside.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 22 Mar 2015 13:27:21 -0400</pubDate>
+                <link>http://inteist.com/gradle-included-libraries-in-android-studio</link>
+                <guid isPermaLink="true">http://inteist.com/gradle-included-libraries-in-android-studio</guid>
+            </item>
+        
+            <item>
+                <title>Throttling Android Simulator via Custom Networking Parameters</title>
+                
+                
+                    <description>&lt;p&gt;This is how you can easily throttle Android networking interface on the emulator. You can go via telnet or netcat.  &lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 22 Mar 2015 12:31:54 -0400</pubDate>
+                <link>http://inteist.com/custom-networking-parameters-for-android-emulator</link>
+                <guid isPermaLink="true">http://inteist.com/custom-networking-parameters-for-android-emulator</guid>
+            </item>
+        
+            <item>
+                <title>How to Remove Pushed Pods Folder from Git Repository</title>
+                
+                
+                    <description>&lt;p&gt;If you (or someone else) have pushed a &lt;code&gt;/Pods&lt;/code&gt; folder into the repository (or any other file that is not supposed to be there) by mistake, there&amp;#39;s a way to permanently remove the file(s) from the repo. The &lt;code&gt;filter-branch&lt;/code&gt; option may be a little more complicated than doing rebase but it is very effective and will remove the files from all the branches.&lt;/p&gt;
+</description>
+                
+                <pubDate>Thu, 19 Mar 2015 16:00:00 -0400</pubDate>
+                <link>http://inteist.com/git-remove-pods-folder-from-pushed-repository-how-to</link>
+                <guid isPermaLink="true">http://inteist.com/git-remove-pods-folder-from-pushed-repository-how-to</guid>
+            </item>
+        
+            <item>
+                <title>OS X Special Characters - Images and Unicode Codes</title>
+                
+                
+                    <description>&lt;p&gt;A collection of the  special sign for the special keys for OS X with the accompanying Unicode codes.&lt;/p&gt;
+</description>
+                
+                <pubDate>Thu, 19 Mar 2015 08:15:37 -0400</pubDate>
+                <link>http://inteist.com/os-x-special-characters</link>
+                <guid isPermaLink="true">http://inteist.com/os-x-special-characters</guid>
+            </item>
+        
+            <item>
+                <title>Individual Google Play Services for Android with Gradle</title>
+                
+                
+                    <description>&lt;h4 id=&quot;google-play-services-api-split-by-individual-service&quot;&gt;Google Play services API split by individual service&lt;/h4&gt;
+</description>
+                
+                <pubDate>Sun, 15 Mar 2015 00:00:00 -0400</pubDate>
+                <link>http://inteist.com/individual-google-play-services</link>
+                <guid isPermaLink="true">http://inteist.com/individual-google-play-services</guid>
+            </item>
+        
+            <item>
+                <title>Including Facebook SDK to Android project via Gradle</title>
+                
+                
+                    <description>&lt;p&gt;It is much easier (finally, sigh) to setup Facebook SDK dependency via maven central dependency than local library dependency.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 15 Mar 2015 00:00:00 -0400</pubDate>
+                <link>http://inteist.com/facebook-sdk-as-gradle-dependency</link>
+                <guid isPermaLink="true">http://inteist.com/facebook-sdk-as-gradle-dependency</guid>
+            </item>
+        
+            <item>
+                <title>DNS FLush Cache for OS X, Linux, and Windows</title>
+                
+                
+                    <description>&lt;h3 id=&quot;osx-10.10&quot;&gt;OSX 10.10&lt;/h3&gt;
+</description>
+                
+                <pubDate>Sun, 15 Mar 2015 00:00:00 -0400</pubDate>
+                <link>http://inteist.com/dns-flush-cache-os-x-linux-windows</link>
+                <guid isPermaLink="true">http://inteist.com/dns-flush-cache-os-x-linux-windows</guid>
+            </item>
+        
+            <item>
+                <title>Switching From Wordpress to Jekyll in 20 Minutes</title>
+                
+                
+                    <description>&lt;p&gt;First I needed to redirect my old &lt;code&gt;/YYYY/MM/TITLE&lt;/code&gt;  structure to the new structure without any date prefix. Jekyll by default will let you do that easily with &lt;code&gt;permalink: /:title&lt;/code&gt;. But that does not solve the problem of having inbound links redirect to the right place on the new blog. It is pretty easy to solve with the &lt;strong&gt;redirect_from&lt;/strong&gt; &amp;quot;native&amp;quot; jekyll plugin. The only thing that remains now is to add the &lt;code&gt;redirect_from:/old_uri_with_date&lt;/code&gt; to each new post.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 07 Mar 2015 00:00:00 -0500</pubDate>
+                <link>http://inteist.com/wordpress-jekyll-switch-migration</link>
+                <guid isPermaLink="true">http://inteist.com/wordpress-jekyll-switch-migration</guid>
+            </item>
+        
+            <item>
+                <title>Jekyll Redirect Plugin &lt;http Equiv&gt; Forcing a File Download</title>
+                
+                
+                    <description>&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+
+&lt;p&gt;The redirect was not working. It was forcing a file download but was not redirecting the page. Turns out Jekyll does not correctly parse the case where the &lt;strong&gt;redirect_from&lt;/strong&gt; &lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 07 Mar 2015 00:00:00 -0500</pubDate>
+                <link>http://inteist.com/jekyll-redirect-http-equiv-not-working</link>
+                <guid isPermaLink="true">http://inteist.com/jekyll-redirect-http-equiv-not-working</guid>
+            </item>
+        
+            <item>
+                <title>Switching to Fabric From Crashlytics</title>
+                
+                
+                    <description>&lt;p&gt;I had a weird Java error appear after updating to &lt;a href=&quot;http://fabric.io&quot;&gt;Fabric&lt;/a&gt;. It turned out the problem was - I forgot to remove the &lt;code&gt;crashlytics.jar&lt;/code&gt; from the libs folder and there were still a few libraries there and the whole folder was getting compiled so when Fabric got added through &lt;code&gt;aarr&lt;/code&gt; file, I ended up with 2 copies of the library, which created the problem.&lt;/p&gt;
+</description>
+                
+                <pubDate>Thu, 05 Mar 2015 12:10:24 -0500</pubDate>
+                <link>http://inteist.com/switching-to-fabric</link>
+                <guid isPermaLink="true">http://inteist.com/switching-to-fabric</guid>
+            </item>
+        
+            <item>
+                <title>Google Wave Had So Much More Potential Than Slack, HipChat, FlowDoc and Co.</title>
+                
+                
+                    <description>&lt;p&gt;&lt;a href=&quot;http://slack.com&quot;&gt;Slack&lt;/a&gt;, &lt;a href=&quot;http://hipchat.com&quot;&gt;HipChat&lt;/a&gt;, &lt;a href=&quot;http://flowdock.com&quot;&gt;Flowdock&lt;/a&gt; and others are all the rave now but wait, wasn&amp;#39;t there something like that like... mmm... 5 (!!!) years ago? There certainly was something like that and actually much, much better thing. It was called Google Wave, &lt;a href=&quot;https://support.google.com/answer/1083134?hl=en&quot;&gt;now defunct&lt;/a&gt;.&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 02 Mar 2015 19:28:06 -0500</pubDate>
+                <link>http://inteist.com/google-wave-vs-slack-hipchat</link>
+                <guid isPermaLink="true">http://inteist.com/google-wave-vs-slack-hipchat</guid>
+            </item>
+        
+            <item>
+                <title>Sublime Text Shortcuts</title>
+                
+                
+                    <description>&lt;h2 id=&quot;⌘-=-command&quot;&gt;&lt;code&gt;⌘ = command&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;⌥-=-option&quot;&gt;&lt;code&gt;⌥ = option&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;=-⇧&quot;&gt;&lt;code&gt;= ⇧&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;⌃-=-control&quot;&gt;&lt;code&gt;⌃ = control&lt;/code&gt;&lt;/h2&gt;
+</description>
+                
+                <pubDate>Thu, 15 Jan 2015 00:00:00 -0500</pubDate>
+                <link>http://inteist.com/sublime-text-shortcuts</link>
+                <guid isPermaLink="true">http://inteist.com/sublime-text-shortcuts</guid>
+            </item>
+        
+            <item>
+                <title>Xcode Themes Collection</title>
+                
+                
+                    <description>&lt;p&gt;Good Xcode themes collection in one archive on &lt;a href=&quot;https://github.com/hdoria/xcode-themes&quot;&gt;Github&lt;/a&gt;, with install script too!&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3&gt;Using the install script:&lt;/h3&gt;
+</description>
+                
+                <pubDate>Sun, 23 Nov 2014 17:27:53 -0500</pubDate>
+                <link>http://inteist.com/xcode-themes-collection</link>
+                <guid isPermaLink="true">http://inteist.com/xcode-themes-collection</guid>
+            </item>
+        
+            <item>
+                <title>Android IntentService vs. Service</title>
+                
+                
+                    <description>&lt;p&gt;Android has often more than one way of doing something but it is not because of a poor design, rather because of the many possibilities that are available to Android developer and it is important to understand the nuances between various options to achieve something and choose the right tool for the job.&lt;/p&gt;
+
+&lt;p&gt;Let&#39;s look at services:&lt;/p&gt;
+
+&lt;h3 style=&quot;text-align: center;&quot;&gt;IntentService vs. Service&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;When to use?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul style=&quot;color: #000000;&quot;&gt;
+&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; can be used in tasks with no UI, but shouldn&#39;t be too long. If you need to perform long tasks, you must use threads within Service.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; can be used in long tasks usually with no communication to Main Thread. If communication is required, can use Main Thread handler or broadcast intents. Another case of use is when callbacks are needed (Intent triggered tasks).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How to trigger?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul style=&quot;color: #000000;&quot;&gt;
+&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; is triggered calling to method onStartService().&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; is triggered using an Intent, it spawns a new worker thread and the method onHandleIntent() is called on this thread.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Triggered From&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul style=&quot;color: #000000;&quot;&gt;
+&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; may be triggered from any thread.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; must be triggered from Main Thread.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Runs On&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul style=&quot;color: #000000;&quot;&gt;
+&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; runs in background but it runs on the Main Thread of the application.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; runs on a separate worker thread.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Limitations / Drawbacks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul style=&quot;color: #000000;&quot;&gt;
+&lt;li&gt;The &lt;em&gt;Service&lt;/em&gt; may block the Main Thread of the application.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;IntentService&lt;/em&gt; cannot run tasks in parallel. Hence all the consecutive intents will go into the message queue for the worker thread and will execute sequentially.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                <pubDate>Mon, 19 May 2014 11:29:03 -0400</pubDate>
+                <link>http://inteist.com/android-intentservice-vs-service</link>
+                <guid isPermaLink="true">http://inteist.com/android-intentservice-vs-service</guid>
+            </item>
+        
+    </channel>
+</rss>
