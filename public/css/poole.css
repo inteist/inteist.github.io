@@ -418,9 +418,9 @@ a.pagination-item:hover {
 /*The subtitle of the blog*/
 
 .lead {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1.05rem;
-    /* matches the "Inteist" title size wise */
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1rem;
+  margin-top: .1em;
 }
 
 

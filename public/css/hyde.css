@@ -51,8 +51,7 @@ hr {
  */
 
 .sidebar {
-  text-align: center;
-  padding: 2rem 1rem;
+  text-align: left;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
@@ -70,21 +69,9 @@ hr {
 
 /* About section */
 .sidebar-about h1 {
-  margin-top: 0;
   font-family: 'Fjalla One', sans-serif;
   font-size: 3.5rem;
-}
-
-
-/*The subtitle of the blog*/
-.lead {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 1.05rem; /* matches the "Inteist" title size wise */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fjalla One', sans-serif;
-  text-rendering: optimizeLegibility;
+  margin-left: -3px;
 }
 
 /* Sidebar nav */
@@ -97,16 +84,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
 }
 
-/*a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
-  color: #268bd2;
-
-}
-*/
-
-/*.sidebar-nav-item.active {
-  font-weight: bold;
-}*/
 
 /* The links overall  */
 a:hover,
