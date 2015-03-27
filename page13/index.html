@@ -1,4 +1,126 @@
-<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <link href="http://gmpg.org/xfn/11" rel="profile"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Inteist &middot; </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/tags">Tags</a> <a class="sidebar-nav-item" href="/archive">Archive</a> <a class="sidebar-nav-item" href="/about">About</a> </nav> <p class="copyright">&copy; 2010 </p> </div> </div> <div class="content container"> <div class="posts"> <div class="post"> <h1 class="post-title"> <a href="/textmate-go-to-last-edit-plugin"> TextMate Go to Last Edit Plugin </a> </h1> <span class="post-date">03 May 2011</span> <p>I have recently started using TextMate. It's been some time I wanted to give it a try and understand why so many people rave about it but every time I needed to use it, I usually wanted to do something very simple and sometimes I just got overwhelmed by all the options and sometimes I just didn't want to invest а lot of time into figuring out how to "use" TextMate beyond the most basic stuff.</p> <p>One of the options I missed and couldn't find an easy way to do was to go to the last edit. After some searching however I did find a plugin that does that. You can <a href="http://email.eva.mpg.de/~bibiko/downloads/textmate/TMGoToLastEdit.tmplugin.zip">download the go to last edit plugin for TextMate</a> plugin and once you install it, you will have the "go to last edit" awesomeness in your TextMate. Use the<span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; font-size: 12px; line-height: 18px; white-space: pre;"><strong>⌥⌘J</strong><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;"> combination to activate the plugin. It uses the "undo/redo" mechanism but this particular plugin solves some problems that some other apple scripts or other solutions that use undo/redo technique had.</span></span></p> <p>Enjoy this plugin and enjoy TextMate, although I actually like my MacVim better for most of the stuff I wanted to use TextMate for :). And actually I find Netbeans to be very good for JS, I started using TextMate for JS, but now I almost exclusively use Netbeans. Share your thoughts, opinions and experience  with TextMate plugins and with Mac editors in general in the comments.</p> </div> <div class="post"> <h1 class="post-title"> <a href="/blackberry-os-distribution-marchapril-2011"> BlackBerry OS Distribution March/April 2011 </a> </h1> <span class="post-date">27 Apr 2011</span> <p>Just got an email from RIM with news and such and noticed the link to the OS center they run on their website to help developers choose which BB OS to target. After looking at the stats, I decided to make a comparison and see how the official stats from RIM differ from what I see within my applications.</p> <p>Here's the distribution published by RIM (dated March 3-d) I am not sure what they compiled into the March 3-d, i.e. what the timestamp of March 3-d actually means. Was it based on OS tracked for March 3-d, was it for last month, week or such. I couldn't find that information.</p> <p><a src="http://inteist.com/media/Screen-shot-2011-04-28-at-12.12.36-AM.png"><img class="aligncenter size-medium wp-image-541" title="BlackBerry OS distribution March 3d 2011" src="http://inteist.com/media/Screen-shot-2011-04-28-at-12.12.36-AM-300x196.png" alt="" width="300" height="196" /></a>And below is the distribution I have compiled from the data for the month of April 2011 (a month worth of data)</p> <p><a src="http://inteist.com/media/BlackBerry-OS-distribution-April-2011.png"><img class="aligncenter size-medium wp-image-542" title="BlackBerry OS distribution April 2011" src="http://inteist.com/media/BlackBerry-OS-distribution-April-2011-300x286.png" alt="" width="300" height="286" /></a>The breakdown by OS version is not identical but the picture is pretty much similar, except that <del>my chart is much nicer</del> I've got 6.1 devices (hmmm!) and the 5.0 OS section is a bit larger for my statistics than it is for the official statistics. But again, the official statistics are pretty much 2 month old now and actually since the rest of the sections pretty much coincide with the official statistics, I would assume that the number of OS 5.0 just got larger in these 2 month; which by itself is great news for BB developers. Hooray to that and I will try to keep up with statistics to see how the distribution shifts, maybe another post in couple month or when something interesting happens. Let me know in the comments if you'd like to see something like that in the future and whether it was useful for you.</p> </div> <div class="post"> <h1 class="post-title"> <a href="/ota-on-blackberry-how-to-detect-os-version-from-the-browser-user-agent"> OTA on BlackBerry - How to Detect OS Version From the Browser User Agent </a> </h1> <span class="post-date">04 Mar 2011</span> <p>I do an OTA (over the air) distribution for BlackBerry. Some time ago, I wrote here how to [link id='206' text='setup the mime types for the OTA distribution on Amazon S3']. Luckily now, S3 has got a new and very useful web interface, as well as improved mime type detection. They still get the file types not exactly right, but close enough so that the OTA installation for BlackBerry works on "autodetect" settings just fine.</p> <p>This is however not about S3, this is about detecting the proper OS version of the BlackBerry OS from the user agent of the browser using a few very simple regular expressions.  The code is tailored to PHP, but you can easily adapt it to any language that supports Perl style regular expressions, or you can adapt the reg. expressions as well based on this simple idea:</p> <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">       $agent = //get user agent raw string</span>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Inteist &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+  
+  <!-- Default pygments -->
+  <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css">
+  
+
+
+  
+  
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Inteist
+        </a>
+      </h1>
+      <p class="lead">I code for living</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+
+
+        <a class="sidebar-nav-item" href="/tags">Tags</a>
+
+        <a class="sidebar-nav-item" href="/archive">Archive</a>
+
+        <a class="sidebar-nav-item" href="/about">About</a>
+    </nav>
+
+    <p class="copyright">&copy; 2010 </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/textmate-go-to-last-edit-plugin">
+        TextMate Go to Last Edit Plugin
+      </a>
+    </h1>
+
+    <span class="post-date">03 May 2011</span>
+
+    <p>I have recently started using TextMate. It's been some time I wanted to give it a try and understand why so many people rave about it but every time I needed to use it, I usually wanted to do something very simple and sometimes I just got overwhelmed by all the options and sometimes I just didn't want to invest а lot of time into figuring out how to "use" TextMate beyond the most basic stuff.</p>
+
+<p>One of the options I missed and couldn't find an easy way to do was to go to the last edit. After some searching however I did find a plugin that does that. You can <a href="http://email.eva.mpg.de/~bibiko/downloads/textmate/TMGoToLastEdit.tmplugin.zip">download the go to last edit plugin for TextMate</a> plugin and once you install it, you will have the "go to last edit" awesomeness in your TextMate. Use the<span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; font-size: 12px; line-height: 18px; white-space: pre;"><strong>⌥⌘J</strong><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;"> combination to activate the plugin. It uses the "undo/redo" mechanism but this particular plugin solves some problems that some other apple scripts or other solutions that use undo/redo technique had.</span></span></p>
+
+<p>Enjoy this plugin and enjoy TextMate, although I actually like my MacVim better for most of the stuff I wanted to use TextMate for :). And actually I find Netbeans to be very good for JS, I started using TextMate for JS, but now I almost exclusively use Netbeans. Share your thoughts, opinions and experience  with TextMate plugins and with Mac editors in general in the comments.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/blackberry-os-distribution-marchapril-2011">
+        BlackBerry OS Distribution March/April 2011
+      </a>
+    </h1>
+
+    <span class="post-date">27 Apr 2011</span>
+
+    <p>Just got an email from RIM with news and such and noticed the link to the OS center they run on their website to help developers choose which BB OS to target. After looking at the stats, I decided to make a comparison and see how the official stats from RIM differ from what I see within my applications.</p>
+
+<p>Here's the distribution published by RIM (dated March 3-d) I am not sure what they compiled into the March 3-d, i.e. what the timestamp of March 3-d actually means. Was it based on OS tracked for March 3-d, was it for last month, week or such. I couldn't find that information.</p>
+
+<p><a src="http://inteist.com/media/Screen-shot-2011-04-28-at-12.12.36-AM.png"><img class="aligncenter size-medium wp-image-541" title="BlackBerry OS distribution March 3d 2011" src="http://inteist.com/media/Screen-shot-2011-04-28-at-12.12.36-AM-300x196.png" alt="" width="300" height="196" /></a>And below is the distribution I have compiled from the data for the month of April 2011 (a month worth of data)</p>
+
+<p><a src="http://inteist.com/media/BlackBerry-OS-distribution-April-2011.png"><img class="aligncenter size-medium wp-image-542" title="BlackBerry OS distribution April 2011" src="http://inteist.com/media/BlackBerry-OS-distribution-April-2011-300x286.png" alt="" width="300" height="286" /></a>The breakdown by OS version is not identical but the picture is pretty much similar, except that <del>my chart is much nicer</del> I've got 6.1 devices (hmmm!) and the 5.0 OS section is a bit larger for my statistics than it is for the official statistics. But again, the official statistics are pretty much 2 month old now and actually since the rest of the sections pretty much coincide with the official statistics, I would assume that the number of OS 5.0 just got larger in these 2 month; which by itself is great news for BB developers. Hooray to that and I will try to keep up with statistics to see how the distribution shifts, maybe another post in couple month or when something interesting happens. Let me know in the comments if you'd like to see something like that in the future and whether it was useful for you.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/ota-on-blackberry-how-to-detect-os-version-from-the-browser-user-agent">
+        OTA on BlackBerry - How to Detect OS Version From the Browser User Agent
+      </a>
+    </h1>
+
+    <span class="post-date">04 Mar 2011</span>
+
+    <p>I do an OTA (over the air) distribution for BlackBerry. Some time ago, I wrote here how to [link id='206' text='setup the mime types for the OTA distribution on Amazon S3']. Luckily now, S3 has got a new and very useful web interface, as well as improved mime type detection. They still get the file types not exactly right, but close enough so that the OTA installation for BlackBerry works on "autodetect" settings just fine.</p>
+
+<p>This is however not about S3, this is about detecting the proper OS version of the BlackBerry OS from the user agent of the browser using a few very simple regular expressions.  The code is tailored to PHP, but you can easily adapt it to any language that supports Perl style regular expressions, or you can adapt the reg. expressions as well based on this simple idea:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">       $agent = //get user agent raw string</span>
 
 <span class="x">        if (preg_match(&quot;/BlackBerry/i&quot;, $agent)) {</span>
 
@@ -29,9 +151,38 @@
 <span class="x">        } else {</span>
 <span class="x">            //This is not BlackBerry user agent</span>
 <span class="x">        }</span>
-</code></pre></div> <p>Nothing complicated, but this should give a start point to any one tying to serve appropriate bundle via OTA.</p> <p>&nbsp;</p> <p>If you were to use S3, then it would basically be:</p> <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">// The main link to S3</span>
+</code></pre></div>
+<p>Nothing complicated, but this should give a start point to any one tying to serve appropriate bundle via OTA.</p>
+
+<p>&nbsp;</p>
+
+<p>If you were to use S3, then it would basically be:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">// The main link to S3</span>
 <span class="x">$downloadURL = &quot;https://s3.amazonaws.com/YOUR_BUCKET/releases/&quot; . $newRelease[&#39;version_folder&#39;] . &quot;/&quot; . $newRelease[&#39;os_folder&#39;] . &quot;/YourAppName.jad&quot;;</span>
-</code></pre></div> <p>Post your thoughts/corrections in the comments!</p> </div> <div class="post"> <h1 class="post-title"> <a href="/convert-argb-to-int-value-java"> Convert ARGB to Int Value (Java) </a> </h1> <span class="post-date">26 Feb 2011</span> <p>In some Java implementations/SDKs the <em>Color </em>class does not have the</p> <blockquote><p><strong>int Color.argb(int, int, int, int)</strong></p></blockquote> <p>method.</p> <p>One SDK that, as far as I know, does not have this method is the [link id='75' text='BlackBerry SDK'].</p> <p>This code snippet can be used to perform just that:</p> <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ColorBB</span> <span class="o">{</span>
+</code></pre></div>
+<p>Post your thoughts/corrections in the comments!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/convert-argb-to-int-value-java">
+        Convert ARGB to Int Value (Java)
+      </a>
+    </h1>
+
+    <span class="post-date">26 Feb 2011</span>
+
+    <p>In some Java implementations/SDKs the <em>Color </em>class does not have the</p>
+
+<blockquote><p><strong>int Color.argb(int, int, int, int)</strong></p></blockquote>
+
+<p>method.</p>
+
+<p>One SDK that, as far as I know, does not have this method is the [link id='75' text='BlackBerry SDK'].</p>
+
+<p>This code snippet can be used to perform just that:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">ColorBB</span> <span class="o">{</span>
 
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">argb</span><span class="o">(</span><span class="kt">int</span> <span class="n">A</span><span class="o">,</span> <span class="kt">int</span> <span class="n">R</span><span class="o">,</span> <span class="kt">int</span> <span class="n">G</span><span class="o">,</span> <span class="kt">int</span> <span class="n">B</span><span class="o">){</span>     
@@ -45,8 +196,119 @@
     <span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div><pre><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">Let me know in the comments if you have any improvement/modification ideas.</span></pre><pre><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">
-</span></pre></div> <div class="post"> <h1 class="post-title"> <a href="/rules-of-simple-design-by-eric-raymond"> Rules of Simple Design by Eric Raymond </a> </h1> <span class="post-date">09 Feb 2011</span> <p>Great collection of design rules by Eric S. Raymond<br /> <a title="Eric S. Raymond" href="http://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a></p> <ul> <li>Rule of Modularity: Write simple parts connected by clean interfaces.</li> <li>Rule of Clarity: Clarity is better than cleverness.</li> <li>Rule of Composition: Design programs to be connected to other programs.</li> <li>Rule of Separation: Separate policy from mechanism; separate interfaces from engines.</li> <li>Rule of Simplicity: Design for simplicity; add complexity only where you must.</li> <li>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.</li> <li>Rule of Transparency: Design for visibility to make inspection and debugging easier.</li> <li>Rule of Robustness: Robustness is the child of transparency and simplicity.</li> <li>Rule of Representation: Fold knowledge into data so program logic can be stupid and robust.</li> <li>Rule of Least Surprise: In interface design, always do the least surprising thing.</li> <li>Rule of Silence: When a program has nothing surprising to say, it should say nothing.</li> <li>Rule of Repair: When you must fail, fail noisily and as soon as possible.</li> <li>Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.</li> <li>Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.</li> <li>Rule of Optimization: Prototype before polishing. Get it working before you optimize it.</li> <li>Rule of Diversity: Distrust all claims for "one true way".</li> <li>Rule of Extensibility: Design for the future, because it will be here sooner than you think.</li> </ul> </div> <div class="post"> <h1 class="post-title"> <a href="/keep-line-breaks-in-dokuwiki"> Keep Line Breaks in DokuWiki </a> </h1> <span class="post-date">12 Jan 2011</span> <p>I have created the very simple [link id='124' text='text formatter plugin for DokuWiki'] mainly to solve the problem of pasting some text with line breaks. DokuWiki by default ignores these line breaks and this was a problem for me. Without knowing any better I quickly put together the [link id='124' text='wpre plugin'] which simply wraps whatever you want with &lt;pre&gt; tag. I later learned that there is a better plugin for this. It's called <a href="http://www.dokuwiki.org/plugin:linebreak" target="_blank">linebreak</a>. It works fine for me, even with the latest DokuWiki release, but it seems that the author suggest to use <a href="http://www.dokuwiki.org/plugin:xbr" target="_blank">xbr</a> plugin instead.</p> </div> <div class="post"> <h1 class="post-title"> <a href="/interesting-and-amazing-things-you-can-do-with-a-little-creativity"> Interesting and Amazing Things You Can Do With a Little Creativity </a> </h1> <span class="post-date">11 Jan 2011</span> <p>Using the latest version of <a href="http://www.google.com/mobile/goggles/#text" target="_blank">Google Goggles</a> on <a href="http://developer.android.com/index.html" target="_blank">Android</a>, you can automatically solve Sudoku. This is what a little creativity paired with technology does - it brings fun and innovation!</p> <p>Check out the video of this in action!</p> <p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="640" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/rdftOloAH9Q?fs=1&amp;hl=en_US" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="640" height="385" src="http://www.youtube.com/v/rdftOloAH9Q?fs=1&amp;hl=en_US" allowscriptaccess="always" allowfullscreen="true"></embed></object></p> </div> <div class="post"> <h1 class="post-title"> <a href="/android-2-4-codenamed-ice-cream-is-expected-this-summer-whats-next"> Android 2.4 Codenamed Ice Cream Is Expected This Summer. What's Next? </a> </h1> <span class="post-date">11 Jan 2011</span> <p>The rumors have it that Android 2.4 codenamed Ice Cream is expected this summer in June-July and the release will be announced at the Google/IO.</p> <p>What's next in store for Android releases? Will the next release going to be named "Jello" or maybe "Jam"? I personally vote for <strong>"Jello"</strong></p> </div> <div class="post"> <h1 class="post-title"> <a href="/java-code-to-work-with-millennialmedia-smaato-and-nexage-web-advertising-apis"> Java Code to Work With MillennialMedia, SMAATO and NexAge Web Advertising APIs </a> </h1> <span class="post-date">18 Dec 2010</span> <p>I wrote yesterday about [link id='434' text="my (mostly) negative experience working with these companies"], but some of you might give it a try and maybe your results will be much better or maybe things have actually improved lately. In any case, the code here should get you up to speed covering most of the dirty work of working with these companies' APIs.</p> <p>I will post 4 classes here:</p> <ul> <li><strong>AdGrabber </strong>-  main abstract class to give all other specific grabbers structure and save some repeating code</li> <li><strong>MillenialAdGrabber </strong>- MillennialMedia specific grabber</li> <li><strong>NexAgeAdGrabber </strong>- right, NexAge specific grabber</li> <li><strong>SomaAdGrabber </strong>- the SMAATO ad grabber. Their ad platform is dubbed SOMA, hence the name</li> </ul> <p>If you are using this code, please give an attribution when applicable with a link to this post.</p> <p><!--more--></p> <h2><strong>AdGrabber </strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+</code></pre></div>
+<pre><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">Let me know in the comments if you have any improvement/modification ideas.</span></pre>
+
+<pre><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px; white-space: normal;">
+</span></pre>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/rules-of-simple-design-by-eric-raymond">
+        Rules of Simple Design by Eric Raymond
+      </a>
+    </h1>
+
+    <span class="post-date">09 Feb 2011</span>
+
+    <p>Great collection of design rules by Eric S. Raymond<br />
+<a title="Eric S. Raymond" href="http://en.wikipedia.org/wiki/Eric_S._Raymond">Eric S. Raymond</a></p>
+
+<ul>
+<li>Rule of Modularity: Write simple parts connected by clean interfaces.</li>
+<li>Rule of Clarity: Clarity is better than cleverness.</li>
+<li>Rule of Composition: Design programs to be connected to other programs.</li>
+<li>Rule of Separation: Separate policy from mechanism; separate interfaces from engines.</li>
+<li>Rule of Simplicity: Design for simplicity; add complexity only where you must.</li>
+<li>Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.</li>
+<li>Rule of Transparency: Design for visibility to make inspection and debugging easier.</li>
+<li>Rule of Robustness: Robustness is the child of transparency and simplicity.</li>
+<li>Rule of Representation: Fold knowledge into data so program logic can be stupid and robust.</li>
+<li>Rule of Least Surprise: In interface design, always do the least surprising thing.</li>
+<li>Rule of Silence: When a program has nothing surprising to say, it should say nothing.</li>
+<li>Rule of Repair: When you must fail, fail noisily and as soon as possible.</li>
+<li>Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.</li>
+<li>Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.</li>
+<li>Rule of Optimization: Prototype before polishing. Get it working before you optimize it.</li>
+<li>Rule of Diversity: Distrust all claims for "one true way".</li>
+<li>Rule of Extensibility: Design for the future, because it will be here sooner than you think.</li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/keep-line-breaks-in-dokuwiki">
+        Keep Line Breaks in DokuWiki
+      </a>
+    </h1>
+
+    <span class="post-date">12 Jan 2011</span>
+
+    <p>I have created the very simple [link id='124' text='text formatter plugin for DokuWiki'] mainly to solve the problem of pasting some text with line breaks. DokuWiki by default ignores these line breaks and this was a problem for me. Without knowing any better I quickly put together the [link id='124' text='wpre plugin'] which simply wraps whatever you want with &lt;pre&gt; tag. I later learned that there is a better plugin for this. It's called <a href="http://www.dokuwiki.org/plugin:linebreak" target="_blank">linebreak</a>. It works fine for me, even with the latest DokuWiki release, but it seems that the author suggest to use <a href="http://www.dokuwiki.org/plugin:xbr" target="_blank">xbr</a> plugin instead.</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/interesting-and-amazing-things-you-can-do-with-a-little-creativity">
+        Interesting and Amazing Things You Can Do With a Little Creativity
+      </a>
+    </h1>
+
+    <span class="post-date">11 Jan 2011</span>
+
+    <p>Using the latest version of <a href="http://www.google.com/mobile/goggles/#text" target="_blank">Google Goggles</a> on <a href="http://developer.android.com/index.html" target="_blank">Android</a>, you can automatically solve Sudoku. This is what a little creativity paired with technology does - it brings fun and innovation!</p>
+
+<p>Check out the video of this in action!</p>
+
+<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="640" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/rdftOloAH9Q?fs=1&amp;hl=en_US" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="640" height="385" src="http://www.youtube.com/v/rdftOloAH9Q?fs=1&amp;hl=en_US" allowscriptaccess="always" allowfullscreen="true"></embed></object></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/android-2-4-codenamed-ice-cream-is-expected-this-summer-whats-next">
+        Android 2.4 Codenamed Ice Cream Is Expected This Summer. What's Next?
+      </a>
+    </h1>
+
+    <span class="post-date">11 Jan 2011</span>
+
+    <p>The rumors have it that Android 2.4 codenamed Ice Cream is expected this summer in June-July and the release will be announced at the Google/IO.</p>
+
+<p>What's next in store for Android releases? Will the next release going to be named "Jello" or maybe "Jam"? I personally vote for <strong>"Jello"</strong></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/java-code-to-work-with-millennialmedia-smaato-and-nexage-web-advertising-apis">
+        Java Code to Work With MillennialMedia, SMAATO and NexAge Web Advertising APIs
+      </a>
+    </h1>
+
+    <span class="post-date">18 Dec 2010</span>
+
+    <p>I wrote yesterday about [link id='434' text="my (mostly) negative experience working with these companies"], but some of you might give it a try and maybe your results will be much better or maybe things have actually improved lately. In any case, the code here should get you up to speed covering most of the dirty work of working with these companies' APIs.</p>
+
+<p>I will post 4 classes here:</p>
+
+<ul>
+<li><strong>AdGrabber </strong>-  main abstract class to give all other specific grabbers structure and save some repeating code</li>
+<li><strong>MillenialAdGrabber </strong>- MillennialMedia specific grabber</li>
+<li><strong>NexAgeAdGrabber </strong>- right, NexAge specific grabber</li>
+<li><strong>SomaAdGrabber </strong>- the SMAATO ad grabber. Their ad platform is dubbed SOMA, hence the name</li>
+</ul>
+
+<p>If you are using this code, please give an attribution when applicable with a link to this post.</p>
+
+<p><!--more--></p>
+
+<h2><strong>AdGrabber </strong></h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
 <span class="cm"> * Abstract class for ad unit grabbing. Inheriting subclasses will implement ad serving platform specific web service interfaces.</span>
 <span class="cm"> *</span>
 <span class="cm"> * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/</span>
@@ -118,7 +380,9 @@
     <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
 
 <span class="o">}</span>
-</code></pre></div> <h2><strong>MillenialAdGrabber </strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+</code></pre></div>
+<h2><strong>MillenialAdGrabber </strong></h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
 <span class="cm"> * Ad grabber that interfaces with Quattro Wireless service</span>
 <span class="cm"> *</span>
 <span class="cm"> * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/</span>
@@ -212,7 +476,9 @@
     <span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div> <h2><strong>NexAgeAdGrabber</strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+</code></pre></div>
+<h2><strong>NexAgeAdGrabber</strong></h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
 <span class="cm"> * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/</span>
 <span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">NexAgeAdGrabber</span> <span class="kd">extends</span> <span class="n">AdGrabber</span> <span class="o">{</span>
@@ -337,7 +603,9 @@
     <span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div> <h2><strong>SomaAdGrabber</strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
+</code></pre></div>
+<h2><strong>SomaAdGrabber</strong></h2>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/**</span>
 <span class="cm"> * Copyright © Comitic Software</span>
 <span class="cm"> */</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">SOMAAdGrabber</span> <span class="kd">extends</span> <span class="n">AdGrabber</span> <span class="o">{</span>
@@ -452,4 +720,83 @@
     <span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div> <h2 style="text-align: center;"><strong>Please let me know in the comments if you find this useful!</strong></h2> <h2 style="text-align: center;"><strong><br /> </strong></h2> </div> <div class="post"> <h1 class="post-title"> <a href="/in-app-advertising-on-blackberry-with-quattrowireless-millennialmedia-smaato-and-nexage-a-bitter-experience"> In App Advertising on BlackBerry With QuattroWireless, MillennialMedia, SMAATO and NexAge a bitter experience </a> </h1> <span class="post-date">16 Dec 2010</span> <h2>Preface</h2> <p>At some point in the past I was trying to monetize free application on BlackBerry and since most of the advertising networks that actually work with BlackBerry don't have an SDK, I had to work with their WEB APIs directly.</p> <p>This did not work for me at all (with minor exception for Quattro Wireless). Maybe this was personal to me, I don't know, probably not. The monetization through advertising on BlackBerry is unfortunately does not work. I am talking from a lot of experience supporting free applications with ads on Android and iOS.</p> <p>I've spent a lot of time looking for advertising agencies working with BlackBerry and then signing up and then getting the necessary information from them and then working through their documentation to implement a custom web client to pull the info from their web APIs - all this to learn once again that<strong> the revenue I could get is a </strong><strong>joke</strong>.</p> <h2>Quattro Wireless</h2> <p>Advertising with Quattro Wireless actually turned out to be the best BlackBerry advertising experience I had so far... As long as it lasted (not very long unfortunately).</p> <p>Starting Sept. 30 1020 Quattro is iAd exclusive and stopped serving any ads to BlackBerry. Since I do not ever trust what I can get from advertising service, when the service stopped, the application was not impacted but other developers that were less careful (something you should not ever do though) might have had some problems.</p> <h2>NexAge</h2> <p>NexAge left me with<strong> the</strong> <strong>worst</strong> <strong>impression </strong>of all. First these guys at NexAge took a hell lot of my time with manual sign up and many  many phone calls I had to have with them to get anywhere. It looked very suspicious to me that they can't implement an automatic sign up and to actually sign up for the service you had to talk to them over the phone. I should have known better at this point. Coupled with their awfully looking website, this fact should have stopped me from moving forward with them and saving a lot of my time and frustration. But since there were not many options at a time, I decided to try them out. The interesting part is that when I voiced my concerns about the manual sign-up to some higher up developer relations manager, he told me "We are the BMW of advertising, we give you a personalized and best service out there"... yeah... right...  After signing up with them and integrating their code (there were a few hiccups on the way but nothing deal breaking) I started to serve their advertisements and the results were - well... simply put horrible. When I talked to them they were not really helpful and they kept saying "we will investigate and will try to optimize". I wonder if they are optimizing the ads manually as the sign-up. After couple weeks of my pilot with them, during which I wrote them and called them to complain about the ridiculousness of the revenue with not much results (they mostly simply ignored me) I shut them down and decided to forget about them and about the partial revenue I have generated in these couple weeks for the sake of my own mental health. I have to point out that they did have an SDK - a ridiculously large SDK, so I decided that I can not add an SDK which is almost as much as half of my whole application size, especially while I can implement the same thing with couple classes.</p> <h2>SMAATO</h2> <p>With <strong>SMAATO</strong> everything was much simpler, but the revenue was as bad if not worse as with NexAge. After trying them for some time and not seeing any improvement, I gave up on them.</p> <h2>MillennialMedia</h2> <p>With Millenial, it was more complicated. At some point I was simply furious with them and if there were any other options to advertise on BlackBerry, I would definitely avoid them, but since there aren't I still work with them in a very limited capacity. I was so so sorry to learn that they are going to handle the technology side of RIM's advertising service. The reason is simple - they are SUPER unorganized. And coupled with RIM, they just doubled the amount of mess. For example, they say you are ready to serve ads and you are fully operational and you publish your app and then you see some super weird stats and you ask them and they tell you some BS and then you wait a little more and then you ask again and then a few weeks later they say - "Ohh the ads you were serving are test ads". To make things even worse - this happened to me more than once.</p> <h2>Summary</h2> <p>In summary, unfortunately, if you want to monetize your free application on BlackBerry - you better prepare yourself for the worst. I was hoping the official RIM advertising service will solve this problem, but unfortunately it didn't. It's a complete mess, as I mentioned and I don't think they are going to sort this out any time soon. If you are a developer that knows of a better service - please let me know, I would appreciate it. Hopefully my experience also helps you to save some of your time. If you are eager to try anyway, I plan to post the custom integration code that I wrote here so that you (again) can save some time reusing this code.</p> </div> </div> <div class="pagination"> <a class="pagination-item older" href="/page14">Older</a> <a class="pagination-item newer" href="/page12">Newer</a> </div> </div> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-2630485-14', 'auto'); ga('send', 'pageview'); </script> </body> </html>
+</code></pre></div>
+<h2 style="text-align: center;"><strong>Please let me know in the comments if you find this useful!</strong></h2>
+
+<h2 style="text-align: center;"><strong><br />
+</strong></h2>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/in-app-advertising-on-blackberry-with-quattrowireless-millennialmedia-smaato-and-nexage-a-bitter-experience">
+        In App Advertising on BlackBerry With QuattroWireless, MillennialMedia, SMAATO and NexAge a bitter experience
+      </a>
+    </h1>
+
+    <span class="post-date">16 Dec 2010</span>
+
+    <h2>Preface</h2>
+
+<p>At some point in the past I was trying to monetize free application on BlackBerry and since most of the advertising networks that actually work with BlackBerry don't have an SDK, I had to work with their WEB APIs directly.</p>
+
+<p>This did not work for me at all (with minor exception for Quattro Wireless). Maybe this was personal to me, I don't know, probably not. The monetization through advertising on BlackBerry is unfortunately does not work. I am talking from a lot of experience supporting free applications with ads on Android and iOS.</p>
+
+<p>I've spent a lot of time looking for advertising agencies working with BlackBerry and then signing up and then getting the necessary information from them and then working through their documentation to implement a custom web client to pull the info from their web APIs - all this to learn once again that<strong> the revenue I could get is a </strong><strong>joke</strong>.</p>
+
+<h2>Quattro Wireless</h2>
+
+<p>Advertising with Quattro Wireless actually turned out to be the best BlackBerry advertising experience I had so far... As long as it lasted (not very long unfortunately).</p>
+
+<p>Starting Sept. 30 1020 Quattro is iAd exclusive and stopped serving any ads to BlackBerry. Since I do not ever trust what I can get from advertising service, when the service stopped, the application was not impacted but other developers that were less careful (something you should not ever do though) might have had some problems.</p>
+
+<h2>NexAge</h2>
+
+<p>NexAge left me with<strong> the</strong> <strong>worst</strong> <strong>impression </strong>of all. First these guys at NexAge took a hell lot of my time with manual sign up and many  many phone calls I had to have with them to get anywhere. It looked very suspicious to me that they can't implement an automatic sign up and to actually sign up for the service you had to talk to them over the phone. I should have known better at this point. Coupled with their awfully looking website, this fact should have stopped me from moving forward with them and saving a lot of my time and frustration. But since there were not many options at a time, I decided to try them out. The interesting part is that when I voiced my concerns about the manual sign-up to some higher up developer relations manager, he told me "We are the BMW of advertising, we give you a personalized and best service out there"... yeah... right...  After signing up with them and integrating their code (there were a few hiccups on the way but nothing deal breaking) I started to serve their advertisements and the results were - well... simply put horrible. When I talked to them they were not really helpful and they kept saying "we will investigate and will try to optimize". I wonder if they are optimizing the ads manually as the sign-up. After couple weeks of my pilot with them, during which I wrote them and called them to complain about the ridiculousness of the revenue with not much results (they mostly simply ignored me) I shut them down and decided to forget about them and about the partial revenue I have generated in these couple weeks for the sake of my own mental health. I have to point out that they did have an SDK - a ridiculously large SDK, so I decided that I can not add an SDK which is almost as much as half of my whole application size, especially while I can implement the same thing with couple classes.</p>
+
+<h2>SMAATO</h2>
+
+<p>With <strong>SMAATO</strong> everything was much simpler, but the revenue was as bad if not worse as with NexAge. After trying them for some time and not seeing any improvement, I gave up on them.</p>
+
+<h2>MillennialMedia</h2>
+
+<p>With Millenial, it was more complicated. At some point I was simply furious with them and if there were any other options to advertise on BlackBerry, I would definitely avoid them, but since there aren't I still work with them in a very limited capacity. I was so so sorry to learn that they are going to handle the technology side of RIM's advertising service. The reason is simple - they are SUPER unorganized. And coupled with RIM, they just doubled the amount of mess. For example, they say you are ready to serve ads and you are fully operational and you publish your app and then you see some super weird stats and you ask them and they tell you some BS and then you wait a little more and then you ask again and then a few weeks later they say - "Ohh the ads you were serving are test ads". To make things even worse - this happened to me more than once.</p>
+
+<h2>Summary</h2>
+
+<p>In summary, unfortunately, if you want to monetize your free application on BlackBerry - you better prepare yourself for the worst. I was hoping the official RIM advertising service will solve this problem, but unfortunately it didn't. It's a complete mess, as I mentioned and I don't think they are going to sort this out any time soon. If you are a developer that knows of a better service - please let me know, I would appreciate it. Hopefully my experience also helps you to save some of your time. If you are eager to try anyway, I plan to post the custom integration code that I wrote here so that you (again) can save some time reusing this code.</p>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page14">Older</a>
+  
+  
+    
+      <a class="pagination-item newer" href="/page12">Newer</a>
+    
+  
+</div>
+
+    </div>
+
+  
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2630485-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>

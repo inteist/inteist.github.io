@@ -18,24 +18,18 @@
  * Update the foundational and global aspects of the page.
  */
 
-
-
 /*
 *
 *       Custom TYPEFACEs
 *
 */
 
-
 @font-face {
-  font-family: 'Meslo LG S';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Meslo LG S'), local('Meslo LG S'),
-  url(http://inteist.com/public/fonts/MesloLGS-Regular.ttf)
-  format('truetype');
+    font-family: 'Meslo LG S';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Meslo LG S'), local('Meslo LG S'), url(http://inteist.com/public/fonts/MesloLGS-Regular.ttf) format('truetype');
 }
-
 /*
 *
 *
@@ -166,11 +160,6 @@ pre {
     font-size: .85rem;
     line-height: 1.4;
     white-space: pre;
-    /*white-space: pre-wrap;*/
-
-/*word-break: break-all;*/
-
-/*word-wrap: break-word;*/
 }
 pre > code {
     padding-left: 0em;

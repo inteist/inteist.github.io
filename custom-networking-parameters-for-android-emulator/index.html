@@ -1,7 +1,107 @@
-<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <link href="http://gmpg.org/xfn/11" rel="profile"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Throttling Android Simulator via Custom Networking Parameters &middot; Inteist </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/tags">Tags</a> <a class="sidebar-nav-item" href="/archive">Archive</a> <a class="sidebar-nav-item" href="/about">About</a> </nav> <p class="copyright">&copy; 2010 </p> </div> </div> <div class="content container"> <div class="reading-time"> <p title="405 words">~ 4 min read</p> </div> <div class="post"> <h1 class="post-title">Throttling Android Simulator via Custom Networking Parameters</h1> <span class="post-date">22 Mar 2015</span> <p>This is how you can easily throttle Android networking interface on the emulator. You can go via telnet or netcat. </p> <h2 id="tl;dr">TL;DR</h2> <p>To set the network interface to have throughput of 6000 bits/s (0.7 KB/s) and 2000 ms latency you would use these commands (for the first emulator that usually defaults to port 5554)</p> <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network delay 2000&quot;</span> <span class="p">|</span> nc localhost 5554
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Throttling Android Simulator via Custom Networking Parameters &middot; Inteist
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+
+  
+  <!-- Default pygments -->
+  <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css">
+  
+
+
+  
+  
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Inteist
+        </a>
+      </h1>
+      <p class="lead">I code for living</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+
+
+        <a class="sidebar-nav-item" href="/tags">Tags</a>
+
+        <a class="sidebar-nav-item" href="/archive">Archive</a>
+
+        <a class="sidebar-nav-item" href="/about">About</a>
+    </nav>
+
+    <p class="copyright">&copy; 2010 </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="reading-time">
+  <p title="405 words">~
+
+
+
+
+
+
+
+4 min
+ read</p>
+</div>
+
+
+<div class="post">
+  <h1 class="post-title">Throttling Android Simulator via Custom Networking Parameters</h1>
+  <span class="post-date">22 Mar 2015</span>
+  <p>This is how you can easily throttle Android networking interface on the emulator. You can go via telnet or netcat.  </p>
+
+<h2 id="tl;dr">TL;DR</h2>
+
+<p>To set the network interface to have throughput of 6000 bits/s (0.7 KB/s) and 2000 ms latency you would use these commands (for the first emulator that usually defaults to port 5554)</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network delay 2000&quot;</span> <span class="p">|</span> nc localhost 5554
 <span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
-</code></pre></div> <p>For more details and samples read on...</p> <h2 id="latency">Latency</h2> <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
-</code></pre></div> <h6 id="sample-output:">Sample output:</h6> <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<p>For more details and samples read on...</p>
+
+<h2 id="latency">Latency</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<h6 id="sample-output:">Sample output:</h6>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network delay 8000&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
 OK
@@ -14,8 +114,12 @@ Current network status:
   minimum latency:  <span class="m">8000</span> ms
   maximum latency:  <span class="m">8000</span> ms
 OK
-</code></pre></div> <h2 id="throughput">Throughput</h2> <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
-</code></pre></div> <h6 id="sample-output:">Sample output:</h6> <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<h2 id="throughput">Throughput</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<h6 id="sample-output:">Sample output:</h6>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network speed 6 6&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
 OK
@@ -28,7 +132,9 @@ Current network status:
   minimum latency:  <span class="m">8000</span> ms
   maximum latency:  <span class="m">8000</span> ms
 OK
-</code></pre></div> <h2 id="list-of-network-commands">List of network commands</h2> <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<h2 id="list-of-network-commands">List of network commands</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;network&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
 allows you to manage the settings related to the network data connection of the
@@ -39,7 +145,9 @@ available sub-commands:
     speed            change network speed
     delay            change network latency
     capture          dump network packets to file
-</code></pre></div> <h2 id="all-available-commands">All available commands</h2> <div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;help&quot;</span> <span class="p">|</span> nc localhost 5554
+</code></pre></div>
+<h2 id="all-available-commands">All available commands</h2>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">➜  ~  <span class="nb">echo</span> <span class="s2">&quot;help&quot;</span> <span class="p">|</span> nc localhost 5554
 Android Console: <span class="nb">type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> a list of commands
 OK
 Android console <span class="nb">command help</span>:
@@ -62,4 +170,754 @@ Android console <span class="nb">command help</span>:
 
 try <span class="s1">&#39;help &lt;command&gt;&#39;</span> <span class="k">for</span> <span class="nb">command</span>-specific <span class="nb">help</span>
 OK
-</code></pre></div> </div> <!-- SIMILAR POSTS --> <div class="related"> <h3>Similar Posts</h3> <ul class="related-posts"> <li> <h4> <a href="/free-great-alternative-to-menlo-font"> Meslo LG - Free and Great Alternative to Menlo </a> <small>27 Mar 2015</small> </h4> </li> <li> <h4> <a href="/convert-xml-files-to-json-with-xml-json-for-node"> Batch Convert XML Files to JSON with xml-json for Node and Terminal Magic </a> <small>23 Mar 2015</small> </h4> </li> <li> <h4> <a href="/oneliner-to-have-jekyll-static-files-automatically-pushed"> Oneliner to Have Jekyll or Any Other Staticly Generated Blog Pushed to Repository </a> <small>23 Mar 2015</small> </h4> </li> <li> <h4> <a href="/us-states-resources-for-android"> US States Resource for Android </a> <small>23 Mar 2015</small> </h4> </li> <li> <h4> <a href="/aliases-for-most-useful-networking-commands-for-android-emulator"> Aliases for Most Useful Android Emulator Networking Commands </a> <small>22 Mar 2015</small> </h4> </li> <li> <h4> <a href="/gradle-included-libraries-in-android-studio"> Gradle Libraries that Actually Get Included in Android Studio </a> <small>22 Mar 2015</small> </h4> </li> </ul> </div> <!-- LATEST POSTS --> <div class="related"> <h3>Latest Posts</h3> <ul class="related-posts"> <li> <h4> <a href="/free-great-alternative-to-menlo-font"> Meslo LG - Free and Great Alternative to Menlo </a> <small>27 Mar 2015</small> </43> </li> <li> <h4> <a href="/speed-up-jekyll-blog-compress-html"> Further Speed Up Your Jekyll Blog by Compressing the HTML </a> <small>24 Mar 2015</small> </43> </li> <li> <h4> <a href="/pygments-theme-for-jekyll-monokai"> Pygments Theme for Jekyll - Monokai </a> <small>24 Mar 2015</small> </43> </li> <li> <h4> <a href="/reset-css-element-styling"> Reset CSS Element Styling </a> <small>24 Mar 2015</small> </43> </li> </ul> </div> </div> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-2630485-14', 'auto'); ga('send', 'pageview'); </script> </body> </html>
+</code></pre></div>
+</div>
+
+<!-- SIMILAR POSTS -->
+<div class="related">
+      
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+                      
+                      <h3>Similar Posts</h3>
+                      <ul class="related-posts">
+                      
+                        <li>
+                          <h4>
+                            <a href="/free-great-alternative-to-menlo-font">
+                              Meslo LG - Free and Great Alternative to Menlo
+                            </a>
+                              <small>27 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/convert-xml-files-to-json-with-xml-json-for-node">
+                              Batch Convert XML Files to JSON with xml-json for Node and Terminal Magic
+                            </a>
+                              <small>23 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/oneliner-to-have-jekyll-static-files-automatically-pushed">
+                              Oneliner to Have Jekyll or Any Other Staticly Generated Blog Pushed to Repository
+                            </a>
+                              <small>23 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/us-states-resources-for-android">
+                              US States Resource for Android
+                            </a>
+                              <small>23 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/aliases-for-most-useful-networking-commands-for-android-emulator">
+                              Aliases for Most Useful Android Emulator Networking Commands
+                            </a>
+                              <small>22 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+                      
+                        <li>
+                          <h4>
+                            <a href="/gradle-included-libraries-in-android-studio">
+                              Gradle Libraries that Actually Get Included in Android Studio
+                            </a>
+                              <small>22 Mar 2015</small>
+                          </h4>
+                      </li>
+                      
+                      
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+          
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+      
+      
+          </ul>
+      
+</div>
+
+
+<!-- LATEST POSTS -->
+<div class="related">
+  <h3>Latest Posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <h4>
+          <a href="/free-great-alternative-to-menlo-font">
+            Meslo LG - Free and Great Alternative to Menlo
+          </a>
+            <small>27 Mar 2015</small>
+        </43>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/speed-up-jekyll-blog-compress-html">
+            Further Speed Up Your Jekyll Blog by Compressing the HTML
+          </a>
+            <small>24 Mar 2015</small>
+        </43>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/pygments-theme-for-jekyll-monokai">
+            Pygments Theme for Jekyll - Monokai
+          </a>
+            <small>24 Mar 2015</small>
+        </43>
+      </li>
+    
+      <li>
+        <h4>
+          <a href="/reset-css-element-styling">
+            Reset CSS Element Styling
+          </a>
+            <small>24 Mar 2015</small>
+        </43>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+  
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2630485-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  </body>
+</html>
