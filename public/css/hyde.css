@@ -18,8 +18,7 @@
  */
 
 html {
-
-  font-family: 'Arimo', sans-serif;
+  font-family: Lato, Arimo, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -28,7 +27,7 @@ html {
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
