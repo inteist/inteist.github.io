@@ -18,6 +18,30 @@
  * Update the foundational and global aspects of the page.
  */
 
+
+
+/*
+*
+*       Custom TYPEFACEs
+*
+*/
+
+
+@font-face {
+  font-family: 'Meslo LG S';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Meslo LG S'), local('Meslo LG S'),
+  url(http://inteist.com/public/fonts/MesloLGS-Regular.ttf)
+  format('truetype');
+}
+
+/*
+*
+*
+*
+*/
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -127,7 +151,7 @@ abbr[title] {
 /* Code */
 
 code, pre {
-    font-family: Menlo, Monaco, 'Source Code Pro', monospace;
+    font-family: Menlo, Monaco, 'Meslo LG S', 'Droid Sans Mono', 'Ubuntu Mono', monospace;
 }
 code {
     padding: .25em .5em;
@@ -151,7 +175,7 @@ pre {
 pre > code {
     padding-left: 0em;
     padding-right: 1em;
-    font-size: 75%;
+    font-size: 80%;
     color: inherit;
     background-color: transparent;
 }
@@ -352,7 +376,7 @@ tbody tr: nth-child(odd) td, tbody tr: nth-child(odd) th {
 
 margin-left: -1rem;
     margin-right: -1rem;
-    font-family: 'Lato', "PT Sans", Helvetica, Arial, sans-serif;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
     color: #ccc;
     text-align: center;
 }
@@ -361,7 +385,7 @@ margin-left: -1rem;
 .pagination-item {
     display: block;
     padding: 1rem;
-    border: 1px solid #eee;
+    /*border: 1px solid #eee;˿*/
 }
 .pagination-item:first-child {
     margin-bottom: -1px;
