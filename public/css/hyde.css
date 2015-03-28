@@ -10,7 +10,6 @@
  * Themes
  */
 
-
 /*
  * Global resets
  *
@@ -18,30 +17,28 @@
  */
 
 html {
-  font-family: Lato, Arimo, sans-serif;
+
+    font-family: Helvetica, Lato, Arimo, Helvetica, sans-serif;
 }
 @media (min-width: 48em) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+   }
 }
 @media (min-width: 58em) {
-  html {
-    font-size: 18px;
-  }
+    html {
+        font-size: 18px;
+   }
 }
-
-
 /* Misc */
+
 hr {
-  position: relative;
-  margin: 1rem 0;
-  border: 0;
-  border-top: 1px solid #cacaca;
-  border-bottom: 1px solid #eee;
+    position: relative;
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #eee;
 }
-
-
 /*
  * Sidebar
  *
@@ -50,46 +47,64 @@ hr {
  */
 
 .sidebar {
-  text-align: left;
-  color: rgba(255,255,255,.5);
-  background-color: #202020;
-}
-
-@media (min-width: 48em) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 16rem;
     text-align: left;
-  }
+    color: rgba(255, 255, 255, .5);
+    background-color: #202020;
 }
-
+@media (min-width: 48em) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 16rem;
+        text-align: left;
+   }
+}
 /* About section */
-.sidebar-about h1 {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 3.5rem;
-  margin-left: -3px;
-}
 
+.sidebar-about h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.5rem;
+    margin-left: -3px;
+}
 /* Sidebar nav */
+
 .sidebar-nav {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  display: block;
-  line-height: 1.75;
-  font-size: 0.9rem;
+    display: block;
+    line-height: 1.75;
+    font-size: 0.9rem;
 }
-
-
 /* The links overall  */
-a:hover,
-a:focus {
-  text-decoration: none;
-  color: #268bd2;
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: #268bd2; //
 }
+.link-underline-OFF a {
+    border-bottom: 1px solid hsla(205, 64%, 90%, 1.0);
+    box-shadow: inset 0 -4px 0 hsla(205, 64%, 90%, 1.0);
+    -webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);
+    transition: background .25s cubic-bezier(.33, .66, .66, 1);
+}
+.link-underline a:hover, .link-underline a:focus, .link-underline a:active,
+.related a:hover, .related a:focus, .related a:active {
+    border-bottom: 1px solid hsla(205, 64%, 90%, 1.0);
+    box-shadow: inset 0 -4px 0 hsla(205, 64%, 90%, 1.0);
+    -webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);
+    transition: background .25s cubic-bezier(.33, .66, .66, 1);
+    background: hsla(205, 64%, 90%, 1.0);
+}
+/*
+.link-underline a:hover, .link-underline a:focus, .link-underline a:active,
+.related a:hover, .related a:focus, .related a:active {
+    background: hsla(205, 64%, 90%, 1.0);
+    transition: background .3s;
+}
+*/
 
 /* Sticky sidebar
  *
@@ -98,26 +113,23 @@ a:focus {
  */
 
 @media (min-width: 48em) {
-  .sidebar-sticky {
-    position: absolute;
-    right:  1rem;
-    bottom: 1rem;
-    left:   1rem;
-  }
+    .sidebar-sticky {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+   }
 }
-
-
 /* Titles */
 
-.post-title-accent{
-  /*color: #268bd2;*/
+.post-title-accent {
+    /*color: #268bd2;*/
 }
-
 /* Meta data line below post title */
-.post-date {
-  margin-bottom: 0.5rem;
-}
 
+.post-date {
+    margin-bottom: 0.5rem;
+}
 /* Container
  *
  * Align the contents of the site above the proper threshold with some margin-fu
@@ -125,22 +137,20 @@ a:focus {
  */
 
 .content {
-  padding-top:    4rem;
-  padding-bottom: 4rem;
-  font-size: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 1rem;
 }
-
 @media (min-width: 48em) {
-  .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
-  }
+    .content {
+        max-width: 38rem;
+        margin-left: 20rem;
+        margin-right: 2rem;
+   }
 }
-
 @media (min-width: 64em) {
-  .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
-  }
+    .content {
+        margin-left: 22rem;
+        margin-right: 4rem;
+   }
 }
