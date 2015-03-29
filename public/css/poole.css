@@ -20,7 +20,7 @@
 
 /*
 *
-*       Custom TYPEFACEs
+*       Custom TYPEFACEs Loading
 *
 */
 
@@ -177,7 +177,7 @@ pre > code {
 /* Gist via GitHub Pages */
 
 .gist .gist-file {
-    font-family: Menlo, Monaco, "Courier New", monospace !important;
+    font-family: Menlo, Monaco, 'Meslo LG S', 'Droid Sans Mono', 'Ubuntu Mono', monospace;
 }
 .gist .markdown-body {
     padding: 15px;

@@ -18,7 +18,7 @@
 
 html {
 
-    font-family: Helvetica, Lato, Arimo, Helvetica, sans-serif;
+    font-family: Museo, Lato, Arimo, Helvetica, sans-serif;
 }
 @media (min-width: 48em) {
     html {
@@ -85,18 +85,19 @@ a:hover, a:focus {
     color: #268bd2; //
 }
 .link-underline-OFF a {
-    border-bottom: 1px solid hsla(205, 64%, 90%, 1.0);
-    box-shadow: inset 0 -4px 0 hsla(205, 64%, 90%, 1.0);
+    border-bottom: 1px solid hsla(205, 64%, 92%, 1.0);
+    box-shadow: inset 0 -4px 0 hsla(205, 64%, 92%, 1.0);
     -webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);
     transition: background .25s cubic-bezier(.33, .66, .66, 1);
 }
+
 .link-underline a:hover, .link-underline a:focus, .link-underline a:active,
 .related a:hover, .related a:focus, .related a:active {
-    border-bottom: 1px solid hsla(205, 64%, 90%, 1.0);
-    box-shadow: inset 0 -4px 0 hsla(205, 64%, 90%, 1.0);
-    -webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);
+    /*border-bottom: 1px solid hsla(205, 64%, 92%, 1.0);*/
+    /*box-shadow: inset 0 -4px 0 hsla(205, 64%, 92%, 1.0);*/
+    /*-webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);*/
     transition: background .25s cubic-bezier(.33, .66, .66, 1);
-    background: hsla(205, 64%, 90%, 1.0);
+    background: hsla(205, 64%, 95%, 1.0);
 }
 /*
 .link-underline a:hover, .link-underline a:focus, .link-underline a:active,
