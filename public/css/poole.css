@@ -68,13 +68,11 @@ a {
     text-decoration: none;
     transition: color ease 0.25s;
 }
-
 a strong {
     color: inherit;
 }
-
-
 /* Headings */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fjalla One', sans-serif;
     margin-bottom: .5rem;
@@ -405,6 +403,13 @@ a.pagination-item:hover {
 .sidebar-nav ul, .related ul, #archive ul, #tags ul {
     list-style-type: none;
     font-size: 85%;
+}
+.related ul, #archive ul, #tags ul {
+    list-style-type: none;
+    font-size: 85%;
+}
+ul h2, ul h3, ul h4 {
+    font-weight: normal;
 }
 /* Sidebar links */
 
