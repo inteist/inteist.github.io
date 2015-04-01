@@ -434,9 +434,14 @@ ul h2, ul h3, ul h4 {
 .posts > .post {
     margin-bottom: 10em;
 }
-.posts > .spacer, .post > .spacer {
+.posts > .spacer, .post > .spacer, {
     margin-bottom: 2rem;
 }
+
+.sidebar-spacer {
+    margin-bottom: 1rem;
+}
+
 .reading-time {
     position: absolute;
     top: 20px;
