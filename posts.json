@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Handling invisibled in Atom.io",
+            "url": "http://inteist.com/handling-invisibled-in-atomio",
+            "date": "2015-04-23T16:22:00-04:00"
+        },
+        
+        {
             "title": "Using MarkdownWriter Plugin for Atom to Make your Blogging even Easier",
             "url": "http://inteist.com/using-markdownwriter-plugin-for-blogging-and-markdown",
             "date": "2015-04-23T00:09:00-04:00"
