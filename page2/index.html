@@ -1,4 +1,154 @@
-<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <link href="http://gmpg.org/xfn/11" rel="profile"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Inteist &middot; </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/dev-resources">Dev Resources</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/tags">Tags</a> <a class="sidebar-nav-item" href="/archive">Archive</a> <a class="sidebar-nav-item" href="/about">About</a> </nav> <p class="copyright">&copy; 2010 </p> </div> </div> <div class="content container"> <div class="posts"> <div class="post"> <h1 class="post-title"> <a href="/convert-xml-files-to-json-with-xml-json-for-node"> Batch Convert XML Files to JSON with xml-json for Node and Terminal Magic </a> </h1> <span class="post-date">23 Mar 2015</span> <div class="link-underline"> <p>To batch convert XML files to JSON a nodejs package can be used that does the job pretty well.</p> <p>Install the package globally:</p> <div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install xml-json -g
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <link href="http://gmpg.org/xfn/11" rel="profile"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Inteist &middot; </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/dev-resources">Dev Resources</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/tags">Tags</a> <a class="sidebar-nav-item" href="/archive">Archive</a> <a class="sidebar-nav-item" href="/about">About</a> </nav> <p class="copyright">&copy; 2010 </p> </div> </div> <div class="content container"> <div class="posts"> <div class="post"> <h1 class="post-title"> <a href="/reset-css-element-styling"> Reset CSS Element Styling </a> </h1> <span class="post-date">24 Mar 2015</span> <div class="link-underline"> <p>A comprehensive way to reset a CSS element:</p> <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.reset-this</span> <span class="p">{</span>
+    <span class="n">animation</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">delay</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="k">direction</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">duration</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">fill</span><span class="o">-</span><span class="n">mode</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">iteration</span><span class="o">-</span><span class="n">count</span> <span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">name</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">play</span><span class="o">-</span><span class="n">state</span> <span class="o">:</span> <span class="n">running</span><span class="p">;</span>
+    <span class="n">animation</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span> <span class="o">:</span> <span class="n">ease</span><span class="p">;</span>
+    <span class="n">backface</span><span class="o">-</span><span class="k">visibility</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">background</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-attachment</span> <span class="o">:</span> <span class="k">scroll</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="k">clip</span> <span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+    <span class="k">background-color</span> <span class="o">:</span> <span class="k">transparent</span><span class="p">;</span>
+    <span class="k">background-image</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="n">origin</span> <span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+    <span class="k">background-position</span> <span class="o">:</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="o">-</span><span class="n">x</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="o">-</span><span class="n">y</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">background-repeat</span> <span class="o">:</span> <span class="k">repeat</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="k">size</span> <span class="o">:</span> <span class="k">auto</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">border</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-bottom</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-bottom-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">-</span><span class="k">left</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">-</span><span class="k">right</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-bottom-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-bottom-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border-collapse</span> <span class="o">:</span> <span class="k">separate</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">image</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-left</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-left-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-left-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-left-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-right</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="o">-</span><span class="k">color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="o">-</span><span class="k">width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">border-spacing</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top-color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">border-top</span><span class="o">-</span><span class="k">left</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top</span><span class="o">-</span><span class="k">right</span><span class="o">-</span><span class="n">radius</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">border-top-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">border-top-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">bottom</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">box</span><span class="o">-</span><span class="n">sizing</span> <span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+    <span class="k">caption-side</span> <span class="o">:</span> <span class="k">top</span><span class="p">;</span>
+    <span class="k">clear</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">clip</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="n">columns</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">count</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">fill</span> <span class="o">:</span> <span class="n">balance</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">gap</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span> <span class="o">:</span> <span class="k">medium</span> <span class="k">none</span> <span class="n">currentColor</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span><span class="o">-</span><span class="k">color</span> <span class="o">:</span> <span class="n">currentColor</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">rule</span><span class="o">-</span><span class="k">width</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="n">span</span> <span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="n">column</span><span class="o">-</span><span class="k">width</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">content</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">counter-increment</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">counter-reset</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">cursor</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">direction</span> <span class="o">:</span> <span class="k">ltr</span><span class="p">;</span>
+    <span class="k">display</span> <span class="o">:</span> <span class="k">inline</span><span class="p">;</span>
+    <span class="k">empty-cells</span> <span class="o">:</span> <span class="k">show</span><span class="p">;</span>
+    <span class="k">float</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">font</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">font-family</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">font-size</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">font-style</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">font-variant</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">font-weight</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">height</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">hyphens</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">left</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">letter-spacing</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">line-height</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">list-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">list-style-image</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">list-style-position</span> <span class="o">:</span> <span class="k">outside</span><span class="p">;</span>
+    <span class="k">list-style-type</span> <span class="o">:</span> <span class="k">disc</span><span class="p">;</span>
+    <span class="k">margin</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-bottom</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-left</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-right</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin-top</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">max-height</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">max-width</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">min-height</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">min-width</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">opacity</span> <span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="k">orphans</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">outline</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">outline-color</span> <span class="o">:</span> <span class="k">invert</span><span class="p">;</span>
+    <span class="k">outline-style</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">outline-width</span> <span class="o">:</span> <span class="k">medium</span><span class="p">;</span>
+    <span class="k">overflow</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">overflow-x</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">overflow-y</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">padding</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-bottom</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-left</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-right</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">padding-top</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">page</span><span class="o">-</span><span class="n">break</span><span class="o">-</span><span class="n">after</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">page</span><span class="o">-</span><span class="n">break</span><span class="o">-</span><span class="n">before</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">page</span><span class="o">-</span><span class="n">break</span><span class="o">-</span><span class="k">inside</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">perspective</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">perspective</span><span class="o">-</span><span class="n">origin</span> <span class="o">:</span> <span class="m">50%</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">position</span> <span class="o">:</span> <span class="k">static</span><span class="p">;</span>
+    <span class="c">/* May need to alter quotes for different locales (e.g fr) */</span>
+    <span class="k">quotes</span> <span class="o">:</span> <span class="s1">&#39;\201C&#39;</span> <span class="s1">&#39;\201D&#39;</span> <span class="s1">&#39;\2018&#39;</span> <span class="s1">&#39;\2019&#39;</span><span class="p">;</span>
+    <span class="k">right</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">tab</span><span class="o">-</span><span class="k">size</span> <span class="o">:</span> <span class="m">8</span><span class="p">;</span>
+    <span class="k">table-layout</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">text-align</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="o">-</span><span class="n">last</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">text-decoration</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">-</span><span class="k">color</span> <span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">-</span><span class="n">line</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="k">solid</span><span class="p">;</span>
+    <span class="k">text-indent</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">text-shadow</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">text-transform</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">top</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="n">transform</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">-</span><span class="n">style</span> <span class="o">:</span> <span class="n">flat</span><span class="p">;</span>
+    <span class="n">transition</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">delay</span> <span class="o">:</span> <span class="m">0s</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">duration</span> <span class="o">:</span> <span class="m">0s</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">property</span> <span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="n">transition</span><span class="o">-</span><span class="n">timing</span><span class="o">-</span><span class="n">function</span> <span class="o">:</span> <span class="n">ease</span><span class="p">;</span>
+    <span class="k">unicode-bidi</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">vertical-align</span> <span class="o">:</span> <span class="k">baseline</span><span class="p">;</span>
+    <span class="k">visibility</span> <span class="o">:</span> <span class="k">visible</span><span class="p">;</span>
+    <span class="k">white-space</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">widows</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">width</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+    <span class="k">word-spacing</span> <span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+    <span class="k">z-index</span> <span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div> <p>&nbsp;</p> <p>Source: <a href="http://stackoverflow.com/questions/15901030/reset-remove-css-styles-for-element-only">StackOverflow</a> </p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/convert-xml-files-to-json-with-xml-json-for-node"> Batch Convert XML Files to JSON with xml-json for Node and Terminal Magic </a> </h1> <span class="post-date">23 Mar 2015</span> <div class="link-underline"> <p>To batch convert XML files to JSON a nodejs package can be used that does the job pretty well.</p> <p>Install the package globally:</p> <div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install xml-json -g
 </code></pre></div> <p>the format of the command is </p> <div class="highlight"><pre><code class="language-bash" data-lang="bash">xml-json input.xml root_node_to_start_from_in_xml
 </code></pre></div> <p>And so we use our friend inline loop with the basic command to batch process all the <code>*.xml</code> files in the current folder</p> <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for</span> f in *.xml<span class="p">;</span> <span class="k">do</span> xml-json <span class="nv">$f</span> root_node_name_here &gt; <span class="nv">$f</span>.json<span class="p">;</span> <span class="k">done</span>
 </code></pre></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/oneliner-to-have-jekyll-static-files-automatically-pushed"> Oneliner to Have Jekyll or Any Other Staticly Generated Blog Pushed to Repository </a> </h1> <span class="post-date">23 Mar 2015</span> <div class="link-underline"> <p>Once your blog is generated, you can commit and push it to the origin to be deployed (if you are using Git as a deployment instrument of course)</p> <p>The oneliner defaults to a <code>_site</code> folder here in the example because this is what is usually used with the static site generators. Make sure to replace it with the correct path.</p> <p>This also assumes that you are building the blog on your machine and are only pushing static files to the repository. You may want to do that to support custom plugins which Github&#39;s version of Jekyll does not support because it runs with a <code>--safe</code> flag on their servers</p> <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span>blog-delploy<span class="o">=</span><span class="s2">&quot;cd ._site &amp;&amp; git add -A &amp;&amp; git commit -m &#39;blog-delploy UPDATE&#39; &amp; git push&quot;</span>
@@ -122,10 +272,4 @@
 <span class="c1">// Google Analytics</span>
 <span class="c1">// Google Cloud Messaging</span>
 <span class="c1">//compile &quot;com.google.android.gms:play-services-base:6.5.+&quot;</span>
-</code></pre></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/facebook-sdk-as-gradle-dependency"> Including Facebook SDK to Android project via Gradle </a> </h1> <span class="post-date">15 Mar 2015</span> <div class="link-underline"> <p>It is much easier (finally, sigh) to setup Facebook SDK dependency via maven central dependency than local library dependency.</p> <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">dependencies</span> <span class="p">{</span>
-    <span class="nx">compile</span> <span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.23.1&#39;</span>
-<span class="p">}</span>
-</code></pre></div> <p>If you feel adventurous, you can wildcard the version number (which is in general not recommended to avoid unexpected build results)</p> <p>but, it can be either one of these:</p> <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.23.+&#39;</span>
-</code></pre></div> <p>will pull any patch update</p> <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.2+&#39;</span>
-</code></pre></div> <p>will pull any minor update smaller than <strong>30</strong></p> <p>or if you feel especially adventurous then even:</p> <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="s1">&#39;com.facebook.android:facebook-android-sdk:3.+&#39;</span>
-</code></pre></div> <p>which will pull any update up to major being <strong>4</strong></p> </div> </div> </div> <div class="pagination"> <a class="pagination-item older" href="/page3">Older</a> <a class="pagination-item newer" href="/">Newer</a> </div> </div> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-2630485-14', 'auto'); ga('send', 'pageview'); </script> </body> </html>
+</code></pre></div> </div> </div> </div> <div class="pagination"> <a class="pagination-item older" href="/page3">Older</a> <a class="pagination-item newer" href="/">Newer</a> </div> </div> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-2630485-14', 'auto'); ga('send', 'pageview'); </script> </body> </html>
