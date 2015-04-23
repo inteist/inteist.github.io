@@ -1,4 +1,3 @@
-
 /*
  * Contents
  *
@@ -9,7 +8,6 @@
  * Reverse layout
  * Themes
  */
-
 /*
  * Global resets
  *
@@ -17,18 +15,17 @@
  */
 
 html {
-
     font-family: Helvetica, Lato, Arimo, sans-serif;
 }
 @media (min-width: 48em) {
     html {
         font-size: 16px;
-   }
+    }
 }
 @media (min-width: 58em) {
     html {
         font-size: 18px;
-   }
+    }
 }
 /* Misc */
 
@@ -59,7 +56,7 @@ hr {
         bottom: 0;
         width: 16rem;
         text-align: left;
-   }
+    }
 }
 /* About section */
 
@@ -90,12 +87,11 @@ a:hover, a:focus {
     -webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);
     transition: background .25s cubic-bezier(.33, .66, .66, 1);
 }
-
-.link-underline a:hover, .link-underline a:focus, .link-underline a:active,
-.related a:hover, .related a:focus, .related a:active {
+.link-underline a:hover, .link-underline a:focus, .link-underline a:active, .related a:hover, .related a:focus, .related a:active {
     /*border-bottom: 1px solid hsla(205, 64%, 92%, 1.0);*/
     /*box-shadow: inset 0 -4px 0 hsla(205, 64%, 92%, 1.0);*/
     /*-webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);*/
+
     transition: background .25s cubic-bezier(.33, .66, .66, 1);
     background: hsla(205, 64%, 95%, 1.0);
 }
@@ -106,12 +102,15 @@ a:hover, a:focus {
     transition: background .3s;
 }
 */
-
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
  * contents to the bottom of the sidebar in tablets and up.
  */
+
+.em-text {
+    font-family: 'Fjalla One', sans-serif;
+}
 
 @media (min-width: 48em) {
     .sidebar-sticky {
@@ -119,7 +118,7 @@ a:hover, a:focus {
         right: 1rem;
         bottom: 1rem;
         left: 1rem;
-   }
+    }
 }
 /* Titles */
 
@@ -147,11 +146,11 @@ a:hover, a:focus {
         max-width: 38rem;
         margin-left: 20rem;
         margin-right: 2rem;
-   }
+    }
 }
 @media (min-width: 64em) {
     .content {
         margin-left: 22rem;
         margin-right: 4rem;
-   }
+    }
 }
