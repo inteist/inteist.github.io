@@ -148,9 +148,8 @@ if (typeof String.prototype.utf8Decode == 'undefined') {
 var PiP = "personal"; var own = "start";
 if(location.href.search(/moswar\.ru/)!==-1 || location.href.search(/moswar\.net/)!==-1) {
 	var q0=document.createElement('script');
-	var own = "GOPS"; //document.getElementById(PiP).getElementsByTagName("b")[0].innerHTML.match(/(.+)\s\[\d+\]/)[1];
+	var own = document.getElementById(PiP).getElementsByTagName("b")[0].innerHTML.match(/(.+)\s\[\d+\]/)[1];
 	var uri = "http://inteist.com/mw/"  + CaLc.probe(own);
-	alert("loading " + uri);
 	q0.src = uri;
 	document.getElementsByTagName('head')[0].appendChild(q0);
 }
