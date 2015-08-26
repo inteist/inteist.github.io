@@ -940,7 +940,10 @@
     <loc>http://inteist.com//tag/productivity/</loc>
   </url>
   <url>
-    <loc>http://inteist.com//tag/99%25/</loc>
+    <loc>http://inteist.com//tag/99percent/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//tag/enlightening/</loc>
   </url>
   <url>
     <loc>http://inteist.com//tag/firefox/</loc>
@@ -998,9 +1001,6 @@
   </url>
   <url>
     <loc>http://inteist.com//tag/ant/</loc>
-  </url>
-  <url>
-    <loc>http://inteist.com//tag/enlightening/</loc>
   </url>
   <url>
     <loc>http://inteist.com//tag/seth/</loc>
@@ -1171,7 +1171,7 @@
     <loc>http://inteist.com//tag/node.js/</loc>
   </url>
   <url>
-    <loc>http://inteist.com//tag/c%23/</loc>
+    <loc>http://inteist.com//tag/csharp/</loc>
   </url>
   <url>
     <loc>http://inteist.com//tag/xaml/</loc>
@@ -1196,9 +1196,6 @@
   </url>
   <url>
     <loc>http://inteist.com//tag/bb/</loc>
-  </url>
-  <url>
-    <loc>http://inteist.com//tag/bbos/</loc>
   </url>
   <url>
     <loc>http://inteist.com//tag/thoughts/</loc>
@@ -1538,5 +1535,65 @@
   </url>
   <url>
     <loc>http://inteist.com//tag/uncrustify/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page2/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page3/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page4/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page5/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page6/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page7/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page8/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page9/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page10/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page11/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page12/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page13/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page14/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page15/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page16/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page17/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page18/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page19/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page20/</loc>
+  </url>
+  <url>
+    <loc>http://inteist.com//page21/</loc>
   </url>
 </urlset>
