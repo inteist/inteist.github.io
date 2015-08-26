@@ -96,7 +96,7 @@ a:hover, a:focus {
     background: hsla(205, 64%, 95%, 1.0);
 }
 
-.tag-links-list > a {
+.tag-links-list > a,  .tag-links-list > li > a{
     border: 3px solid hsla(205, 64%, 90%, 1.0);
     background: hsla(205, 64%, 90%, 1.0);
 }
