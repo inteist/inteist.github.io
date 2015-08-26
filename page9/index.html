@@ -131,13 +131,13 @@ master.txt
     <span class="cm">/**</span>
 <span class="cm">     * Make sure that beside the apps that are registered to handle android market URI, there is the</span>
 <span class="cm">     * com.android.vending package, which means that the Google Play app (the Android market) is installed.</span>
-<span class="cm">     * </span>
+<span class="cm">     *</span>
 <span class="cm">     * @return</span>
 <span class="cm">     */</span>
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasGooglePlayMarket</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">List</span><span class="o">&lt;</span><span class="n">resolveinfo</span><span class="o">&gt;</span> <span class="n">marketHandlers</span> <span class="o">=</span> <span class="n">getMarketHandlers</span><span class="o">();</span>
         <span class="k">for</span> <span class="o">(</span><span class="n">ResolveInfo</span> <span class="n">resolveInfo</span> <span class="o">:</span> <span class="n">marketHandlers</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">resolveInfo</span><span class="o">.</span><span class="na">activityInfo</span><span class="o">.</span><span class="na">packageName</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;com.android.vending&quot;</span><span class="o">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>                
+            <span class="k">if</span> <span class="o">(</span><span class="n">resolveInfo</span><span class="o">.</span><span class="na">activityInfo</span><span class="o">.</span><span class="na">packageName</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;com.android.vending&quot;</span><span class="o">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
                 <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
             <span class="o">}</span>
         <span class="o">}</span>
@@ -149,7 +149,7 @@ master.txt
 
     <span class="cm">/**</span>
 <span class="cm">     * Check whether there is any app that is registered to handle android market URIs or not</span>
-<span class="cm">     * </span>
+<span class="cm">     *</span>
 <span class="cm">     * @return</span>
 <span class="cm">     *          - TRUE if someone can handle android market URI, false otherwise</span>
 <span class="cm">     */</span>
@@ -160,9 +160,9 @@ master.txt
 
 
     <span class="cm">/**</span>
-<span class="cm">     * </span>
+<span class="cm">     *</span>
 <span class="cm">     * Pick up all the resolvers for android market URI</span>
-<span class="cm">     * </span>
+<span class="cm">     *</span>
 <span class="cm">     * @return</span>
 <span class="cm">     *          - List of resolvers who can handle the provided URI</span>
 <span class="cm">     */</span>

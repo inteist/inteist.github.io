@@ -95,6 +95,11 @@ a:hover, a:focus {
     transition: background .25s cubic-bezier(.33, .66, .66, 1);
     background: hsla(205, 64%, 95%, 1.0);
 }
+
+.tag-links-list > a {
+    border: 3px solid hsla(205, 64%, 90%, 1.0);
+    background: hsla(205, 64%, 90%, 1.0);
+}
 /*
 .link-underline a:hover, .link-underline a:focus, .link-underline a:active,
 .related a:hover, .related a:focus, .related a:active {
