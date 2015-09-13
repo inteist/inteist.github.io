@@ -443,7 +443,11 @@
         
         "formatting",
         
-        "uncrustify"
+        "uncrustify",
+        
+        "find",
+        
+        "clang-format"
         
     ]
 }

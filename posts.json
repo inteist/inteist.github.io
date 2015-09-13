@@ -2,7 +2,13 @@
     "posts": [
         
         {
-            "title": "clang-format Shell Script to Format all Files in a Folder",
+            "title": "clang-format Style File for iOS Projects",
+            "url": "http://inteist.com/clang-format-style-file-for-ios-projects/",
+            "date": "2015-09-13T17:40:00-04:00"
+        },
+        
+        {
+            "title": "Shell Script to Format all Files in a Folder using clang-format",
             "url": "http://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/",
             "date": "2015-09-13T17:07:00-04:00"
         },
