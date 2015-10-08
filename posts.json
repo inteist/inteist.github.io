@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Fix Fonts Issue in Android Studio with El Capitan on OS X",
+            "url": "http://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/",
+            "date": "2015-10-07T20:46:00-04:00"
+        },
+        
+        {
             "title": "clang-format Style File for iOS Projects",
             "url": "http://inteist.com/clang-format-style-file-for-ios-projects/",
             "date": "2015-09-13T17:40:00-04:00"

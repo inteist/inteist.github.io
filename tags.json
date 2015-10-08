@@ -447,7 +447,9 @@
         
         "find",
         
-        "clang-format"
+        "clang-format",
+        
+        "as"
         
     ]
 }
