@@ -449,7 +449,9 @@
         
         "clang-format",
         
-        "as"
+        "as",
+        
+        "blurb"
         
     ]
 }
