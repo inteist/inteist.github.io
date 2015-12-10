@@ -451,7 +451,11 @@
         
         "as",
         
-        "blurb"
+        "blurb",
+        
+        "tarantool",
+        
+        "highload"
         
     ]
 }
