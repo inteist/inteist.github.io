@@ -45,7 +45,7 @@ hr {
 
 .sidebar {
     text-align: left;
-    color: rgba(255, 255, 255, .5);
+    color: rgb(200, 200, 200) rgba(255, 255, 255, .5);
     background-color: #202020;
 }
 @media (min-width: 48em) {
@@ -87,8 +87,9 @@ a:hover, a:focus {
     transition: background .25s cubic-bezier(.33, .66, .66, 1);
 }
 .link-underline a:hover, .link-underline a:focus, .link-underline a:active, .related a:hover, .related a:focus, .related a:active {
-    /*transition: background .25s cubic-bezier(.33, .66, .66, 1);
-    background: hsla(0,0%,50%,.2);*/
+    /*transition: background .25s cubic-bezier(.33, .66, .66, 1);*/
+    /*background: hsla(0, 0%, 80%, .4);*/
+    color: hsla(0, 0%, 20%, .8);
 }
 
 .tag-links-list > a,  .tag-links-list > li > a{
