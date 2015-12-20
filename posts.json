@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Good Idea -- Quote",
+            "url": "http://inteist.com/good-idea-quote/",
+            "date": "2015-12-20T00:51:00-04:00"
+        },
+        
+        {
             "title": "Tarantool - Fast in Memory Database for HOT DATA",
             "url": "http://inteist.com/tarantool---fast-in-memory-database-for-hot-data/",
             "date": "2015-12-10T15:38:00-04:00"
