@@ -158,25 +158,25 @@ eval('AngryAjax.goToUrl3 = '+AngryAjax.goToUrl.toString().replace("url = url.rep
 		{title: 'Пробковая каска [Ультра]', name: 'helmet', image: '<span class="icon icon-helmet" style="margin: 0;"></span>'},
 		{title: 'Пробковая каска', name: 'helmet', image: '<span class="icon icon-helmet" style="margin: 0;"></span>'},
 		{title: 'Ароматным сыром', name: 'cheese', image: '<span class="icon icon-cheese" style="margin: 0;"></span>'},
-		{title: 'Щит [Ультра]', name: 'antigranata', image: '<img src="http://inteist.com/mw/img/eq/4.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Щит [Ультра]', name: 'antigranata', image: '<img src="http://www.gopiki.ru/img/eq/4.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
 		{title: 'Щит', name: 'antigranata', image: '<span class="icon icon-antigranata" style="margin: 0;"></span>'},
 		{title: 'Коварная пружина', name: 'reflect', image: '<span class="icon icon-reflect" style="margin: 0;"></span>'},
 		{title: 'Коварная пружина [Ультра]', name: 'reflect', image: '<span class="icon icon-reflect" style="margin: 0;"></span>'},
-		{title: 'Тыква «Колхозная»', name: 'tikva', image: '<img src="http://inteist.com/mw/img/eq/22.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Орех «Кокосовый»', name: 'oreh', image: '<img src="http://inteist.com/mw/img/eq/21.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Роллы «Огурцовые» [Ультра]', name: 'rolls_ultra', image: '<img src="http://inteist.com/mw/img/eq/13.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Роллы «Огурцовые» [Мега]', name: 'rolls_mega', image: '<img src="http://inteist.com/mw/img/eq/13.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Роллы «Огурцовые»', name: 'rolls', image: '<img src="http://inteist.com/mw/img/eq/13.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Гранат «Осколочный»', name: 'granat', image: '<img src="http://inteist.com/mw/img/eq/24.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Дуриан «Заморский»', name: 'durian', image: '<img src="http://inteist.com/mw/img/eq/23.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Вкусный воккер', name: 'vokker', image: '<img src="http://inteist.com/mw/img/eq/16.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Вкусный воккер [Ультра]', name: 'vokker', image: '<img src="http://inteist.com/mw/img/eq/15.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Икорка на черством хлебушке', name: 'ikorka', image: '<img src="http://inteist.com/mw/img/eq/12.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Кластерная граната', name: 'klaster', image: '<img src="http://inteist.com/mw/img/eq/10.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Кластерная граната [Ультра]', name: 'klaster_ultra', image: '<img src="http://inteist.com/mw/img/eq/9.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Кластерная граната [Мега]', name: 'klaster_mega', image: '<img src="http://inteist.com/mw/img/eq/9.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Коктейль Молотова', name: 'molotov', image: '<img src="http://inteist.com/mw/img/eq/7.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
-		{title: 'Коктейль Молотова [Ультра]', name: 'molotov_ultra', image: '<img src="http://inteist.com/mw/img/eq/8.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Тыква «Колхозная»', name: 'tikva', image: '<img src="http://www.gopiki.ru/img/eq/22.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Орех «Кокосовый»', name: 'oreh', image: '<img src="http://www.gopiki.ru/img/eq/21.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Роллы «Огурцовые» [Ультра]', name: 'rolls_ultra', image: '<img src="http://www.gopiki.ru/img/eq/13.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Роллы «Огурцовые» [Мега]', name: 'rolls_mega', image: '<img src="http://www.gopiki.ru/img/eq/13.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Роллы «Огурцовые»', name: 'rolls', image: '<img src="http://www.gopiki.ru/img/eq/13.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Гранат «Осколочный»', name: 'granat', image: '<img src="http://www.gopiki.ru/img/eq/24.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Дуриан «Заморский»', name: 'durian', image: '<img src="http://www.gopiki.ru/img/eq/23.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Вкусный воккер', name: 'vokker', image: '<img src="http://www.gopiki.ru/img/eq/16.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Вкусный воккер [Ультра]', name: 'vokker', image: '<img src="http://www.gopiki.ru/img/eq/15.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Икорка на черством хлебушке', name: 'ikorka', image: '<img src="http://www.gopiki.ru/img/eq/12.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Кластерная граната', name: 'klaster', image: '<img src="http://www.gopiki.ru/img/eq/10.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Кластерная граната [Ультра]', name: 'klaster_ultra', image: '<img src="http://www.gopiki.ru/img/eq/9.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Кластерная граната [Мега]', name: 'klaster_mega', image: '<img src="http://www.gopiki.ru/img/eq/9.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Коктейль Молотова', name: 'molotov', image: '<img src="http://www.gopiki.ru/img/eq/7.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
+		{title: 'Коктейль Молотова [Ультра]', name: 'molotov_ultra', image: '<img src="http://www.gopiki.ru/img/eq/8.jpg" style="width: 16px; height: 16px; vertical-align: middle;">'},
 		{title: 'Стальной щит', name: 'o_shield', image: '<span class="icon icon-antigranata" style="margin: 0;"></span>'}
 	];
 	function analyzeEq() {
@@ -321,7 +321,29 @@ eval('AngryAjax.goToUrl3 = '+AngryAjax.goToUrl.toString().replace("url = url.rep
 	if (typeof(window.localStorage.avaddonAutoTugri) == 'undefined')
 		window.localStorage.avaddonAutoTugri = 0;
 
-	$(document).on("ajaxComplete", function() {
+		var newTimer = function() {
+				var timeOffset = parseInt($("#timeoffset").attr("rel"));
+				AngryAjax.setInterval(function(){
+					var time = parseInt($("#servertime2").attr("rel"));
+					var d = new Date();
+					d.setTime((time + timeOffset) * 1000); // серверное время здесь
+					var m = d.getUTCMinutes();
+					if (m < 10) {
+						m = "0" + m;
+					}
+					var s = d.getUTCSeconds();
+					if (s < 10) {
+						s = "0" + s;
+					}
+					$("#servertime2").html(d.getUTCHours() + ":" + m + ":" + s);
+					time ++;
+					$("#servertime2").attr("rel", time);
+				}, "1000");
+		};
+	showmetrowar();
+			newTimer();
+		$(document).on("ajaxComplete", function() {
+				showmetrowar();
 				if (location.href.search(/[/]fight[/]/)!=-1) {
 						analyzeEq();
 			doSaveEq();
@@ -400,106 +422,6 @@ eval('AngryAjax.goToUrl3 = '+AngryAjax.goToUrl.toString().replace("url = url.rep
 	});
 	})();
 
-function MultiOpenItem(item) {
-	var id = $(item).parent().find("img").data("id");
-	var type = $(item).parent().find('img').prop("src").replace('http://www.moswar.ru', '').replace('http://www.moswar.net', '');
-	var act = $(item).parent().find('.action').data("action");
-	var b = [];
-	b.push({title: "Открыть",
-		callback: function (obj) {
-			alertsData = [];
-			BuyNextMultiItem($('#multbuy').attr('value'), id, type, act, m.items[id].info.title, '0');
-			closeAlert(obj);
-		}
-	});
-	b.push({title: "Отмена", callback: null});
-	showConfirm('<p align="center">Количество: <input id="multbuy" value="'+$(item).parent().find('.count').text().replace(/#/gi,'')+'"></p>', b, {"__title": "Открыть сразу"});
-}
-function ParseDataItem(data, st) {
-	var a = JSON.parse(data);
-	var al = new Array;
-	for (var j in a.alerts)  {
-		al.push(a.alerts[j].text);
-	}
-	for (var i in a.inventory) {
-		if ('/@/images/obj/'+a.inventory[i].image == st) {
-			return {id: a.inventory[i].id, alerts: al};
-		}
-	}
-	return {alerts: al};
-}
-
-function BuyNextMultiItem (num, id, st, action, title, sp) {
-	if (typeof(title) == "undefined") {
-		title = "Предмет";
-	}
-	if (num > 0) {
-		$.get('/player/json/'+action+'/'+id+'/', function(data) {
-			moswar.showPopup(title+' открыт!', 'Осталось: '+(num-1), 4000);
-			var obj = ParseDataItem(data, st);
-			if (typeof(obj.id) != "undefined") {
-				var a = JSON.parse(localStorage['mw_alerts']);
-				for (var i in obj.alerts) {
-					a.push(obj.alerts[i]);
-				}
-				localStorage['mw_alerts']=JSON.stringify(a);
-				BuyNextMultiItem(num-1, obj.id, st, action, title, sp);
-			}
-			else {
-				var a=JSON.parse(localStorage['mw_alerts']);
-				for (var i in obj.alerts) {
-					a.push(obj.alerts[i]);
-				}
-				localStorage['mw_alerts']=JSON.stringify(a);
-				if (sp == '1') {
-					localStorage['listGiftsN'] = Number(localStorage['listGiftsN'])-1;
-					if (Number(localStorage['listGiftsN'])<1) {
-						setTimeout("AngryAjax.goToUrl2('/player/');", 1000);
-					}
-				}
-				else{
-					setTimeout("AngryAjax.goToUrl2('/player/');", 2000);
-				}
-			}
-		});
-	}
-	else {
-		if (sp == '1') {
-			localStorage['listGiftsN'] = Number(localStorage['listGiftsN'])-1;
-			if (Number(localStorage['listGiftsN'])<1) {
-				setTimeout("AngryAjax.goToUrl2('/player/');", 1000);
-			}
-		}
-		else {
-			setTimeout("AngryAjax.goToUrl2('/player/');", 2000);
-		}
-	}
-}
-
-(function() {
-	var multiOpenItemList = [6565, 5740, 4023, 4022, 4021, 3365, 3350, 3349, 3348];
-
-	if (typeof(localStorage['mw_alerts']) == "undefined") { localStorage['mw_alerts']='[]'; }
-    alertsData = JSON.parse(localStorage['mw_alerts']);
-    if (alertsData.length>0) {
-		for (var i in alertsData) {
-			showAlert('Оповещение', alertsData[i]);
-		}
-		alertsData=[];
-		localStorage['mw_alerts']="[]";
-	}
-
-	$(document).on("ajaxComplete", function() {
-
-		if (location.href.search(/[/]player[/]/) != -1) {
-			for (var i = 0; i < multiOpenItemList.length; i++)
-				$(".object-thumb div.padding img[data-st=\'" + multiOpenItemList[i] + "\']").each(function() {
-					if ($(this).parent().children('.avaddon-multi-open').length==0)
-						$(this).before('<b class="avaddon-multi-open" style="cursor: pointer; color: green; font-size: 11px; position: absolute; margin: 0 1px;" onclick="MultiOpenItem(this);">[#]</b>');
-				});
-		}
-	});
-})();
 $(document).on("ajaxComplete", function() {
 	if (location.href.search(/[/]gypsy[/]/) != -1) {
 		if ($("#avaddon-auto-gypsy").length == 0) {
@@ -523,7 +445,7 @@ $(document).on("ajaxComplete", function() {
 			}
 			$("#avaddon-auto-fight-alley").on("click", function() {
 				var html = '<p align="center">Количество боев: <input id="avaddon-num-fights" value="20"></p>';
-				html += '<p align="center">Уровень для битья: <input id="avaddon-lvl-fights" value="23"></p>';
+				html += '<p align="center">Уровень для битья: <input id="avaddon-lvl-fights" value="21"></p>';
 				var buttons = [];
 				buttons.push({
 					title: "Начать",
@@ -588,139 +510,64 @@ function AvaddonAutoFightAlley(num, lvl) {
 }
 
 	$(document).on("ajaxComplete", function() {
-	if (location.href.search(/[/]job[/]/) != -1) {
-		if ($("#avaddon-avto-job-tonus").length == 0) {
-			$(".do").prepend('<div class="button" id="avaddon-avto-job-tonus"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i><div class="c">Слить тонус</div></span></div>');
-			$("#avaddon-avto-job-tonus").on("click", function() {
-				var html = '<p align="center">Количество банок: <input id="num-tonus" value="20"></p>';
+	if (location.href.search(/[/]shaurburgers[/]/) != -1) {
+		if ($("#shaurma-btn").length == 1 && $("#avaddon-auto-shaurma").length == 0) {
+			$("#shaurma-btn").after('<span id="avaddon-auto-shaurma" style="margin-left: 16px;" class="button"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i><div class="c">Работать как таджик</div></span></span>');
+			$("#avaddon-auto-shaurma").on("click", function() {
+				var time = parseInt($("select[name='time']").val());
+				var html = '<p align="center">Количество смен: <input id="num-shaurma" value="8"></p>';
 				var buttons = [];
-				var jobId = $(".do > span").prop("id").replace("job-button-", "");
 				buttons.push({
 					title: "Начать",
 					callback: function(obj) {
 						alertsData = [];
-						AvaddonBurnJobTonus($("#num-tonus").val(), jobId);
+						AvaddonAutoShaurma($("#num-shaurma").val(), time);
 						closeAlert(obj);
 					}
 				});
 				buttons.push({title: "Отмена", callback: null});
-				showConfirm(html, buttons, {"__title": "Слить тонус"});
+				showConfirm(html, buttons, {"__title": "Начать работу"});
 			});
+		}
+		if (typeof(window.localStorage.avaddonNumShaurma) != 'undefined') {
+			var num = parseInt(window.localStorage.avaddonNumShaurma);
+
+			if (num >= 0) {
+				var a = $("#workForm > div > span > span > div").html();
+				if (a == "Улизнуть с работы") {
+					$("#workForm > div > span > span > div").html("Прервать. Осталось " + num).on("click", function() {
+						window.localStorage.avaddonNumShaurma = -1;
+					});
+
+				}
+			}
+
+			if (num >= 0 && window.localStorage.avaddonAutoShaurma == 1) {
+				var time = parseInt(window.localStorage.avaddonTimeShaurma);
+				$("select[name='time']").val(window.localStorage.avaddonTimeShaurma);
+				window.localStorage.avaddonAutoShaurma = 0;
+				$("#shaurma-btn").click();
+				setTimeout("AvaddonAutoShaurma(" + window.localStorage.avaddonNumShaurma + ", " + time + ")", (time * 60 * 60 * 1000 + 5000));
+			}
 		}
 	}
 });
 
-	function AvaddonRestoreTonus() {
-			window.localStorage.avaddonBurnTonusJobNumber = (parseInt(window.localStorage.avaddonBurnTonusJobNumber)-1).toString();
-			if (parseInt(window.localStorage.avaddonBurnTonusJobNumber) < 1) {
-				AvaddonStopBurnJobTonus();
-			}
-			else {
-				$.get('/job/tonus-buy-alert/', function(data) {
-					if (data['error']) {
-						showAlert(moswar.lang.LANG_MAIN_105, data['error'], true);
-						AvaddonStopBurnJobTonus();
-						console.log('catch ERROR!');
-					}
-					else {
-						if(data['restore_tonus']) {
-							$.get("/player/json/use/" + data['restore_tonus'] + "/", function(data) {
-								if (typeof(data['fullenergyin']) != 'undefinded') {
-									player['fullenergyin'] = 0;
-									$('div.tonus-overtip-increase').html();
-								}
-								if (data['stats']['energy']) {
-									avaddonFullTonus = true;
-									setEnergy(data['stats']['energy']);
-									setTimeout('AvaddonBurnJobTonus(window.localStorage.avaddonBurnTonusJobNumber, window.localStorage.avaddonBurnTonusJobNumberJob)', 500);
-								}
-							}, 'json');
-						}
-						else {
-							AvaddonStopBurnJobTonus();
-						}
-					}
-				}, 'json');
-			}
+function AvaddonAutoShaurma(numShaurma, timeShaurma) {
+	numShaurma = parseInt(numShaurma);
+	numShaurma--;
+	window.localStorage.avaddonNumShaurma = numShaurma;
+	window.localStorage.avaddonTimeShaurma = timeShaurma;
+
+	if (numShaurma < 0) {
+		window.localStorage.avaddonNumShaurma = -1;
+		window.localStorage.avaddonTimeShaurma = 0;
+		window.localStorage.avaddonAutoShaurma = 0;
 	}
-
-function AvaddonStopBurnJobTonus() {
-	window.localStorage.avaddonBurnTonusJobNumber = 0;
-	window.localStorage.avaddonBurnTonusJobNumberJob = 0;
-}
-
-function AvaddonBurnJobTonus(num, job) {
-	window.localStorage.avaddonBurnTonusJobNumber = num;
-	window.localStorage.avaddonBurnTonusJobNumberJob = job;
-	$.post("/job/do/", {"action": "do", "job": job, "ajax": 1}, function(data) {
-		if (typeof(data['maxenergy']) != 'undefinded') {
-			$('#maxenergy').html(data['maxenergy']);
-		}
-		if (typeof(data['energy']) != 'undefinded') {
-			setEnergy(data['energy']);
-		}
-		if (typeof(data['fullenergyin']) != 'undefinded') {
-			player['fullenergyin'] = data['fullenergyin'];
-		}
-		if (typeof(data['wallet']) != 'undefinded') {
-			updateWallet(data['wallet']);
-		}
-		if (typeof(data['tutorial']) != "undefined") {
-			playerStep = data['tutorial'];
-			tutorial.curStep = data.tutorial;
-			tutorial.buildStepsPos();
-		}
-		if (data['result'] == 1) {
-			var q = $(data['html']);
-			//$('#job-' + job).find("tr[rel='content']").html($(q).find("tr[rel='content']").html());
-			//$('#job-' + job).find("tr.progressbar > td.stars").html($(q).find("tr.progressbar > td.stars").html());
-			countdown($('#job-' + job).find("tr[rel='content'] *[timer]:not(*[process])"));
-			var cb = function() {
-				//$("#job-" + job).find("table:first").after($(q).find("div[rel='job_result']"));
-				//$("div[rel='job_result']").slideDown("fast", function() {
-				//	$("div.job td.do span.button").removeClass("disabled").attr("disabled", null);
-				//	$('#job-' + job).append($(q).find("div.alert"));
-				//});
-			};
-			if (100*$('#job-percent-scale-' + job).width()/$('#job-percent-scale-' + job).offsetParent().width() == parseInt($(q).find("tr.progressbar td.progress b").html())) {
-				cb();
-			} else {
-				$('#job-percent-scale-' + job).animate({width: $(q).find("tr.progressbar td.progress b").html()}, "slow", function() {
-					cb();
-				});
-			}
-			$("#job-" + job).find("tr.progressbar td.progress b").html($(q).find("tr.progressbar td.progress b").html());
-			if ($("div.jobs-list li[rel=" + job + "] span.percent").length) {
-				animateNumber($("div.jobs-list li[rel=" + job + "] span.percent"), $(q).find("tr.progressbar td.progress b").text().replace('%', ''));
-			}
-			if (job == 223 || job == 224 || job == 225) {
-				$("#get-amulet-block").remove();
-			}
-			if (data['questline']) {
-				$("#job-block-place").replaceWith(data['questline']);
-			}
-			if (data['arrows']) {
-				jobsArrows = data['arrows'];
-				jobInitArrows();
-			}
-			setTimeout('AvaddonBurnJobTonus(' + window.localStorage.avaddonBurnTonusJobNumber + ', ' + window.localStorage.avaddonBurnTonusJobNumberJob + ')', 500);
-		} else {
-			if (data['error'] == 'no_energy') {
-				if (data['restore_tonus']) {
-					AvaddonRestoreTonus();
-				} else {
-					restoreTonus = '';
-				}
-			} else if (data['error'] == 'conditions_not_passed') {
-				jobShowError(job, '<p><b class="red">'+'Для выполнения задания тебе не хватает:'+'</b></p>' + data['require']);
-			} else {
-				showAlert(moswar.lang.LANG_MAIN_105, data['error'], true);
-			}
-			//$("#job-" + job).find("table:first").after($(q).find("div[rel='job_result']"));
-			//$("div.job td.do span.button").removeClass("disabled");
-		}
-		AngryAjax.handleLinks();
-	}, 'json');
+	else {
+		setTimeout("AngryAjax.goToUrl3('/shaurburgers/')", 1000);
+		window.localStorage.avaddonAutoShaurma = 1;
+	}
 }
 		(function() {
 		$(document).on("ajaxComplete", function() {
@@ -783,193 +630,5 @@ function AvaddonBurnJobTonus(num, job) {
 			setTimeout("AngryAjax.goToUrl3('/bank/')", 2000);
 			setTimeout("$('#ruda_count').val('" + r + "');$('.bank-robbery form').submit()", 6000);
 			setTimeout("AngryAjax.goToUrl3('/alley/')", 8000);
-		}
-	}
-	(function() {
-		$(document).on("ajaxComplete", function() {
-			if (parseInt(window.localStorage.avaddonBurnTonusNumber) > 0) {
-				$('#avaddon-tonus-need-number').remove();
-				$('.tonus-icon-small').after('<span id="avaddon-tonus-need-number" style="margin-left: 10px;">(' + window.localStorage.avaddonBurnTonusNumber + ')</span>');
-			}
-			if (location.href.search(/[/]alley[/]/)!=-1) {
-				if ($("#avaddon-avtokill").length == 0) {
-					var html = '<div class="button" id="avaddon-avtokill"><span class="f"><i class="rl"></i><i class="bl"></i><i class="brc"></i><div class="c">Автобой за тонус</div></span></div>';
-					$("#searchForm").before(html);
-
-					$("#avaddon-avtokill").on("click", function() {
-						var html = '<p align="center">Количество банок: <input id="num-tonus" value="20"></p>';
-						html += '<p align="center">Уровень для атаки: <input id="attack-level" value="7"></p>';
-						var buttons = [];
-						buttons.push({
-							title: "Начать",
-							callback: function(obj) {
-								alertsData = [];
-								AvaddonBurnTonus($("#num-tonus").val(), $("#attack-level").val());
-								closeAlert(obj);
-							}
-						});
-						buttons.push({title: "Отмена", callback: null});
-						showConfirm(html, buttons, {"__title": "Слить тонус"});
-					});
-				}
-				if (window.localStorage.avaddonBurnTonusActive == '1') {
-					if ($(".button-fight").length > 0) {
-						window.localStorage.avaddonBurnTonusActive = '2';
-						$(".button-fight a").click();
-						setTimeout("AngryAjax.goToUrl3('/alley/');", 2000);
-					}
-				}
-				else if (window.localStorage.avaddonBurnTonusActive == '2') {
-					if ($("#timeout").length > 0) {
-						moswar.showPopup('Используем тонус', 'Банок еще ' + window.localStorage.avaddonBurnTonusNumber, 4000);
-						var tonus = parseInt($("#currenttonus").html());
-						if (tonus < 32) {
-							//window.localStorage.avaddonBurnTonusActive = '10';
-							//console.log('try to call function avaddonusetonus');
-							//setTimeout("AvaddonUseTonus();", 2000);
-						}
-						else {
-							setTimeout("cooldownReset('tonus');", 2000);
-						}
-						//window.localStorage.avaddonBurnTonusActive = '3';
-					}
-					//else {
-						window.localStorage.avaddonBurnTonusActive = '3';
-					//	setTimeout("AngryAjax.goToUrl3('/alley/');", 2000);
-						//}
-				}
-				else if (window.localStorage.avaddonBurnTonusActive == '3') {
-					setTimeout("AvaddonBurnTonus(window.localStorage.avaddonBurnTonusNumber, window.localStorage.avaddonBurnTonusLevel);", 2000);
-				}
-			}
-		});
-	})();
-
-	var avaddonUseTonusComplete = false;
-	var avaddonFullTonus = false;
-
-	function UseTonusCompleteOn() {
-		avaddonUseTonusComplete = false;
-	}
-
-	function AvaddonUseTonus() {
-		if (!avaddonUseTonusComplete) {
-			avaddonUseTonusComplete = true;
-			window.localStorage.avaddonBurnTonusNumber = (parseInt(window.localStorage.avaddonBurnTonusNumber)-1).toString();
-			if (parseInt(window.localStorage.avaddonBurnTonusNumber) < 1) {
-				AvaddonStopBurnTonus();
-			}
-			else {
-				$.get('/job/tonus-buy-alert/', function(data) {
-					if (data['error']) {
-						showAlert(moswar.lang.LANG_MAIN_105, data['error'], true);
-						console.log('catch ERROR!');
-						AvaddonBurnTonus(window.localStorage.avaddonBurnTonusNumber, window.localStorage.avaddonBurnTonusLevel);
-					}
-					else {
-						if(data['restore_tonus']) {
-							$.get("/player/json/use/" + data['restore_tonus'] + "/", function(data) {
-								if (typeof(data['fullenergyin']) != 'undefinded') {
-									player['fullenergyin'] = 0;
-									$('div.tonus-overtip-increase').html();
-								}
-								if (data['stats']['energy']) {
-									avaddonFullTonus = true;
-									AvaddonResetCooldown();
-									setEnergy(data['stats']['energy']);
-									setTimeout('UseTonusCompleteOn()', 3000);
-									setTimeout('AvaddonBurnTonus(window.localStorage.avaddonBurnTonusNumber, window.localStorage.avaddonBurnTonusLevel)', 2000);
-								}
-							}, 'json');
-						}
-						else {
-							AvaddonStopBurnTonus();
-						}
-					}
-				}, 'json');
-			}
-		}
-	}
-
-
-	function AvaddonApplyTonus() {
-		window.localStorage.avaddonBurnTonusNumber = (parseInt(window.localStorage.avaddonBurnTonusNumber)-1).toString();
-		if (parseInt(window.localStorage.avaddonBurnTonusNumber) < 0) {
-			AvaddonStopBurnTonus();
-		}
-		else {
-			$.get('/job/tonus-buy-alert/', function(data) {
-				if (data['error']) {
-					showAlert(moswar.lang.LANG_MAIN_105, data['error'], true);
-					console.log('catch ERROR!');
-				}
-				else {
-					if(data['restore_tonus']) {
-						$.get("/player/json/use/" + data['restore_tonus'] + "/", function(data) {
-							if (typeof(data['fullenergyin']) != 'undefinded') {
-								player['fullenergyin'] = 0;
-								$('div.tonus-overtip-increase').html();
-							}
-							if (data['stats']['energy']) {
-								setEnergy(data['stats']['energy']);
-								AvaddonResetCooldown();
-							}
-						}, 'json');
-					}
-					else {
-						AvaddonStopBurnTonus();
-					}
-				}
-			}, 'json');
-		}
-	}
-
-	function AvaddonResetCooldown() {
-		$.post("/alley/", {action: "rest_cooldown", code: 'tonus', ajax: true}, function(data) {
-			if (data['result'] == 'ok') {
-				$('.need-some-rest .holders .timer').attr('timer',0);
-				if (data['energy'] != undefined) {
-					setEnergy(data['energy']);
-				}
-				$('.need-some-rest ').hide();
-				$('#timeout').hide();
-				$('.no-rest').show();
-				AvaddonBurnTonus(window.localStorage.avaddonBurnTonusNumber, window.localStorage.avaddonBurnTonusLevel);
-				//AvaddonLoopBurn();
-			} else {
-				showAlert(l.LANG_STR_ERROR, data['result'], true);
-			}
-		}, 'json');
-	}
-
-	function AvaddonStopBurnTonus() {
-		window.localStorage.avaddonBurnTonusActive = '0';
-		moswar.showPopup('Закончили сливать тонус', 'Все готово!', 4000);
-	}
-
-	function AvaddonBurnTonus(num, lvl) {
-		var tonus = parseInt($("#currenttonus").html());
-		if (tonus < 32 && num == 0) {
-			AvaddonStopBurnTonus();
-		}
-		else {
-			if (tonus < 32 && !avaddonFullTonus) {
-				//AvaddonUseTonus();
-				AvaddonApplyTonus();
-			}
-			else {
-				avaddonFullTonus = false;
-				window.localStorage.avaddonBurnTonusNumber = num;
-				window.localStorage.avaddonBurnTonusLevel = lvl;
-				window.localStorage.avaddonBurnTonusActive = '1';
-				if ($("#alley-search-werewolf-tab").length > 0) {
-					$("#alley-search-werewolf-tab").click();
-				}
-				if ($("#searchLevelFormWerewolf").length == 1 || $("#alley-search-werewolf-tab").length > 0) {
-					setTimeout('$("input[name=\'minlevel\']").val(window.localStorage.avaddonBurnTonusLevel);$("input[name=\'maxlevel\']").val(window.localStorage.avaddonBurnTonusLevel);$("#searchLevelFormWerewolf").trigger("submit")', 2000);
-				}
-				else
-					setTimeout('$("input[name=\'minlevel\']").val(window.localStorage.avaddonBurnTonusLevel);$("input[name=\'maxlevel\']").val(window.localStorage.avaddonBurnTonusLevel);$("#searchLevelForm").trigger("submit")', 2000);
-			}
 		}
 	}
