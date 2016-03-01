@@ -3,19 +3,23 @@
         
         "blurb",
         
-        "brain teasers",
+        "Brain Teasers",
         
-        "general",
+        "General",
         
-        "ranting",
+        "Ranting",
         
         "mobile",
         
         "fun",
         
+        "ranting",
+        
         "technical",
         
         "enlightening",
+        
+        "Mobile",
         
         "android",
         
@@ -27,7 +31,9 @@
         
         "ios",
         
-        "inspirational",
+        "general",
+        
+        "Inspirational",
         
         "tips",
         
@@ -47,7 +53,9 @@
         
         "random",
         
-        "article"
+        "article",
+        
+        "reference"
         
     ]
 }

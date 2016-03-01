@@ -455,7 +455,11 @@
         
         "tarantool",
         
-        "highload"
+        "highload",
+        
+        "virtualbox",
+        
+        "vm"
         
     ]
 }

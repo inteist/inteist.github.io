@@ -2,27 +2,39 @@
     "posts": [
         
         {
+            "title": "System Chaos - Quote",
+            "url": "http://inteist.com/system-chaos-quote/",
+            "date": "2016-02-29T20:59:00-05:00"
+        },
+        
+        {
+            "title": "Some Basic Useful VirtualBox terminal commands",
+            "url": "http://inteist.com/some-basic-useful-virtualbox-terminal-commands/",
+            "date": "2016-02-29T18:21:00-05:00"
+        },
+        
+        {
             "title": "Good Idea - Quote",
             "url": "http://inteist.com/good-idea-quote/",
-            "date": "2015-12-20T00:51:00-04:00"
+            "date": "2015-12-19T23:51:00-05:00"
         },
         
         {
             "title": "Tarantool - Fast in Memory Database for HOT DATA",
-            "url": "http://inteist.com/tarantool---fast-in-memory-database-for-hot-data/",
-            "date": "2015-12-10T15:38:00-04:00"
+            "url": "http://inteist.com/tarantool-fast-in-memory-database-for-hot-data/",
+            "date": "2015-12-10T14:38:00-05:00"
         },
         
         {
             "title": "Atom editor search highlight style",
             "url": "http://inteist.com/atom-editor-search-highlight-style/",
-            "date": "2015-12-10T00:03:00-04:00"
+            "date": "2015-12-09T23:03:00-05:00"
         },
         
         {
             "title": "Subset Test in Java",
             "url": "http://inteist.com/subset-test-in-java/",
-            "date": "2015-11-13T16:53:00-04:00"
+            "date": "2015-11-13T15:53:00-05:00"
         },
         
         {
@@ -63,13 +75,13 @@
         
         {
             "title": "Javascript - Get the Day of The Week",
-            "url": "http://inteist.com/javascript---get-the-day-of-the-week/",
+            "url": "http://inteist.com/javascript-get-the-day-of-the-week/",
             "date": "2015-07-26T18:49:00-04:00"
         },
         
         {
             "title": "Javascript - Date and Time for any TimeZone",
-            "url": "http://inteist.com/javascript---date-and-time-for-any-timezone/",
+            "url": "http://inteist.com/javascript-date-and-time-for-any-timezone/",
             "date": "2015-07-18T12:18:00-04:00"
         },
         
