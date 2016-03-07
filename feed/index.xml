@@ -7,6 +7,18 @@
         <atom:link href="http://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Git - Salvaging Lost Commits</title>
+                
+                
+                    <description>&lt;p&gt;If you have not run a &lt;code&gt;gc&lt;/code&gt; yet and it has been less than 2 weeks (default gc setting) since the commits you lost were created you are in luck.&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 07 Mar 2016 15:26:00 -0500</pubDate>
+                <link>http://inteist.com/git-salvaging-lost-commits/</link>
+                <guid isPermaLink="true">http://inteist.com/git-salvaging-lost-commits/</guid>
+            </item>
+        
+            <item>
                 <title>System Chaos - Quote</title>
                 
                 
@@ -241,18 +253,6 @@ is doomed to be in a state of chaos
                 <pubDate>Fri, 08 May 2015 16:42:00 -0400</pubDate>
                 <link>http://inteist.com/concise-code-readability-vs-obscurity/</link>
                 <guid isPermaLink="true">http://inteist.com/concise-code-readability-vs-obscurity/</guid>
-            </item>
-        
-            <item>
-                <title>Completely Remove Pushed  Files and/or Folders from Git Repository</title>
-                
-                
-                    <description>&lt;p&gt;Here&amp;#39;s the recipe to remove the &lt;code&gt;lib&lt;/code&gt; folder. You can change the file/path matching and also limit the command for range of commits because what it actually does is basically overwriting the history and removing the unwanted files.&lt;/p&gt;
-</description>
-                
-                <pubDate>Sun, 03 May 2015 13:50:00 -0400</pubDate>
-                <link>http://inteist.com/remove-pushed-files-folders-from-git-repo/</link>
-                <guid isPermaLink="true">http://inteist.com/remove-pushed-files-folders-from-git-repo/</guid>
             </item>
         
     </channel>

@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Git - Salvaging Lost Commits",
+            "url": "http://inteist.com/git-salvaging-lost-commits/",
+            "date": "2016-03-07T15:26:00-05:00"
+        },
+        
+        {
             "title": "System Chaos - Quote",
             "url": "http://inteist.com/system-chaos-quote/",
             "date": "2016-02-29T20:59:00-05:00"

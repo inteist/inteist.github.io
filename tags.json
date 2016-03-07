@@ -459,7 +459,9 @@
         
         "virtualbox",
         
-        "vm"
+        "vm",
+        
+        "Git"
         
     ]
 }
