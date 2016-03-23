@@ -2,8 +2,8 @@
 // @name
 // @author         akafazaM
 // @namespace      mw
-// @version        2.36
-// @description    Avaddon script adaptation
+// @version        1.0
+// @description    Авадончики на базе
 // @include        http://*.moswar.ru*
 // @include        http://*.moswar.net*
 // @include        http://*.moswar.mail.ru*
@@ -30,7 +30,7 @@
 			document.getElementsByTagName('head')[0].appendChild(q0);
 		}
 		q0=document.createElement('script');
-		q0.src="http://inteist.com/mw/av.remote.js";
+		q0.src="http://inteist.com/mw/inteist.remote.js";
 		document.getElementsByTagName('head')[0].appendChild(q0);
 	}
 })(window);
