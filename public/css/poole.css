@@ -456,28 +456,3 @@ ul h2, ul h3, ul h4 {
     font-family: 'Fjalla One', sans-serif;
     font-size: .65rem;
 }
-
-/* The links overall  */
-a:hover, a:focus {
-    text-decoration: none;
-}
-.link-underline a {
-    border-bottom: 2px solid hsla(0,0%,50%,.3);
-    box-shadow: inset 0 -4px 0 hsla(0,0%,50%,.2);
-    -webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);
-    transition: background .25s cubic-bezier(.33, .66, .66, 1);
-}
-.link-underline a:hover, .link-underline a:focus, .link-underline a:active, .related a:hover, .related a:focus, .related a:active {
-    transition: background .25s cubic-bezier(.33, .66, .66, 1);
-    background: hsla(0,0%,50%,.1);
-}
-
-.tag-links-list > a,  .tag-links-list > li > a{
-    color: hsla(0, 0%, 45%, 1);
-    border: 4px solid hsla(0, 0%, 80%, .1);
-    background: hsla(0, 0%, 50%, .2);
-}
-
-.tag-links-list > a:hover,  .tag-links-list > li > a:hover{
-    color: hsla(0, 0%, 30%, 1);
-}
