@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://inteist.com//google-i-o-videos-list/</loc>
+<lastmod>2016-05-20T18:37:00-04:00</lastmod>
+</url>
+<url>
 <loc>http://inteist.com//git-salvaging-lost-commits/</loc>
 <lastmod>2016-03-07T15:26:00-05:00</lastmod>
 </url>
@@ -1611,5 +1615,8 @@
 </url>
 <url>
 <loc>http://inteist.com//tag/git/</loc>
+</url>
+<url>
+<loc>http://inteist.com//tag/conference/</loc>
 </url>
 </urlset>

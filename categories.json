@@ -55,7 +55,9 @@
         
         "article",
         
-        "reference"
+        "reference",
+        
+        "ref"
         
     ]
 }

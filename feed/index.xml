@@ -7,6 +7,18 @@
         <atom:link href="http://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Google I/O Videos List</title>
+                
+                
+                    <description>&lt;h2 id=&quot;http-bit-ly-gio2016videos&quot;&gt;&lt;a href=&quot;http://bit.ly/gio2016videos&quot;&gt;http://bit.ly/gio2016videos&lt;/a&gt;&lt;/h2&gt;
+</description>
+                
+                <pubDate>Fri, 20 May 2016 18:37:00 -0400</pubDate>
+                <link>http://inteist.com/google-i-o-videos-list/</link>
+                <guid isPermaLink="true">http://inteist.com/google-i-o-videos-list/</guid>
+            </item>
+        
+            <item>
                 <title>Git - Salvaging Lost Commits</title>
                 
                 
@@ -241,18 +253,6 @@ is doomed to be in a state of chaos
                 <pubDate>Sat, 09 May 2015 01:40:00 -0400</pubDate>
                 <link>http://inteist.com/javascript-generate-pseudo-random-set/</link>
                 <guid isPermaLink="true">http://inteist.com/javascript-generate-pseudo-random-set/</guid>
-            </item>
-        
-            <item>
-                <title>Concise Code - Where to Draw Readability and Obscurity Line?</title>
-                
-                
-                    <description>&lt;p&gt;I have recently found myself writing this code and I wondered, should I be writing such code at all? Is it too obscure?&lt;/p&gt;
-</description>
-                
-                <pubDate>Fri, 08 May 2015 16:42:00 -0400</pubDate>
-                <link>http://inteist.com/concise-code-readability-vs-obscurity/</link>
-                <guid isPermaLink="true">http://inteist.com/concise-code-readability-vs-obscurity/</guid>
             </item>
         
     </channel>
