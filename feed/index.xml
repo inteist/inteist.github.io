@@ -7,6 +7,20 @@
         <atom:link href="http://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Git + Trello Integration</title>
+                
+                
+                    <description>&lt;hr&gt;
+
+&lt;h1 id=&quot;environment-config&quot;&gt;Environment config&lt;/h1&gt;
+</description>
+                
+                <pubDate>Mon, 23 May 2016 00:31:00 -0400</pubDate>
+                <link>http://inteist.com/git-trello-integration/</link>
+                <guid isPermaLink="true">http://inteist.com/git-trello-integration/</guid>
+            </item>
+        
+            <item>
                 <title>Google I/O Videos List</title>
                 
                 
@@ -241,18 +255,6 @@ is doomed to be in a state of chaos
                 <pubDate>Sat, 09 May 2015 19:09:00 -0400</pubDate>
                 <link>http://inteist.com/android-material-colors/</link>
                 <guid isPermaLink="true">http://inteist.com/android-material-colors/</guid>
-            </item>
-        
-            <item>
-                <title>Javascript - Generate Pseudo Random NON REPEATING Array of Numbers</title>
-                
-                
-                    <description>&lt;p&gt;I have recently had to have a random non repeating numbers. So I used these 2 methods to first generate the set and then shuffle it.&lt;/p&gt;
-</description>
-                
-                <pubDate>Sat, 09 May 2015 01:40:00 -0400</pubDate>
-                <link>http://inteist.com/javascript-generate-pseudo-random-set/</link>
-                <guid isPermaLink="true">http://inteist.com/javascript-generate-pseudo-random-set/</guid>
             </item>
         
     </channel>
