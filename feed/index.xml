@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
-        <title>Inteist&#39;s Blog</title>
+        <title></title>
         <description>I code for living</description>
-        <link>http://inteist.com</link>
-        <atom:link href="http://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
+        <link>https://inteist.com</link>
+        <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
                 <title>Git + Trello Integration</title>
@@ -16,8 +16,8 @@
 </description>
                 
                 <pubDate>Mon, 23 May 2016 00:31:00 -0400</pubDate>
-                <link>http://inteist.com/git-trello-integration/</link>
-                <guid isPermaLink="true">http://inteist.com/git-trello-integration/</guid>
+                <link>https://inteist.com/git-trello-integration/</link>
+                <guid isPermaLink="true">https://inteist.com/git-trello-integration/</guid>
             </item>
         
             <item>
@@ -28,8 +28,8 @@
 </description>
                 
                 <pubDate>Fri, 20 May 2016 18:37:00 -0400</pubDate>
-                <link>http://inteist.com/google-i-o-videos-list/</link>
-                <guid isPermaLink="true">http://inteist.com/google-i-o-videos-list/</guid>
+                <link>https://inteist.com/google-i-o-videos-list/</link>
+                <guid isPermaLink="true">https://inteist.com/google-i-o-videos-list/</guid>
             </item>
         
             <item>
@@ -40,8 +40,8 @@
 </description>
                 
                 <pubDate>Mon, 07 Mar 2016 15:26:00 -0500</pubDate>
-                <link>http://inteist.com/git-salvaging-lost-commits/</link>
-                <guid isPermaLink="true">http://inteist.com/git-salvaging-lost-commits/</guid>
+                <link>https://inteist.com/git-salvaging-lost-commits/</link>
+                <guid isPermaLink="true">https://inteist.com/git-salvaging-lost-commits/</guid>
             </item>
         
             <item>
@@ -56,8 +56,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Mon, 29 Feb 2016 20:59:00 -0500</pubDate>
-                <link>http://inteist.com/system-chaos-quote/</link>
-                <guid isPermaLink="true">http://inteist.com/system-chaos-quote/</guid>
+                <link>https://inteist.com/system-chaos-quote/</link>
+                <guid isPermaLink="true">https://inteist.com/system-chaos-quote/</guid>
             </item>
         
             <item>
@@ -69,8 +69,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Mon, 29 Feb 2016 18:21:00 -0500</pubDate>
-                <link>http://inteist.com/some-basic-useful-virtualbox-terminal-commands/</link>
-                <guid isPermaLink="true">http://inteist.com/some-basic-useful-virtualbox-terminal-commands/</guid>
+                <link>https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</link>
+                <guid isPermaLink="true">https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</guid>
             </item>
         
             <item>
@@ -83,8 +83,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sat, 19 Dec 2015 23:51:00 -0500</pubDate>
-                <link>http://inteist.com/good-idea-quote/</link>
-                <guid isPermaLink="true">http://inteist.com/good-idea-quote/</guid>
+                <link>https://inteist.com/good-idea-quote/</link>
+                <guid isPermaLink="true">https://inteist.com/good-idea-quote/</guid>
             </item>
         
             <item>
@@ -95,8 +95,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Thu, 10 Dec 2015 14:38:00 -0500</pubDate>
-                <link>http://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</link>
-                <guid isPermaLink="true">http://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</guid>
+                <link>https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</link>
+                <guid isPermaLink="true">https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</guid>
             </item>
         
             <item>
@@ -107,8 +107,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Wed, 09 Dec 2015 23:03:00 -0500</pubDate>
-                <link>http://inteist.com/atom-editor-search-highlight-style/</link>
-                <guid isPermaLink="true">http://inteist.com/atom-editor-search-highlight-style/</guid>
+                <link>https://inteist.com/atom-editor-search-highlight-style/</link>
+                <guid isPermaLink="true">https://inteist.com/atom-editor-search-highlight-style/</guid>
             </item>
         
             <item>
@@ -119,8 +119,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Fri, 13 Nov 2015 15:53:00 -0500</pubDate>
-                <link>http://inteist.com/subset-test-in-java/</link>
-                <guid isPermaLink="true">http://inteist.com/subset-test-in-java/</guid>
+                <link>https://inteist.com/subset-test-in-java/</link>
+                <guid isPermaLink="true">https://inteist.com/subset-test-in-java/</guid>
             </item>
         
             <item>
@@ -131,8 +131,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Tue, 27 Oct 2015 00:29:00 -0400</pubDate>
-                <link>http://inteist.com/ls-safari-history-on-os-x-using-oneliner/</link>
-                <guid isPermaLink="true">http://inteist.com/ls-safari-history-on-os-x-using-oneliner/</guid>
+                <link>https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</link>
+                <guid isPermaLink="true">https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</guid>
             </item>
         
             <item>
@@ -145,8 +145,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Wed, 07 Oct 2015 20:46:00 -0400</pubDate>
-                <link>http://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</link>
-                <guid isPermaLink="true">http://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</guid>
+                <link>https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</link>
+                <guid isPermaLink="true">https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</guid>
             </item>
         
             <item>
@@ -157,8 +157,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sun, 13 Sep 2015 17:40:00 -0400</pubDate>
-                <link>http://inteist.com/clang-format-style-file-for-ios-projects/</link>
-                <guid isPermaLink="true">http://inteist.com/clang-format-style-file-for-ios-projects/</guid>
+                <link>https://inteist.com/clang-format-style-file-for-ios-projects/</link>
+                <guid isPermaLink="true">https://inteist.com/clang-format-style-file-for-ios-projects/</guid>
             </item>
         
             <item>
@@ -169,8 +169,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sun, 13 Sep 2015 17:07:00 -0400</pubDate>
-                <link>http://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</link>
-                <guid isPermaLink="true">http://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</guid>
+                <link>https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</link>
+                <guid isPermaLink="true">https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</guid>
             </item>
         
             <item>
@@ -181,8 +181,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Mon, 24 Aug 2015 23:45:00 -0400</pubDate>
-                <link>http://inteist.com/uncrustify-whole-ios-project/</link>
-                <guid isPermaLink="true">http://inteist.com/uncrustify-whole-ios-project/</guid>
+                <link>https://inteist.com/uncrustify-whole-ios-project/</link>
+                <guid isPermaLink="true">https://inteist.com/uncrustify-whole-ios-project/</guid>
             </item>
         
             <item>
@@ -193,8 +193,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sat, 22 Aug 2015 13:43:00 -0400</pubDate>
-                <link>http://inteist.com/tv-by-steve-cutts/</link>
-                <guid isPermaLink="true">http://inteist.com/tv-by-steve-cutts/</guid>
+                <link>https://inteist.com/tv-by-steve-cutts/</link>
+                <guid isPermaLink="true">https://inteist.com/tv-by-steve-cutts/</guid>
             </item>
         
             <item>
@@ -205,8 +205,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sun, 26 Jul 2015 18:49:00 -0400</pubDate>
-                <link>http://inteist.com/javascript-get-the-day-of-the-week/</link>
-                <guid isPermaLink="true">http://inteist.com/javascript-get-the-day-of-the-week/</guid>
+                <link>https://inteist.com/javascript-get-the-day-of-the-week/</link>
+                <guid isPermaLink="true">https://inteist.com/javascript-get-the-day-of-the-week/</guid>
             </item>
         
             <item>
@@ -217,8 +217,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sat, 18 Jul 2015 12:18:00 -0400</pubDate>
-                <link>http://inteist.com/javascript-date-and-time-for-any-timezone/</link>
-                <guid isPermaLink="true">http://inteist.com/javascript-date-and-time-for-any-timezone/</guid>
+                <link>https://inteist.com/javascript-date-and-time-for-any-timezone/</link>
+                <guid isPermaLink="true">https://inteist.com/javascript-date-and-time-for-any-timezone/</guid>
             </item>
         
             <item>
@@ -229,8 +229,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Tue, 16 Jun 2015 13:48:00 -0400</pubDate>
-                <link>http://inteist.com/handy-adb-oneliners-for-android/</link>
-                <guid isPermaLink="true">http://inteist.com/handy-adb-oneliners-for-android/</guid>
+                <link>https://inteist.com/handy-adb-oneliners-for-android/</link>
+                <guid isPermaLink="true">https://inteist.com/handy-adb-oneliners-for-android/</guid>
             </item>
         
             <item>
@@ -241,8 +241,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Mon, 11 May 2015 10:43:00 -0400</pubDate>
-                <link>http://inteist.com/installing-golang-with-gvm-and-zsh/</link>
-                <guid isPermaLink="true">http://inteist.com/installing-golang-with-gvm-and-zsh/</guid>
+                <link>https://inteist.com/installing-golang-with-gvm-and-zsh/</link>
+                <guid isPermaLink="true">https://inteist.com/installing-golang-with-gvm-and-zsh/</guid>
             </item>
         
             <item>
@@ -253,8 +253,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sat, 09 May 2015 19:09:00 -0400</pubDate>
-                <link>http://inteist.com/android-material-colors/</link>
-                <guid isPermaLink="true">http://inteist.com/android-material-colors/</guid>
+                <link>https://inteist.com/android-material-colors/</link>
+                <guid isPermaLink="true">https://inteist.com/android-material-colors/</guid>
             </item>
         
     </channel>
