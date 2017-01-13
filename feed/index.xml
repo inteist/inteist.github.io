@@ -7,6 +7,19 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Android - working with Gradle: purging gradle cache</title>
+                
+                
+                    <description>&lt;p&gt;To force refresh the dependencies for gradle build you can first try running the task with
+&lt;code&gt;--refresh-dependencies&lt;/code&gt; switch&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 13 Jan 2017 15:28:00 -0500</pubDate>
+                <link>https://inteist.com/android-working-with-gradle-purging-gradle-cache/</link>
+                <guid isPermaLink="true">https://inteist.com/android-working-with-gradle-purging-gradle-cache/</guid>
+            </item>
+        
+            <item>
                 <title>Git + Trello Integration</title>
                 
                 
@@ -243,18 +256,6 @@ is doomed to be in a state of chaos
                 <pubDate>Mon, 11 May 2015 10:43:00 -0400</pubDate>
                 <link>https://inteist.com/installing-golang-with-gvm-and-zsh/</link>
                 <guid isPermaLink="true">https://inteist.com/installing-golang-with-gvm-and-zsh/</guid>
-            </item>
-        
-            <item>
-                <title>Android Material Colors Resource</title>
-                
-                
-                    <description>&lt;p&gt;Here&amp;#39;s the latest material colors as an XML resource.&lt;/p&gt;
-</description>
-                
-                <pubDate>Sat, 09 May 2015 19:09:00 -0400</pubDate>
-                <link>https://inteist.com/android-material-colors/</link>
-                <guid isPermaLink="true">https://inteist.com/android-material-colors/</guid>
             </item>
         
     </channel>
