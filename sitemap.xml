@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://inteist.com//os-x-quick-dock-setup/</loc>
+<lastmod>2017-02-04T21:24:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://inteist.com//android-working-with-gradle-purging-gradle-cache/</loc>
 <lastmod>2017-01-13T15:28:00-05:00</lastmod>
 </url>

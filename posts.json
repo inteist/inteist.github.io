@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "OS X Quick Dock Setup",
+            "url": "https://inteist.com/os-x-quick-dock-setup/",
+            "date": "2017-02-04T21:24:00-05:00"
+        },
+        
+        {
             "title": "Android - working with Gradle: purging gradle cache",
             "url": "https://inteist.com/android-working-with-gradle-purging-gradle-cache/",
             "date": "2017-01-13T15:28:00-05:00"
