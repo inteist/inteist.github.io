@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Scheduling randomized cron within an hour</title>
+                
+                
+                    <description>&lt;p&gt;This will run the cron job every day sometime between 2pm-3pm and 2am–3am  randomize&lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 18 Feb 2017 12:24:00 -0500</pubDate>
+                <link>https://inteist.com/scheduling-randomized-cron-within-an-hour/</link>
+                <guid isPermaLink="true">https://inteist.com/scheduling-randomized-cron-within-an-hour/</guid>
+            </item>
+        
+            <item>
                 <title>OS X Quick Dock Setup</title>
                 
                 
@@ -247,18 +259,6 @@ is doomed to be in a state of chaos
                 <pubDate>Sat, 18 Jul 2015 12:18:00 -0400</pubDate>
                 <link>https://inteist.com/javascript-date-and-time-for-any-timezone/</link>
                 <guid isPermaLink="true">https://inteist.com/javascript-date-and-time-for-any-timezone/</guid>
-            </item>
-        
-            <item>
-                <title>Handy adb Oneliners for Android</title>
-                
-                
-                    <description>&lt;p&gt;Oneliner to speed up screenshot taking process.&lt;/p&gt;
-</description>
-                
-                <pubDate>Tue, 16 Jun 2015 13:48:00 -0400</pubDate>
-                <link>https://inteist.com/handy-adb-oneliners-for-android/</link>
-                <guid isPermaLink="true">https://inteist.com/handy-adb-oneliners-for-android/</guid>
             </item>
         
     </channel>

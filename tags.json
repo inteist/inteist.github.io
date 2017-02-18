@@ -465,7 +465,11 @@
         
         "conference",
         
-        "trello"
+        "trello",
+        
+        "cron",
+        
+        "devops"
         
     ]
 }

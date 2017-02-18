@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://inteist.com//scheduling-randomized-cron-within-an-hour/</loc>
+<lastmod>2017-02-18T12:24:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://inteist.com//os-x-quick-dock-setup/</loc>
 <lastmod>2017-02-04T21:24:00-05:00</lastmod>
 </url>
@@ -1636,5 +1640,11 @@
 </url>
 <url>
 <loc>https://inteist.com//tag/trello/</loc>
+</url>
+<url>
+<loc>https://inteist.com//tag/cron/</loc>
+</url>
+<url>
+<loc>https://inteist.com//tag/devops/</loc>
 </url>
 </urlset>
