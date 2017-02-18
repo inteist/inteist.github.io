@@ -7,30 +7,15 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
-                <title>Scheduling randomized cron within an hour</title>
+                <title>Scheduling randomized cron - within an hour or within a minute</title>
                 
                 
-                    <description>&lt;p&gt;This will run the cron job every day sometime between 2pm-3pm and 2am–3am  randomize&lt;/p&gt;
+                    <description>&lt;p&gt;It is &lt;strong&gt;usually&lt;/strong&gt; a good idea in general to add slight randomness to the start time of a cron job, especially if you are accessing some 3-d party resource to prevent flooding of 3-d party at the top of the hour or at the top of the minute.&lt;/p&gt;
 </description>
                 
                 <pubDate>Sat, 18 Feb 2017 12:24:00 -0500</pubDate>
                 <link>https://inteist.com/scheduling-randomized-cron-within-an-hour/</link>
                 <guid isPermaLink="true">https://inteist.com/scheduling-randomized-cron-within-an-hour/</guid>
-            </item>
-        
-            <item>
-                <title>OS X Quick Dock Setup</title>
-                
-                
-                    <description>&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;defaults write com.apple.dock autohide -bool &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-defaults write com.apple.dock autohide-delay -float &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-defaults write com.apple.dock autohide-time-modifier -float &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
-killall Dock
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-                
-                <pubDate>Sat, 04 Feb 2017 21:24:00 -0500</pubDate>
-                <link>https://inteist.com/os-x-quick-dock-setup/</link>
-                <guid isPermaLink="true">https://inteist.com/os-x-quick-dock-setup/</guid>
             </item>
         
             <item>
@@ -259,6 +244,18 @@ is doomed to be in a state of chaos
                 <pubDate>Sat, 18 Jul 2015 12:18:00 -0400</pubDate>
                 <link>https://inteist.com/javascript-date-and-time-for-any-timezone/</link>
                 <guid isPermaLink="true">https://inteist.com/javascript-date-and-time-for-any-timezone/</guid>
+            </item>
+        
+            <item>
+                <title>Handy adb Oneliners for Android</title>
+                
+                
+                    <description>&lt;p&gt;Oneliner to speed up screenshot taking process.&lt;/p&gt;
+</description>
+                
+                <pubDate>Tue, 16 Jun 2015 13:48:00 -0400</pubDate>
+                <link>https://inteist.com/handy-adb-oneliners-for-android/</link>
+                <guid isPermaLink="true">https://inteist.com/handy-adb-oneliners-for-android/</guid>
             </item>
         
     </channel>

@@ -2,15 +2,9 @@
     "posts": [
         
         {
-            "title": "Scheduling randomized cron within an hour",
+            "title": "Scheduling randomized cron - within an hour or within a minute",
             "url": "https://inteist.com/scheduling-randomized-cron-within-an-hour/",
             "date": "2017-02-18T12:24:00-05:00"
-        },
-        
-        {
-            "title": "OS X Quick Dock Setup",
-            "url": "https://inteist.com/os-x-quick-dock-setup/",
-            "date": "2017-02-04T21:24:00-05:00"
         },
         
         {
@@ -329,6 +323,12 @@
             "title": "Google Wave Had So Much More Potential Than Slack, HipChat, FlowDoc and Co.",
             "url": "https://inteist.com/google-wave-vs-slack-hipchat/",
             "date": "2015-03-02T19:28:06-05:00"
+        },
+        
+        {
+            "title": "OS X Quick Dock Setup",
+            "url": "https://inteist.com/os-x-quick-dock-setup/",
+            "date": "2015-02-04T21:24:00-05:00"
         },
         
         {
