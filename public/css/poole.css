@@ -66,6 +66,7 @@ body {
 
 a {
     color: hsla(0,0%,50%,1);
+    color: hsl(189deg 98% 23%);
     text-decoration: none;
     transition: color ease 0.25s;
 }
@@ -79,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
     font-weight: bold;
     line-height: 1.25;
-    color: #313131;
+    color: #313131;    
     text-rendering: optimizeLegibility;
 }
 h1 {
@@ -97,6 +98,7 @@ h4, h5, h6 {
     margin-top: 1rem;
     font-size: 1rem;
 }
+
 /* Body text */
 
 p {
@@ -207,6 +209,7 @@ blockquote {
 blockquote p: last-child {
     margin-bottom: 0;
 }
+
 @media (min-width: 30em) {
     blockquote {
         padding-right: 5rem;
@@ -343,7 +346,7 @@ tbody tr: nth-child(odd) td, tbody tr: nth-child(odd) th {
     color: #999;
 }
 .related-posts li a:hover {
-    color: hsla(0, 0%, 40%, 1);
+    color: rgb(0, 171, 223);
     text-decoration: none;
 }
 .related-posts li a:hover small {
@@ -399,7 +402,7 @@ a.pagination-item:hover {
      border-top-right-radius: 4px;
      border-bottom-right-radius: 4px;
 }
-}
+
 /*Need to only make it for the archive and tags*/
 
 .sidebar-nav ul, .related ul, #archive ul, #tags ul {
@@ -416,7 +419,7 @@ ul h2, ul h3, ul h4 {
 /* Sidebar links */
 
 .sidebar a {
-    color: #dedede;
+    color: #b6b6b6;
     position: relative;
     text-decoration: none;
 }
@@ -455,4 +458,8 @@ ul h2, ul h3, ul h4 {
 .copyright {
     font-family: 'Fjalla One', sans-serif;
     font-size: .65rem;
+}
+
+#similar-posts, #site-name, #latest-posts  {
+    color: #ff3100;
 }

@@ -75,8 +75,6 @@
         
         "chromium",
         
-        "iphone",
-        
         "driver",
         
         "droid",
@@ -453,15 +451,21 @@
         
         "blurb",
         
+        "editors",
+        
+        "devtools",
+        
         "tarantool",
         
         "highload",
         
+        "quotes",
+        
+        "wisdom",
+        
         "virtualbox",
         
         "vm",
-        
-        "Git",
         
         "conference",
         
