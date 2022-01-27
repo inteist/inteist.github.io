@@ -1,407 +1,415 @@
-<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Java Code to Work With MillennialMedia, SMAATO and NexAge Web Advertising APIs &middot; Inteist </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='//fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <link rel="canonical" href=" https://inteist.com/java-code-to-work-with-millennialmedia-smaato-and-nexage-web-advertising-apis/" /> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-2630485-14', 'auto'); ga('send', 'pageview'); </script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/dev-resources/">Dev Resources</a> <a class="sidebar-nav-item" href="/figlet/">Figlet</a> <a class="sidebar-nav-item" href="/git/">Git Tips</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/tags/">Tags</a> <a class="sidebar-nav-item" href="/archive/">Archive</a> <a class="sidebar-nav-item" href="/me/">Me</a> </nav> <p class="copyright">&copy; 2010 </p> </div> </div> <div class="content container"> <div class="reading-time"> <p title="3293 words">~ 27 min read</p> </div> <div class="post link-underline"> <h1 class="post-title">Java Code to Work With MillennialMedia, SMAATO and NexAge Web Advertising APIs</h1> <span class="post-date">18 Dec 2010</span> <p>I wrote yesterday about [link id='434' text="my (mostly) negative experience working with these companies"], but some of you might give it a try and maybe your results will be much better or maybe things have actually improved lately. In any case, the code here should get you up to speed covering most of the dirty work of working with these companies' APIs.</p> <p>I will post 4 classes here:</p> <ul> <li><strong>AdGrabber </strong>-  main abstract class to give all other specific grabbers structure and save some repeating code</li> <li><strong>MillenialAdGrabber </strong>- MillennialMedia specific grabber</li> <li><strong>NexAgeAdGrabber </strong>- right, NexAge specific grabber</li> <li><strong>SomaAdGrabber </strong>- the SMAATO ad grabber. Their ad platform is dubbed SOMA, hence the name</li> </ul> <p>If you are using this code, please give an attribution when applicable with a link to this post.</p> <p><!--more--></p> <h2><strong>AdGrabber </strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="cm">/**</span>
-<span class="cm"> * Abstract class for ad unit grabbing. Inheriting subclasses will implement ad serving platform specific web service interfaces.</span>
-<span class="cm"> *</span>
-<span class="cm"> * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/</span>
-<span class="cm"> */</span>
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Java Code to Work With MillennialMedia, SMAATO and NexAge Web Advertising APIs &middot; Inteist </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='//fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <link rel="canonical" href=" https://inteist.com/java-code-to-work-with-millennialmedia-smaato-and-nexage-web-advertising-apis/" /> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <!-- Google Analytics --> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-2630485-14', 'auto'); ga('send', 'pageview'); </script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/dev-resources/">Dev Resources</a> <a class="sidebar-nav-item" href="/figlet/">Figlet</a> <a class="sidebar-nav-item" href="/git/">Git Tips</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/tags/">Tags</a> <a class="sidebar-nav-item" href="/archive/">Archive</a> <a class="sidebar-nav-item" href="/me/">Me</a> </nav> <p class="copyright">&copy; 2010 </p> </div> </div> <div class="content container"> <div class="reading-time"> <p title="3195 words">~ 26 min read</p> </div> <div class="post link-underline"> <h1 class="post-title">Java Code to Work With MillennialMedia, SMAATO and NexAge Web Advertising APIs</h1> <span class="post-date">18 Dec 2010</span> <p>I wrote yesterday about [link id='434' text="my (mostly) negative experience working with these companies"], but some of you might give it a try and maybe your results will be much better or maybe things have actually improved lately. In any case, the code here should get you up to speed covering most of the dirty work of working with these companies' APIs.</p> <p>I will post 4 classes here:</p> <ul> <li><strong>AdGrabber </strong>-  main abstract class to give all other specific grabbers structure and save some repeating code</li> <li><strong>MillenialAdGrabber </strong>- MillennialMedia specific grabber</li> <li><strong>NexAgeAdGrabber </strong>- right, NexAge specific grabber</li> <li><strong>SomaAdGrabber </strong>- the SMAATO ad grabber. Their ad platform is dubbed SOMA, hence the name</li> </ul> <p>If you are using this code, please give an attribution when applicable with a link to this post.</p> <p><!--more--></p> <h2><strong>AdGrabber </strong></h2> <div class="language-java highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="cm">/**
+ * Abstract class for ad unit grabbing. Inheriting subclasses will implement ad serving platform specific web service interfaces.
+ *
+ * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/
+ */</span>
 <span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">AdGrabber</span> <span class="o">{</span>
 
-    <span class="kd">protected</span> <span class="n">HashTableExt</span> <span class="n">_adFieldPropertyBag</span><span class="o">;</span>
+	<span class="kd">protected</span> <span class="nc">HashTableExt</span> <span class="n">_adFieldPropertyBag</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="nf">AdGrabber</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">_adFieldPropertyBag</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashTableExt</span><span class="o">();</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="n">_adFieldPropertyBag</span> <span class="o">=</span> <span class="n">adFieldPropertyBag</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+	<span class="kd">public</span> <span class="nf">AdGrabber</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">_adFieldPropertyBag</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashTableExt</span><span class="o">();</span>
+		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="n">_adFieldPropertyBag</span> <span class="o">=</span> <span class="n">adFieldPropertyBag</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     * Inheriting classes have to implement the grabbing and the parsing of the ad from the appropriate ad serving web service</span>
-<span class="cm">     *</span>
-<span class="cm">     * @return</span>
-<span class="cm">     *          - an {@link Ad} object populated with the values parsed from the appropriate ad serving web service</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="n">Ad</span> <span class="nf">grabTheAd</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="n">Document</span> <span class="n">adResponseDoc</span> <span class="o">=</span> <span class="n">StreamUtils</span><span class="o">.</span><span class="na">parseRemoteXML</span><span class="o">(</span><span class="n">getRequestURL</span><span class="o">(</span><span class="n">_adFieldPropertyBag</span><span class="o">));</span>
-            <span class="k">return</span> <span class="n">parseServerResponse</span><span class="o">(</span><span class="n">adResponseDoc</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-            <span class="c1">//Log error</span>
-        <span class="o">}</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="n">EmptyAd</span><span class="o">();</span>
-    <span class="o">}</span>
+	<span class="cm">/**
+	 * Inheriting classes have to implement the grabbing and the parsing of the ad from the appropriate ad serving web service
+	 *
+	 * @return
+	 * 			- an {@link Ad} object populated with the values parsed from the appropriate ad serving web service
+	 */</span>
+	<span class="kd">public</span> <span class="nc">Ad</span> <span class="nf">grabTheAd</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="nc">Document</span> <span class="n">adResponseDoc</span> <span class="o">=</span> <span class="nc">StreamUtils</span><span class="o">.</span><span class="na">parseRemoteXML</span><span class="o">(</span><span class="n">getRequestURL</span><span class="o">(</span><span class="n">_adFieldPropertyBag</span><span class="o">));</span>
+			<span class="k">return</span> <span class="nf">parseServerResponse</span><span class="o">(</span><span class="n">adResponseDoc</span><span class="o">);</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="c1">//Log error</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="nf">EmptyAd</span><span class="o">();</span>
+	<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">);</span>
+	<span class="kd">protected</span> <span class="kd">abstract</span> <span class="nc">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">);</span>
 
-    <span class="kd">protected</span> <span class="n">Ad</span> <span class="nf">parseServerResponse</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Ad</span> <span class="n">ad</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+	<span class="kd">protected</span> <span class="nc">Ad</span> <span class="nf">parseServerResponse</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Ad</span> <span class="n">ad</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 
-        <span class="k">if</span> <span class="o">(</span><span class="n">doc</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="n">ad</span><span class="o">;</span> <span class="c1">// basically = return null</span>
-        <span class="o">}</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">doc</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">ad</span><span class="o">;</span> <span class="c1">// basically = return null</span>
+		<span class="o">}</span>
 
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">gotProperAd</span><span class="o">(</span><span class="n">doc</span><span class="o">))</span> <span class="o">{</span>
-                <span class="k">if</span> <span class="o">(</span><span class="n">shouldParseAsImageAd</span><span class="o">(</span><span class="n">doc</span><span class="o">))</span> <span class="o">{</span>
-                    <span class="n">ad</span> <span class="o">=</span> <span class="n">parseImageAd</span><span class="o">(</span><span class="n">doc</span><span class="o">);</span>
-                <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-                    <span class="n">ad</span> <span class="o">=</span> <span class="n">parseTextAd</span><span class="o">(</span><span class="n">doc</span><span class="o">);</span>
-                <span class="o">}</span>
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">gotProperAd</span><span class="o">(</span><span class="n">doc</span><span class="o">))</span> <span class="o">{</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">shouldParseAsImageAd</span><span class="o">(</span><span class="n">doc</span><span class="o">))</span> <span class="o">{</span>
+					<span class="n">ad</span> <span class="o">=</span> <span class="n">parseImageAd</span><span class="o">(</span><span class="n">doc</span><span class="o">);</span>
+				<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+					<span class="n">ad</span> <span class="o">=</span> <span class="n">parseTextAd</span><span class="o">(</span><span class="n">doc</span><span class="o">);</span>
+				<span class="o">}</span>
 
-                <span class="n">ad</span><span class="o">.</span><span class="na">setNetwork</span><span class="o">(</span><span class="n">StringUtils</span><span class="o">.</span><span class="na">getClassName</span><span class="o">(</span><span class="k">this</span><span class="o">));</span>
+				<span class="n">ad</span><span class="o">.</span><span class="na">setNetwork</span><span class="o">(</span><span class="nc">StringUtils</span><span class="o">.</span><span class="na">getClassName</span><span class="o">(</span><span class="k">this</span><span class="o">));</span>
 
-            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span> <span class="c1">// did NOT get a proper ad</span>
-                <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EmptyAd</span><span class="o">();</span>
-            <span class="o">}</span>
+			<span class="o">}</span> <span class="k">else</span> <span class="o">{</span> <span class="c1">// did NOT get a proper ad</span>
+				<span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EmptyAd</span><span class="o">();</span>
+			<span class="o">}</span>
 
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Throwable</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
-            <span class="c1">//Log error</span>
-        <span class="o">}</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Throwable</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+			<span class="c1">//Log error</span>
+		<span class="o">}</span>
 
-        <span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
-    <span class="o">}</span>
+		<span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
+	<span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">;</span>
 
-    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="n">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
+	<span class="kd">protected</span> <span class="kd">abstract</span> <span class="nc">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">;</span>
 
-    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="n">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
+	<span class="kd">protected</span> <span class="kd">abstract</span> <span class="nc">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">;</span>
 
-    <span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
-
-<span class="o">}</span>
-</code></pre></div> <h2><strong>MillenialAdGrabber </strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="cm">/**</span>
-<span class="cm"> * Ad grabber that interfaces with Quattro Wireless service</span>
-<span class="cm"> *</span>
-<span class="cm"> * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/</span>
-<span class="cm"> */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MillenialAdGrabber</span> <span class="kd">extends</span> <span class="n">AdGrabber</span> <span class="o">{</span>
-
-    <span class="cm">/* ------------------------------------------           PUBLISHING CONSTANTS            ------------------------------------------*/</span>
-
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">APP_ID</span> <span class="o">=</span> <span class="s">&quot;YOUR_APP_ID&quot;</span><span class="o">;</span>
-
-    <span class="cm">/* ------------------------------------------                                           ------------------------------------------*/</span>
-
-    <span class="kd">public</span> <span class="nf">MillenialAdGrabber</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">);</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param adFieldPropertyBag</span>
-<span class="cm">     * @return</span>
-<span class="cm">     *          - The URL to be sent to the advertising web service</span>
-<span class="cm">     */</span>
-    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">(</span><span class="s">&quot;http://ads.mp.mydas.mobi/getAd.php5?&quot;</span><span class="o">);</span>
-
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;apid=&quot;</span> <span class="o">+</span> <span class="n">APP_ID</span><span class="o">);</span>
-
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;auid=&quot;</span> <span class="o">+</span> <span class="n">BBInfo</span><span class="o">.</span><span class="na">getUniqueDeviceHash</span><span class="o">());</span>
-
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;uip=&quot;</span> <span class="o">+</span> <span class="n">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">getIP</span><span class="o">()));</span> <span class="c1">// device IP</span>
-
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;ua=&quot;</span> <span class="o">+</span> <span class="n">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">getUserAgent</span><span class="o">()));</span> <span class="c1">// USER AGENT</span>
-
-        <span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-    <span class="o">}</span>
-
-    <span class="cm">/* ------------------------------------------------             AD response PARSING         ------------------------------------------------ */</span>
-
-    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="o">((</span><span class="n">NodeList</span><span class="o">)</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ad&quot;</span><span class="o">));</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">nl</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">()</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="mi">0</span><span class="o">;</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">isTallScreen</span><span class="o">()</span> <span class="o">||</span> <span class="n">_adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">AdAllocManager</span><span class="o">.</span><span class="na">FETCH_IMAGE_ADS</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">if</span> <span class="o">(!</span><span class="n">StringUtils</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;url&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">))))</span> <span class="o">{</span>
-                <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-
-        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">protected</span> <span class="n">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">TextAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextAd</span><span class="o">();</span>
-        <span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
-
-        <span class="c1">//parse the TEXT of the banner</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;altText&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
-
-        <span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">protected</span> <span class="n">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">ImageAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ImageAd</span><span class="o">();</span>
-        <span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
-
-        <span class="c1">//parse the IMAGE of the banner</span>
-        <span class="n">String</span> <span class="n">imageURL</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getNodeTextCumulative</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;url&quot;</span><span class="o">));</span>
-        <span class="n">EncodedImage</span> <span class="n">bannerImage</span> <span class="o">=</span> <span class="n">EncodedImage</span><span class="o">.</span><span class="na">createEncodedImage</span><span class="o">(</span><span class="n">StreamUtils</span><span class="o">.</span><span class="na">readRemoteStream</span><span class="o">(</span><span class="n">imageURL</span><span class="o">).</span><span class="na">getBytes</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setImage</span><span class="o">(</span><span class="n">bannerImage</span><span class="o">);</span>
-
-        <span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * Parse common values from the responce like the:</span>
-<span class="cm">     *  - tracking pixels/beacons</span>
-<span class="cm">     *  - the click URL</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param ad</span>
-<span class="cm">     * @param doc</span>
-<span class="cm">     */</span>
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">parseCommonAdValues</span><span class="o">(</span><span class="n">Ad</span> <span class="n">ad</span><span class="o">,</span> <span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="c1">// CLICK URL</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setClickURL</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getNodeTextCumulative</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;clickUrl&quot;</span><span class="o">)));</span>
-    <span class="o">}</span>
+	<span class="kd">protected</span> <span class="kd">abstract</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">;</span>
 
 <span class="o">}</span>
-</code></pre></div> <h2><strong>NexAgeAdGrabber</strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="cm">/**</span>
-<span class="cm"> * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/</span>
-<span class="cm"> */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NexAgeAdGrabber</span> <span class="kd">extends</span> <span class="n">AdGrabber</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="nf">NexAgeAdGrabber</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">);</span>
-    <span class="o">}</span>
+</code></pre></div></div> <h2><strong>MillenialAdGrabber </strong></h2> <div class="language-java highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="cm">/**
+ * Ad grabber that interfaces with Quattro Wireless service
+ *
+ * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MillenialAdGrabber</span> <span class="kd">extends</span> <span class="nc">AdGrabber</span> <span class="o">{</span>
 
-    <span class="cm">/* ------------------------------------------           PUBLISHING CONSTANTS            ------------------------------------------*/</span>
+	<span class="cm">/* ------------------------------------------			PUBLISHING CONSTANTS			------------------------------------------*/</span>
 
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">SITE_ID</span> <span class="o">=</span> <span class="s">&quot;YOUR_SITE_ID&quot;</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">APP_ID</span> <span class="o">=</span> <span class="s">"YOUR_APP_ID"</span><span class="o">;</span>
 
-    <span class="cm">/* ------------------------------------------                                           ------------------------------------------*/</span>
+	<span class="cm">/* ------------------------------------------											------------------------------------------*/</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param adFieldPropertyBag</span>
-<span class="cm">     * @return</span>
-<span class="cm">     *          - The URL to be sent to the advertising web service</span>
-<span class="cm">     */</span>
-    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">(</span><span class="s">&quot;http://admax.nexage.com/adServe?&quot;</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="nf">MillenialAdGrabber</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">super</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">);</span>
+	<span class="o">}</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;dcn=&quot;</span> <span class="o">+</span> <span class="n">SITE_ID</span><span class="o">);</span>
+	<span class="cm">/**
+	 *
+	 * @param adFieldPropertyBag
+	 * @return
+	 * 			- The URL to be sent to the advertising web service
+	 */</span>
+	<span class="kd">protected</span> <span class="nc">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">(</span><span class="s">"http://ads.mp.mydas.mobi/getAd.php5?"</span><span class="o">);</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;pos=&quot;</span> <span class="o">+</span> <span class="n">getAdPosition</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">));</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"apid="</span> <span class="o">+</span> <span class="no">APP_ID</span><span class="o">);</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;ip=&quot;</span> <span class="o">+</span> <span class="n">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">getIP</span><span class="o">()));</span> <span class="c1">// device IP</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;auid="</span> <span class="o">+</span> <span class="nc">BBInfo</span><span class="o">.</span><span class="na">getUniqueDeviceHash</span><span class="o">());</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;ua=&quot;</span> <span class="o">+</span> <span class="n">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">getUserAgent</span><span class="o">()));</span> <span class="c1">// device USER AGENT</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;uip="</span> <span class="o">+</span> <span class="nc">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">getIP</span><span class="o">()));</span> <span class="c1">// device IP</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;f=&quot;</span> <span class="o">+</span> <span class="s">&quot;xml&quot;</span><span class="o">);</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;ua="</span> <span class="o">+</span> <span class="nc">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">getUserAgent</span><span class="o">()));</span> <span class="c1">// USER AGENT</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;u(id)=&quot;</span> <span class="o">+</span> <span class="n">BBInfo</span><span class="o">.</span><span class="na">getUniqueDeviceHash</span><span class="o">());</span>
+		<span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+	<span class="o">}</span>
 
-        <span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-    <span class="o">}</span>
+	<span class="cm">/* ------------------------------------------------				AD response PARSING			------------------------------------------------ */</span>
 
-    <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getAdPosition</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">AdAllocManager</span><span class="o">.</span><span class="na">AD_POSITION</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//if we specified the ad position - return the specified ad position</span>
-            <span class="k">return</span> <span class="o">(</span><span class="n">String</span><span class="o">)</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">AdAllocManager</span><span class="o">.</span><span class="na">AD_POSITION</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="c1">// otherwise, use the &quot;imageonly&quot; or &quot;textonly&quot;, depending on the display size, or manual override</span>
-            <span class="k">return</span> <span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">isTallScreen</span><span class="o">()</span> <span class="o">||</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">AdAllocManager</span><span class="o">.</span><span class="na">FETCH_IMAGE_ADS</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">))</span> <span class="o">?</span> <span class="s">&quot;imageonly&quot;</span> <span class="o">:</span> <span class="s">&quot;textonly&quot;</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+	<span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="o">((</span><span class="nc">NodeList</span><span class="o">)</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ad"</span><span class="o">));</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">nl</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">()</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">Node</span> <span class="n">adsNode</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ads&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">adsNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="kt">int</span> <span class="n">adCount</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">adsNode</span><span class="o">,</span> <span class="s">&quot;count&quot;</span><span class="o">));</span>
-            <span class="k">return</span> <span class="n">adCount</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="mi">0</span><span class="o">;</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+	<span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">isTallScreen</span><span class="o">()</span> <span class="o">||</span> <span class="n">_adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">AdAllocManager</span><span class="o">.</span><span class="na">FETCH_IMAGE_ADS</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">if</span> <span class="o">(!</span><span class="nc">StringUtils</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"url"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">))))</span> <span class="o">{</span>
+				<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="n">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">ImageAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ImageAd</span><span class="o">();</span>
-        <span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
+		<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+	<span class="o">}</span>
 
-        <span class="c1">//parse the IMAGE of the banner</span>
-        <span class="n">String</span> <span class="n">imageURL</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ad:content&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="s">&quot;url&quot;</span><span class="o">);</span>
+	<span class="kd">protected</span> <span class="nc">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">TextAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TextAd</span><span class="o">();</span>
+		<span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
 
-        <span class="n">EncodedImage</span> <span class="n">bannerImage</span> <span class="o">=</span> <span class="n">EncodedImage</span><span class="o">.</span><span class="na">createEncodedImage</span><span class="o">(</span><span class="n">StreamUtils</span><span class="o">.</span><span class="na">readRemoteStream</span><span class="o">(</span><span class="n">imageURL</span><span class="o">).</span><span class="na">getBytes</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setImage</span><span class="o">(</span><span class="n">bannerImage</span><span class="o">);</span>
+		<span class="c1">//parse the TEXT of the banner</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"altText"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
 
-        <span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
-    <span class="o">}</span>
+		<span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="n">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">TextAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextAd</span><span class="o">();</span>
-        <span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
+	<span class="kd">protected</span> <span class="nc">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">ImageAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ImageAd</span><span class="o">();</span>
+		<span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
 
-        <span class="c1">//parse the TEXT of the banner</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ad:text&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
+		<span class="c1">//parse the IMAGE of the banner</span>
+		<span class="nc">String</span> <span class="n">imageURL</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getNodeTextCumulative</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"url"</span><span class="o">));</span>
+		<span class="nc">EncodedImage</span> <span class="n">bannerImage</span> <span class="o">=</span> <span class="nc">EncodedImage</span><span class="o">.</span><span class="na">createEncodedImage</span><span class="o">(</span><span class="nc">StreamUtils</span><span class="o">.</span><span class="na">readRemoteStream</span><span class="o">(</span><span class="n">imageURL</span><span class="o">).</span><span class="na">getBytes</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setImage</span><span class="o">(</span><span class="n">bannerImage</span><span class="o">);</span>
 
-        <span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
-    <span class="o">}</span>
+		<span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">Node</span> <span class="n">node</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ad:group&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">adType</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="s">&quot;type&quot;</span><span class="o">);</span>
-
-        <span class="k">return</span> <span class="n">adType</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">&quot;banner&quot;</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * Parse common values from the responce like the:</span>
-<span class="cm">     *  - tracking pixels/beacons</span>
-<span class="cm">     *  - the click URL</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param ad</span>
-<span class="cm">     * @param doc</span>
-<span class="cm">     */</span>
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">parseCommonAdValues</span><span class="o">(</span><span class="n">Ad</span> <span class="n">ad</span><span class="o">,</span> <span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// CLICK URL</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setClickURL</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;link&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
-
-        <span class="c1">// TRACKING PIXEL URLs - get only ones from the FIRST  node (in case there are more than 1 ad in the response, only the first should be processed and the rest ignored)</span>
-        <span class="n">Node</span> <span class="n">adEventsNode</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ad:events&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-        <span class="n">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">adEventsNode</span><span class="o">.</span><span class="na">getChildNodes</span><span class="o">();</span>
-
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="c1">// If the tracking is of the &quot;display&quot; type - it is a tracking PIXEL URL</span>
-            <span class="k">if</span> <span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">),</span> <span class="s">&quot;type&quot;</span><span class="o">).</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">&quot;display&quot;</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">String</span> <span class="n">nodeName</span> <span class="o">=</span> <span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">().</span><span class="na">getNodeName</span><span class="o">();</span>
-                <span class="k">if</span> <span class="o">(</span><span class="n">nodeName</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">&quot;link&quot;</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-                    <span class="n">String</span> <span class="n">trackingPx</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">());</span>
-                    <span class="n">ad</span><span class="o">.</span><span class="na">addTrackingPixelURL</span><span class="o">(</span><span class="n">trackingPx</span><span class="o">);</span>
-                <span class="o">}</span>
-            <span class="o">}</span>
-            <span class="c1">// otherwise, if it is of the &quot;click&quot; type - it is a CLICK tracking URL</span>
-            <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">),</span> <span class="s">&quot;type&quot;</span><span class="o">).</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">&quot;click&quot;</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-                <span class="n">String</span> <span class="n">nodeName</span> <span class="o">=</span> <span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">().</span><span class="na">getNodeName</span><span class="o">();</span>
-                <span class="k">if</span> <span class="o">(</span><span class="n">nodeName</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">&quot;link&quot;</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-                    <span class="n">String</span> <span class="n">trackingPx</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">());</span>
-                    <span class="n">ad</span><span class="o">.</span><span class="na">addClickTrackingURL</span><span class="o">(</span><span class="n">trackingPx</span><span class="o">);</span>
-                <span class="o">}</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+	<span class="cm">/**
+	 * Parse common values from the responce like the:
+	 *  - tracking pixels/beacons
+	 *  - the click URL
+	 *
+	 * @param ad
+	 * @param doc
+	 */</span>
+	<span class="kd">private</span> <span class="kt">void</span> <span class="nf">parseCommonAdValues</span><span class="o">(</span><span class="nc">Ad</span> <span class="n">ad</span><span class="o">,</span> <span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="c1">// CLICK URL</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setClickURL</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getNodeTextCumulative</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"clickUrl"</span><span class="o">)));</span>
+	<span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div> <h2><strong>SomaAdGrabber</strong></h2> <div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="cm">/**</span>
-<span class="cm"> * Copyright © Comitic Software</span>
-<span class="cm"> */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SOMAAdGrabber</span> <span class="kd">extends</span> <span class="n">AdGrabber</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="nf">SOMAAdGrabber</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kd">super</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">);</span>
-    <span class="o">}</span>
+</code></pre></div></div> <h2><strong>NexAgeAdGrabber</strong></h2> <div class="language-java highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="cm">/**
+ * Copyright: Creative Common Attribution http://creativecommons.org/licenses/by/3.0/
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NexAgeAdGrabber</span> <span class="kd">extends</span> <span class="nc">AdGrabber</span> <span class="o">{</span>
 
-    <span class="cm">/* ------------------------------------------           PUBLISHING CONSTANTS            ------------------------------------------*/</span>
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">AD_SPACE</span> <span class="o">=</span> <span class="s">&quot;YOUR_AD_SPACE&quot;</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="nf">NexAgeAdGrabber</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">super</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">);</span>
+	<span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">PUBLISHER_ID</span> <span class="o">=</span> <span class="s">&quot;YOUR_PUB_ID&quot;</span><span class="o">;</span>
+	<span class="cm">/* ------------------------------------------			PUBLISHING CONSTANTS			------------------------------------------*/</span>
 
-    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">SOMA_API_VER</span> <span class="o">=</span> <span class="s">&quot;somaapi-318&quot;</span><span class="o">;</span> <span class="c1">//This is the version of the API I used</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">SITE_ID</span> <span class="o">=</span> <span class="s">"YOUR_SITE_ID"</span><span class="o">;</span>
 
-    <span class="cm">/* ------------------------------------------                                           ------------------------------------------*/</span>
+	<span class="cm">/* ------------------------------------------											------------------------------------------*/</span>
 
-    <span class="cm">/**</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param overrideImageAds</span>
-<span class="cm">     * @return</span>
-<span class="cm">     *          - The URL to be sent to the advertising web service</span>
-<span class="cm">     */</span>
-    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="n">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">(</span><span class="s">&quot;http://soma.smaato.net/oapi/reqAd.jsp?&quot;</span><span class="o">);</span>
+	<span class="cm">/**
+	 *
+	 * @param adFieldPropertyBag
+	 * @return
+	 * 			- The URL to be sent to the advertising web service
+	 */</span>
+	<span class="kd">protected</span> <span class="nc">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">(</span><span class="s">"http://admax.nexage.com/adServe?"</span><span class="o">);</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;adspace=&quot;</span> <span class="o">+</span> <span class="n">AD_SPACE</span><span class="o">);</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"dcn="</span> <span class="o">+</span> <span class="no">SITE_ID</span><span class="o">);</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;pub=&quot;</span> <span class="o">+</span> <span class="n">PUBLISHER_ID</span><span class="o">);</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;pos="</span> <span class="o">+</span> <span class="n">getAdPosition</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">));</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;client=&quot;</span> <span class="o">+</span> <span class="n">SOMA_API_VER</span><span class="o">);</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;ip="</span> <span class="o">+</span> <span class="nc">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">getIP</span><span class="o">()));</span> <span class="c1">// device IP</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;devip=&quot;</span> <span class="o">+</span> <span class="n">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">getIP</span><span class="o">()));</span> <span class="c1">// device IP</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;ua="</span> <span class="o">+</span> <span class="nc">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">getUserAgent</span><span class="o">()));</span> <span class="c1">// device USER AGENT</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;device=&quot;</span> <span class="o">+</span> <span class="n">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">getUserAgent</span><span class="o">()));</span> <span class="c1">// device USER AGENT</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;f="</span> <span class="o">+</span> <span class="s">"xml"</span><span class="o">);</span>
 
-        <span class="n">String</span> <span class="n">adMode</span> <span class="o">=</span> <span class="o">(</span><span class="n">BBInfo</span><span class="o">.</span><span class="na">isTallScreen</span><span class="o">()</span> <span class="o">||</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">!=</span><span class="kc">null</span> <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">AdAllocManager</span><span class="o">.</span><span class="na">FETCH_IMAGE_ADS</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">))</span> <span class="o">?</span> <span class="s">&quot;all&quot;</span> <span class="o">:</span> <span class="s">&quot;txt&quot;</span><span class="o">;</span> <span class="c1">// &quot;all&quot; = IMAGE and TEXT; &quot;txt&quot; = TEXT only</span>
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;format=&quot;</span> <span class="o">+</span> <span class="n">adMode</span><span class="o">);</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;u(id)="</span> <span class="o">+</span> <span class="nc">BBInfo</span><span class="o">.</span><span class="na">getUniqueDeviceHash</span><span class="o">());</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;ownid=&quot;</span> <span class="o">+</span> <span class="n">BBInfo</span><span class="o">.</span><span class="na">getUniqueDeviceHash</span><span class="o">());</span>
+		<span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+	<span class="o">}</span>
 
-        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&amp;amp;responce=&quot;</span> <span class="o">+</span> <span class="s">&quot;xml&quot;</span><span class="o">);</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">getAdPosition</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">AdAllocManager</span><span class="o">.</span><span class="na">AD_POSITION</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> <span class="c1">//if we specified the ad position - return the specified ad position</span>
+			<span class="k">return</span> <span class="o">(</span><span class="nc">String</span><span class="o">)</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">AdAllocManager</span><span class="o">.</span><span class="na">AD_POSITION</span><span class="o">);</span>
+		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="c1">// otherwise, use the "imageonly" or "textonly", depending on the display size, or manual override</span>
+			<span class="k">return</span> <span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">isTallScreen</span><span class="o">()</span> <span class="o">||</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">AdAllocManager</span><span class="o">.</span><span class="na">FETCH_IMAGE_ADS</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">))</span> <span class="o">?</span> <span class="s">"imageonly"</span> <span class="o">:</span> <span class="s">"textonly"</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
 
-        <span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-    <span class="o">}</span>
+	<span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Node</span> <span class="n">adsNode</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ads"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">adsNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">adCount</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">adsNode</span><span class="o">,</span> <span class="s">"count"</span><span class="o">));</span>
+			<span class="k">return</span> <span class="n">adCount</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="c1">//return ((NodeList) doc.getElementsByTagName(&quot;ads&quot;)).getLength() &amp;gt; 0 &amp;amp;&amp;amp; canProcessTheAd(doc);</span>
-        <span class="n">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="o">((</span><span class="n">NodeList</span><span class="o">)</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ads&quot;</span><span class="o">));</span>
-        <span class="k">if</span> <span class="o">(</span><span class="n">nl</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">()</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="mi">0</span>  <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">canProcessTheAd</span><span class="o">(</span><span class="n">doc</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+	<span class="kd">protected</span> <span class="nc">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">ImageAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ImageAd</span><span class="o">();</span>
+		<span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
 
-    <span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">canProcessTheAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">Node</span> <span class="n">node</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;action&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">actionType</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="s">&quot;type&quot;</span><span class="o">);</span>
-        <span class="k">return</span> <span class="n">actionType</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">&quot;link&quot;</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">;</span>
-    <span class="o">}</span>
+		<span class="c1">//parse the IMAGE of the banner</span>
+		<span class="nc">String</span> <span class="n">imageURL</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ad:content"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="s">"url"</span><span class="o">);</span>
 
-    <span class="kd">protected</span> <span class="n">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">ImageAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ImageAd</span><span class="o">();</span>
-        <span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
+		<span class="nc">EncodedImage</span> <span class="n">bannerImage</span> <span class="o">=</span> <span class="nc">EncodedImage</span><span class="o">.</span><span class="na">createEncodedImage</span><span class="o">(</span><span class="nc">StreamUtils</span><span class="o">.</span><span class="na">readRemoteStream</span><span class="o">(</span><span class="n">imageURL</span><span class="o">).</span><span class="na">getBytes</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setImage</span><span class="o">(</span><span class="n">bannerImage</span><span class="o">);</span>
 
-        <span class="c1">//parse the IMAGE of the banner</span>
-        <span class="n">String</span> <span class="n">imageURL</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getNodeTextCumulative</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;link&quot;</span><span class="o">));</span>
+		<span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
+	<span class="o">}</span>
 
-        <span class="n">EncodedImage</span> <span class="n">bannerImage</span> <span class="o">=</span> <span class="n">EncodedImage</span><span class="o">.</span><span class="na">createEncodedImage</span><span class="o">(</span><span class="n">StreamUtils</span><span class="o">.</span><span class="na">readRemoteStream</span><span class="o">(</span><span class="n">imageURL</span><span class="o">).</span><span class="na">getBytes</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setImage</span><span class="o">(</span><span class="n">bannerImage</span><span class="o">);</span>
+	<span class="kd">protected</span> <span class="nc">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">TextAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TextAd</span><span class="o">();</span>
+		<span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
 
-        <span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
-    <span class="o">}</span>
+		<span class="c1">//parse the TEXT of the banner</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ad:text"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
 
-    <span class="kd">protected</span> <span class="n">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">TextAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextAd</span><span class="o">();</span>
-        <span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
+	<span class="o">}</span>
 
-        <span class="c1">//parse the TEXT of the banner</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;adtext&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
+	<span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Node</span> <span class="n">node</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ad:group"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+		<span class="nc">String</span> <span class="n">adType</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="s">"type"</span><span class="o">);</span>
 
-        <span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
-    <span class="o">}</span>
+		<span class="k">return</span> <span class="n">adType</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">"banner"</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
 
-    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="n">Node</span> <span class="n">node</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;ad&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">adType</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="s">&quot;type&quot;</span><span class="o">);</span>
+	<span class="cm">/**
+	 * Parse common values from the responce like the:
+	 *  - tracking pixels/beacons
+	 *  - the click URL
+	 *
+	 * @param ad
+	 * @param doc
+	 */</span>
+	<span class="kd">private</span> <span class="kt">void</span> <span class="nf">parseCommonAdValues</span><span class="o">(</span><span class="nc">Ad</span> <span class="n">ad</span><span class="o">,</span> <span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// CLICK URL</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setClickURL</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"link"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
 
-        <span class="k">return</span> <span class="n">adType</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">&quot;img&quot;</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">;</span>
+		<span class="c1">// TRACKING PIXEL URLs - get only ones from the FIRST  node (in case there are more than 1 ad in the response, only the first should be processed and the rest ignored)</span>
+		<span class="nc">Node</span> <span class="n">adEventsNode</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ad:events"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+		<span class="nc">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">adEventsNode</span><span class="o">.</span><span class="na">getChildNodes</span><span class="o">();</span>
 
-    <span class="o">}</span>
-
-    <span class="cm">/**</span>
-<span class="cm">     * Parse common values from the responce like the:</span>
-<span class="cm">     *  - tracking pixels/beacons</span>
-<span class="cm">     *  - the click URL</span>
-<span class="cm">     *</span>
-<span class="cm">     * @param ad</span>
-<span class="cm">     * @param doc</span>
-<span class="cm">     */</span>
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">parseCommonAdValues</span><span class="o">(</span><span class="n">Ad</span> <span class="n">ad</span><span class="o">,</span> <span class="n">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
-        <span class="c1">// CLICK URL</span>
-        <span class="n">ad</span><span class="o">.</span><span class="na">setClickURL</span><span class="o">(</span><span class="n">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;action&quot;</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="s">&quot;target&quot;</span><span class="o">));</span>
-
-        <span class="c1">//TRACKING PIXEL URLs = the BEACONs as they are named in SMAATO network</span>
-        <span class="n">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">&quot;beacon&quot;</span><span class="o">);</span>
-        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-            <span class="n">String</span> <span class="n">trackingPx</span> <span class="o">=</span> <span class="n">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
-            <span class="n">ad</span><span class="o">.</span><span class="na">addTrackingPixelURL</span><span class="o">(</span><span class="n">trackingPx</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="c1">// If the tracking is of the "display" type - it is a tracking PIXEL URL</span>
+			<span class="k">if</span> <span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">),</span> <span class="s">"type"</span><span class="o">).</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">"display"</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+				<span class="nc">String</span> <span class="n">nodeName</span> <span class="o">=</span> <span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">().</span><span class="na">getNodeName</span><span class="o">();</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">nodeName</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">"link"</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+					<span class="nc">String</span> <span class="n">trackingPx</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">());</span>
+					<span class="n">ad</span><span class="o">.</span><span class="na">addTrackingPixelURL</span><span class="o">(</span><span class="n">trackingPx</span><span class="o">);</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+			<span class="c1">// otherwise, if it is of the "click" type - it is a CLICK tracking URL</span>
+			<span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">),</span> <span class="s">"type"</span><span class="o">).</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">"click"</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+				<span class="nc">String</span> <span class="n">nodeName</span> <span class="o">=</span> <span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">().</span><span class="na">getNodeName</span><span class="o">();</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">nodeName</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">"link"</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+					<span class="nc">String</span> <span class="n">trackingPx</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFirstChild</span><span class="o">());</span>
+					<span class="n">ad</span><span class="o">.</span><span class="na">addClickTrackingURL</span><span class="o">(</span><span class="n">trackingPx</span><span class="o">);</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
 
 <span class="o">}</span>
-</code></pre></div> <h2 style="text-align: center;"><strong>Please let me know in the comments if you find this useful!</strong></h2> <h2 style="text-align: center;"><strong><br /> </strong></h2> </div> <!-- TAGs LIST --> <div class="tag-links-list" style="text-align: right;"> <a href="/tag/blackberry/"<span style="font-size: .6rem;">#blackberry</span></a>&nbsp;&nbsp; <a href="/tag/mobile/"<span style="font-size: .6rem;">#mobile</span></a>&nbsp;&nbsp; <a href="/tag/source/"<span style="font-size: .6rem;">#source</span></a>&nbsp;&nbsp; <a href="/tag/technical/"<span style="font-size: .6rem;">#technical</span></a>&nbsp;&nbsp; </div> <!-- SIMILAR POSTS --> <div class="related"> <h3>Similar Posts</h3> <ul class="related-posts"> <li> <h4> <a href="/android-working-with-gradle-purging-gradle-cache/"> Android - working with Gradle: purging gradle cache </a> <small>13 Jan 2017</small> </h4> </li> <li> <h4> <a href="/git-trello-integration/"> Git + Trello Integration </a> <small>23 May 2016</small> </h4> </li> <li> <h4> <a href="/git-salvaging-lost-commits/"> Git - Salvaging Lost Commits </a> <small>07 Mar 2016</small> </h4> </li> </ul> </div> <!-- LATEST POSTS --> <div class="related"> <h3>Latest Posts</h3> <ul class="related-posts"> <li> <h4> <a href="/scheduling-randomized-cron-within-an-hour/"> Scheduling randomized cron - within an hour or within a minute </a> <small>18 Feb 2017</small> </43> </li> <li> <h4> <a href="/android-working-with-gradle-purging-gradle-cache/"> Android - working with Gradle: purging gradle cache </a> <small>13 Jan 2017</small> </43> </li> <li> <h4> <a href="/git-trello-integration/"> Git + Trello Integration </a> <small>23 May 2016</small> </43> </li> <li> <h4> <a href="/google-i-o-videos-list/"> Google I/O Videos List </a> <small>20 May 2016</small> </43> </li> </ul> </div> <div id="disqus_thread"></div> <script type="text/javascript"> /* * * CONFIGURATION VARIABLES * * */ var disqus_shortname = 'inteist'; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); </script> </div> </body> </html>
+
+</code></pre></div></div> <h2><strong>SomaAdGrabber</strong></h2> <div class="language-java highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="cm">/**
+ * Copyright © Comitic Software
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SOMAAdGrabber</span> <span class="kd">extends</span> <span class="nc">AdGrabber</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="nf">SOMAAdGrabber</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">super</span><span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="cm">/* ------------------------------------------			PUBLISHING CONSTANTS			------------------------------------------*/</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">AD_SPACE</span> <span class="o">=</span> <span class="s">"YOUR_AD_SPACE"</span><span class="o">;</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">PUBLISHER_ID</span> <span class="o">=</span> <span class="s">"YOUR_PUB_ID"</span><span class="o">;</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">SOMA_API_VER</span> <span class="o">=</span> <span class="s">"somaapi-318"</span><span class="o">;</span> <span class="c1">//This is the version of the API I used</span>
+
+	<span class="cm">/* ------------------------------------------											------------------------------------------*/</span>
+
+	<span class="cm">/**
+	 *
+	 * @param overrideImageAds
+	 * @return
+	 * 			- The URL to be sent to the advertising web service
+	 */</span>
+	<span class="kd">protected</span> <span class="nc">String</span> <span class="nf">getRequestURL</span><span class="o">(</span><span class="nc">HashTableExt</span> <span class="n">adFieldPropertyBag</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">(</span><span class="s">"http://soma.smaato.net/oapi/reqAd.jsp?"</span><span class="o">);</span>
+
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"adspace="</span> <span class="o">+</span> <span class="no">AD_SPACE</span><span class="o">);</span>
+
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;pub="</span> <span class="o">+</span> <span class="no">PUBLISHER_ID</span><span class="o">);</span>
+
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;client="</span> <span class="o">+</span> <span class="no">SOMA_API_VER</span><span class="o">);</span>
+
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;devip="</span> <span class="o">+</span> <span class="nc">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">getIP</span><span class="o">()));</span> <span class="c1">// device IP</span>
+
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;device="</span> <span class="o">+</span> <span class="nc">URLTools</span><span class="o">.</span><span class="na">urlEncodeBBForum</span><span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">getUserAgent</span><span class="o">()));</span> <span class="c1">// device USER AGENT</span>
+
+		<span class="nc">String</span> <span class="n">adMode</span> <span class="o">=</span> <span class="o">(</span><span class="nc">BBInfo</span><span class="o">.</span><span class="na">isTallScreen</span><span class="o">()</span> <span class="o">||</span> <span class="o">(</span><span class="n">adFieldPropertyBag</span><span class="o">!=</span><span class="kc">null</span> <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">adFieldPropertyBag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="nc">AdAllocManager</span><span class="o">.</span><span class="na">FETCH_IMAGE_ADS</span><span class="o">)</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">))</span> <span class="o">?</span> <span class="s">"all"</span> <span class="o">:</span> <span class="s">"txt"</span><span class="o">;</span> <span class="c1">// "all" = IMAGE and TEXT; "txt" = TEXT only</span>
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;format="</span> <span class="o">+</span> <span class="n">adMode</span><span class="o">);</span>
+
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;ownid="</span> <span class="o">+</span> <span class="nc">BBInfo</span><span class="o">.</span><span class="na">getUniqueDeviceHash</span><span class="o">());</span>
+
+		<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"&amp;amp;responce="</span> <span class="o">+</span> <span class="s">"xml"</span><span class="o">);</span>
+
+		<span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">gotProperAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="c1">//return ((NodeList) doc.getElementsByTagName("ads")).getLength() &amp;gt; 0 &amp;amp;&amp;amp; canProcessTheAd(doc);</span>
+		<span class="nc">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="o">((</span><span class="nc">NodeList</span><span class="o">)</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ads"</span><span class="o">));</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">nl</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">()</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;</span> <span class="mi">0</span>  <span class="o">&amp;</span><span class="n">amp</span><span class="o">;&amp;</span><span class="n">amp</span><span class="o">;</span> <span class="n">canProcessTheAd</span><span class="o">(</span><span class="n">doc</span><span class="o">);</span>
+		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">canProcessTheAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Node</span> <span class="n">node</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"action"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+		<span class="nc">String</span> <span class="n">actionType</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="s">"type"</span><span class="o">);</span>
+		<span class="k">return</span> <span class="n">actionType</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">"link"</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">protected</span> <span class="nc">ImageAd</span> <span class="nf">parseImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">ImageAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ImageAd</span><span class="o">();</span>
+		<span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
+
+		<span class="c1">//parse the IMAGE of the banner</span>
+		<span class="nc">String</span> <span class="n">imageURL</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getNodeTextCumulative</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"link"</span><span class="o">));</span>
+
+		<span class="nc">EncodedImage</span> <span class="n">bannerImage</span> <span class="o">=</span> <span class="nc">EncodedImage</span><span class="o">.</span><span class="na">createEncodedImage</span><span class="o">(</span><span class="nc">StreamUtils</span><span class="o">.</span><span class="na">readRemoteStream</span><span class="o">(</span><span class="n">imageURL</span><span class="o">).</span><span class="na">getBytes</span><span class="o">(),</span> <span class="mi">0</span><span class="o">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">);</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setImage</span><span class="o">(</span><span class="n">bannerImage</span><span class="o">);</span>
+
+		<span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">protected</span> <span class="nc">TextAd</span> <span class="nf">parseTextAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">TextAd</span> <span class="n">ad</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TextAd</span><span class="o">();</span>
+		<span class="n">parseCommonAdValues</span><span class="o">(</span><span class="n">ad</span><span class="o">,</span> <span class="n">doc</span><span class="o">);</span>
+
+		<span class="c1">//parse the TEXT of the banner</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"adtext"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">)));</span>
+
+		<span class="k">return</span> <span class="n">ad</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">shouldParseAsImageAd</span><span class="o">(</span><span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Node</span> <span class="n">node</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"ad"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+		<span class="nc">String</span> <span class="n">adType</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">node</span><span class="o">,</span> <span class="s">"type"</span><span class="o">);</span>
+
+		<span class="k">return</span> <span class="n">adType</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="s">"img"</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">;</span>
+
+	<span class="o">}</span>
+
+	<span class="cm">/**
+	 * Parse common values from the responce like the:
+	 *  - tracking pixels/beacons
+	 *  - the click URL
+	 *
+	 * @param ad
+	 * @param doc
+	 */</span>
+	<span class="kd">private</span> <span class="kt">void</span> <span class="nf">parseCommonAdValues</span><span class="o">(</span><span class="nc">Ad</span> <span class="n">ad</span><span class="o">,</span> <span class="nc">Document</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// CLICK URL</span>
+		<span class="n">ad</span><span class="o">.</span><span class="na">setClickURL</span><span class="o">(</span><span class="no">XML</span><span class="o">.</span><span class="na">getAttributeValue</span><span class="o">(</span><span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"action"</span><span class="o">).</span><span class="na">item</span><span class="o">(</span><span class="mi">0</span><span class="o">),</span> <span class="s">"target"</span><span class="o">));</span>
+
+		<span class="c1">//TRACKING PIXEL URLs = the BEACONs as they are named in SMAATO network</span>
+		<span class="nc">NodeList</span> <span class="n">nl</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="na">getElementsByTagName</span><span class="o">(</span><span class="s">"beacon"</span><span class="o">);</span>
+		<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="o">;</span> <span class="n">nl</span><span class="o">.</span><span class="na">getLength</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="nc">String</span> <span class="n">trackingPx</span> <span class="o">=</span> <span class="no">XML</span><span class="o">.</span><span class="na">getTextFromNode</span><span class="o">(</span><span class="n">nl</span><span class="o">.</span><span class="na">item</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+			<span class="n">ad</span><span class="o">.</span><span class="na">addTrackingPixelURL</span><span class="o">(</span><span class="n">trackingPx</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div> <h2 style="text-align: center;"><strong>Please let me know in the comments if you find this useful!</strong></h2> <h2 style="text-align: center;"><strong><br /> </strong></h2> </div> <!-- TAGs LIST --> <div class="tag-links-list" style="text-align: right;"> <a href="/tag/blackberry/"<span style="font-size: .6rem;">#blackberry</span></a>&nbsp;&nbsp; <a href="/tag/mobile/"<span style="font-size: .6rem;">#mobile</span></a>&nbsp;&nbsp; <a href="/tag/source/"<span style="font-size: .6rem;">#source</span></a>&nbsp;&nbsp; <a href="/tag/technical/"<span style="font-size: .6rem;">#technical</span></a>&nbsp;&nbsp; </div> <!-- SIMILAR POSTS --> <div class="related"> <h3>Similar Posts</h3> <ul class="related-posts"> <li> <h4> <a href="/android-working-with-gradle-purging-gradle-cache/"> Android - working with Gradle: purging gradle cache </a> <small>13 Jan 2017</small> </h4> </li> <li> <h4> <a href="/git-trello-integration/"> Git + Trello Integration </a> <small>23 May 2016</small> </h4> </li> <li> <h4> <a href="/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/"> Lean and Fast - How to shrink down and lean down Android apps </a> <small>20 May 2016</small> </h4> </li> <li> <h4> <a href="/git-salvaging-lost-commits/"> Git - Salvaging Lost Commits </a> <small>07 Mar 2016</small> </h4> </li> </ul> </div> <!-- LATEST POSTS --> <div class="related"> <h3>Latest Posts</h3> <ul class="related-posts"> <li> <h4> <a href="/scheduling-randomized-cron-within-an-hour/"> Scheduling randomized cron - within an hour or within a minute </a> <small>18 Feb 2017</small> </43> </li> <li> <h4> <a href="/android-working-with-gradle-purging-gradle-cache/"> Android - working with Gradle: purging gradle cache </a> <small>13 Jan 2017</small> </43> </li> <li> <h4> <a href="/git-trello-integration/"> Git + Trello Integration </a> <small>23 May 2016</small> </43> </li> <li> <h4> <a href="/google-i-o-videos-list/"> Google I/O Videos List </a> <small>20 May 2016</small> </43> </li> </ul> </div> <div id="disqus_thread"></div> <script type="text/javascript"> /* * * CONFIGURATION VARIABLES * * */ var disqus_shortname = 'inteist'; /* * * DON'T EDIT BELOW THIS LINE * * */ (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); </script> </div> </body> </html>

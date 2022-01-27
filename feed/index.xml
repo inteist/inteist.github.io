@@ -23,7 +23,7 @@
                 
                 
                     <description>&lt;p&gt;To force refresh the dependencies for gradle build you can first try running the task with
-&lt;code&gt;--refresh-dependencies&lt;/code&gt; switch&lt;/p&gt;
+&lt;code class=&quot;language-html highlighter-rouge&quot;&gt;--refresh-dependencies&lt;/code&gt; switch&lt;/p&gt;
 </description>
                 
                 <pubDate>Fri, 13 Jan 2017 15:28:00 -0500</pubDate>
@@ -36,7 +36,7 @@
                 
                 
                     <description>&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/media/trello-git-hooks-logo.png&quot;&gt;
+&lt;img src=&quot;/media/trello-git-hooks-logo.png&quot; /&gt;
 &lt;/p&gt;
 </description>
                 
@@ -49,7 +49,7 @@
                 <title>Google I/O Videos List</title>
                 
                 
-                    <description>&lt;h2 id=&quot;http-bit-ly-gio2016videos&quot;&gt;&lt;a href=&quot;http://bit.ly/gio2016videos&quot;&gt;http://bit.ly/gio2016videos&lt;/a&gt;&lt;/h2&gt;
+                    <description>&lt;h2 id=&quot;httpbitlygio2016videos&quot;&gt;http://bit.ly/gio2016videos&lt;/h2&gt;
 </description>
                 
                 <pubDate>Fri, 20 May 2016 18:37:00 -0400</pubDate>
@@ -58,10 +58,23 @@
             </item>
         
             <item>
+                <title>Lean and Fast - How to shrink down and lean down Android apps</title>
+                
+                
+                    <description>&lt;h3 id=&quot;zopfli&quot;&gt;Zopfli&lt;/h3&gt;
+&lt;p&gt;Despite previous advice - do not use zopfli for alternative compression&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 20 May 2016 10:24:00 -0400</pubDate>
+                <link>https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</link>
+                <guid isPermaLink="true">https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</guid>
+            </item>
+        
+            <item>
                 <title>Git - Salvaging Lost Commits</title>
                 
                 
-                    <description>&lt;p&gt;If you have not run a &lt;code&gt;gc&lt;/code&gt; yet and it has been less than 2 weeks (default gc setting) since the commits you lost were created you are in luck.&lt;/p&gt;
+                    <description>&lt;p&gt;If you have not run a &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;gc&lt;/code&gt; yet and it has been less than 2 weeks (default gc setting) since the commits you lost were created you are in luck.&lt;/p&gt;
 </description>
                 
                 <pubDate>Mon, 07 Mar 2016 15:26:00 -0500</pubDate>
@@ -74,8 +87,8 @@
                 
                 
                     <description>&lt;h3&gt;
-Any system with enough moving parts&lt;br&gt;
-and no entity to coordinate&lt;br&gt;
+Any system with enough moving parts&lt;br /&gt;
+and no entity to coordinate&lt;br /&gt;
 is doomed to be in a state of chaos
  &lt;/h3&gt;
 </description>
@@ -89,8 +102,8 @@ is doomed to be in a state of chaos
                 <title>Some Basic Useful VirtualBox terminal commands</title>
                 
                 
-                    <description>&lt;p&gt;List the running VMs&lt;br&gt;
-&lt;code&gt;vboxmanage list runningvms&lt;/code&gt;&lt;/p&gt;
+                    <description>&lt;p&gt;List the running VMs&lt;br /&gt;
+&lt;code class=&quot;language-html highlighter-rouge&quot;&gt;vboxmanage list runningvms&lt;/code&gt;&lt;/p&gt;
 </description>
                 
                 <pubDate>Mon, 29 Feb 2016 18:21:00 -0500</pubDate>
@@ -103,7 +116,6 @@ is doomed to be in a state of chaos
                 
                 
                     <description>&lt;h3 id=&quot;any-good-idea-is-only-as-good-as-its-implementation&quot;&gt;Any good idea is only as good as its implementation&lt;/h3&gt;
-
 &lt;p style=&quot;text-align: right;&quot;&gt;–– Inteist&lt;/p&gt;
 </description>
                 
@@ -165,8 +177,7 @@ is doomed to be in a state of chaos
                 
                 
                     <description>&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;/h3&gt;
-
-&lt;p&gt;If you have recently upgraded to El Capitan and now your fonts in Android Studio are non anti aliased (they look thin and broken) you&amp;#39;ve come to the right place for a solution.&lt;/p&gt;
+&lt;p&gt;If you have recently upgraded to El Capitan and now your fonts in Android Studio are non anti aliased (they look thin and broken) you’ve come to the right place for a solution.&lt;/p&gt;
 </description>
                 
                 <pubDate>Wed, 07 Oct 2015 20:46:00 -0400</pubDate>
@@ -178,7 +189,7 @@ is doomed to be in a state of chaos
                 <title>clang-format Style File for iOS Projects</title>
                 
                 
-                    <description>&lt;p&gt;A simple &lt;code&gt;clang-format&lt;/code&gt; style file that will get you 80% of what you want with 20% of effort (or even less):&lt;/p&gt;
+                    <description>&lt;p&gt;A simple &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;clang-format&lt;/code&gt; style file that will get you 80% of what you want with 20% of effort (or even less):&lt;/p&gt;
 </description>
                 
                 <pubDate>Sun, 13 Sep 2015 17:40:00 -0400</pubDate>
@@ -202,7 +213,7 @@ is doomed to be in a state of chaos
                 <title>Uncrustify Whole iOS Project</title>
                 
                 
-                    <description>&lt;p&gt;A great &lt;code&gt;uncrustify&lt;/code&gt; utility does not have (afaik) an option to recursively process all the files in the folder/project. Fear not. &lt;code&gt;find(1)&lt;/code&gt; to the rescue!&lt;/p&gt;
+                    <description>&lt;p&gt;A great &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;uncrustify&lt;/code&gt; utility does not have (afaik) an option to recursively process all the files in the folder/project. Fear not. &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;find(1)&lt;/code&gt; to the rescue!&lt;/p&gt;
 </description>
                 
                 <pubDate>Mon, 24 Aug 2015 23:45:00 -0400</pubDate>
@@ -214,7 +225,7 @@ is doomed to be in a state of chaos
                 <title>TV reality</title>
                 
                 
-                    <description>&lt;p&gt;&lt;img src=&quot;/media/steve.cutts-the.daily.bullshit.jpg&quot; alt=&quot;the daily bullshit - TV reality&quot;&gt;&lt;/p&gt;
+                    <description>&lt;p&gt;&lt;img src=&quot;/media/steve.cutts-the.daily.bullshit.jpg&quot; alt=&quot;the daily bullshit - TV reality&quot; /&gt;&lt;/p&gt;
 </description>
                 
                 <pubDate>Sat, 22 Aug 2015 13:43:00 -0400</pubDate>
@@ -244,18 +255,6 @@ is doomed to be in a state of chaos
                 <pubDate>Sat, 18 Jul 2015 12:18:00 -0400</pubDate>
                 <link>https://inteist.com/javascript-date-and-time-for-any-timezone/</link>
                 <guid isPermaLink="true">https://inteist.com/javascript-date-and-time-for-any-timezone/</guid>
-            </item>
-        
-            <item>
-                <title>Handy adb Oneliners for Android</title>
-                
-                
-                    <description>&lt;p&gt;Oneliner to speed up screenshot taking process.&lt;/p&gt;
-</description>
-                
-                <pubDate>Tue, 16 Jun 2015 13:48:00 -0400</pubDate>
-                <link>https://inteist.com/handy-adb-oneliners-for-android/</link>
-                <guid isPermaLink="true">https://inteist.com/handy-adb-oneliners-for-android/</guid>
             </item>
         
     </channel>
