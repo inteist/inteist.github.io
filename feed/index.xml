@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title></title>
+        <description>I code for living</description>
+        <link>https://inteist.com</link>
+        <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>Scheduling randomized cron - within an hour or within a minute</title>
+                
+                
+                    <description>&lt;p&gt;It is &lt;strong&gt;usually&lt;/strong&gt; a good idea in general to add slight randomness to the start time of a cron job, especially if you are accessing some 3-d party resource to prevent flooding of 3-d party at the top of the hour or at the top of the minute.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 18 Feb 2017 12:24:00 -0500</pubDate>
+                <link>https://inteist.com/scheduling-randomized-cron-within-an-hour/</link>
+                <guid isPermaLink="true">https://inteist.com/scheduling-randomized-cron-within-an-hour/</guid>
+            </item>
+        
+            <item>
+                <title>Android - working with Gradle: purging gradle cache</title>
+                
+                
+                    <description>&lt;p&gt;To force refresh the dependencies for gradle build you can first try running the task with
+&lt;code class=&quot;language-html highlighter-rouge&quot;&gt;--refresh-dependencies&lt;/code&gt; switch&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 13 Jan 2017 15:28:00 -0500</pubDate>
+                <link>https://inteist.com/android-working-with-gradle-purging-gradle-cache/</link>
+                <guid isPermaLink="true">https://inteist.com/android-working-with-gradle-purging-gradle-cache/</guid>
+            </item>
+        
+            <item>
+                <title>Git + Trello Integration</title>
+                
+                
+                    <description>&lt;p align=&quot;center&quot;&gt;
+&lt;img src=&quot;/media/trello-git-hooks-logo.png&quot; /&gt;
+&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 23 May 2016 00:31:00 -0400</pubDate>
+                <link>https://inteist.com/git-trello-integration/</link>
+                <guid isPermaLink="true">https://inteist.com/git-trello-integration/</guid>
+            </item>
+        
+            <item>
+                <title>Google I/O Videos List</title>
+                
+                
+                    <description>&lt;h2 id=&quot;httpbitlygio2016videos&quot;&gt;http://bit.ly/gio2016videos&lt;/h2&gt;
+</description>
+                
+                <pubDate>Fri, 20 May 2016 18:37:00 -0400</pubDate>
+                <link>https://inteist.com/google-i-o-videos-list/</link>
+                <guid isPermaLink="true">https://inteist.com/google-i-o-videos-list/</guid>
+            </item>
+        
+            <item>
+                <title>Lean and Fast - How to shrink down and lean down Android apps</title>
+                
+                
+                    <description>&lt;h3 id=&quot;zopfli&quot;&gt;Zopfli&lt;/h3&gt;
+&lt;p&gt;Despite previous advice - do not use zopfli for alternative compression&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 20 May 2016 10:24:00 -0400</pubDate>
+                <link>https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</link>
+                <guid isPermaLink="true">https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</guid>
+            </item>
+        
+            <item>
+                <title>Git - Salvaging Lost Commits</title>
+                
+                
+                    <description>&lt;p&gt;If you have not run a &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;gc&lt;/code&gt; yet and it has been less than 2 weeks (default gc setting) since the commits you lost were created you are in luck.&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 07 Mar 2016 15:26:00 -0500</pubDate>
+                <link>https://inteist.com/git-salvaging-lost-commits/</link>
+                <guid isPermaLink="true">https://inteist.com/git-salvaging-lost-commits/</guid>
+            </item>
+        
+            <item>
+                <title>System Chaos - Quote</title>
+                
+                
+                    <description>&lt;h3&gt;
+Any system with enough moving parts&lt;br /&gt;
+and no entity to coordinate&lt;br /&gt;
+is doomed to be in a state of chaos
+ &lt;/h3&gt;
+</description>
+                
+                <pubDate>Mon, 29 Feb 2016 20:59:00 -0500</pubDate>
+                <link>https://inteist.com/system-chaos-quote/</link>
+                <guid isPermaLink="true">https://inteist.com/system-chaos-quote/</guid>
+            </item>
+        
+            <item>
+                <title>Some Basic Useful VirtualBox terminal commands</title>
+                
+                
+                    <description>&lt;p&gt;List the running VMs&lt;br /&gt;
+&lt;code class=&quot;language-html highlighter-rouge&quot;&gt;vboxmanage list runningvms&lt;/code&gt;&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 29 Feb 2016 18:21:00 -0500</pubDate>
+                <link>https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</link>
+                <guid isPermaLink="true">https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</guid>
+            </item>
+        
+            <item>
+                <title>Good Idea - Quote</title>
+                
+                
+                    <description>&lt;h3 id=&quot;any-good-idea-is-only-as-good-as-its-implementation&quot;&gt;Any good idea is only as good as its implementation&lt;/h3&gt;
+&lt;p style=&quot;text-align: right;&quot;&gt;–– Inteist&lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 19 Dec 2015 23:51:00 -0500</pubDate>
+                <link>https://inteist.com/good-idea-quote/</link>
+                <guid isPermaLink="true">https://inteist.com/good-idea-quote/</guid>
+            </item>
+        
+            <item>
+                <title>Tarantool - Fast in Memory Database for HOT DATA</title>
+                
+                
+                    <description>&lt;p&gt;I have stumbled across &lt;a href=&quot;http://tarantool.org&quot;&gt;Tarantool&lt;/a&gt; database which seems to be a very fast storage for &lt;em&gt;hot data&lt;/em&gt;. If you are looking for a very fast and efficient tool, check it out.&lt;/p&gt;
+</description>
+                
+                <pubDate>Thu, 10 Dec 2015 14:38:00 -0500</pubDate>
+                <link>https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</link>
+                <guid isPermaLink="true">https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</guid>
+            </item>
+        
+            <item>
+                <title>Atom editor search highlight style</title>
+                
+                
+                    <description>&lt;p&gt;In April I &lt;a href=&quot;/atom-highlighting-search-results-in-a-dark-theme/&quot;&gt;have wrote&lt;/a&gt; how to solve a problem of poor highlighting for the search results for the Atom editor. Since then in the ever evolving editor after one of the updates something broke and the highlight feature became broken. Took me a while to get to it but I have finally had some time to take a look at it and I came up with the following replacement:&lt;/p&gt;
+</description>
+                
+                <pubDate>Wed, 09 Dec 2015 23:03:00 -0500</pubDate>
+                <link>https://inteist.com/atom-editor-search-highlight-style/</link>
+                <guid isPermaLink="true">https://inteist.com/atom-editor-search-highlight-style/</guid>
+            </item>
+        
+            <item>
+                <title>Subset Test in Java</title>
+                
+                
+                    <description>&lt;p&gt;A neat method to test for a set containment in another set both of which are Collections&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 13 Nov 2015 15:53:00 -0500</pubDate>
+                <link>https://inteist.com/subset-test-in-java/</link>
+                <guid isPermaLink="true">https://inteist.com/subset-test-in-java/</guid>
+            </item>
+        
+            <item>
+                <title>List Safari History on OS X  Oneliner</title>
+                
+                
+                    <description>&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;/h3&gt;
+</description>
+                
+                <pubDate>Tue, 27 Oct 2015 00:29:00 -0400</pubDate>
+                <link>https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</link>
+                <guid isPermaLink="true">https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</guid>
+            </item>
+        
+            <item>
+                <title>Fix Fonts Issue in Android Studio with El Capitan on OS X</title>
+                
+                
+                    <description>&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;/h3&gt;
+&lt;p&gt;If you have recently upgraded to El Capitan and now your fonts in Android Studio are non anti aliased (they look thin and broken) you’ve come to the right place for a solution.&lt;/p&gt;
+</description>
+                
+                <pubDate>Wed, 07 Oct 2015 20:46:00 -0400</pubDate>
+                <link>https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</link>
+                <guid isPermaLink="true">https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</guid>
+            </item>
+        
+            <item>
+                <title>clang-format Style File for iOS Projects</title>
+                
+                
+                    <description>&lt;p&gt;A simple &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;clang-format&lt;/code&gt; style file that will get you 80% of what you want with 20% of effort (or even less):&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 13 Sep 2015 17:40:00 -0400</pubDate>
+                <link>https://inteist.com/clang-format-style-file-for-ios-projects/</link>
+                <guid isPermaLink="true">https://inteist.com/clang-format-style-file-for-ios-projects/</guid>
+            </item>
+        
+            <item>
+                <title>Shell Script to Format all Files in a Folder using clang-format</title>
+                
+                
+                    <description>&lt;p&gt;This is a snippet I use to format all the files (recursively from the current folder) for iOS projects&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 13 Sep 2015 17:07:00 -0400</pubDate>
+                <link>https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</link>
+                <guid isPermaLink="true">https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</guid>
+            </item>
+        
+            <item>
+                <title>Uncrustify Whole iOS Project</title>
+                
+                
+                    <description>&lt;p&gt;A great &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;uncrustify&lt;/code&gt; utility does not have (afaik) an option to recursively process all the files in the folder/project. Fear not. &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;find(1)&lt;/code&gt; to the rescue!&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 24 Aug 2015 23:45:00 -0400</pubDate>
+                <link>https://inteist.com/uncrustify-whole-ios-project/</link>
+                <guid isPermaLink="true">https://inteist.com/uncrustify-whole-ios-project/</guid>
+            </item>
+        
+            <item>
+                <title>TV reality</title>
+                
+                
+                    <description>&lt;p&gt;&lt;img src=&quot;/media/steve.cutts-the.daily.bullshit.jpg&quot; alt=&quot;the daily bullshit - TV reality&quot; /&gt;&lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 22 Aug 2015 13:43:00 -0400</pubDate>
+                <link>https://inteist.com/tv-by-steve-cutts/</link>
+                <guid isPermaLink="true">https://inteist.com/tv-by-steve-cutts/</guid>
+            </item>
+        
+            <item>
+                <title>Javascript - Get the Day of The Week</title>
+                
+                
+                    <description>&lt;p&gt;You can use methods like this to easily get which day of the week we it is now.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 26 Jul 2015 18:49:00 -0400</pubDate>
+                <link>https://inteist.com/javascript-get-the-day-of-the-week/</link>
+                <guid isPermaLink="true">https://inteist.com/javascript-get-the-day-of-the-week/</guid>
+            </item>
+        
+            <item>
+                <title>Javascript - Date and Time for any TimeZone</title>
+                
+                
+                    <description>&lt;p&gt;A little something I wrote since I did not find anything that does that readily available. It looks solid but may contain bugs for corner cases or possibly other minor inconsistencies. For my needed timezones it seems to work fine.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 18 Jul 2015 12:18:00 -0400</pubDate>
+                <link>https://inteist.com/javascript-date-and-time-for-any-timezone/</link>
+                <guid isPermaLink="true">https://inteist.com/javascript-date-and-time-for-any-timezone/</guid>
+            </item>
+        
+    </channel>
+</rss>

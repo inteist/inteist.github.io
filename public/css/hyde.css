@@ -1,0 +1,157 @@
+/*
+ * Contents
+ *
+ * Global resets
+ * Misc
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+    font-family: Helvetica, Lato, Arimo, sans-serif;
+}
+@media (min-width: 48em) {
+    html {
+        font-size: 16px;
+    }
+}
+@media (min-width: 58em) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Misc */
+hr {
+    position: relative;
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid #cacaca;
+    border-bottom: 1px solid #eee;
+}
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+
+.sidebar {
+    text-align: left;
+    color: rgb(200, 200, 200) rgba(255, 255, 255, .5);
+    background-color: #202020;
+}
+@media (min-width: 48em) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 16rem;
+        text-align: left;
+    }
+}
+/* About section */
+
+.sidebar-about h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.5rem;
+    margin-left: -3px;
+}
+/* Sidebar nav */
+
+.sidebar-nav {
+    margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+    display: block;
+    line-height: 1.75;
+    font-size: 0.9rem;
+}
+
+/* The links overall  */
+a:hover, a:focus {
+    text-decoration: none;
+}
+.link-underline a {
+    border-bottom: 2px solid hsla(0,0%,50%,.3);
+    box-shadow: inset 0 -4px 0 hsla(0,0%,50%,.2);
+    -webkit-transition: background .25s cubic-bezier(.33, .66, .66, 1);
+    transition: background .25s cubic-bezier(.33, .66, .66, 1);
+}
+.link-underline a:hover, .link-underline a:focus, .link-underline a:active, .related a:hover, .related a:focus, .related a:active {
+    transition: background .25s cubic-bezier(.33, .66, .66, 1);
+    background: hsla(0,0%,50%,.1);
+}
+
+.tag-links-list > a,  .tag-links-list > li > a{
+    color: hsla(0, 0%, 45%, 1);
+    border: 4px solid hsla(0, 0%, 80%, .1);
+    background: hsla(0, 0%, 50%, .2);
+}
+
+.tag-links-list > a:hover,  .tag-links-list > li > a:hover{
+    color: hsla(0, 0%, 30%, 1);
+}
+
+
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+.em-text {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+@media (min-width: 48em) {
+    .sidebar-sticky {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
+/* Titles */
+
+.post-title-accent {
+
+}
+/* Meta data line below post title */
+
+.post-date {
+    margin-bottom: 0.5rem;
+}
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 1rem;
+}
+@media (min-width: 48em) {
+    .content {
+        max-width: 38rem;
+        margin-left: 20rem;
+        margin-right: 2rem;
+    }
+}
+@media (min-width: 64em) {
+    .content {
+        margin-left: 22rem;
+        margin-right: 4rem;
+    }
+}

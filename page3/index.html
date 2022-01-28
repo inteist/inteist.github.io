@@ -1,0 +1,463 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Inteist &middot; </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='//fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <link rel="canonical" href=" https://inteist.com/page3/" /> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <!-- Google Analytics --> <script> (function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-2630485-14', 'auto'); ga('send', 'pageview'); </script> <!-- Google Adsense Validation --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9336216488761027" crossorigin="anonymous"></script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1 id="site-name"> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/pages/">Pages</a> <a class="sidebar-nav-item" href="/dev-resources/">Dev Resources</a> <a class="sidebar-nav-item" href="/figlet/">Figlet</a> <a class="sidebar-nav-item" href="/git/">Git Tips</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/tags/">Tags</a> <a class="sidebar-nav-item" href="/archive/">Archive</a> <a class="sidebar-nav-item" href="/me/">Me</a> </nav> <p class="copyright">&copy; 2010 - 2022</p> </div> </div> <div class="content container"> <div class="posts"> <div class="post"> <h1 class="post-title"> <a href="/handy-adb-oneliners-for-android/"> Handy adb Oneliners for Android </a> </h1> <span class="post-date">16 Jun 2015</span> <div class="link-underline"> <p>Oneliner to speed up screenshot taking process.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="syntax"><code>adb shell screencap <span class="nt">-p</span> | perl <span class="nt">-pe</span> <span class="s1">'s/\x0D\x0A/\x0A/g'</span> <span class="o">&gt;</span> screenshot.png
+</code></pre></div></div> <p>Combined with the <code class="language-html highlighter-rouge">adb shell start</code> command that launches intents and activities the process of taking screenshots can be completely automated.</p> <p>Unlock the screen:</p><pre><code class="language-csh">adb shell input keyevent 82
+</code></pre><p>Power buttona</p><pre><code class="language-csh">adb shell input keyevent 26
+</code></pre></div> </div> <div class="post"> <h1 class="post-title"> <a href="/installing-golang-with-gvm-and-zsh/"> Installing golang with gvm and zsh </a> </h1> <span class="post-date">11 May 2015</span> <div class="link-underline"> <p>###TL;DR</p> <p>add this to your <code class="language-html highlighter-rouge">rc</code> file</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">[[</span> <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gvm/scripts/gvm"</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gvm/scripts/gvm"</span>
+</code></pre></div></div> <hr /> <p>###The Details:</p> <p>There is a wonderful tool to install and otherwise manage go versions <a href="https://github.com/moovweb/gvm">gvm</a>. It is very similar to nvm (node version manager)</p> <p>To install gvm run:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nv">$ </span>bash &lt; &lt;<span class="o">(</span>curl <span class="nt">-s</span> https://raw.github.com/moovweb/gvm/master/binscripts/gvm-installer<span class="o">)</span>
+</code></pre></div></div> <p>if you are using <code class="language-html highlighter-rouge">zsh</code> and <code class="language-html highlighter-rouge">ohmyzsh</code> in particular, you need to add this to your <code class="language-html highlighter-rouge">rc</code> file</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="o">[[</span> <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gvm/scripts/gvm"</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nb">source</span> <span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gvm/scripts/gvm"</span>
+</code></pre></div></div> <p>Then it is easy to install and use any version of go.</p> <p>to list available go versions:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>gvm listall
+</code></pre></div></div> <p>to install just use:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>gvm <span class="nb">install </span>go1.4.2  
+</code></pre></div></div> <p>currently most recent stable version of go.</p> <p>You will get something like that:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>➜  ~  gvm <span class="nb">install </span>go1.4.2
+Downloading Go source...
+Installing go1.4.2...
+ <span class="k">*</span> Compiling...
+➜  ~
+</code></pre></div></div> <p>to make it a default use this commands:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>gvm use go1.4.2 <span class="nt">--default</span>
+</code></pre></div></div> <p>After running <code class="language-html highlighter-rouge">go use</code> command you will have the <code class="language-html highlighter-rouge">$GOROOT</code> added and the $PATH updated.</p> <p>Go will reside in <code class="language-html highlighter-rouge">~/.gvm/gos/go1.4.2</code> or a similar folder, depending on the version(s) you have installed.</p> <p>Kudos to the author for making our lives easier!</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/android-material-colors/"> Android Material Colors Resource </a> </h1> <span class="post-date">09 May 2015</span> <div class="link-underline"> <p>Here’s the latest material colors as an XML resource.</p> <p>You can use it by</p> <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="c">&lt;!--
+Created by: inteist - max@inteist.com
+@inteist on Github and Twitter
+
+This resource is licensed under
+
+Creative Commons Attribution 4.0 International License.
+http://creativecommons.org/licenses/by/4.0/
+--&gt;</span>
+<span class="nt">&lt;resources&gt;</span>
+
+    <span class="c">&lt;!--Red--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_50"</span><span class="nt">&gt;</span>#FFEBEE<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_100"</span><span class="nt">&gt;</span>#FFCDD2<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_200"</span><span class="nt">&gt;</span>#EF9A9A<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_300"</span><span class="nt">&gt;</span>#E57373<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_400"</span><span class="nt">&gt;</span>#EF5350<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_500"</span><span class="nt">&gt;</span>#F44336<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_600"</span><span class="nt">&gt;</span>#E53935<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_700"</span><span class="nt">&gt;</span>#D32F2F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_800"</span><span class="nt">&gt;</span>#C62828<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_900"</span><span class="nt">&gt;</span>#B71C1C<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_A100"</span><span class="nt">&gt;</span>#FF8A80<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_A200"</span><span class="nt">&gt;</span>#FF5252<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_A400"</span><span class="nt">&gt;</span>#FF1744<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_red_A700"</span><span class="nt">&gt;</span>#D50000<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Pink--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_50"</span><span class="nt">&gt;</span>#FCE4EC<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_100"</span><span class="nt">&gt;</span>#F8BBD0<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_200"</span><span class="nt">&gt;</span>#F48FB1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_300"</span><span class="nt">&gt;</span>#F06292<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_400"</span><span class="nt">&gt;</span>#EC407A<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_500"</span><span class="nt">&gt;</span>#E91E63<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_600"</span><span class="nt">&gt;</span>#D81B60<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_700"</span><span class="nt">&gt;</span>#C2185B<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_800"</span><span class="nt">&gt;</span>#AD1457<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_900"</span><span class="nt">&gt;</span>#880E4F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_A100"</span><span class="nt">&gt;</span>#FF80AB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_A200"</span><span class="nt">&gt;</span>#FF4081<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_A400"</span><span class="nt">&gt;</span>#F50057<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_pink_A700"</span><span class="nt">&gt;</span>#C51162<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Purple--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_50"</span><span class="nt">&gt;</span>#F3E5F5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_100"</span><span class="nt">&gt;</span>#E1BEE7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_200"</span><span class="nt">&gt;</span>#CE93D8<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_300"</span><span class="nt">&gt;</span>#BA68C8<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_400"</span><span class="nt">&gt;</span>#AB47BC<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_500"</span><span class="nt">&gt;</span>#9C27B0<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_600"</span><span class="nt">&gt;</span>#8E24AA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_700"</span><span class="nt">&gt;</span>#7B1FA2<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_800"</span><span class="nt">&gt;</span>#6A1B9A<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_900"</span><span class="nt">&gt;</span>#4A148C<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_A100"</span><span class="nt">&gt;</span>#EA80FC<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_A200"</span><span class="nt">&gt;</span>#E040FB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_A400"</span><span class="nt">&gt;</span>#D500F9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_purple_A700"</span><span class="nt">&gt;</span>#AA00FF<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Deep Purple--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_50"</span><span class="nt">&gt;</span>#EDE7F6<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_100"</span><span class="nt">&gt;</span>#D1C4E9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_200"</span><span class="nt">&gt;</span>#B39DDB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_300"</span><span class="nt">&gt;</span>#9575CD<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_400"</span><span class="nt">&gt;</span>#7E57C2<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_500"</span><span class="nt">&gt;</span>#673AB7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_600"</span><span class="nt">&gt;</span>#5E35B1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_700"</span><span class="nt">&gt;</span>#512DA8<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_800"</span><span class="nt">&gt;</span>#4527A0<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_900"</span><span class="nt">&gt;</span>#311B92<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_A100"</span><span class="nt">&gt;</span>#B388FF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_A200"</span><span class="nt">&gt;</span>#7C4DFF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_A400"</span><span class="nt">&gt;</span>#651FFF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_purple_A700"</span><span class="nt">&gt;</span>#6200EA<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Indigo--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_50"</span><span class="nt">&gt;</span>#E8EAF6<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_100"</span><span class="nt">&gt;</span>#C5CAE9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_200"</span><span class="nt">&gt;</span>#9FA8DA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_300"</span><span class="nt">&gt;</span>#7986CB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_400"</span><span class="nt">&gt;</span>#5C6BC0<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_500"</span><span class="nt">&gt;</span>#3F51B5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_600"</span><span class="nt">&gt;</span>#3949AB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_700"</span><span class="nt">&gt;</span>#303F9F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_800"</span><span class="nt">&gt;</span>#283593<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_900"</span><span class="nt">&gt;</span>#1A237E<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_A100"</span><span class="nt">&gt;</span>#8C9EFF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_A200"</span><span class="nt">&gt;</span>#536DFE<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_A400"</span><span class="nt">&gt;</span>#3D5AFE<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_indigo_A700"</span><span class="nt">&gt;</span>#304FFE<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Blue--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_50"</span><span class="nt">&gt;</span>#E3F2FD<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_100"</span><span class="nt">&gt;</span>#BBDEFB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_200"</span><span class="nt">&gt;</span>#90CAF9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_300"</span><span class="nt">&gt;</span>#64B5F6<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_400"</span><span class="nt">&gt;</span>#42A5F5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_500"</span><span class="nt">&gt;</span>#2196F3<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_600"</span><span class="nt">&gt;</span>#1E88E5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_700"</span><span class="nt">&gt;</span>#1976D2<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_800"</span><span class="nt">&gt;</span>#1565C0<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_900"</span><span class="nt">&gt;</span>#0D47A1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_A100"</span><span class="nt">&gt;</span>#82B1FF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_A200"</span><span class="nt">&gt;</span>#448AFF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_A400"</span><span class="nt">&gt;</span>#2979FF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_A700"</span><span class="nt">&gt;</span>#2962FF<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Light Blue--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_50"</span><span class="nt">&gt;</span>#E1F5FE<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_100"</span><span class="nt">&gt;</span>#B3E5FC<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_200"</span><span class="nt">&gt;</span>#81D4FA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_300"</span><span class="nt">&gt;</span>#4FC3F7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_400"</span><span class="nt">&gt;</span>#29B6F6<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_500"</span><span class="nt">&gt;</span>#03A9F4<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_600"</span><span class="nt">&gt;</span>#039BE5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_700"</span><span class="nt">&gt;</span>#0288D1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_800"</span><span class="nt">&gt;</span>#0277BD<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_900"</span><span class="nt">&gt;</span>#01579B<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_A100"</span><span class="nt">&gt;</span>#80D8FF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_A200"</span><span class="nt">&gt;</span>#40C4FF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_A400"</span><span class="nt">&gt;</span>#00B0FF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_blue_A700"</span><span class="nt">&gt;</span>#0091EA<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Cyan--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_50"</span><span class="nt">&gt;</span>#E0F7FA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_100"</span><span class="nt">&gt;</span>#B2EBF2<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_200"</span><span class="nt">&gt;</span>#80DEEA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_300"</span><span class="nt">&gt;</span>#4DD0E1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_400"</span><span class="nt">&gt;</span>#26C6DA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_500"</span><span class="nt">&gt;</span>#00BCD4<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_600"</span><span class="nt">&gt;</span>#00ACC1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_700"</span><span class="nt">&gt;</span>#0097A7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_800"</span><span class="nt">&gt;</span>#00838F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_900"</span><span class="nt">&gt;</span>#006064<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_A100"</span><span class="nt">&gt;</span>#84FFFF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_A200"</span><span class="nt">&gt;</span>#18FFFF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_A400"</span><span class="nt">&gt;</span>#00E5FF<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_cyan_A700"</span><span class="nt">&gt;</span>#00B8D4<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Teal--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_50"</span><span class="nt">&gt;</span>#E0F2F1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_100"</span><span class="nt">&gt;</span>#B2DFDB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_200"</span><span class="nt">&gt;</span>#80CBC4<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_300"</span><span class="nt">&gt;</span>#4DB6AC<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_400"</span><span class="nt">&gt;</span>#26A69A<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_500"</span><span class="nt">&gt;</span>#009688<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_600"</span><span class="nt">&gt;</span>#00897B<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_700"</span><span class="nt">&gt;</span>#00796B<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_800"</span><span class="nt">&gt;</span>#00695C<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_900"</span><span class="nt">&gt;</span>#004D40<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_A100"</span><span class="nt">&gt;</span>#A7FFEB<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_A200"</span><span class="nt">&gt;</span>#64FFDA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_A400"</span><span class="nt">&gt;</span>#1DE9B6<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_teal_A700"</span><span class="nt">&gt;</span>#00BFA5<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!-- Green --&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_50"</span><span class="nt">&gt;</span>#E8F5E9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_100"</span><span class="nt">&gt;</span>#C8E6C9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_200"</span><span class="nt">&gt;</span>#A5D6A7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_300"</span><span class="nt">&gt;</span>#81C784<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_400"</span><span class="nt">&gt;</span>#66BB6A<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_500"</span><span class="nt">&gt;</span>#4CAF50<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_600"</span><span class="nt">&gt;</span>#43A047<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_700"</span><span class="nt">&gt;</span>#388E3C<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_800"</span><span class="nt">&gt;</span>#2E7D32<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_900"</span><span class="nt">&gt;</span>#1B5E20<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_A100"</span><span class="nt">&gt;</span>#B9F6CA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_A200"</span><span class="nt">&gt;</span>#69F0AE<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_A400"</span><span class="nt">&gt;</span>#00E676<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_green_A700"</span><span class="nt">&gt;</span>#00C853<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--    Light Green     --&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_50"</span><span class="nt">&gt;</span>#F1F8E9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_100"</span><span class="nt">&gt;</span>#DCEDC8<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_200"</span><span class="nt">&gt;</span>#C5E1A5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_300"</span><span class="nt">&gt;</span>#AED581<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_400"</span><span class="nt">&gt;</span>#9CCC65<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_500"</span><span class="nt">&gt;</span>#8BC34A<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_600"</span><span class="nt">&gt;</span>#7CB342<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_700"</span><span class="nt">&gt;</span>#689F38<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_800"</span><span class="nt">&gt;</span>#558B2F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_900"</span><span class="nt">&gt;</span>#33691E<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_A100"</span><span class="nt">&gt;</span>#CCFF90<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_A200"</span><span class="nt">&gt;</span>#B2FF59<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_A400"</span><span class="nt">&gt;</span>#76FF03<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_light_green_A700"</span><span class="nt">&gt;</span>#64DD17<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Lime--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_50"</span><span class="nt">&gt;</span>#F9FBE7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_100"</span><span class="nt">&gt;</span>#F0F4C3<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_200"</span><span class="nt">&gt;</span>#E6EE9C<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_300"</span><span class="nt">&gt;</span>#DCE775<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_400"</span><span class="nt">&gt;</span>#D4E157<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_500"</span><span class="nt">&gt;</span>#CDDC39<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_600"</span><span class="nt">&gt;</span>#C0CA33<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_700"</span><span class="nt">&gt;</span>#AFB42B<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_800"</span><span class="nt">&gt;</span>#9E9D24<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_900"</span><span class="nt">&gt;</span>#827717<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_A100"</span><span class="nt">&gt;</span>#F4FF81<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_A200"</span><span class="nt">&gt;</span>#EEFF41<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_A400"</span><span class="nt">&gt;</span>#C6FF00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_lime_A700"</span><span class="nt">&gt;</span>#AEEA00<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Yellow--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_50"</span><span class="nt">&gt;</span>#FFFDE7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_100"</span><span class="nt">&gt;</span>#FFF9C4<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_200"</span><span class="nt">&gt;</span>#FFF59D<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_300"</span><span class="nt">&gt;</span>#FFF176<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_400"</span><span class="nt">&gt;</span>#FFEE58<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_500"</span><span class="nt">&gt;</span>#FFEB3B<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_600"</span><span class="nt">&gt;</span>#FDD835<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_700"</span><span class="nt">&gt;</span>#FBC02D<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_800"</span><span class="nt">&gt;</span>#F9A825<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_900"</span><span class="nt">&gt;</span>#F57F17<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_A100"</span><span class="nt">&gt;</span>#FFFF8D<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_A200"</span><span class="nt">&gt;</span>#FFFF00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_A400"</span><span class="nt">&gt;</span>#FFEA00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_yellow_A700"</span><span class="nt">&gt;</span>#FFD600<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Amber--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_50"</span><span class="nt">&gt;</span>#FFF8E1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_100"</span><span class="nt">&gt;</span>#FFECB3<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_200"</span><span class="nt">&gt;</span>#FFE082<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_300"</span><span class="nt">&gt;</span>#FFD54F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_400"</span><span class="nt">&gt;</span>#FFCA28<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_500"</span><span class="nt">&gt;</span>#FFC107<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_600"</span><span class="nt">&gt;</span>#FFB300<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_700"</span><span class="nt">&gt;</span>#FFA000<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_800"</span><span class="nt">&gt;</span>#FF8F00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_900"</span><span class="nt">&gt;</span>#FF6F00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_A100"</span><span class="nt">&gt;</span>#FFE57F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_A200"</span><span class="nt">&gt;</span>#FFD740<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_A400"</span><span class="nt">&gt;</span>#FFC400<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_amber_A700"</span><span class="nt">&gt;</span>#FFAB00<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Orange--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_50"</span><span class="nt">&gt;</span>#FFF3E0<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_100"</span><span class="nt">&gt;</span>#FFE0B2<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_200"</span><span class="nt">&gt;</span>#FFCC80<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_300"</span><span class="nt">&gt;</span>#FFB74D<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_400"</span><span class="nt">&gt;</span>#FFA726<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_500"</span><span class="nt">&gt;</span>#FF9800<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_600"</span><span class="nt">&gt;</span>#FB8C00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_700"</span><span class="nt">&gt;</span>#F57C00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_800"</span><span class="nt">&gt;</span>#EF6C00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_900"</span><span class="nt">&gt;</span>#E65100<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_A100"</span><span class="nt">&gt;</span>#FFD180<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_A200"</span><span class="nt">&gt;</span>#FFAB40<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_A400"</span><span class="nt">&gt;</span>#FF9100<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_orange_A700"</span><span class="nt">&gt;</span>#FF6D00<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Deep Orange--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_50"</span><span class="nt">&gt;</span>#FBE9E7<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_100"</span><span class="nt">&gt;</span>#FFCCBC<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_200"</span><span class="nt">&gt;</span>#FFAB91<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_300"</span><span class="nt">&gt;</span>#FF8A65<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_400"</span><span class="nt">&gt;</span>#FF7043<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_500"</span><span class="nt">&gt;</span>#FF5722<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_600"</span><span class="nt">&gt;</span>#F4511E<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_700"</span><span class="nt">&gt;</span>#E64A19<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_800"</span><span class="nt">&gt;</span>#D84315<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_900"</span><span class="nt">&gt;</span>#BF360C<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_A100"</span><span class="nt">&gt;</span>#FF9E80<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_A200"</span><span class="nt">&gt;</span>#FF6E40<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_A400"</span><span class="nt">&gt;</span>#FF3D00<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_deep_orange_A700"</span><span class="nt">&gt;</span>#DD2C00<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Brown--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_50"</span><span class="nt">&gt;</span>#EFEBE9<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_100"</span><span class="nt">&gt;</span>#D7CCC8<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_200"</span><span class="nt">&gt;</span>#BCAAA4<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_300"</span><span class="nt">&gt;</span>#A1887F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_400"</span><span class="nt">&gt;</span>#8D6E63<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_500"</span><span class="nt">&gt;</span>#795548<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_600"</span><span class="nt">&gt;</span>#6D4C41<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_700"</span><span class="nt">&gt;</span>#5D4037<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_800"</span><span class="nt">&gt;</span>#4E342E<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_brown_900"</span><span class="nt">&gt;</span>#3E2723<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Grey--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_50"</span><span class="nt">&gt;</span>#FAFAFA<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_100"</span><span class="nt">&gt;</span>#F5F5F5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_200"</span><span class="nt">&gt;</span>#EEEEEE<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_300"</span><span class="nt">&gt;</span>#E0E0E0<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_400"</span><span class="nt">&gt;</span>#BDBDBD<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_500"</span><span class="nt">&gt;</span>#9E9E9E<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_600"</span><span class="nt">&gt;</span>#757575<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_700"</span><span class="nt">&gt;</span>#616161<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_800"</span><span class="nt">&gt;</span>#424242<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_grey_900"</span><span class="nt">&gt;</span>#212121<span class="nt">&lt;/color&gt;</span>
+
+    <span class="c">&lt;!--Blue Grey--&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_50"</span><span class="nt">&gt;</span>#ECEFF1<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_100"</span><span class="nt">&gt;</span>#CFD8DC<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_200"</span><span class="nt">&gt;</span>#B0BEC5<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_300"</span><span class="nt">&gt;</span>#90A4AE<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_400"</span><span class="nt">&gt;</span>#78909C<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_500"</span><span class="nt">&gt;</span>#607D8B<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_600"</span><span class="nt">&gt;</span>#546E7A<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_700"</span><span class="nt">&gt;</span>#455A64<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_800"</span><span class="nt">&gt;</span>#37474F<span class="nt">&lt;/color&gt;</span>
+    <span class="nt">&lt;color</span> <span class="na">name=</span><span class="s">"material_blue_grey_900"</span><span class="nt">&gt;</span>#263238<span class="nt">&lt;/color&gt;</span>
+
+<span class="nt">&lt;/resources&gt;</span>
+</code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/javascript-generate-pseudo-random-set/"> Javascript - Generate Pseudo Random NON REPEATING Array of Numbers </a> </h1> <span class="post-date">09 May 2015</span> <div class="link-underline"> <p>I have recently had to have a random non repeating numbers. So I used these 2 methods to first generate the set and then shuffle it.</p> <p>The example will generate numbers 1..99 in a random order.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="kd">function</span> <span class="nx">generateNumArr</span><span class="p">(</span><span class="nx">limit</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">ret</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">limit</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">ret</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kd">function</span> <span class="nx">shuffle</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span>
+        <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">temp</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">j</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+
+        <span class="c1">// swap randomly chosen element with current element</span>
+        <span class="nx">temp</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+        <span class="nx">array</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">array</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="kd">var</span> <span class="nx">ranNums</span> <span class="o">=</span> <span class="nx">shuffle</span><span class="p">(</span><span class="nx">generateNumArr</span><span class="p">(</span><span class="mi">100</span><span class="p">));</span>
+</code></pre></div></div> <p>Please let me know in the comments what you think about this method.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/concise-code-readability-vs-obscurity/"> Concise Code - Where to Draw Readability and Obscurity Line? </a> </h1> <span class="post-date">08 May 2015</span> <div class="link-underline"> <p>I have recently found myself writing this code and I wondered, should I be writing such code at all? Is it too obscure?</p> <div class="language-java highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">return</span> <span class="o">(</span><span class="n">tokens</span><span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">tokens</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;=</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">tokens</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="na">compareToIgnoreCase</span><span class="o">(</span><span class="s">"NIL"</span><span class="o">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="n">tokens</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">:</span> <span class="kc">null</span><span class="o">;</span>
+</code></pre></div></div> <p>It is pretty straightforward but it will require some mental power to process this code.</p> <p>It is a often advocated that the code should be <a href="http://en.wikipedia.org/wiki/Self-documenting">self documenting</a> and I think it indeed should. Some thinkg only hacks and edge cases have to be documented but I still think placing notes in the strategic places in the code saying in a few words (few here means literally 3 to 5 words) what this piece of code does/is supposed to do.</p> <p>Developers often take pride in complex and obscure code. This is, I guess some sort of narcissism in a shape of saying “I am so smart” instead of “I am so pretty”. Let’s call this the <strong>“Narcissistic code complexity syndrome”</strong></p> <p>Many times I do prefer writing such code however because I like the conciseness of it. Maybe I am deluding myself and I actually am a victim of narcissistic code complexity syndrom?</p> <p>Let me know in the comments.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/remove-pushed-files-folders-from-git-repo/"> Completely Remove Pushed Files and/or Folders from Git Repository </a> </h1> <span class="post-date">03 May 2015</span> <div class="link-underline"> <p>Here’s the recipe to remove the <code class="language-html highlighter-rouge">lib</code> folder. You can change the file/path matching and also limit the command for range of commits because what it actually does is basically overwriting the history and removing the unwanted files.</p> <h3 id="step-1-filter-branch">Step 1: filter-branch</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>git filter-branch <span class="nt">--index-filter</span> <span class="s1">'git rm --cached --ignore-unmatch lib/*'</span> <span class="nt">--tag-name-filter</span> <span class="nb">cat</span> <span class="nt">--</span> <span class="nt">--all</span>
+</code></pre></div></div> <h3 id="step-2-push-force">Step 2: push –force</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>git push <span class="nt">--force</span>
+</code></pre></div></div> <p>This will clean the unwanted <code class="language-html highlighter-rouge">lib</code> folder from the repository completely</p> <p>It will not rewrite the log commits though and the commit messages will still be there.</p> <p><a href="http://inteist.com/git-remove-pods-folder-from-pushed-repository-how-to">[This is an update to post on how to remove Pods folder from iOS project]</a></p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/atom-highlighting-search-results-in-a-dark-theme/"> Atom.io Highlighting the Search Results in a Dark Theme </a> </h1> <span class="post-date">29 Apr 2015</span> <div class="link-underline"> <p><strong>TL;DR</strong><br /> add the css into your <code class="language-html highlighter-rouge">~/.atom/style.less</code> which you can open from Atom <code class="language-html highlighter-rouge">-&gt;</code> Open Your Stylesheet.</p> <p>Yesterday following the fix of <a href="http://blog.atom.io/2015/04/21/atom-is-faster-resizable-saves-app-state.html">many major issues</a> I had with Atom where one of the major ones being the <a href="https://github.com/atom/atom/issues/1603">save state</a> issue which I missed so much from Sublime and this was a deal breaker for me. Up until tomorrow when I realized it has been finally implemented in Atom.</p> <p>I completely switched to Atom now. So long sublime… Or so I hope :)</p> <p>I have realized that the search highlighting in the dark themes (I use Dark Monokay pretty much everywhere) and I used a <a href="https://atom.io/themes/atomized-monokai-dark">custom Monokai theme</a> in Atom that I changed a little to match better the Sublime Text Monokai theme I have been using for a while.</p> <p>Anyhow. I realized that there is no search highlighting for me going on. Ok, so I thought maybe it’s me and tried some other dark themes. Nada yada…</p> <p>Fortunately it’s a pretty easy fix via the custom styles that will apply to any theme you load:</p> <div class="language-css highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">atom-text-editor</span><span class="nd">::shadow</span> <span class="nc">.highlight.find-result</span> <span class="nc">.region</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="nt">atom-text-editor</span><span class="nd">::shadow</span> <span class="nc">.highlight.current-result</span> <span class="nc">.region</span><span class="o">,</span>
+<span class="nt">atom-text-editor</span><span class="nd">::shadow</span> <span class="nc">.highlight.current-result</span> <span class="o">~</span> <span class="nc">.highlight.selection</span> <span class="nc">.region</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="err">//</span> <span class="err">the</span> <span class="err">active</span> <span class="err">search</span> <span class="err">highlight</span> <span class="err">-</span> <span class="err">to</span> <span class="err">distinguish</span> <span class="err">from</span> <span class="err">the</span> <span class="err">other</span> <span class="err">results</span>
+  <span class="nl">border-color</span><span class="p">:</span> <span class="no">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>After playing a little with various options I decided to settle on these. You can of course change the background and the border to your liking.</p> <p>The red used here is the default one and is <code class="language-html highlighter-rouge">rgb(255, 0, 0)</code>.</p> <p><strong>UPD (2015-11-01)</strong> As of October 2015, the colors are broken with the updated Atom. I still did not have the chance to fix it.</p> <p><strong>UPD (2015-12-10)</strong> I got some time to have a <a href="/atom-editor-search-highlight-style/">quick fix for the search highlight issue</a></p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/keycdn-introduces-node-library/"> KeyCDN introduces Node library </a> </h1> <span class="post-date">28 Apr 2015</span> <div class="link-underline"> <p>KeyCDN is an awesome PAYG (pay-as-you-go) CDN service. I have been using them and I love them so far. I am planning on writing a more detailed post about why I like them and what makes them a great fit for us in hope to help someone to make a decision on which CDN service to use and just to give some props and praise to the guys behind keyCDN.</p> <p>It is free to try and if you like it, you can <a href="https://www.keycdn.com/?a=4969">get $5 off using this promo link</a></p> <p>In this post I just wanted to show some code that interacts with their <code class="language-html highlighter-rouge">Node.js</code> library.</p> <p>I am using a <code class="language-html highlighter-rouge">prompt</code> module to get input as to what needs to be done</p> <p>The <code class="language-html highlighter-rouge">purgeZone(1)</code> and <code class="language-html highlighter-rouge">listZones(0)</code> are pretty much taken from the sample with some very minor enhancements to make the methods be more “output friendly”.</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="kd">var</span> <span class="nx">secret</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./secret.js</span><span class="dl">'</span><span class="p">);</span>        <span class="c1">//put your secret key here or you can use it directly passing to the keyCDN method.</span>
+
+<span class="kd">var</span> <span class="nx">KeyCDN</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">keycdn</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">keycdn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">KeyCDN</span><span class="p">(</span><span class="nx">secret</span><span class="p">.</span><span class="nx">key</span><span class="p">);</span>
+
+
+<span class="kd">function</span> <span class="nx">purgeZone</span><span class="p">(</span><span class="nx">zoneID</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// purge zone cache</span>
+    <span class="nx">keycdn</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">zones/purge/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">zoneID</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">.json</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">GET zones/purge/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">zoneID</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">.json</span><span class="dl">'</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">ERR:</span><span class="dl">'</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">Could not purge-&gt; </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">zoneID</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">trace</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">ACK:</span><span class="dl">'</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">Purge-&gt; </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">zoneID</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+
+<span class="kd">function</span> <span class="nx">listZones</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// get all zones</span>
+    <span class="nx">keycdn</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">zones.json</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">trace</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">dir</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">results</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">zones</span><span class="p">);</span>
+
+    <span class="p">});</span>
+<span class="p">}</span>
+
+
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">-------------------------- START -------------------------------</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">1. List Zones</span><span class="se">\n</span><span class="s2">2. Purge Content Zones</span><span class="se">\n</span><span class="s2">3. Purge All Zones</span><span class="se">\n\n</span><span class="s2">Choose option: </span><span class="se">\n</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">ZONES1</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">zone</span><span class="p">:</span> <span class="dl">'</span><span class="s1">name1</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">1111</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">zone</span><span class="p">:</span> <span class="dl">'</span><span class="s1">name2</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">1112</span>
+    <span class="p">},</span>
+<span class="p">];</span>
+
+
+<span class="kd">var</span> <span class="nx">ZONES2</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="na">zone</span><span class="p">:</span> <span class="dl">'</span><span class="s1">name3</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">1113</span>
+    <span class="p">}</span>
+<span class="p">];</span>
+
+
+<span class="kd">var</span> <span class="nx">prompt</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">prompt</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">prompt</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+<span class="nx">prompt</span><span class="p">.</span><span class="kd">get</span><span class="p">([</span><span class="dl">'</span><span class="s1">insert</span><span class="dl">'</span><span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">insert</span><span class="p">;</span>
+
+    <span class="k">switch</span> <span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">case</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span><span class="p">:</span>
+        <span class="nx">listZones</span><span class="p">();</span>
+        <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">case</span> <span class="dl">'</span><span class="s1">2</span><span class="dl">'</span><span class="p">:</span>
+        <span class="nx">ZONES1</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">zoneObj</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">purgeZone</span><span class="p">(</span><span class="nx">zoneObj</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+        <span class="p">});</span>
+        <span class="k">break</span><span class="p">;</span>
+
+    <span class="k">case</span> <span class="dl">'</span><span class="s1">3</span><span class="dl">'</span><span class="p">:</span>
+        <span class="kd">var</span> <span class="nx">allZones</span> <span class="o">=</span> <span class="nx">ZONES1</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">ZONES2</span><span class="p">);</span>
+
+        <span class="nx">allZones</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">zoneObj</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">purgeZone</span><span class="p">(</span><span class="nx">zoneObj</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+        <span class="p">});</span>
+        <span class="k">break</span><span class="p">;</span>
+
+    <span class="nl">default</span><span class="p">:</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">ERR: no action mathches the input</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+</code></pre></div></div> <p>the <code class="language-html highlighter-rouge">secret.js</code> is just one line</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nx">exports</span><span class="p">.</span><span class="nx">key</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">*****************************</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div> <p>I could do a much nicer job I suppose using a <code class="language-html highlighter-rouge">commander</code> package or the <code class="language-html highlighter-rouge">optimist</code> but I just needed to throw something quick together to be able to basically purge all the zones or some types of zones quickly.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/my-new-404-page/"> My New 404 Page </a> </h1> <span class="post-date">23 Apr 2015</span> <div class="link-underline"> <p>Here’s my new 404 page. What do you think? Click <a href="/nonexistingpage">here to test it</a></p> <p><img src="/media/404-panda-page.png" alt="" /></p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/handling-invisibles-in-atom-editor/"> Handling invisibles in Atom.io </a> </h1> <span class="post-date">23 Apr 2015</span> <div class="link-underline"> <p>I like being able to see the invisibles in my text editor. While the invisibles are enabled in Atom though, it shows all of the invisibles and it may be overwhelming.</p> <p>To make it a little saner use:</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="nx">showInvisibles</span><span class="p">:</span> <span class="kc">true</span>
+<span class="nx">invisibles</span><span class="p">:</span>
+    <span class="nx">eol</span><span class="p">:</span> <span class="kc">false</span>
+
+</code></pre></div></div> <p>in your Atom config file.</p> <p>To get to the config use Atom → Open Your Config</p> <p>Enjoy.</p> </div> </div> </div> <div class="pagination"> <a class="pagination-item older" href="/page4/">Older</a> <a class="pagination-item newer" href="/page2/">Newer</a> </div> </div> </body> </html>
