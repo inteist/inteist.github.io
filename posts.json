@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Upgrading Ruby Jekyll and all the Gems after years of neglect",
+            "url": "https://inteist.com/2022-01-30-reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/",
+            "date": "2022-01-30T01:11:00-05:00"
+        },
+        
+        {
             "title": "It's been long 5 years of silence",
             "url": "https://inteist.com/Its-been-long-5-years-of-silence/",
             "date": "2022-01-27T20:27:13-05:00"
