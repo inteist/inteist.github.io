@@ -869,8 +869,8 @@
 <lastmod>2017-02-18T12:24:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://inteist.com/Its-been-long-5-years-of-silence/</loc>
-<lastmod>2022-01-29T17:05:15-05:00</lastmod>
+<loc>https://inteist.com/long-5-years-silence/</loc>
+<lastmod>2022-02-11T14:42:29-05:00</lastmod>
 </url>
 <url>
 <loc>https://inteist.com/2022-01-30-reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</loc>
@@ -922,7 +922,7 @@
 </url>
 <url>
 <loc>https://inteist.com/git/</loc>
-<lastmod>2022-02-11T11:56:26-05:00</lastmod>
+<lastmod>2022-02-11T14:42:39-05:00</lastmod>
 </url>
 <url>
 <loc>https://inteist.com/</loc>
@@ -1667,6 +1667,9 @@
 </url>
 <url>
 <loc>https://inteist.com/tag/braindump/</loc>
+</url>
+<url>
+<loc>https://inteist.com/tag/ruby/</loc>
 </url>
 <url>
 <loc>https://inteist.com/page2/</loc>
