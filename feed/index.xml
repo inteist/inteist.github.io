@@ -3,11 +3,35 @@
     <channel>
         <title></title>
         <description>I code for living</description>
-        <link>http://localhost:4000</link>
-        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+        <link>https://inteist.com</link>
+        <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
-                <title>Upgrading Ruby Jekyll and all the Gems after years of neglect</title>
+                <title>Removing Alpha Channel for App Store Pictures from Figma or any other source</title>
+                
+                
+                    <description>&lt;p&gt;It is not possible to export PNGs with no alpha channel from Figma, unfortunately.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 22 May 2022 18:47:59 -0400</pubDate>
+                <link>https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</link>
+                <guid isPermaLink="true">https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</guid>
+            </item>
+        
+            <item>
+                <title>Customizing and Custom Loading Chrome Extensions</title>
+                
+                
+                    <description>&lt;p&gt;I have just encountered an issue where Google is constantly blocking certain extension from being active in Chrome that is supposedly violating its terms. The thing is - this is an extension that hides an advertising sidebar on any Facebook sub-websites.&lt;/p&gt;
+</description>
+                
+                <pubDate>Wed, 23 Feb 2022 21:27:00 -0500</pubDate>
+                <link>https://inteist.com/customizing-custom-loading-chrome-extensions/</link>
+                <guid isPermaLink="true">https://inteist.com/customizing-custom-loading-chrome-extensions/</guid>
+            </item>
+        
+            <item>
+                <title>Reviving the blog - upgrading Ruby Jekyll and all the Gems</title>
                 
                 
                     <description>&lt;ul&gt;
@@ -17,8 +41,8 @@
 </description>
                 
                 <pubDate>Sun, 30 Jan 2022 01:11:00 -0500</pubDate>
-                <link>http://localhost:4000/2022-01-30-reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</link>
-                <guid isPermaLink="true">http://localhost:4000/2022-01-30-reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</guid>
+                <link>https://inteist.com/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</link>
+                <guid isPermaLink="true">https://inteist.com/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</guid>
             </item>
         
             <item>
@@ -29,8 +53,8 @@
 </description>
                 
                 <pubDate>Thu, 27 Jan 2022 20:27:13 -0500</pubDate>
-                <link>http://localhost:4000/long-5-years-silence/</link>
-                <guid isPermaLink="true">http://localhost:4000/long-5-years-silence/</guid>
+                <link>https://inteist.com/long-5-years-silence/</link>
+                <guid isPermaLink="true">https://inteist.com/long-5-years-silence/</guid>
             </item>
         
             <item>
@@ -41,8 +65,8 @@
 </description>
                 
                 <pubDate>Sat, 18 Feb 2017 12:24:00 -0500</pubDate>
-                <link>http://localhost:4000/scheduling-randomized-cron-within-an-hour/</link>
-                <guid isPermaLink="true">http://localhost:4000/scheduling-randomized-cron-within-an-hour/</guid>
+                <link>https://inteist.com/scheduling-randomized-cron-within-an-hour/</link>
+                <guid isPermaLink="true">https://inteist.com/scheduling-randomized-cron-within-an-hour/</guid>
             </item>
         
             <item>
@@ -54,8 +78,8 @@
 </description>
                 
                 <pubDate>Fri, 13 Jan 2017 15:28:00 -0500</pubDate>
-                <link>http://localhost:4000/android-working-with-gradle-purging-gradle-cache/</link>
-                <guid isPermaLink="true">http://localhost:4000/android-working-with-gradle-purging-gradle-cache/</guid>
+                <link>https://inteist.com/android-working-with-gradle-purging-gradle-cache/</link>
+                <guid isPermaLink="true">https://inteist.com/android-working-with-gradle-purging-gradle-cache/</guid>
             </item>
         
             <item>
@@ -68,8 +92,8 @@
 </description>
                 
                 <pubDate>Mon, 23 May 2016 00:31:00 -0400</pubDate>
-                <link>http://localhost:4000/git-trello-integration/</link>
-                <guid isPermaLink="true">http://localhost:4000/git-trello-integration/</guid>
+                <link>https://inteist.com/git-trello-integration/</link>
+                <guid isPermaLink="true">https://inteist.com/git-trello-integration/</guid>
             </item>
         
             <item>
@@ -80,8 +104,8 @@
 </description>
                 
                 <pubDate>Fri, 20 May 2016 18:37:00 -0400</pubDate>
-                <link>http://localhost:4000/google-i-o-videos-list/</link>
-                <guid isPermaLink="true">http://localhost:4000/google-i-o-videos-list/</guid>
+                <link>https://inteist.com/google-i-o-videos-list/</link>
+                <guid isPermaLink="true">https://inteist.com/google-i-o-videos-list/</guid>
             </item>
         
             <item>
@@ -93,8 +117,8 @@
 </description>
                 
                 <pubDate>Fri, 20 May 2016 10:24:00 -0400</pubDate>
-                <link>http://localhost:4000/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</link>
-                <guid isPermaLink="true">http://localhost:4000/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</guid>
+                <link>https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</link>
+                <guid isPermaLink="true">https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</guid>
             </item>
         
             <item>
@@ -105,8 +129,8 @@
 </description>
                 
                 <pubDate>Mon, 07 Mar 2016 15:26:00 -0500</pubDate>
-                <link>http://localhost:4000/git-salvaging-lost-commits/</link>
-                <guid isPermaLink="true">http://localhost:4000/git-salvaging-lost-commits/</guid>
+                <link>https://inteist.com/git-salvaging-lost-commits/</link>
+                <guid isPermaLink="true">https://inteist.com/git-salvaging-lost-commits/</guid>
             </item>
         
             <item>
@@ -121,8 +145,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Mon, 29 Feb 2016 20:59:00 -0500</pubDate>
-                <link>http://localhost:4000/system-chaos-quote/</link>
-                <guid isPermaLink="true">http://localhost:4000/system-chaos-quote/</guid>
+                <link>https://inteist.com/system-chaos-quote/</link>
+                <guid isPermaLink="true">https://inteist.com/system-chaos-quote/</guid>
             </item>
         
             <item>
@@ -134,8 +158,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Mon, 29 Feb 2016 18:21:00 -0500</pubDate>
-                <link>http://localhost:4000/some-basic-useful-virtualbox-terminal-commands/</link>
-                <guid isPermaLink="true">http://localhost:4000/some-basic-useful-virtualbox-terminal-commands/</guid>
+                <link>https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</link>
+                <guid isPermaLink="true">https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</guid>
             </item>
         
             <item>
@@ -147,8 +171,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sat, 19 Dec 2015 23:51:00 -0500</pubDate>
-                <link>http://localhost:4000/good-idea-quote/</link>
-                <guid isPermaLink="true">http://localhost:4000/good-idea-quote/</guid>
+                <link>https://inteist.com/good-idea-quote/</link>
+                <guid isPermaLink="true">https://inteist.com/good-idea-quote/</guid>
             </item>
         
             <item>
@@ -159,8 +183,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Thu, 10 Dec 2015 14:38:00 -0500</pubDate>
-                <link>http://localhost:4000/tarantool-fast-in-memory-database-for-hot-data/</link>
-                <guid isPermaLink="true">http://localhost:4000/tarantool-fast-in-memory-database-for-hot-data/</guid>
+                <link>https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</link>
+                <guid isPermaLink="true">https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</guid>
             </item>
         
             <item>
@@ -171,8 +195,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Wed, 09 Dec 2015 23:03:00 -0500</pubDate>
-                <link>http://localhost:4000/atom-editor-search-highlight-style/</link>
-                <guid isPermaLink="true">http://localhost:4000/atom-editor-search-highlight-style/</guid>
+                <link>https://inteist.com/atom-editor-search-highlight-style/</link>
+                <guid isPermaLink="true">https://inteist.com/atom-editor-search-highlight-style/</guid>
             </item>
         
             <item>
@@ -183,8 +207,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Fri, 13 Nov 2015 15:53:00 -0500</pubDate>
-                <link>http://localhost:4000/subset-test-in-java/</link>
-                <guid isPermaLink="true">http://localhost:4000/subset-test-in-java/</guid>
+                <link>https://inteist.com/subset-test-in-java/</link>
+                <guid isPermaLink="true">https://inteist.com/subset-test-in-java/</guid>
             </item>
         
             <item>
@@ -195,8 +219,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Tue, 27 Oct 2015 00:29:00 -0400</pubDate>
-                <link>http://localhost:4000/ls-safari-history-on-os-x-using-oneliner/</link>
-                <guid isPermaLink="true">http://localhost:4000/ls-safari-history-on-os-x-using-oneliner/</guid>
+                <link>https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</link>
+                <guid isPermaLink="true">https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</guid>
             </item>
         
             <item>
@@ -208,8 +232,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Wed, 07 Oct 2015 20:46:00 -0400</pubDate>
-                <link>http://localhost:4000/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</link>
-                <guid isPermaLink="true">http://localhost:4000/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</guid>
+                <link>https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</link>
+                <guid isPermaLink="true">https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</guid>
             </item>
         
             <item>
@@ -220,8 +244,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sun, 13 Sep 2015 17:40:00 -0400</pubDate>
-                <link>http://localhost:4000/clang-format-style-file-for-ios-projects/</link>
-                <guid isPermaLink="true">http://localhost:4000/clang-format-style-file-for-ios-projects/</guid>
+                <link>https://inteist.com/clang-format-style-file-for-ios-projects/</link>
+                <guid isPermaLink="true">https://inteist.com/clang-format-style-file-for-ios-projects/</guid>
             </item>
         
             <item>
@@ -232,32 +256,8 @@ is doomed to be in a state of chaos
 </description>
                 
                 <pubDate>Sun, 13 Sep 2015 17:07:00 -0400</pubDate>
-                <link>http://localhost:4000/clang-format-shell-script-to-format-all-files-in-a-folder/</link>
-                <guid isPermaLink="true">http://localhost:4000/clang-format-shell-script-to-format-all-files-in-a-folder/</guid>
-            </item>
-        
-            <item>
-                <title>Uncrustify Whole iOS Project</title>
-                
-                
-                    <description>&lt;p&gt;A great &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;uncrustify&lt;/code&gt; utility does not have (afaik) an option to recursively process all the files in the folder/project. Fear not. &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;find(1)&lt;/code&gt; to the rescue!&lt;/p&gt;
-</description>
-                
-                <pubDate>Mon, 24 Aug 2015 23:45:00 -0400</pubDate>
-                <link>http://localhost:4000/uncrustify-whole-ios-project/</link>
-                <guid isPermaLink="true">http://localhost:4000/uncrustify-whole-ios-project/</guid>
-            </item>
-        
-            <item>
-                <title>TV reality</title>
-                
-                
-                    <description>&lt;p&gt;&lt;img src=&quot;/media/steve.cutts-the.daily.bullshit.jpg&quot; alt=&quot;the daily bullshit - TV reality&quot; /&gt;&lt;/p&gt;
-</description>
-                
-                <pubDate>Sat, 22 Aug 2015 13:43:00 -0400</pubDate>
-                <link>http://localhost:4000/tv-by-steve-cutts/</link>
-                <guid isPermaLink="true">http://localhost:4000/tv-by-steve-cutts/</guid>
+                <link>https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</link>
+                <guid isPermaLink="true">https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</guid>
             </item>
         
     </channel>

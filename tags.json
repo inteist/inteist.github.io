@@ -477,7 +477,13 @@
         
         "braindump",
         
-        "ruby"
+        "ruby",
+        
+        "gems",
+        
+        "app store",
+        
+        "imagemagick"
         
     ]
 }
