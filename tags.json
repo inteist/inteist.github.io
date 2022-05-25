@@ -483,7 +483,13 @@
         
         "app store",
         
-        "imagemagick"
+        "imagemagick",
+        
+        "mogrify",
+        
+        "brew",
+        
+        "homebrew"
         
     ]
 }

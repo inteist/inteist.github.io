@@ -49,23 +49,18 @@
           "type": "string"
         },
         {
-          "title": "category",
-          "name": "category",
-          "type": "categories"
+          "title": "keywords",
+          "name": "keywords",
+          "type": "choice",
+          "choices": [
+            "mogrify",
+            "app store"
+          ]
         },
         {
           "title": "last_modified_at",
           "name": "last_modified_at",
           "type": "datetime"
-        },
-        {
-          "title": "keywords",
-          "name": "keywords",
-          "type": "choice",
-          "choices": [
-            "extension",
-            "chrome"
-          ]
         }
       ]
     }
