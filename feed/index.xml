@@ -7,6 +7,19 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Exploring Obsidian</title>
+                
+                
+                    <description>&lt;p&gt;I have just discovered Obsidian.md and have been exploring it. It sonds like a great idea but I already had encountered
+such ideas in the past but these ideas did not survice because they did not get enough traction.&lt;/p&gt;
+</description>
+                
+                <pubDate>Wed, 25 May 2022 19:52:00 -0400</pubDate>
+                <link>https://inteist.com/exploring-obsidian/</link>
+                <guid isPermaLink="true">https://inteist.com/exploring-obsidian/</guid>
+            </item>
+        
+            <item>
                 <title>Removing Alpha Channel for App Store Pictures from Figma or any other source</title>
                 
                 
@@ -246,18 +259,6 @@ is doomed to be in a state of chaos
                 <pubDate>Sun, 13 Sep 2015 17:40:00 -0400</pubDate>
                 <link>https://inteist.com/clang-format-style-file-for-ios-projects/</link>
                 <guid isPermaLink="true">https://inteist.com/clang-format-style-file-for-ios-projects/</guid>
-            </item>
-        
-            <item>
-                <title>Shell Script to Format all Files in a Folder using clang-format</title>
-                
-                
-                    <description>&lt;p&gt;This is a snippet I use to format all the files (recursively from the current folder) for iOS projects&lt;/p&gt;
-</description>
-                
-                <pubDate>Sun, 13 Sep 2015 17:07:00 -0400</pubDate>
-                <link>https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</link>
-                <guid isPermaLink="true">https://inteist.com/clang-format-shell-script-to-format-all-files-in-a-folder/</guid>
             </item>
         
     </channel>
