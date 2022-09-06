@@ -4,49 +4,53 @@
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
+      "previewPath": null,
       "pageBundle": false,
       "fields": [
-        {
-          "title": "Title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Content preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "boolean"
-        },
-        {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        },
         {
           "title": "layout",
           "name": "layout",
           "type": "string"
+        },
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "summary",
+          "name": "summary",
+          "type": "datetime"
+        },
+        {
+          "title": "last_modified_at",
+          "name": "last_modified_at",
+          "type": "datetime"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "datetime"
         },
         {
           "title": "keywords",
@@ -54,13 +58,14 @@
           "type": "choice",
           "choices": [
             "mogrify",
-            "app store"
+            "app store",
+            "homebrew"
           ]
         },
         {
-          "title": "last_modified_at",
-          "name": "last_modified_at",
-          "type": "datetime"
+          "title": "description",
+          "name": "description",
+          "type": "string"
         }
       ]
     }

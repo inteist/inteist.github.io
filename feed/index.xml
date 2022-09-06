@@ -20,7 +20,7 @@ such ideas in the past but these ideas did not survice because they did not get 
             </item>
         
             <item>
-                <title>Removing Alpha Channel for App Store Pictures from Figma or any other source</title>
+                <title>Removing Alpha Channel for App Store Pictures</title>
                 
                 
                     <description>&lt;p&gt;It is not possible to export PNGs with no alpha channel from Figma, unfortunately.&lt;/p&gt;
