@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Efficient Image Resizing on OS X",
+            "url": "https://inteist.com/efficient-image-resizing-os/",
+            "date": "2022-09-27T21:06:44-04:00"
+        },
+        
+        {
             "title": "Exploring Obsidian",
             "url": "https://inteist.com/exploring-obsidian/",
             "date": "2022-05-25T19:52:00-04:00"

@@ -7,6 +7,19 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Efficient Image Resizing on OS X</title>
+                
+                
+                    <description>&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;syntax&quot;&gt;&lt;code&gt;sips -Z 640 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.jpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+                
+                <pubDate>Tue, 27 Sep 2022 21:06:44 -0400</pubDate>
+                <link>https://inteist.com/efficient-image-resizing-os/</link>
+                <guid isPermaLink="true">https://inteist.com/efficient-image-resizing-os/</guid>
+            </item>
+        
+            <item>
                 <title>Exploring Obsidian</title>
                 
                 
@@ -247,18 +260,6 @@ is doomed to be in a state of chaos
                 <pubDate>Wed, 07 Oct 2015 20:46:00 -0400</pubDate>
                 <link>https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</link>
                 <guid isPermaLink="true">https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</guid>
-            </item>
-        
-            <item>
-                <title>clang-format Style File for iOS Projects</title>
-                
-                
-                    <description>&lt;p&gt;A simple &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;clang-format&lt;/code&gt; style file that will get you 80% of what you want with 20% of effort (or even less):&lt;/p&gt;
-</description>
-                
-                <pubDate>Sun, 13 Sep 2015 17:40:00 -0400</pubDate>
-                <link>https://inteist.com/clang-format-style-file-for-ios-projects/</link>
-                <guid isPermaLink="true">https://inteist.com/clang-format-style-file-for-ios-projects/</guid>
             </item>
         
     </channel>
