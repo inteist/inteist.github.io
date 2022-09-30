@@ -63,7 +63,9 @@
         
         "braindumps",
         
-        "osx"
+        "osx",
+        
+        "terminal"
         
     ]
 }
