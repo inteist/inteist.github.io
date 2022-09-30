@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Best Compression for 7z </title>
+                
+                
+                    <description>&lt;p&gt;For best 7z compression use&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 30 Sep 2022 17:04:38 -0400</pubDate>
+                <link>https://inteist.com/compression-7z/</link>
+                <guid isPermaLink="true">https://inteist.com/compression-7z/</guid>
+            </item>
+        
+            <item>
                 <title>Efficient Image Resizing on OS X</title>
                 
                 
@@ -247,19 +259,6 @@ is doomed to be in a state of chaos
                 <pubDate>Tue, 27 Oct 2015 00:29:00 -0400</pubDate>
                 <link>https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</link>
                 <guid isPermaLink="true">https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</guid>
-            </item>
-        
-            <item>
-                <title>Fix Fonts Issue in Android Studio with El Capitan on OS X</title>
-                
-                
-                    <description>&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;/h3&gt;
-&lt;p&gt;If you have recently upgraded to El Capitan and now your fonts in Android Studio are non anti aliased (they look thin and broken) you’ve come to the right place for a solution.&lt;/p&gt;
-</description>
-                
-                <pubDate>Wed, 07 Oct 2015 20:46:00 -0400</pubDate>
-                <link>https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</link>
-                <guid isPermaLink="true">https://inteist.com/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/</guid>
             </item>
         
     </channel>

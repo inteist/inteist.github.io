@@ -1,0 +1,99 @@
+<p>For best 7z compression use</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>7z a <span class="nt">-t7z</span> <span class="nt">-m0</span><span class="o">=</span>lzma <span class="nt">-mx</span><span class="o">=</span>9 <span class="nt">-mfb</span><span class="o">=</span>64 <span class="nt">-md</span><span class="o">=</span>32m <span class="nt">-ms</span><span class="o">=</span>on archive.7z dir1
+</code></pre></div></div>
+
+<p>Switches explained:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">-t7z</span>   7z archive
+
+<span class="nt">-m0</span><span class="o">=</span>lzma
+       lzma method
+
+<span class="nt">-mx</span><span class="o">=</span>9  level of compression <span class="o">=</span> 9 <span class="o">(</span>Ultra<span class="o">)</span>
+
+<span class="nt">-mfb</span><span class="o">=</span>64
+       number of fast bytes <span class="k">for </span>LZMA <span class="o">=</span> 64
+<span class="nt">-md</span><span class="o">=</span>32m
+       dictionary size <span class="o">=</span> 32 megabytes
+
+<span class="nt">-ms</span><span class="o">=</span>on solid archive <span class="o">=</span> on
+</code></pre></div></div>
+
+<p>7z is available on most standard Linux distros</p>
+
+<p>Max OS - install via homebrew</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>brew install p7zip
+</code></pre></div></div>
+
+<h2 id="extras">Extras</h2>
+<p>7z command reference:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+7-Zip <span class="o">[</span>64] 17.04 : Copyright <span class="o">(</span>c<span class="o">)</span> 1999-2021 Igor Pavlov : 2017-08-28
+p7zip Version 17.04 <span class="o">(</span><span class="nv">locale</span><span class="o">=</span>utf8,Utf16<span class="o">=</span>on,HugeFiles<span class="o">=</span>on,64 bits,16 CPUs x64<span class="o">)</span>
+
+Usage: 7z &lt;<span class="nb">command</span><span class="o">&gt;</span> <span class="o">[</span>&lt;switches&gt;...] &lt;archive_name&gt; <span class="o">[</span>&lt;file_names&gt;...]
+
+&lt;Commands&gt;
+  a : Add files to archive
+  b : Benchmark
+  d : Delete files from archive
+  e : Extract files from archive <span class="o">(</span>without using directory names<span class="o">)</span>
+  h : Calculate <span class="nb">hash </span>values <span class="k">for </span>files
+  i : Show information about supported formats
+  l : List contents of archive
+  rn : Rename files <span class="k">in </span>archive
+  t : Test integrity of archive
+  u : Update files to archive
+  x : eXtract files with full paths
+
+&lt;Switches&gt;
+  <span class="nt">--</span> : Stop switches parsing
+  @listfile : <span class="nb">set </span>path to listfile that contains file names
+  <span class="nt">-ai</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : Include archives
+  <span class="nt">-ax</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : eXclude archives
+  <span class="nt">-ao</span><span class="o">{</span>a|s|t|u<span class="o">}</span> : <span class="nb">set </span>Overwrite mode
+  <span class="nt">-an</span> : disable archive_name field
+  <span class="nt">-bb</span><span class="o">[</span>0-3] : <span class="nb">set </span>output log level
+  <span class="nt">-bd</span> : disable progress indicator
+  <span class="nt">-bs</span><span class="o">{</span>o|e|p<span class="o">}{</span>0|1|2<span class="o">}</span> : <span class="nb">set </span>output stream <span class="k">for </span>output/error/progress line
+  <span class="nt">-bt</span> : show execution <span class="nb">time </span>statistics
+  <span class="nt">-i</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : Include filenames
+  <span class="nt">-m</span><span class="o">{</span>Parameters<span class="o">}</span> : <span class="nb">set </span>compression Method
+    <span class="nt">-mmt</span><span class="o">[</span>N] : <span class="nb">set </span>number of CPU threads
+    <span class="nt">-mx</span><span class="o">[</span>N] : <span class="nb">set </span>compression level: <span class="nt">-mx1</span> <span class="o">(</span>fastest<span class="o">)</span> ... <span class="nt">-mx9</span> <span class="o">(</span>ultra<span class="o">)</span>
+  <span class="nt">-o</span><span class="o">{</span>Directory<span class="o">}</span> : <span class="nb">set </span>Output directory
+  <span class="nt">-p</span><span class="o">{</span>Password<span class="o">}</span> : <span class="nb">set </span>Password
+  <span class="nt">-r</span><span class="o">[</span>-|0] : Recurse subdirectories
+  <span class="nt">-sa</span><span class="o">{</span>a|e|s<span class="o">}</span> : <span class="nb">set </span>Archive name mode
+  <span class="nt">-scc</span><span class="o">{</span>UTF-8|WIN|DOS<span class="o">}</span> : <span class="nb">set </span>charset <span class="k">for for </span>console input/output
+  <span class="nt">-scs</span><span class="o">{</span>UTF-8|UTF-16LE|UTF-16BE|WIN|DOS|<span class="o">{</span><span class="nb">id</span><span class="o">}}</span> : <span class="nb">set </span>charset <span class="k">for </span>list files
+  <span class="nt">-scrc</span><span class="o">[</span>CRC32|CRC64|SHA1|SHA256|<span class="k">*</span><span class="o">]</span> : <span class="nb">set hash </span><span class="k">function for </span>x, e, h commands
+  <span class="nt">-sdel</span> : delete files after compression
+  <span class="nt">-seml</span><span class="o">[</span>.] : send archive by email
+  <span class="nt">-sfx</span><span class="o">[{</span>name<span class="o">}]</span> : Create SFX archive
+  <span class="nt">-si</span><span class="o">[{</span>name<span class="o">}]</span> : <span class="nb">read </span>data from stdin
+  <span class="nt">-slp</span> : <span class="nb">set </span>Large Pages mode
+  <span class="nt">-slt</span> : show technical information <span class="k">for </span>l <span class="o">(</span>List<span class="o">)</span> <span class="nb">command</span>
+  <span class="nt">-snh</span> : store hard links as links
+  <span class="nt">-snl</span> : store symbolic links as links
+  <span class="nt">-sni</span> : store NT security information
+  <span class="nt">-sns</span><span class="o">[</span>-] : store NTFS alternate streams
+  <span class="nt">-so</span> : write data to stdout
+  <span class="nt">-spd</span> : disable wildcard matching <span class="k">for </span>file names
+  <span class="nt">-spe</span> : eliminate duplication of root folder <span class="k">for </span>extract <span class="nb">command</span>
+  <span class="nt">-spf</span> : use fully qualified file paths
+  <span class="nt">-ssc</span><span class="o">[</span>-] : <span class="nb">set </span>sensitive <span class="k">case</span> mode
+  <span class="nt">-ssw</span> : compress shared files
+  <span class="nt">-stl</span> : <span class="nb">set </span>archive timestamp from the most recently modified file
+  <span class="nt">-stm</span><span class="o">{</span>HexMask<span class="o">}</span> : <span class="nb">set </span>CPU thread affinity mask <span class="o">(</span>hexadecimal number<span class="p">)</span>
+  <span class="nt">-stx</span><span class="o">{</span>Type<span class="o">}</span> : exclude archive <span class="nb">type</span>
+  <span class="nt">-t</span><span class="o">{</span>Type<span class="o">}</span> : Set <span class="nb">type </span>of archive
+  <span class="nt">-u</span><span class="o">[</span>-][p#][q#][r#][x#][y#][z#][!newArchiveName] : Update options
+  <span class="nt">-v</span><span class="o">{</span>Size<span class="o">}[</span>b|k|m|g] : Create volumes
+  <span class="nt">-w</span><span class="o">[{</span>path<span class="o">}]</span> : assign Work directory. Empty path means a temporary directory
+  <span class="nt">-x</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : eXclude filenames
+  <span class="nt">-y</span> : assume Yes on all queries
+</code></pre></div></div>
+
