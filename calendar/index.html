@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2630485-14"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-2630485-14');
+  </script>
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+    Posts Heatmap Calendar &middot; Inteist
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link href='//fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+
+  <link rel="canonical" href=" https://inteist.com/calendar/" />
+
+  
+  <!-- Default pygments -->
+  <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css">
+  
+
+  
+  
+
+
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+    href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+
+
+  <!-- Google Adsense Validation -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9336216488761027"
+    crossorigin="anonymous"></script>
+
+</head>
+
+  <body>
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1 id="site-name">
+        <a href="/">
+          Inteist
+        </a>
+      </h1>
+      <p class="lead">I code for living</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+
+
+      <a class="sidebar-nav-item" href="/pages/">Pages</a>
+
+      <a class="sidebar-nav-item" href="/dev-resources/">Dev Resources</a>
+
+      <a class="sidebar-nav-item" href="/figlet/">Figlet</a>
+      <a class="sidebar-nav-item" href="/git/">Git Tips</a>
+
+      <div class="sidebar-spacer">&nbsp;</div>
+
+
+      <a class="sidebar-nav-item" href="/calendar/">Posts Calendar</a>
+      <a class="sidebar-nav-item" href="/tags/">Tags</a>
+      <a class="sidebar-nav-item" href="/archive/">Archive</a>
+      <a class="sidebar-nav-item" href="/me/">Me</a>
+    </nav>
+
+    <p class="copyright">&copy; 2010 - 2022</p>
+  </div>
+</div>
+
+    <div class="content container">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.min.js"></script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css" />
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+
+<style type="text/css">
+.content {
+	min-width: 400px;
+}
+#calendar {
+	width: 839px;
+}
+.subdomain-text {
+	fill: #fff;
+}
+#calendar a {
+	color: #999;
+}
+@media all and (max-width:1400px) {
+	#calendar {
+		width: 626px;
+	}
+}
+@media all and (max-width:730px) {
+	#calendar {
+		width:365px;
+	}
+}
+@media all and (max-width:420px) {
+	#calendar {
+		width:191px;
+	}
+}
+</style>
+
+<h1 id="my-heat-map-posts-calendar">My Heat Map Posts Calendar</h1>
+
+<div id="calendar" style="margin:0 auto;">
+	<div id="cal-heatmap"></div>
+	<div style="padding-top: 10px;">
+		<a href="#" style="margin-right:10px;" id="cal-heatmap-PreviousDomain-selector"><i>&larr;</i></a>
+		<a href="#" style="float:right;" id="cal-heatmap-NextDomain-selector"><i>&rarr;</i></a>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+var data = {
+"1665159075": 1,
+"1665117063": 1,
+"1665116844": 1,
+"1665115200": 1,
+"1665083535": 1,
+"1665075414": 1,
+"1664571878": 1,
+"1664327204": 1,
+"1653522720": 1,
+"1653259679": 1,
+"1645669620": 1,
+"1643523060": 1,
+"1643333233": 1,
+"1487438640": 1,
+"1484339280": 1,
+"1463977860": 1,
+"1463783820": 1,
+"1463754240": 1,
+"1457382360": 1,
+"1456797540": 1,
+"1456788060": 1,
+"1450587060": 1,
+"1449776280": 1,
+"1449720180": 1,
+"1447447980": 1,
+"1445920140": 1,
+"1444265160": 1,
+"1442180400": 1,
+"1442178420": 1,
+"1440474300": 1,
+"1440265380": 1,
+"1437950940": 1,
+"1437236280": 1,
+"1434476880": 1,
+"1431355380": 1,
+"1431212940": 1,
+"1431150000": 1,
+"1431117720": 1,
+"1430675400": 1,
+"1430319840": 1,
+"1430198760": 1,
+"1429844220": 1,
+"1429820520": 1,
+"1429762140": 1,
+"1429303620": 1,
+"1429292520": 1,
+"1429246860": 1,
+"1428030660": 1,
+"1427917620": 1,
+"1427429220": 1,
+"1427239680": 1,
+"1427175840": 1,
+"1427170320": 1,
+"1427148103": 1,
+"1427115464": 1,
+"1427110099": 1,
+"1427049930": 1,
+"1427045241": 1,
+"1427041914": 1,
+"1426795200": 1,
+"1426767337": 1,
+"1426392000": 3,
+"1425704400": 2,
+"1425575424": 1,
+"1425342486": 1,
+"1423103040": 1,
+"1421298000": 1,
+"1416781673": 1,
+"1400513343": 1,
+"1399475754": 1,
+"1399262400": 1,
+"1396625589": 1,
+"1395932633": 1,
+"1394646454": 1,
+"1394501398": 1,
+"1393433698": 1,
+"1392752753": 1,
+"1385166883": 1,
+"1382736962": 1,
+"1382730129": 1,
+"1382109746": 1,
+"1380155488": 1,
+"1378650488": 1,
+"1375892028": 1,
+"1375891307": 1,
+"1373568657": 1,
+"1369709635": 1,
+"1369637374": 1,
+"1369633446": 1,
+"1369622118": 1,
+"1369288160": 1,
+"1369288023": 1,
+"1368807215": 1,
+"1367726400": 1,
+"1366406412": 1,
+"1362189232": 1,
+"1359345809": 1,
+"1355355173": 1,
+"1354562850": 1,
+"1352964745": 1,
+"1351750448": 1,
+"1351612420": 1,
+"1351017754": 1,
+"1348070379": 1,
+"1347626104": 1,
+"1347622122": 1,
+"1346926824": 1,
+"1346925485": 1,
+"1346758858": 1,
+"1346653339": 1,
+"1346401497": 1,
+"1346143522": 1,
+"1346054086": 1,
+"1345996501": 1,
+"1345878007": 1,
+"1345628341": 1,
+"1345274894": 1,
+"1345219113": 1,
+"1345183831": 1,
+"1344595684": 1,
+"1344588877": 1,
+"1343514409": 1,
+"1342658996": 1,
+"1342650591": 1,
+"1342228451": 1,
+"1342140182": 1,
+"1342131159": 1,
+"1342130798": 1,
+"1341954872": 1,
+"1341781903": 1,
+"1341720701": 1,
+"1341720389": 1,
+"1341079655": 1,
+"1341024299": 1,
+"1340421121": 1,
+"1339709949": 1,
+"1336146805": 1,
+"1333659994": 1,
+"1333298968": 1,
+"1331868446": 1,
+"1331269870": 1,
+"1329419504": 1,
+"1329417289": 1,
+"1329364972": 1,
+"1328462248": 1,
+"1328296069": 1,
+"1327993958": 1,
+"1327540661": 1,
+"1327530676": 1,
+"1327204473": 1,
+"1327175278": 1,
+"1327008047": 1,
+"1326901259": 1,
+"1326900737": 1,
+"1326470417": 1,
+"1326231183": 1,
+"1326228731": 1,
+"1323915385": 1,
+"1323480893": 1,
+"1318343418": 1,
+"1317225376": 1,
+"1317069667": 1,
+"1304563886": 1,
+"1304398487": 1,
+"1303962385": 1,
+"1299295435": 1,
+"1298766598": 1,
+"1297275528": 1,
+"1294889964": 1,
+"1294778875": 1,
+"1294724090": 1,
+"1292650207": 1,
+"1292560861": 1,
+"1292400780": 1,
+"1291667634": 1,
+"1290222829": 1,
+"1290014799": 1,
+"1289423925": 1,
+"1289328500": 1,
+"1288288637": 1,
+"1288070982": 1,
+"1285881608": 1,
+"1285879228": 1,
+"1285606655": 1,
+"1285561594": 1,
+"1285273963": 1,
+"1285008552": 1,
+"1284918207": 1,
+"1283704957": 1,
+"1279900092": 1,
+"1279553220": 1,
+"1275540556": 1,
+"1275027142": 1,
+"1274637514": 1,
+"1273771023": 1,
+"1273082297": 1,
+"1270400596": 1,
+"1269915659": 1,
+"1269902743": 1,
+"1269883684": 1,
+"1269798542": 1,
+"1268947599": 1,
+"1268860680": 1,
+"1268845773": 1,
+"1268842857": 1,
+"1268504960": 1,
+"1268282178": 1,
+"1267154500": 1,
+"1266018179": 1,
+"1265830183": 1,
+"1264548511": 1,
+"1264214374": 1,
+"1262833161": 1,
+"1250172482": 1,
+"1248370871": 1,
+"1244581281": 1,
+"1243984866": 1,
+"1239509187": 1,
+"1239500886": 1,
+"1238876793": 1,
+"1232141641": 1,
+"1232136625": 1,
+"1232136468": 1,
+"1232051109": 1,
+"1232050003": 1,
+"1232045912": 1,
+"1231983555": 1
+};
+
+
+var responsiveCal = function( options ) {
+	var now = new Date();
+    if( $(window).width() < 420 ) {
+        options.start = now.setMonth(now.getMonth());
+        options.range = 1;
+        options.cellSize = 25;
+    } else if ( $(window).width() < 730 ) {
+        options.start = now.setMonth(now.getMonth() - 1);
+        options.range = 2;
+        options.cellSize = 20;
+    } else if( $(window).width() < 1400 ) {
+        options.start = now.setMonth(now.getMonth() - 2);
+        options.range = 4;
+        options.cellSize = 20;
+    } else {
+        options.start = now.setMonth(now.getMonth() - 3);
+        options.range = 5;
+        options.cellSize = 20;
+    }
+
+    if( typeof cal === "object" ) {
+        $('#cal-heatmap').html('');
+        cal = cal.destroy();
+    }
+    cal = new CalHeatMap();
+    cal.init( options );
+
+}
+caloptions = {
+    itemSelector: "#cal-heatmap",
+	domain: "month",
+	subDomain: "x_day",
+	data: data,
+	dataType: "json",
+	cellPadding: 5,
+	domainGutter: 20,
+	displayLegend: false,
+	range: 4,
+	considerMissingDataAsZero:false,
+	domainDynamicDimension: true,
+	previousSelector: "#cal-heatmap-PreviousDomain-selector",
+	nextSelector: "#cal-heatmap-NextDomain-selector",
+	domainLabelFormat: function(date) {
+		moment.locale("en");
+		return moment(date).format("MMMM").toUpperCase();
+	},
+	subDomainTextFormat: "%d",
+	legend: [0,1,2,3],
+	label: {
+		position: "top"
+	}
+};
+
+
+responsiveCal( caloptions );
+$(window).resize(function() {
+    if(this.resizeTO) clearTimeout(this.resizeTO);
+    this.resizeTO = setTimeout(function() {
+        $(this).trigger('resizeEnd');
+    }, 500);
+});
+
+
+
+$(window).bind('resizeEnd', function() {
+	 responsiveCal( cal.options );
+});
+  
+	
+</script>
+
+
+    </div>
+
+  
+
+  </body>
+</html>
