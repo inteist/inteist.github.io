@@ -499,7 +499,11 @@
         
         "mongo",
         
-        "scripting"
+        "scripting",
+        
+        "onelinier",
+        
+        "chrome"
         
     ]
 }

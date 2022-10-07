@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Super easy way to prevent your computer from sleeping</title>
+                
+                
+                    <description>&lt;p&gt;If you need to make sure your comouter doesn’t go to sleep, with the recent addition of wakelock to Chrome this is extremely easy to do.&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 07 Oct 2022 12:11:15 -0400</pubDate>
+                <link>https://inteist.com/super-easy-prevent-computer-sleeping/</link>
+                <guid isPermaLink="true">https://inteist.com/super-easy-prevent-computer-sleeping/</guid>
+            </item>
+        
+            <item>
                 <title>MongoDB adding users and roles to databases</title>
                 
                 
@@ -28,6 +40,18 @@
                 <pubDate>Fri, 07 Oct 2022 00:27:24 -0400</pubDate>
                 <link>https://inteist.com/mongo-db-backup-restore/</link>
                 <guid isPermaLink="true">https://inteist.com/mongo-db-backup-restore/</guid>
+            </item>
+        
+            <item>
+                <title>New Post</title>
+                
+                
+                    <description>
+</description>
+                
+                <pubDate>Fri, 07 Oct 2022 00:00:00 -0400</pubDate>
+                <link>https://inteist.com/new-post/</link>
+                <guid isPermaLink="true">https://inteist.com/new-post/</guid>
             </item>
         
             <item>
@@ -233,32 +257,6 @@ is doomed to be in a state of chaos
                 <pubDate>Mon, 29 Feb 2016 20:59:00 -0500</pubDate>
                 <link>https://inteist.com/system-chaos-quote/</link>
                 <guid isPermaLink="true">https://inteist.com/system-chaos-quote/</guid>
-            </item>
-        
-            <item>
-                <title>Some Basic Useful VirtualBox terminal commands</title>
-                
-                
-                    <description>&lt;p&gt;List the running VMs&lt;br /&gt;
-&lt;code class=&quot;language-html highlighter-rouge&quot;&gt;vboxmanage list runningvms&lt;/code&gt;&lt;/p&gt;
-</description>
-                
-                <pubDate>Mon, 29 Feb 2016 18:21:00 -0500</pubDate>
-                <link>https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</link>
-                <guid isPermaLink="true">https://inteist.com/some-basic-useful-virtualbox-terminal-commands/</guid>
-            </item>
-        
-            <item>
-                <title>Good Idea - Quote</title>
-                
-                
-                    <description>&lt;h3 id=&quot;any-good-idea-is-only-as-good-as-its-implementation&quot;&gt;Any good idea is only as good as its implementation&lt;/h3&gt;
-&lt;p style=&quot;text-align: right;&quot;&gt;–– Inteist&lt;/p&gt;
-</description>
-                
-                <pubDate>Sat, 19 Dec 2015 23:51:00 -0500</pubDate>
-                <link>https://inteist.com/good-idea-quote/</link>
-                <guid isPermaLink="true">https://inteist.com/good-idea-quote/</guid>
             </item>
         
     </channel>

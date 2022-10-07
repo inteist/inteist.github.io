@@ -69,7 +69,11 @@
         
         "python",
         
-        "mongo"
+        "mongo",
+        
+        "hack",
+        
+        "chrome"
         
     ]
 }
