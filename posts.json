@@ -2,7 +2,25 @@
     "posts": [
         
         {
-            "title": "Best Compression for 7z ",
+            "title": "MongoDB adding users and roles to databases",
+            "url": "https://inteist.com/mongodb-adding-users-roles-databases/",
+            "date": "2022-10-07T00:31:03-04:00"
+        },
+        
+        {
+            "title": "Mongo DB backup and restore",
+            "url": "https://inteist.com/mongo-db-backup-restore/",
+            "date": "2022-10-07T00:27:24-04:00"
+        },
+        
+        {
+            "title": "Google Colan Tips and Tricks",
+            "url": "https://inteist.com/google-colan-tips-tricks/",
+            "date": "2022-10-06T15:12:15-04:00"
+        },
+        
+        {
+            "title": "Best Compression Results With 7z ",
             "url": "https://inteist.com/compression-7z/",
             "date": "2022-09-30T17:04:38-04:00"
         },

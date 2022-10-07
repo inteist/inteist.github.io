@@ -7,7 +7,43 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
-                <title>Best Compression for 7z </title>
+                <title>MongoDB adding users and roles to databases</title>
+                
+                
+                    <description>&lt;h2 id=&quot;to-add-users--roles&quot;&gt;To add users + roles&lt;/h2&gt;
+</description>
+                
+                <pubDate>Fri, 07 Oct 2022 00:31:03 -0400</pubDate>
+                <link>https://inteist.com/mongodb-adding-users-roles-databases/</link>
+                <guid isPermaLink="true">https://inteist.com/mongodb-adding-users-roles-databases/</guid>
+            </item>
+        
+            <item>
+                <title>Mongo DB backup and restore</title>
+                
+                
+                    <description>&lt;p&gt;&lt;code class=&quot;language-html highlighter-rouge&quot;&gt;mongodump&lt;/code&gt; is a tool for exporting the contents of a database as a binary file. Mongodump can export data from either mongod or mongos instances. It can also export data from standalone, replica set, and sharded cluster deployments.&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 07 Oct 2022 00:27:24 -0400</pubDate>
+                <link>https://inteist.com/mongo-db-backup-restore/</link>
+                <guid isPermaLink="true">https://inteist.com/mongo-db-backup-restore/</guid>
+            </item>
+        
+            <item>
+                <title>Google Colan Tips and Tricks</title>
+                
+                
+                    <description>
+</description>
+                
+                <pubDate>Thu, 06 Oct 2022 15:12:15 -0400</pubDate>
+                <link>https://inteist.com/google-colan-tips-tricks/</link>
+                <guid isPermaLink="true">https://inteist.com/google-colan-tips-tricks/</guid>
+            </item>
+        
+            <item>
+                <title>Best Compression Results With 7z </title>
                 
                 
                     <description>&lt;p&gt;For best 7z compression use&lt;/p&gt;
@@ -223,42 +259,6 @@ is doomed to be in a state of chaos
                 <pubDate>Thu, 10 Dec 2015 14:38:00 -0500</pubDate>
                 <link>https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</link>
                 <guid isPermaLink="true">https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</guid>
-            </item>
-        
-            <item>
-                <title>Atom editor search highlight style</title>
-                
-                
-                    <description>&lt;p&gt;In April I &lt;a href=&quot;/atom-highlighting-search-results-in-a-dark-theme/&quot;&gt;have wrote&lt;/a&gt; how to solve a problem of poor highlighting for the search results for the Atom editor. Since then in the ever evolving editor after one of the updates something broke and the highlight feature became broken. Took me a while to get to it but I have finally had some time to take a look at it and I came up with the following replacement:&lt;/p&gt;
-</description>
-                
-                <pubDate>Wed, 09 Dec 2015 23:03:00 -0500</pubDate>
-                <link>https://inteist.com/atom-editor-search-highlight-style/</link>
-                <guid isPermaLink="true">https://inteist.com/atom-editor-search-highlight-style/</guid>
-            </item>
-        
-            <item>
-                <title>Subset Test in Java</title>
-                
-                
-                    <description>&lt;p&gt;A neat method to test for a set containment in another set both of which are Collections&lt;/p&gt;
-</description>
-                
-                <pubDate>Fri, 13 Nov 2015 15:53:00 -0500</pubDate>
-                <link>https://inteist.com/subset-test-in-java/</link>
-                <guid isPermaLink="true">https://inteist.com/subset-test-in-java/</guid>
-            </item>
-        
-            <item>
-                <title>List Safari History on OS X  Oneliner</title>
-                
-                
-                    <description>&lt;h3 id=&quot;the-problem&quot;&gt;The problem&lt;/h3&gt;
-</description>
-                
-                <pubDate>Tue, 27 Oct 2015 00:29:00 -0400</pubDate>
-                <link>https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</link>
-                <guid isPermaLink="true">https://inteist.com/ls-safari-history-on-os-x-using-oneliner/</guid>
             </item>
         
     </channel>
