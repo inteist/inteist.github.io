@@ -65,7 +65,11 @@
         
         "osx",
         
-        "terminal"
+        "terminal",
+        
+        "python",
+        
+        "mongo"
         
     ]
 }

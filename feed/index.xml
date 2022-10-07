@@ -31,15 +31,27 @@
             </item>
         
             <item>
-                <title>Google Colan Tips and Tricks</title>
+                <title>Google ColaB Tips and Tricks</title>
                 
                 
-                    <description>
+                    <description>&lt;p&gt;Stop Google Colab from disconnecting&lt;/p&gt;
 </description>
                 
                 <pubDate>Thu, 06 Oct 2022 15:12:15 -0400</pubDate>
-                <link>https://inteist.com/google-colan-tips-tricks/</link>
-                <guid isPermaLink="true">https://inteist.com/google-colan-tips-tricks/</guid>
+                <link>https://inteist.com/google-colab-tips-tricks/</link>
+                <guid isPermaLink="true">https://inteist.com/google-colab-tips-tricks/</guid>
+            </item>
+        
+            <item>
+                <title>My Journey with Large Scale Data Gathering</title>
+                
+                
+                    <description>&lt;p&gt;Create additional indexes on the DB&lt;/p&gt;
+</description>
+                
+                <pubDate>Thu, 06 Oct 2022 12:56:54 -0400</pubDate>
+                <link>https://inteist.com/large-scale-data-gathering-journey/</link>
+                <guid isPermaLink="true">https://inteist.com/large-scale-data-gathering-journey/</guid>
             </item>
         
             <item>
@@ -247,18 +259,6 @@ is doomed to be in a state of chaos
                 <pubDate>Sat, 19 Dec 2015 23:51:00 -0500</pubDate>
                 <link>https://inteist.com/good-idea-quote/</link>
                 <guid isPermaLink="true">https://inteist.com/good-idea-quote/</guid>
-            </item>
-        
-            <item>
-                <title>Tarantool - Fast in Memory Database for HOT DATA</title>
-                
-                
-                    <description>&lt;p&gt;I have stumbled across &lt;a href=&quot;http://tarantool.org&quot;&gt;Tarantool&lt;/a&gt; database which seems to be a very fast storage for &lt;em&gt;hot data&lt;/em&gt;. If you are looking for a very fast and efficient tool, check it out.&lt;/p&gt;
-</description>
-                
-                <pubDate>Thu, 10 Dec 2015 14:38:00 -0500</pubDate>
-                <link>https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</link>
-                <guid isPermaLink="true">https://inteist.com/tarantool-fast-in-memory-database-for-hot-data/</guid>
             </item>
         
     </channel>

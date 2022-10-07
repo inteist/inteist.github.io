@@ -495,7 +495,11 @@
         
         "obsidian",
         
-        "img"
+        "img",
+        
+        "mongo",
+        
+        "scripting"
         
     ]
 }
