@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Creating Nested Folders with bash",
+            "url": "https://inteist.com/creating-nested-folders-bash/",
+            "date": "2022-10-11T00:28:49-04:00"
+        },
+        
+        {
             "title": "Super easy way to prevent your computer from sleeping",
             "url": "https://inteist.com/super-easy-prevent-computer-sleeping/",
             "date": "2022-10-07T12:11:15-04:00"
@@ -39,7 +45,7 @@
         
         {
             "title": "Best Compression Results With 7z ",
-            "url": "https://inteist.com/compression-7z/",
+            "url": "https://inteist.com/compression-results-7z/",
             "date": "2022-09-30T17:04:38-04:00"
         },
         

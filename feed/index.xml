@@ -7,6 +7,21 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Creating Nested Folders with bash</title>
+                
+                
+                    <description>&lt;p&gt;```sh
+#&lt;/p&gt;
+&lt;h1 id=&quot;5-level-deep-nested-directory-creation---this-is-roughly-655-million-folders&quot;&gt;5 level deep nested directory creation - this is roughly 65.5 million folders&lt;/h1&gt;
+&lt;p&gt;#&lt;/p&gt;
+</description>
+                
+                <pubDate>Tue, 11 Oct 2022 00:28:49 -0400</pubDate>
+                <link>https://inteist.com/creating-nested-folders-bash/</link>
+                <guid isPermaLink="true">https://inteist.com/creating-nested-folders-bash/</guid>
+            </item>
+        
+            <item>
                 <title>Super easy way to prevent your computer from sleeping</title>
                 
                 
@@ -86,8 +101,8 @@
 </description>
                 
                 <pubDate>Fri, 30 Sep 2022 17:04:38 -0400</pubDate>
-                <link>https://inteist.com/compression-7z/</link>
-                <guid isPermaLink="true">https://inteist.com/compression-7z/</guid>
+                <link>https://inteist.com/compression-results-7z/</link>
+                <guid isPermaLink="true">https://inteist.com/compression-results-7z/</guid>
             </item>
         
             <item>
@@ -241,22 +256,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Mon, 07 Mar 2016 15:26:00 -0500</pubDate>
                 <link>https://inteist.com/git-salvaging-lost-commits/</link>
                 <guid isPermaLink="true">https://inteist.com/git-salvaging-lost-commits/</guid>
-            </item>
-        
-            <item>
-                <title>System Chaos - Quote</title>
-                
-                
-                    <description>&lt;h3&gt;
-Any system with enough moving parts&lt;br /&gt;
-and no entity to coordinate&lt;br /&gt;
-is doomed to be in a state of chaos
- &lt;/h3&gt;
-</description>
-                
-                <pubDate>Mon, 29 Feb 2016 20:59:00 -0500</pubDate>
-                <link>https://inteist.com/system-chaos-quote/</link>
-                <guid isPermaLink="true">https://inteist.com/system-chaos-quote/</guid>
             </item>
         
     </channel>

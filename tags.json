@@ -503,7 +503,9 @@
         
         "onelinier",
         
-        "chrome"
+        "chrome",
+        
+        "nix"
         
     ]
 }
