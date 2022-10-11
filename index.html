@@ -31,7 +31,27 @@
   <span class="k">done
   </span><span class="nb">cd</span> <span class="s2">".."</span>
 <span class="k">done</span>
-</code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/super-easy-prevent-computer-sleeping/"> Super easy way to prevent your computer from sleeping </a> </h1> <span class="post-date">07 Oct 2022</span> <div class="link-underline"> <p>If you need to make sure your comouter doesn’t go to sleep, with the recent addition of wakelock to Chrome this is extremely easy to do.</p> <p>Open Chrome on any page</p> <p>Open the developer tools:</p> <p>Ctrl+Shift+C on Windows/Linux <br /> or<br /> ⌘ +⇧+C on Mac (Cmd+Shift+C)</p> <p>will open the dev tools - then go to the “Console” tab and paste/type this into the console</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>let screenLock = await navigator.wakeLock.request('screen');
+</code></pre></div></div> <p>I have not tested the following but it should work and is somewhat simpler</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="c">#!/bin/bash</span>
+
+<span class="k">for </span>p <span class="k">in</span> <span class="o">{</span>0..9<span class="o">}</span> <span class="o">{</span>a..z<span class="o">}</span>
+<span class="k">do
+    for </span>m <span class="k">in</span> <span class="o">{</span>0..9<span class="o">}</span> <span class="o">{</span>a..z<span class="o">}</span>
+    <span class="k">do
+        for </span>n <span class="k">in</span> <span class="o">{</span>0..9<span class="o">}</span> <span class="o">{</span>a..z<span class="o">}</span>
+        <span class="k">do
+            for </span>y <span class="k">in</span> <span class="o">{</span>0..9<span class="o">}</span> <span class="o">{</span>a..z<span class="o">}</span> 
+            <span class="k">do
+                for </span>z <span class="k">in</span> <span class="o">{</span>0..9<span class="o">}</span> <span class="o">{</span>a..z<span class="o">}</span> 
+                <span class="k">do
+                    </span><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"./</span><span class="k">${</span><span class="nv">p</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">m</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">n</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">y</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">z</span><span class="k">}</span><span class="s2">
+                done
+            done
+        done
+    done
+done
+
+</span></code></pre></div></div> <p>another option for a flatter structure would be to use doubles i.e. <code class="language-html highlighter-rouge">00</code> <code class="language-html highlighter-rouge">01</code> <code class="language-html highlighter-rouge">02</code> ….. <code class="language-html highlighter-rouge">8b</code> <code class="language-html highlighter-rouge">8c</code> …..<code class="language-html highlighter-rouge">zz</code></p> <p>This gives you 36 * 36 = 1296 variations in the first level and then adding a second level would give you about a million combinations :) which if you think about it, even if each folder has 100 files - that 100 million files.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/super-easy-prevent-computer-sleeping/"> Super easy way to prevent your computer from sleeping </a> </h1> <span class="post-date">07 Oct 2022</span> <div class="link-underline"> <p>If you need to make sure your comouter doesn’t go to sleep, with the recent addition of wakelock to Chrome this is extremely easy to do.</p> <p>Open Chrome on any page</p> <p>Open the developer tools:</p> <p>Ctrl+Shift+C on Windows/Linux <br /> or<br /> ⌘ +⇧+C on Mac (Cmd+Shift+C)</p> <p>will open the dev tools - then go to the “Console” tab and paste/type this into the console</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>let screenLock = await navigator.wakeLock.request('screen');
 </code></pre></div></div> <p>That’s it. Your computer won’t sleep.</p> <p><strong>Note</strong> that you will lose the lock if you clos or change the tab.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/mongodb-adding-users-roles-databases/"> MongoDB adding users and roles to databases </a> </h1> <span class="post-date">07 Oct 2022</span> <div class="link-underline"> <h2 id="to-add-users--roles">To add users + roles</h2> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
     <span class="c1">// main admin user</span>
     <span class="nx">use</span> <span class="nx">admin</span>
