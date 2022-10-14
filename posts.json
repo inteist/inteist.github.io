@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "MongoDump - backup script example",
+            "url": "https://inteist.com/mongodump-backup-script/",
+            "date": "2022-10-14T13:53:17-04:00"
+        },
+        
+        {
             "title": "Creating Nested Folders with bash",
             "url": "https://inteist.com/creating-nested-folders-bash/",
             "date": "2022-10-11T00:28:49-04:00"

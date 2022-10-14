@@ -505,7 +505,11 @@
         
         "chrome",
         
-        "nix"
+        "nix",
+        
+        "script",
+        
+        "backup"
         
     ]
 }

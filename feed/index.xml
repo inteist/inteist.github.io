@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>MongoDump - backup script example</title>
+                
+                
+                    <description>&lt;p&gt;An example script for backing up a database&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 14 Oct 2022 13:53:17 -0400</pubDate>
+                <link>https://inteist.com/mongodump-backup-script/</link>
+                <guid isPermaLink="true">https://inteist.com/mongodump-backup-script/</guid>
+            </item>
+        
+            <item>
                 <title>Creating Nested Folders with bash</title>
                 
                 
@@ -244,18 +256,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Fri, 20 May 2016 10:24:00 -0400</pubDate>
                 <link>https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</link>
                 <guid isPermaLink="true">https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</guid>
-            </item>
-        
-            <item>
-                <title>Git - Salvaging Lost Commits</title>
-                
-                
-                    <description>&lt;p&gt;If you have not run a &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;gc&lt;/code&gt; yet and it has been less than 2 weeks (default gc setting) since the commits you lost were created you are in luck.&lt;/p&gt;
-</description>
-                
-                <pubDate>Mon, 07 Mar 2016 15:26:00 -0500</pubDate>
-                <link>https://inteist.com/git-salvaging-lost-commits/</link>
-                <guid isPermaLink="true">https://inteist.com/git-salvaging-lost-commits/</guid>
             </item>
         
     </channel>
