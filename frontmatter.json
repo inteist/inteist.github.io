@@ -4,8 +4,8 @@
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
-      "previewPath": null,
       "pageBundle": false,
+      "previewPath": null,
       "fields": [
         {
           "title": "layout",
@@ -28,46 +28,49 @@
           "type": "categories"
         },
         {
-          "title": "author",
-          "name": "author",
-          "type": "string"
-        },
-        {
           "title": "tags",
           "name": "tags",
           "type": "tags"
         },
         {
-          "title": "summary",
-          "name": "summary",
-          "type": "datetime"
-        },
-        {
           "title": "last_modified_at",
           "name": "last_modified_at",
           "type": "datetime"
-        },
-        {
-          "title": "draft",
-          "name": "draft",
-          "type": "datetime"
-        },
-        {
-          "title": "keywords",
-          "name": "keywords",
-          "type": "choice",
-          "choices": [
-            "mogrify",
-            "app store",
-            "homebrew"
-          ]
-        },
-        {
-          "title": "description",
-          "name": "description",
-          "type": "string"
         }
       ]
     }
+  ],
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.content.pageFolders": [
+    {
+      "path": "[[workspace]]/pages"
+    }
+  ],
+  "frontMatter.taxonomy.tags": [
+    "*nix",
+    "android",
+    "code",
+    "css",
+    "dev",
+    "enlightening",
+    "flutter",
+    "git",
+    "iOs",
+    "jekyll",
+    "mobile",
+    "osx",
+    "poole",
+    "pygments",
+    "resources",
+    "shell",
+    "source",
+    "technical",
+    "web"
+  ],
+  "frontMatter.taxonomy.categories": [
+    "page",
+    "post",
+    "source"
   ]
 }

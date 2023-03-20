@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Crontab CheatSheet</title>
+                
+                
+                    <description>&lt;p&gt;#Useful Crontab CheatSheet&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 20 Mar 2023 13:39:30 -0400</pubDate>
+                <link>https://inteist.com/crontab-cheatsheet/</link>
+                <guid isPermaLink="true">https://inteist.com/crontab-cheatsheet/</guid>
+            </item>
+        
+            <item>
                 <title>MongoDump - backup script example</title>
                 
                 
@@ -195,7 +207,7 @@ such ideas in the past but these ideas did not survice because they did not get 
             </item>
         
             <item>
-                <title>Scheduling randomized cron - within an hour or within a minute</title>
+                <title>Scheduling randomized cron within an hour or within a minute</title>
                 
                 
                     <description>&lt;p&gt;It is &lt;strong&gt;usually&lt;/strong&gt; a good idea in general to add slight randomness to the start time of a cron job, especially if you are accessing some 3-d party resource to prevent flooding of 3-d party at the top of the hour or at the top of the minute.&lt;/p&gt;
@@ -243,19 +255,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Fri, 20 May 2016 18:37:00 -0400</pubDate>
                 <link>https://inteist.com/google-i-o-videos-list/</link>
                 <guid isPermaLink="true">https://inteist.com/google-i-o-videos-list/</guid>
-            </item>
-        
-            <item>
-                <title>Lean and Fast - How to shrink down and lean down Android apps</title>
-                
-                
-                    <description>&lt;h3 id=&quot;zopfli&quot;&gt;Zopfli&lt;/h3&gt;
-&lt;p&gt;Despite previous advice - do not use zopfli for alternative compression&lt;/p&gt;
-</description>
-                
-                <pubDate>Fri, 20 May 2016 10:24:00 -0400</pubDate>
-                <link>https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</link>
-                <guid isPermaLink="true">https://inteist.com/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/</guid>
             </item>
         
     </channel>
