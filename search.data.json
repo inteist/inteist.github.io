@@ -1,0 +1,2100 @@
+[
+    
+    {
+        "title": "Crontab CheatSheet",
+        "url": "/crontab-cheatsheet/",
+        "category": "post",
+        "tags": "*nix, technical",
+        "date": "March 20  2023",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "MongoDump - backup script example",
+        "url": "/mongodump-backup-script/",
+        "category": "mongo, technical",
+        "tags": "mongo, mongodb, bash, shell, script, backup",
+        "date": "October 14  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Creating Nested Folders with bash",
+        "url": "/creating-nested-folders-bash/",
+        "category": "technical",
+        "tags": "shell, nix",
+        "date": "October 11  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Super easy way to prevent your computer from sleeping",
+        "url": "/super-easy-prevent-computer-sleeping/",
+        "category": "hack, chrome",
+        "tags": "onelinier, js, chrome, devtools",
+        "date": "October  7  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "MongoDB adding users and roles to databases",
+        "url": "/mongodb-adding-users-roles-databases/",
+        "category": "",
+        "tags": "",
+        "date": "October  7  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Mongo DB backup and restore",
+        "url": "/mongo-db-backup-restore/",
+        "category": "",
+        "tags": "",
+        "date": "October  7  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "New Post",
+        "url": "/new-post/",
+        "category": "",
+        "tags": "",
+        "date": "October  7  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Google ColaB Tips and Tricks",
+        "url": "/google-colab-tips-tricks/",
+        "category": "",
+        "tags": "",
+        "date": "October  6  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "My Journey with Large Scale Data Gathering",
+        "url": "/large-scale-data-gathering-journey/",
+        "category": "python, mongo, technical",
+        "tags": "mongo, technical, python, scripting",
+        "date": "October  6  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Best Compression Results With 7z ",
+        "url": "/compression-results-7z/",
+        "category": "technical, terminal",
+        "tags": "oneliner, osx",
+        "date": "September 30  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Efficient Image Resizing on OS X",
+        "url": "/efficient-image-resizing-os/",
+        "category": "osx, technical",
+        "tags": "oneliner, technical, osx, img",
+        "date": "September 27  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Exploring Obsidian",
+        "url": "/exploring-obsidian/",
+        "category": "reference",
+        "tags": "notes, obsidian, blogging",
+        "date": "May 25  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Removing Alpha Channel for App Store Pictures",
+        "url": "/removing-alpha-channel-for-app-store-pictures-figma/",
+        "category": "article",
+        "tags": "app store, imagemagick, mogrify, ios, osx, brew, homebrew",
+        "date": "May 22  2022",
+        "discription": "An easy way to remove alpha channel from PGN images in order to submit them to App Store"
+    } ,
+  
+    {
+        "title": "Customizing and Custom Loading Chrome Extensions",
+        "url": "/customizing-custom-loading-chrome-extensions/",
+        "category": "reference",
+        "tags": "",
+        "date": "February 23  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Reviving the blog - upgrading Ruby Jekyll and all the Gems",
+        "url": "/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/",
+        "category": "reference",
+        "tags": "jekyll, ruby, gems",
+        "date": "January 30  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "It&#39;s been long 5 years of silence reviving my Jekyll blog",
+        "url": "/long-5-years-silence/",
+        "category": "braindumps",
+        "tags": "blog, braindump, jekyll, ruby",
+        "date": "January 27  2022",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Scheduling randomized cron within an hour or within a minute",
+        "url": "/scheduling-randomized-cron-within-an-hour/",
+        "category": "devops",
+        "tags": "cron, linux, devops",
+        "date": "February 18  2017",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android - working with Gradle: purging gradle cache",
+        "url": "/android-working-with-gradle-purging-gradle-cache/",
+        "category": "reference",
+        "tags": "gradle, android, shell, technical",
+        "date": "January 13  2017",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Git + Trello Integration",
+        "url": "/git-trello-integration/",
+        "category": "article",
+        "tags": "git, trello, technical",
+        "date": "May 23  2016",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Google I/O Videos List",
+        "url": "/google-i-o-videos-list/",
+        "category": "ref, blurb",
+        "tags": "google, conference, reference",
+        "date": "May 20  2016",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Lean and Fast - How to shrink down and lean down Android apps",
+        "url": "/lean-and-fast-how-to-shrink-down-and-lean-down-android-apps/",
+        "category": "",
+        "tags": "android, technical",
+        "date": "May 20  2016",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Git - Salvaging Lost Commits",
+        "url": "/git-salvaging-lost-commits/",
+        "category": "",
+        "tags": "git, technical, dev",
+        "date": "March  7  2016",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "System Chaos - Quote",
+        "url": "/system-chaos-quote/",
+        "category": "quote",
+        "tags": "",
+        "date": "February 29  2016",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Some Basic Useful VirtualBox terminal commands",
+        "url": "/some-basic-useful-virtualbox-terminal-commands/",
+        "category": "reference",
+        "tags": "tech, virtualbox, vm",
+        "date": "February 29  2016",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Good Idea - Quote",
+        "url": "/good-idea-quote/",
+        "category": "quote",
+        "tags": "quotes, wisdom",
+        "date": "December 19  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Tarantool - Fast in Memory Database for HOT DATA",
+        "url": "/tarantool-fast-in-memory-database-for-hot-data/",
+        "category": "blurb",
+        "tags": "tarantool, db, highload",
+        "date": "December 10  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Atom editor search highlight style",
+        "url": "/atom-editor-search-highlight-style/",
+        "category": "editors",
+        "tags": "atom, editors, devtools",
+        "date": "December  9  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Subset Test in Java",
+        "url": "/subset-test-in-java/",
+        "category": "code",
+        "tags": "java, technical, code",
+        "date": "November 13  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "List Safari History on OS X  Oneliner",
+        "url": "/ls-safari-history-on-os-x-using-oneliner/",
+        "category": "",
+        "tags": "blurb, oneliner, osx, safari",
+        "date": "October 27  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Fix Fonts Issue in Android Studio with El Capitan on OS X",
+        "url": "/fix-fonts-issue-in-android-studio-with-el-capitan-on-os-x/",
+        "category": "article",
+        "tags": "android, dev, technical, as, java, osx",
+        "date": "October  7  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "clang-format Style File for iOS Projects",
+        "url": "/clang-format-style-file-for-ios-projects/",
+        "category": "blurb",
+        "tags": "code, clang-format, ios, dev",
+        "date": "September 13  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Shell Script to Format all Files in a Folder using clang-format",
+        "url": "/clang-format-shell-script-to-format-all-files-in-a-folder/",
+        "category": "blurb",
+        "tags": "code, shell, oneliner, ios, osx, zsh, find",
+        "date": "September 13  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Uncrustify Whole iOS Project",
+        "url": "/uncrustify-whole-ios-project/",
+        "category": "blurb",
+        "tags": "code, source, objc, osx, xcode, style, formatting, uncrustify",
+        "date": "August 24  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "TV reality",
+        "url": "/tv-by-steve-cutts/",
+        "category": "random, blurb",
+        "tags": "illustration, random, realitycheck",
+        "date": "August 22  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Javascript - Get the Day of The Week",
+        "url": "/javascript-get-the-day-of-the-week/",
+        "category": "blurb, code",
+        "tags": "code, js, javascript, date, prototype",
+        "date": "July 26  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Javascript - Date and Time for any TimeZone",
+        "url": "/javascript-date-and-time-for-any-timezone/",
+        "category": "blurb, code",
+        "tags": "code, js, javascript",
+        "date": "July 18  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Handy adb Oneliners for Android",
+        "url": "/handy-adb-oneliners-for-android/",
+        "category": "blurb",
+        "tags": "android, adb, dev, tech, oneliners",
+        "date": "June 16  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Installing golang with gvm and zsh",
+        "url": "/installing-golang-with-gvm-and-zsh/",
+        "category": "code, blurb",
+        "tags": "go, golang, sh, gvm, code, shell, zsh, ohmyzsh",
+        "date": "May 11  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android Material Colors Resource",
+        "url": "/android-material-colors/",
+        "category": "code, post",
+        "tags": "code, xml, android, java, material, L",
+        "date": "May  9  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Javascript - Generate Pseudo Random NON REPEATING Array of Numbers",
+        "url": "/javascript-generate-pseudo-random-set/",
+        "category": "blurb, code",
+        "tags": "code, js, javascript, source, snippet",
+        "date": "May  9  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Concise Code - Where to Draw Readability and Obscurity Line?",
+        "url": "/concise-code-readability-vs-obscurity/",
+        "category": "post",
+        "tags": "hmm, inspire",
+        "date": "May  8  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Completely Remove Pushed  Files and/or Folders from Git Repository",
+        "url": "/remove-pushed-files-folders-from-git-repo/",
+        "category": "blurb",
+        "tags": "git, ios, tech, dvcs, vcs, tips",
+        "date": "May  3  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Atom.io Highlighting the Search Results in a Dark Theme",
+        "url": "/atom-highlighting-search-results-in-a-dark-theme/",
+        "category": "blurb",
+        "tags": "atom, css",
+        "date": "April 29  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "KeyCDN introduces Node library",
+        "url": "/keycdn-introduces-node-library/",
+        "category": "blurb, news",
+        "tags": "cdn, lib, code, src",
+        "date": "April 28  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "My New 404 Page",
+        "url": "/my-new-404-page/",
+        "category": "blurb",
+        "tags": "blog, fun",
+        "date": "April 23  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Handling invisibles in Atom.io",
+        "url": "/handling-invisibles-in-atom-editor/",
+        "category": "blurb",
+        "tags": "atom.io, editor, dev",
+        "date": "April 23  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Using MarkdownWriter Plugin for Atom to Make your Blogging even Easier",
+        "url": "/using-markdownwriter-plugin-for-blogging-and-markdown/",
+        "category": "blurb, post",
+        "tags": "atom.io, markdown, plugins, blogging, st",
+        "date": "April 23  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Quote - Great Design is Transparent",
+        "url": "/quote-good-design/",
+        "category": "quote, blurb",
+        "tags": "quote, design",
+        "date": "April 17  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Preview any File on OS X in Finder with QuickLook Plugin",
+        "url": "/preview-any-file-in-os-x-finder/",
+        "category": "blurb",
+        "tags": "osx, finder",
+        "date": "April 17  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Delete Specific Line Number(s) from File with sed",
+        "url": "/delete-specific-line-from-file-using-sed/",
+        "category": "blurb",
+        "tags": "onelined",
+        "date": "April 17  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Font Weight for Dummies",
+        "url": "/font-weight-for-dummies/",
+        "category": "blurb",
+        "tags": "font, dev, css, web",
+        "date": "April  2  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "String to Title Case in Javascript",
+        "url": "/string-to-titlecase-javascript/",
+        "category": "post",
+        "tags": "js, src, npm, string, dev",
+        "date": "April  1  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Meslo LG - Free and Great Alternative to Menlo",
+        "url": "/free-great-alternative-to-menlo-font/",
+        "category": "post",
+        "tags": "fonts, tech, ux, ui, blog, web",
+        "date": "March 27  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Further Speed Up Your Jekyll Blog by Compressing the HTML",
+        "url": "/speed-up-jekyll-blog-compress-html/",
+        "category": "tips",
+        "tags": "jekyll, plugin, html",
+        "date": "March 24  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Pygments Theme for Jekyll - Monokai",
+        "url": "/pygments-theme-for-jekyll-monokai/",
+        "category": "source, post",
+        "tags": "source, pygments, jekyll, poole, css",
+        "date": "March 24  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Reset CSS Element Styling",
+        "url": "/reset-css-element-styling/",
+        "category": "tips, src",
+        "tags": "css, tricks, html, web",
+        "date": "March 24  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Batch Convert XML Files to JSON with xml-json for Node and Terminal Magic",
+        "url": "/convert-xml-files-to-json-with-xml-json-for-node/",
+        "category": "tips",
+        "tags": "oneliner, terminal, nodejs, npm, util",
+        "date": "March 23  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Oneliner to Have Jekyll or Any Other Staticly Generated Blog Pushed to Repository",
+        "url": "/oneliner-to-have-jekyll-static-files-automatically-pushed/",
+        "category": "tips",
+        "tags": "oneliner, jekyll, tip, git, shell, terminal",
+        "date": "March 23  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "US States Resource for Android",
+        "url": "/us-states-resources-for-android/",
+        "category": "tips, resources",
+        "tags": "android, xml, resource",
+        "date": "March 23  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Aliases for Most Useful Android Emulator Networking Commands",
+        "url": "/aliases-for-most-useful-networking-commands-for-android-emulator/",
+        "category": "tips",
+        "tags": "alias, zshrc, ohmyzsh, android, network, emulator",
+        "date": "March 22  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Gradle Libraries that Actually Get Included in Android Studio",
+        "url": "/gradle-included-libraries-in-android-studio/",
+        "category": "tips",
+        "tags": "android, dev, tech",
+        "date": "March 22  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Throttling Android Simulator via Custom Networking Parameters",
+        "url": "/custom-networking-parameters-for-android-emulator/",
+        "category": "tips",
+        "tags": "oneliner, android, dev, tech, console",
+        "date": "March 22  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Remove Pushed Pods Folder from Git Repository",
+        "url": "/git-remove-pods-folder-from-pushed-repository-how-to/",
+        "category": "tips, blurb",
+        "tags": "git, ios, dev, tech, vcs",
+        "date": "March 19  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "OS X Special Characters - Images and Unicode Codes",
+        "url": "/os-x-special-characters/",
+        "category": "tips, blurb",
+        "tags": "osx, mac",
+        "date": "March 19  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Individual Google Play Services for Android with Gradle",
+        "url": "/individual-google-play-services/",
+        "category": "blurb",
+        "tags": "android, gps, sdk, gradle, dev",
+        "date": "March 15  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Including Facebook SDK to Android project via Gradle",
+        "url": "/facebook-sdk-as-gradle-dependency/",
+        "category": "blurb",
+        "tags": "android, sdk, gradle, facebook",
+        "date": "March 15  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "DNS FLush Cache for OS X, Linux, and Windows",
+        "url": "/dns-flush-cache-os-x-linux-windows/",
+        "category": "tips",
+        "tags": "tech, dev, os, oneliner",
+        "date": "March 15  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Switching From Wordpress to Jekyll in 20 Minutes",
+        "url": "/wordpress-jekyll-switch-migration/",
+        "category": "post",
+        "tags": "jekyll, migration, tech, blog",
+        "date": "March  7  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Jekyll Redirect Plugin  Forcing a File Download",
+        "url": "/jekyll-redirect-http-equiv-not-working/",
+        "category": "blurb",
+        "tags": "",
+        "date": "March  7  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Switching to Fabric From Crashlytics",
+        "url": "/switching-to-fabric/",
+        "category": "post",
+        "tags": "mobile, fabric.io, crashlytics, dev",
+        "date": "March  5  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Google Wave Had So Much More Potential Than Slack, HipChat, FlowDoc and Co.",
+        "url": "/google-wave-vs-slack-hipchat/",
+        "category": "post, essay",
+        "tags": "im, slack, google",
+        "date": "March  2  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "OS X Quick Dock Setup",
+        "url": "/os-x-quick-dock-setup/",
+        "category": "blurb",
+        "tags": "osx",
+        "date": "February  4  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Sublime Text Shortcuts",
+        "url": "/sublime-text-shortcuts/",
+        "category": "tips",
+        "tags": "sublime, dev, st3",
+        "date": "January 15  2015",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Xcode Themes Collection",
+        "url": "/xcode-themes-collection/",
+        "category": "blurb",
+        "tags": "dev, technical, ios, xcode",
+        "date": "November 23  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android IntentService vs. Service",
+        "url": "/android-intentservice-vs-service/",
+        "category": "blurb, android, technical",
+        "tags": "android, code",
+        "date": "May 19  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "OS X Uninstall Plex Media Server",
+        "url": "/os-x-uninstall-plex-media-server/",
+        "category": "blurb, technical",
+        "tags": "osx",
+        "date": "May  7  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Custom fonts on Android",
+        "url": "/custom-fonts-on-android/",
+        "category": "",
+        "tags": "",
+        "date": "May  5  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Travel Inspiration",
+        "url": "/travel-inspiration/",
+        "category": "blurb, enlightening, Inspirational",
+        "tags": "gopro, sailing, travel, video",
+        "date": "April  4  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Mavericks Energy Saving Settings Sleep and Display Sleep",
+        "url": "/mavericks-energy-saving-settings-sleep-and-display-sleep/",
+        "category": "blurb, enlightening, General",
+        "tags": "mavericks, oneliner, osx, terminal",
+        "date": "March 27  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Pull Screenshot From Android With One Liner Using &#39;Adb&#39;",
+        "url": "/pull-screenshot-from-android-with-one-liner-using-adb/",
+        "category": "blurb, android, enlightening",
+        "tags": "adb, android, oneliner",
+        "date": "March 12  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Evernote Account Limits in Perspective",
+        "url": "/evernote-account-limits-in-perspective/",
+        "category": "blurb, enlightening, General",
+        "tags": "evernote",
+        "date": "March 10  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Secret.ly Is Supposedly Inviting Hackers to Contest but Telegram Is Putting their money and a lot of it on the line",
+        "url": "/secret-ly-is-supposedly-inviting-hackers-to-contest-but-telegram-is-putting-their-money-and-a-lot-of-it-on-the-line/",
+        "category": "blurb, enlightening, general",
+        "tags": "messaging, mobile, russia, security, telegram, xmpp",
+        "date": "February 26  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Droidtocat - my New Cute Blog Sentinel :)",
+        "url": "/droidtocat-my-new-cute-blog-sentinel/",
+        "category": "blurb",
+        "tags": "fun, git, humor",
+        "date": "February 18  2014",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Useful Meteor Resources",
+        "url": "/useful-meteor-resources/",
+        "category": "blurb, technical",
+        "tags": "meteor, dev",
+        "date": "November 22  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "PHP Remove Curly (Smart) Quotes From String Data",
+        "url": "/php-remove-curly-smart-quotes-from-string-data/",
+        "category": "blurb, technical",
+        "tags": "code, php",
+        "date": "October 25  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Hitting Multiple Files Using Bash and Wget or Curl",
+        "url": "/hitting-multiple-files-using-bash-and-wget-or-curl/",
+        "category": "blurb, technical",
+        "tags": "bash, curl, shell, wget",
+        "date": "October 25  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Facebook iOS SDK - Print SDK Version Number",
+        "url": "/facebook-ios-sdk-print-sdk-version-number/",
+        "category": "blurb, ios, technical",
+        "tags": "code, ios",
+        "date": "October 18  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Quote of the Day",
+        "url": "/quote-of-the-day/",
+        "category": "blurb, enlightening, General",
+        "tags": "quote",
+        "date": "September 25  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Getting the Inch Size of the Android Device",
+        "url": "/getting-the-inch-size-of-the-android-device/",
+        "category": "blurb",
+        "tags": "android, code, dpi, java, pixel, screen+size, tablet",
+        "date": "September  8  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Great Infografic on iOS vs. Android App Monetization",
+        "url": "/great-infografic-on-ios-vs-android-app-monetization/",
+        "category": "blurb, android, enlightening, fun, mobile",
+        "tags": "android, apple, infographic, ios",
+        "date": "August  7  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Big Wave Surfing",
+        "url": "/big-wave-surfing/",
+        "category": "blurb, fun",
+        "tags": "record, surfing, wave",
+        "date": "August  7  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Facebook Graph API Methods and Parameters",
+        "url": "/facebook-graph-api-methods-and-parameters/",
+        "category": "blurb, technical",
+        "tags": "facebook, api",
+        "date": "July 11  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Natural Oils With SPF, Who Knew",
+        "url": "/natural-oils-with-spf-who-knew/",
+        "category": "blurb, enlightening",
+        "tags": "health",
+        "date": "May 27  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Open Source Android Clustering Library",
+        "url": "/open-source-android-clustering-library/",
+        "category": "blurb, android, mobile, technical",
+        "tags": "android, lib, memo",
+        "date": "May 27  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Nice Sliding Menu With Unique Color Fade Effect by Romain Guy",
+        "url": "/nice-sliding-menu-with-unique-color-fade-effect-by-romain-guy/",
+        "category": "blurb",
+        "tags": "mobile, technical, android, lib",
+        "date": "May 27  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Google Analytics Sessions vs. Flurry Analytics Session",
+        "url": "/google-analytics-sessions-vs-flurry-analytics-session/",
+        "category": "blurb, android, technical",
+        "tags": "analytics, google",
+        "date": "May 26  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "A Useful Tool to Work With Android APKs",
+        "url": "/a-useful-tool-to-work-with-android-apks/",
+        "category": "blurb, android, mobile, technical",
+        "tags": "android, apk, apktool",
+        "date": "May 23  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Hex Editor for Mac or Any Platform Actually - MacVim (Vim)",
+        "url": "/hex-editor-for-mac-or-any-platform-actually-macvim-vim/",
+        "category": "blurb, enlightening, technical",
+        "tags": "vim",
+        "date": "May 23  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Should Microsoft Out-Apple Apple?",
+        "url": "/should-microsoft-out-apple-apple/",
+        "category": "fun, post",
+        "tags": "",
+        "date": "May 17  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "List of Facebook Errors",
+        "url": "/list-of-all-facebook-api-errors/",
+        "category": "",
+        "tags": "",
+        "date": "May  5  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Programming Fonts",
+        "url": "/programming-fonts/",
+        "category": "blurb, General, technical",
+        "tags": "eclipse, font, sublimetext, st",
+        "date": "April 19  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Using Jackson JSON Parser in Android Project",
+        "url": "/using-jackson-json-parser-in-android-project/",
+        "category": "blurb, android",
+        "tags": "android, jackson, java, json",
+        "date": "March  1  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android ICS Style Buttons for a Dialog",
+        "url": "/android-ics-style-buttons-for-a-dialog/",
+        "category": "blurb, android, mobile",
+        "tags": "android, code, xml",
+        "date": "January 27  2013",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Git Wizardry - Easy Way to Get the Change Set From Git",
+        "url": "/git-wizardry-easy-way-to-get-the-change-set-from-git/",
+        "category": "blurb, technical",
+        "tags": "git, versioning",
+        "date": "December 12  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Git Tags Cheat Sheet",
+        "url": "/git-tags-cheat-sheet/",
+        "category": "blurb",
+        "tags": "technical, git, reference",
+        "date": "December  3  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Skype - Clever Upgrade Marketing :)",
+        "url": "/skype-clever-upgrade-marketing/",
+        "category": "blurb, fun, General",
+        "tags": "",
+        "date": "November 15  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "ProGuard - Keep Entire Package (Different Variations)",
+        "url": "/proguard-keep-entire-package-different-variations/",
+        "category": "blurb, enlightening, technical",
+        "tags": "android, java, proguard",
+        "date": "November  1  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Why I Hate Facebook Engineers",
+        "url": "/why-i-hate-facebook-engineers/",
+        "category": "blurb, General, Ranting",
+        "tags": "android, facebook, mobile",
+        "date": "October 30  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Cleaning Up and Removing Unused Ports in Your MacPorts",
+        "url": "/cleaning-up-and-removing-unused-ports-in-your-macports/",
+        "category": "blurb",
+        "tags": "enlightening, technical, osx, macports, terminal",
+        "date": "October 23  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "A Quote -- Dave Barry",
+        "url": "/a-quote/",
+        "category": "blurb, fun",
+        "tags": "quote",
+        "date": "September 19  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "NullPointerException in WebViewDatabase.getCacheTotalSize Fix",
+        "url": "/nullpointerexception-in-webviewdatabase-getcachetotalsize-fix/",
+        "category": "blurb, android, enlightening, technical",
+        "tags": "android, bug, crash, webkit, webview",
+        "date": "September 14  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Apple iPhone 5 Presentation Keynote 2012 in One Word",
+        "url": "/apple-iphone-5-presentation-keynote-2012-in-one-word/",
+        "category": "blurb",
+        "tags": "apple, keynote, fun",
+        "date": "September 14  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "The 20/80 Rule - a Wider Perspective",
+        "url": "/the-2080-rule-a-wider-perspective/",
+        "category": "blurb, enlightening, General",
+        "tags": "thoughts",
+        "date": "September  6  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Eclipse.ini Garbage Collector (GC) Settings",
+        "url": "/eclipse-ini-garbage-collector-gc-settings/",
+        "category": "blurb",
+        "tags": "enlightening, technical, eclipse, eclipse.ini, jvm",
+        "date": "September  6  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android and Apple Fun",
+        "url": "/android-and-apple-fun/",
+        "category": "blurb, fun",
+        "tags": "fun",
+        "date": "September  4  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Easily Generate Change Set Between Releases Using Git",
+        "url": "/easily-generate-change-set-between-releases-using-git/",
+        "category": "blurb, enlightening, technical",
+        "tags": "git",
+        "date": "September  3  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Github&#39;s Octocat",
+        "url": "/githubs-octocat/",
+        "category": "blurb, fun",
+        "tags": "git",
+        "date": "August 31  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Git Adding a New Remote Branch - Detailed but Simple Example",
+        "url": "/git-adding-a-new-remote-branch-detailed-but-simple-example/",
+        "category": "blurb, enlightening, technical",
+        "tags": "git, reference, technical, tricks, wizardy",
+        "date": "August 28  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Detect if Google Play/Android Market (com.android.vending Package) Is Installed on a Device",
+        "url": "/detect-if-google-play-android-market-com-android-vending-package-is-installed-on-a-device/",
+        "category": "blurb",
+        "tags": "mobile, technical, android, java",
+        "date": "August 27  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Git – Update Last Commit With Changes You Forgot to Make",
+        "url": "/git-update-last-commit-with-changes-you-forgot-to-make/",
+        "category": "blurb, enlightening, technical",
+        "tags": "git",
+        "date": "August 26  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Ammend/Change Previous Git Commit Message",
+        "url": "/ammend-or-change-previous-git-commit-message/",
+        "category": "blurb, enlightening, technical",
+        "tags": "git",
+        "date": "August 25  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Words of Wisdom on How to Start a Business From GitHub Co-Founder",
+        "url": "/words-of-wisdom-on-how-to-start-a-business-from-github-co-founder/",
+        "category": "blurb, enlightening, General",
+        "tags": "",
+        "date": "August 22  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android File Transfer Stooped Recognizing Galaxy Nexus on OS X",
+        "url": "/android-file-transfer-stooped-recognizing-galaxy-nexus-on-os-x/",
+        "category": "blurb, android, enlightening, mobile",
+        "tags": "android, osx, technical",
+        "date": "August 18  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Easily Retrace Proguard Obfuscated Android Code",
+        "url": "/easily-retrace-proguard-obfuscated-android-code/",
+        "category": "blurb, General",
+        "tags": "",
+        "date": "August 17  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "People Are Crafty",
+        "url": "/people-are-crafty/",
+        "category": "blurb, fun, General",
+        "tags": "thoughts",
+        "date": "August 17  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Singletons",
+        "url": "/singletons/",
+        "category": "blurb, technical",
+        "tags": "",
+        "date": "August 10  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Upgrade Eclipse Indigo to Eclipse Juno 4.2",
+        "url": "/how-to-upgrade-eclipse-indigo-to-eclipse-juno-4-2/",
+        "category": "blurb, technical",
+        "tags": "eclipse, ide, java, technical",
+        "date": "August 10  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry OS Distribution - July 2012",
+        "url": "/blackberry-os-distribution-july-2012/",
+        "category": "blurb",
+        "tags": "enlightening, mobile, bb, bbos, blackberry, rim",
+        "date": "July 28  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Get Unix Epoch Time on Android",
+        "url": "/get-unix-epoch-time-on-android/",
+        "category": "blurb, android, technical",
+        "tags": "android",
+        "date": "July 18  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android text.ClipboardManager and content.ClipboardManager",
+        "url": "/android-text-clipboardmanager-and-content-clipboardmanager/",
+        "category": "blurb, android, technical",
+        "tags": "android, api",
+        "date": "July 18  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "William Gibson Quote",
+        "url": "/william-gibson-quote/",
+        "category": "blurb, General",
+        "tags": "quote",
+        "date": "July 13  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Restore a File Deleted From Git",
+        "url": "/restore-a-file-deleted-from-git/",
+        "category": "blurb, technical",
+        "tags": "git",
+        "date": "July 12  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Backward Compatible Action Bar for Android",
+        "url": "/backward-compatible-action-bar-for-android/",
+        "category": "blurb, android, technical",
+        "tags": "android",
+        "date": "July 12  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Free Git Repository Hosting Plus Bug Tracking",
+        "url": "/free-git-repository-hosting-plus-bug-tracking/",
+        "category": "blurb, technical",
+        "tags": "bitbucket, dvcs, git, vcs",
+        "date": "July 12  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "PHPStorm Change Default Open in a New Frame",
+        "url": "/phpstorm-change-default-open-in-a-new-frame/",
+        "category": "blurb, technical",
+        "tags": "ide, phpstorm, technical",
+        "date": "July 10  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Add Gestures to Your Windows Phone 7 Application",
+        "url": "/add-gestures-and-gesture-control-to-your-windows-phone-7-application/",
+        "category": "blurb",
+        "tags": "technical, code, source, wp7, xaml",
+        "date": "July  8  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Determine Theme Accent Color on Windows Phone",
+        "url": "/how-to-determine-theme-accent-color-on-windows-phone/",
+        "category": "blurb, technical, wp7",
+        "tags": "csharp, code, source, wp7",
+        "date": "July  8  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Determine Theme Background Color on Windows Phone",
+        "url": "/how-to-determine-theme-background-color-on-windows-phone/",
+        "category": "blurb, technical, wp7",
+        "tags": "csharp, code, wp7",
+        "date": "July  8  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Node.js",
+        "url": "/node-js/",
+        "category": "blurb",
+        "tags": "enlightening, technical, node.js",
+        "date": "June 30  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Windows Phone 7 &quot;Hidden&quot; Shortcut Keys for the Simulator",
+        "url": "/windows-phone-7-hidden-shortcut-keys-for-the-simulator-wp7/",
+        "category": "blurb, technical, wp7",
+        "tags": "wp7",
+        "date": "June 29  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "A Quote",
+        "url": "/to-be-a-good-programmer-you-have-to-be-a-good-tester/",
+        "category": "blurb",
+        "tags": "enlightening, cs, quote",
+        "date": "June 22  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "NoSQL Is the future... or Is It? )",
+        "url": "/nosql-is-the-future-or-is-it/",
+        "category": "blurb, General",
+        "tags": "",
+        "date": "June 14  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Go Mobile - Advice From Google",
+        "url": "/how-to-go-mobile-advice-from-google/",
+        "category": "blurb, mobile",
+        "tags": "gomometer, howtogomo",
+        "date": "May  4  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Import SVN Repository to Git",
+        "url": "/import-svn-repository-to-git/",
+        "category": "blurb",
+        "tags": "technical, git, vn",
+        "date": "April  5  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "April&#39;s Fool 2012 by BitBucket",
+        "url": "/aprils-fool-2012-by-bitbucket/",
+        "category": "blurb, fun",
+        "tags": "",
+        "date": "April  1  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "OS X How to Install MongoDB for PHP",
+        "url": "/os-x-how-to-install-mongodb-for-php/",
+        "category": "blurb, technical",
+        "tags": "mongodb, osx, php",
+        "date": "March 15  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "OS X Setup TextWrangler as Your Default Editor for Git",
+        "url": "/os-x-setup-textwrangler-as-your-default-editor-for-git/",
+        "category": "blurb, enlightening, technical",
+        "tags": "bash, git, osx, terminal, textwrangler",
+        "date": "March  9  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Debug Apps on Kindle Fire on OS X",
+        "url": "/how-to-debug-apps-on-kindle-fire-on-os-x/",
+        "category": "blurb",
+        "tags": "android, mobile, technical, amazon, kindle, vim",
+        "date": "February 16  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Fixing Eclipse Fonts on OS X",
+        "url": "/fixing-eclipse-fonts-on-os-x/",
+        "category": "blurb, technical",
+        "tags": "eclipse, fix, font, osx",
+        "date": "February 16  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Global Android DevCamp",
+        "url": "/global-android-devcamp/",
+        "category": "blurb",
+        "tags": "android, boston, devcamp, hackaton, mobile",
+        "date": "February 15  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Smoked by Windows Phone at CES",
+        "url": "/smoked-by-windows-phone-at-ces/",
+        "category": "blurb",
+        "tags": "mobile, wp7",
+        "date": "February  5  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Mobile Advertising by the Numbers - Inforgraphics From InnerActive",
+        "url": "/mobile-advertising-by-the-numbers-inforgraphics-from-inneractive/",
+        "category": "blurb",
+        "tags": "infographics, enlightening, mobile",
+        "date": "February  3  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Great Collection of Mobile UI Resources",
+        "url": "/great-collection-of-mobile-ui-resources/",
+        "category": "blurb",
+        "tags": "mobile, ui, ux",
+        "date": "January 31  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Why Python Is Awesome :)",
+        "url": "/why-python-is-awesome/",
+        "category": "blurb, fun, technical",
+        "tags": "dev, python",
+        "date": "January 25  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Developers Can See the Device and App Version on Each Comment on Android Market",
+        "url": "/developers-can-see-the-device-and-app-version-on-each-comment-on-android-market/",
+        "category": "blurb, android",
+        "tags": "android",
+        "date": "January 25  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Uninstall and Reinstall XCode Os OS X",
+        "url": "/how-to-uninstall-and-reinstall-xcode-os-x-install-xcode-from-app-store/",
+        "category": "blurb, technical",
+        "tags": "osx, xcode",
+        "date": "January 21  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "The Fiancée of Sean Parker Naked Picture",
+        "url": "/the-fiancee-of-sean-parker-naked-picture/",
+        "category": "blurb, fun",
+        "tags": "",
+        "date": "January 21  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry OS Distribution January 2012",
+        "url": "/blackberry-os-distribution-january-2012/",
+        "category": "blurb, mobile",
+        "tags": "bbos, blackberry, rim",
+        "date": "January 19  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "iOS vs. Android vs. BlackBerry vs. Windows Phones",
+        "url": "/ios-vs-android-vs-blackberry-vs-windows-phones/",
+        "category": "blurb, mobile",
+        "tags": "android, blackberry, iPhone, wp7",
+        "date": "January 18  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Windows Phone (WP7) Stats for 2011 Infographics",
+        "url": "/windows-phone-wp7-stats-for-2011-infographics/",
+        "category": "blurb",
+        "tags": "infographics, wp7",
+        "date": "January 18  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Keyboard Shortcut to Switch Tabs in Safari",
+        "url": "/keyboard-shortcut-to-switch-tabs-in-safari/",
+        "category": "blurb",
+        "tags": "enlightening, osx, safari",
+        "date": "January 13  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "WP7 - What Makes Live Tile Unique?",
+        "url": "/wp7-what-makes-live-tile-unique/",
+        "category": "blurb",
+        "tags": "wp7",
+        "date": "January 10  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "WP7 Deployment Error: Failed to Connect to Device as It Is Pin Locked",
+        "url": "/wp7-deployment-error-failed-to-connect-to-device-as-it-is-pin-locked/",
+        "category": "blurb",
+        "tags": "wp7",
+        "date": "January 10  2012",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Installing/Updating BlackBerry Eclipse SDK - Problem With Authentication",
+        "url": "/installing-updating-blackberry-eclipse-sdk-problem-with-authentication/",
+        "category": "blurb, enlightening, technical",
+        "tags": "blackberry, eclipse",
+        "date": "December 14  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Eclipse Marking SVN Changes Like Netbeans",
+        "url": "/eclipse-marking-svn-changes-like-netbeans/",
+        "category": "blurb",
+        "tags": "enlightening, technical, eclipse, svn",
+        "date": "December  9  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "The Power of SnapDragon Processor With Adreno GPU",
+        "url": "/the-power-of-snapdragon-processor-with-adreno-gpu/",
+        "category": "blurb",
+        "tags": "android, iPhone, snapdragon, cpi",
+        "date": "October 11  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "There Was a Problem Generating the Feed Story From the Provided Data - Facebook gives headache to developers once again",
+        "url": "/there-was-a-problem-generating-the-feed-story-from-the-provided-data-facebook-gives-headache-to-developers-once-again/",
+        "category": "blurb, android",
+        "tags": "android, facebook, ios",
+        "date": "September 28  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Windows 8 &quot;Contracts&quot; What&#39;s the Fuss Is All About",
+        "url": "/windows-8-contracts-whats-the-fuss-is-all-about/",
+        "category": "blurb, enlightening, General",
+        "tags": "win8",
+        "date": "September 26  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Google I/O 2011 Is Approaching!",
+        "url": "/google-io-2011-is-approaching/",
+        "category": "blurb, fun",
+        "tags": "google, googleIO",
+        "date": "May  4  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "TextMate Go to Last Edit Plugin",
+        "url": "/textmate-go-to-last-edit-plugin/",
+        "category": "blurb, General, technical",
+        "tags": "netbeans, textmate, vim",
+        "date": "May  3  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry OS Distribution March/April 2011",
+        "url": "/blackberry-os-distribution-marchapril-2011/",
+        "category": "blurb, mobile",
+        "tags": "blackberry, mobile, os, rim, statistics",
+        "date": "April 27  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "OTA on BlackBerry - How to Detect OS Version From the Browser User Agent",
+        "url": "/ota-on-blackberry-how-to-detect-os-version-from-the-browser-user-agent/",
+        "category": "blurb, technical",
+        "tags": "blackberry, code, ota",
+        "date": "March  4  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Convert ARGB to Int Value (Java)",
+        "url": "/convert-argb-to-int-value-java/",
+        "category": "blurb, technical",
+        "tags": "blackberry, code, java",
+        "date": "February 26  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Rules of Simple Design by Eric Raymond",
+        "url": "/rules-of-simple-design-by-eric-raymond/",
+        "category": "blurb, enlightening",
+        "tags": "",
+        "date": "February  9  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Keep Line Breaks in DokuWiki",
+        "url": "/keep-line-breaks-in-dokuwiki/",
+        "category": "blurb, technical",
+        "tags": "dokuwiki",
+        "date": "January 12  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Interesting and Amazing Things You Can Do With a Little Creativity",
+        "url": "/interesting-and-amazing-things-you-can-do-with-a-little-creativity/",
+        "category": "blurb, android, enlightening",
+        "tags": "android, fun, innovation",
+        "date": "January 11  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android 2.4 Codenamed Ice Cream Is Expected This Summer. What&#39;s Next?",
+        "url": "/android-2-4-codenamed-ice-cream-is-expected-this-summer-whats-next/",
+        "category": "blurb, android, mobile",
+        "tags": "android",
+        "date": "January 11  2011",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Java Code to Work With MillennialMedia, SMAATO and NexAge Web Advertising APIs",
+        "url": "/java-code-to-work-with-millennialmedia-smaato-and-nexage-web-advertising-apis/",
+        "category": "blurb, Mobile, technical",
+        "tags": "blackberry, mobile, source, technical",
+        "date": "December 18  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "In App Advertising on BlackBerry With QuattroWireless, MillennialMedia, SMAATO and NexAge a bitter experience",
+        "url": "/in-app-advertising-on-blackberry-with-quattrowireless-millennialmedia-smaato-and-nexage-a-bitter-experience/",
+        "category": "blurb, mobile, Ranting",
+        "tags": "",
+        "date": "December 16  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Foursquare&#39;s Use of MongoDB",
+        "url": "/foursquare-use-of-mongodb/",
+        "category": "blurb",
+        "tags": "technical, db, mongodb",
+        "date": "December 15  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android – Can’t Find my ADB",
+        "url": "/android-2-3-cant-find-my-adb/",
+        "category": "blurb, technical",
+        "tags": "android, technical",
+        "date": "December  6  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Fix Android Debug Certificate Expire Error",
+        "url": "/how-to-fix-android-debug-certificate-expire-error/",
+        "category": "blurb, technical",
+        "tags": "android, eclipse",
+        "date": "November 19  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry PlayBook vs. Apple iPad - Browser Comparison",
+        "url": "/blackberry-playbook-vs-apple-ipad-browser-comparison/",
+        "category": "blurb, mobile",
+        "tags": "apple, blackberry, iPad, playbook",
+        "date": "November 17  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "DokuWiki Upgrade Error",
+        "url": "/dokuwiki-upgrade-error/",
+        "category": "blurb, technical",
+        "tags": "dokuwiki",
+        "date": "November 10  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android vs. iPhone vs. BlackBerry Users",
+        "url": "/android-vs-iphone-vs-blackberry-users/",
+        "category": "blurb, fun, mobile",
+        "tags": "android, blackberry, fun, iPhone",
+        "date": "November  9  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Free Windows Phone 7 for PDC10 Attendees",
+        "url": "/free-windows-phone-7-for-pdc10-attendees/",
+        "category": "blurb, mobile",
+        "tags": "freebie, google, microsoft, wp7",
+        "date": "October 28  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Windows Phone 7 – How to Reset Emulator",
+        "url": "/windows-phone-7-how-reset-clean-emulator/",
+        "category": "blurb, enlightening",
+        "tags": "mobile, technical, wp7",
+        "date": "October 26  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Some Notes on QNX - the New BlackBerry PlayBook OS",
+        "url": "/some-notes-on-qnx-the-new-blackberry-playbook-os/",
+        "category": "blurb, mobile",
+        "tags": "blackberry, qnx, rim, tablet",
+        "date": "September 30  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android Expands Support for Paid Application to More Countries and Developers",
+        "url": "/android-expands-support-for-paid-application-to-more-countries-and-developers/",
+        "category": "blurb, mobile",
+        "tags": "android, apps",
+        "date": "September 30  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry Developer Conference - Subjective Notes - Note One",
+        "url": "/blackberry-developer-conference-subjective-notes-note-one/",
+        "category": "blurb, mobile",
+        "tags": "bbdevcon, blackberry, rim",
+        "date": "September 27  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry Developer Conference 2010 Is Tomorrow",
+        "url": "/blackberry-developer-conference-2010-is-tomorrow/",
+        "category": "blurb, mobile, Ranting",
+        "tags": "blackberry, devcon, mobile, rim",
+        "date": "September 27  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Facebook Is Down - Funny Tweets Collection",
+        "url": "/facebook-is-down-funny-tweets-collection/",
+        "category": "blurb, fun, General",
+        "tags": "facebook, fun, picture, twitter",
+        "date": "September 23  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Is RIM Going Down?",
+        "url": "/is-rim-going-down/",
+        "category": "blurb, mobile, Ranting",
+        "tags": "android, blackberry, mobile, rim",
+        "date": "September 20  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "The Difference Between Android and the iPhone Illustrated",
+        "url": "/the-difference-between-android-and-the-iphone-illustrated/",
+        "category": "blurb, General",
+        "tags": "",
+        "date": "September 19  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Load Cod File to BlackBerry Using JavaLoader",
+        "url": "/load-cod-file-to-blackberry-using-javaloader/",
+        "category": "blurb, General",
+        "tags": "blackberry, mobile, technical",
+        "date": "September  5  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "The Future of GPU Computing",
+        "url": "/the-future-of-gpu-computing/",
+        "category": "blurb, enlightening",
+        "tags": "gpu, technical",
+        "date": "July 23  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "This Is Broken or why You Have to &quot;Eat Your Own Dog Food",
+        "url": "/this-is-broken-or-why-you-have-to-eat-your-own-dog-food/",
+        "category": "blurb",
+        "tags": "enlightening, seth, ux",
+        "date": "July 19  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Apache Ant - Fixing &quot;Can&#39;t Locate tools.jar&quot; Error",
+        "url": "/ant-fixing-cant-locate-tools-jar-file-error/",
+        "category": "blurb, enlightening",
+        "tags": "ant, technical",
+        "date": "June  3  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Speed Up Eclipse on OS X 10.6 Snow Leopard",
+        "url": "/how-to-speed-up-eclipse-on-os-x-10-6-snow-leopard/",
+        "category": "blurb, enlightening",
+        "tags": "eclipse, mac, osx, technical",
+        "date": "May 28  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Motorola Droid Driver for Windows 7 64 Bit",
+        "url": "/motorola-droid-driver-for-windows-7-64-bit/",
+        "category": "blurb",
+        "tags": "android, driver, droid, mobile, technical, usb",
+        "date": "May 23  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Chrome OS and the iPad",
+        "url": "/chrome-os-and-the-ipad/",
+        "category": "blurb",
+        "tags": "mobile, android, chromium, iPhone",
+        "date": "May 13  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Use Apache 2.0 License in Commercial Products, Explained in Simple Terms",
+        "url": "/how-to-use-apache-2-0-in-commercial-products-explained-in-simple-terms/",
+        "category": "blurb",
+        "tags": "apache, licensing",
+        "date": "May  5  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Using Amazon S3 to Serve JAD Files for BlackBerry OTA Distribution",
+        "url": "/using-amazon-s3-to-serve-jad-files-for-blackberry-ota-distribution/",
+        "category": "blurb, General, technical",
+        "tags": "aws, technical",
+        "date": "April  4  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry Eclipse Plugin 1.1 Will Fix Some of the Annoying Problems",
+        "url": "/blackberry-eclipse-plugin-1-1-will-fix-some-of-the-annoying-problems/",
+        "category": "blurb, mobile",
+        "tags": "blackberry, eclipse, mobile, technical",
+        "date": "March 29  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Super App Webcast Q&amp;A Follow-Up",
+        "url": "/super-app-webcast-questions-answered-follow-up/",
+        "category": "blurb, mobile",
+        "tags": "blackberry, mobile, technical, webcast",
+        "date": "March 29  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Building Secure Mobile Applications - AT&amp;T Free Webcast",
+        "url": "/building-secure-mobile-applications-att-free-webcast/",
+        "category": "blurb, mobile",
+        "tags": "blackberry, mobile, technical, webcast",
+        "date": "March 29  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Don&#39;t Be Afraid to Push the Envelope",
+        "url": "/dont-be-afraid-to-push-the-envelope/",
+        "category": "blurb",
+        "tags": "enlightening, 99percent, video",
+        "date": "March 28  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Find Out Your iPhone or iPod Touch Device ID or UUID",
+        "url": "/how-to-find-out-your-iphone-or-ipod-touch-device-id-or-uuid-udid/",
+        "category": "blurb, mobile",
+        "tags": "iPhone, mobile, technical",
+        "date": "March 18  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "How to Do a Remote Programming Interview With Code Review",
+        "url": "/how-to-do-a-remote-programming-interview-with-code-review/",
+        "category": "blurb, ranting",
+        "tags": "googlewave, interviewing, dev, technical",
+        "date": "March 17  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "New England BlackBerry Developer Meetup Group - First Meetup Notes",
+        "url": "/new-england-blackberry-developer-meetup-group-first-meetup-notes/",
+        "category": "blurb, mobile",
+        "tags": "blackberry, meetup, mobile, technical",
+        "date": "March 17  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry Upcoming WebKit Browser",
+        "url": "/blackberry-upcoming-webkit-browser/",
+        "category": "blurb, General",
+        "tags": "blackberry, mobile, webkit",
+        "date": "March 17  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Firefox 3.6 Fix the Tab Order to Open at the End of the Tabs",
+        "url": "/firefox-3-6-fix-the-tab-order-to-open-at-the-end-of-the-tabs/",
+        "category": "blurb",
+        "tags": "firefox, tips",
+        "date": "March 13  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Successful People SHIP",
+        "url": "/successful-people-ship-or-what-makes-successful-enterpreneurs/",
+        "category": "blurb",
+        "tags": "99percent, enlightening",
+        "date": "March 10  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "What Makes Blackberry App a Super App - Summary of Webcast",
+        "url": "/what-makes-blackberry-app-a-super-app-summary-of-webcast/",
+        "category": "blurb, mobile",
+        "tags": "blackberry, mobile, technical",
+        "date": "February 25  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Word Wrapped Preformatted Text in DokuWiki",
+        "url": "/word-wrapped-preformatted-text-in-dokuwiki/",
+        "category": "blurb, fun",
+        "tags": "dokuwiki, php, productivity, technical",
+        "date": "February 12  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Google Buzz a Step Forward to Google Wave?",
+        "url": "/google-buzz-a-step-forward-to-google-wave/",
+        "category": "blurb, General, mobile",
+        "tags": "google, twitter",
+        "date": "February 10  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Some Web Server Administration Tips on CentOS and cPanel (But Not Only)",
+        "url": "/some-web-server-administration-tips-on-centos-and-cpanel-but-not-only/",
+        "category": "blurb",
+        "tags": "apache, centos, cpanel, php",
+        "date": "January 26  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Problems Running BlackBerry Simulator (Fledge) on Windows 7 64 Bit",
+        "url": "/problems-running-blackberry-simulator-fledge-on-windows-7-64-bit/",
+        "category": "",
+        "tags": "blackberry",
+        "date": "January 22  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "The Humans Are Dead - Flight of the Conchord",
+        "url": "/the-humans-are-dead-flight-of-the-conchord/",
+        "category": "blurb, fun",
+        "tags": "fun, video",
+        "date": "January  6  2010",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "BlackBerry Development With Eclipse Plugin – Fixing Corrupted *.jdp File",
+        "url": "/blackberry-development-with-eclipse-plugin-fixing-corrupted-jdp-file/",
+        "category": "blurb, mobile",
+        "tags": "eclipse, technical",
+        "date": "August 13  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "New Icon for FireFox 3.5",
+        "url": "/new-icon-for-firefox-3-5/",
+        "category": "blurb, General",
+        "tags": "",
+        "date": "July 23  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Showing a Dialog (Or Screen) From a Background Thread on BlackBerry",
+        "url": "/showing-a-dialog-or-screen-from-a-background-thread-on-blackberry/",
+        "category": "blurb",
+        "tags": "mobile, blackberry, code, mobile, technical",
+        "date": "June  9  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Will Windows Eventually Loose Portables War Thanks to Many ARM Powered Netbooks coming?",
+        "url": "/will-windows-eventually-loose-portables-war-thanks-to-many-arm-powered-netbooks-coming/",
+        "category": "blurb",
+        "tags": "android, linux, microsoft, mobile, ubuntu",
+        "date": "June  2  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Palm Inc. Allows Early Access to It’s Mojo Framework for Developers",
+        "url": "/palm-inc-allows-early-access-to-its-mojo-framework-for-developers/",
+        "category": "blurb, mobile",
+        "tags": "mobile, mojo, palm, webos",
+        "date": "April 12  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Android Development vs. Blackberry Development",
+        "url": "/android-development-vs-blackberry-development/",
+        "category": "blurb, Ranting",
+        "tags": "android, blackberry, mobile, technical",
+        "date": "April 11  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Ad Aggregation and Mediation Networks",
+        "url": "/ad-aggregation-and-mediation-networks/",
+        "category": "blurb, General",
+        "tags": "mobile",
+        "date": "April  4  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Jealous Husbands Problem Puzzle",
+        "url": "/jealous-husbands-problem-puzzle/",
+        "category": "blurb",
+        "tags": "puzzles",
+        "date": "January 16  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Missionaries and Cannibals Puzzle -- Solution",
+        "url": "/missionaries-and-cannibals-puzzle-solution/",
+        "category": "",
+        "tags": "puzzles",
+        "date": "January 16  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Missionaries and Cannibals Puzzle",
+        "url": "/missionaries-and-cannibals-puzzle/",
+        "category": "blurb, Brain Teasers",
+        "tags": "puzzles",
+        "date": "January 16  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Publishing Your Article — Scientific Joke",
+        "url": "/publishing-your-article-scientific-joke/",
+        "category": "blurb",
+        "tags": "fun",
+        "date": "January 15  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Hazzards of Recursion",
+        "url": "/hazzards-of-recursion-or-why-it-is-so-slow/",
+        "category": "blurb",
+        "tags": "technical",
+        "date": "January 15  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Getting 1/3 Probability by Tossing Coins -- Solution",
+        "url": "/getting-one-third-probability-by-tossing-coins-puzzle-solution/",
+        "category": "blurb",
+        "tags": "puzzles",
+        "date": "January 15  2009",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Getting 1/3 Probability by Tossing Coins",
+        "url": "/getting-one-third-probability-by-tossing-coins-puzzle/",
+        "category": "blurb",
+        "tags": "puzzles",
+        "date": "January 14  2009",
+        "discription": ""
+    } 
+  
+]
