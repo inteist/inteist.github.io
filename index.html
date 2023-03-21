@@ -84,10 +84,12 @@ done
     <span class="nx">db</span><span class="p">.</span><span class="nx">createUser</span><span class="p">({</span> <span class="na">user</span><span class="p">:</span> <span class="dl">"</span><span class="s2">***</span><span class="dl">"</span><span class="p">,</span> <span class="na">pwd</span><span class="p">:</span> <span class="nx">passwordPrompt</span><span class="p">(),</span> <span class="na">roles</span><span class="p">:</span> <span class="p">[{</span> <span class="na">role</span><span class="p">:</span> <span class="dl">"</span><span class="s2">dbOwner</span><span class="dl">"</span><span class="p">,</span> <span class="na">db</span><span class="p">:</span> <span class="dl">"</span><span class="s2">work_db</span><span class="dl">"</span> <span class="p">}]</span> <span class="p">})</span>
 
 </code></pre></div></div> <h2 id="connection-string">Connection string</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="syntax"><code>connectionURI <span class="o">=</span> <span class="s2">"mongodb://user:pass@localhost:27017/?serverSelectionTimeoutMS=5000&amp;connectTimeoutMS=10000&amp;authSource=WORK_DB&amp;authMechanism=SCRAM-SHA-256"</span>
-</code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/mongo-db-backup-restore/"> Mongo DB backup and restore </a> </h1> <span class="post-date">07 Oct 2022</span> <div class="link-underline"> <p><code class="language-html highlighter-rouge">mongodump</code> is a tool for exporting the contents of a database as a binary file. Mongodump can export data from either mongod or mongos instances. It can also export data from standalone, replica set, and sharded cluster deployments.</p> <p>usages</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>mongodump <span class="nt">--user</span><span class="o">=</span>myuser <span class="nt">--db</span><span class="o">=</span>mydb <span class="nt">--password</span><span class="o">=</span>somepass <span class="nt">--authenticationDatabase</span><span class="o">=</span>admin
-</code></pre></div></div> <p>Or with a Mongo URI:</p><pre><code class="language-block">mongodump --uri="mongodb://myuser:somepass@localhost:27107/mydb?ssl=false&amp;authSource=admin
-</code></pre><p>so if we go back to <a href="">users and roles definitions for MongoDB</a></p> <!-- cut --> <h1 id="mongodump-usage-card">mongodump usage card</h1><pre><code class="language-block">Usage:
-  mongodump &lt;options&gt; &lt;connection-string&gt;
+</code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/mongo-db-backup-restore/"> Mongo DB Backup and Restore </a> </h1> <span class="post-date">07 Oct 2022</span> <div class="link-underline"> <p><code class="language-html highlighter-rouge">mongodump</code> is a tool for exporting the contents of a database as a binary file. Mongodump can export data from either mongod or mongos instances. It can also export data from standalone, replica set, and sharded cluster deployments.</p> <p>usages</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>mongodump <span class="nt">--user</span><span class="o">=</span>myuser <span class="nt">--db</span><span class="o">=</span>mydb <span class="nt">--password</span><span class="o">=</span>somepass <span class="nt">--authenticationDatabase</span><span class="o">=</span>admin
+</code></pre></div></div> <p>Or with a Mongo URI:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>mongodump <span class="nt">--uri</span><span class="o">=</span><span class="s2">"mongodb://myuser:somepass@localhost:27107/mydb?ssl=false&amp;authSource=admin
+</span></code></pre></div></div> <p>so if we go back to <a href="">users and roles definitions for MongoDB</a></p> <!-- cut --> <h1 id="mongodump-usage-card">mongodump usage card</h1> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+Usage:
+
+&gt; mongodump &lt;options&gt; &lt;connection-string&gt;
 
 Export the content of a running server into .bson files.
 
@@ -153,7 +155,7 @@ output options:
       --excludeCollectionsWithPrefix=&lt;collection-prefix&gt;    exclude all collections from the dump that have the given prefix (may be specified multiple times to exclude additional prefixes)
   -j, --numParallelCollections=                             number of collections to dump in parallel
       --viewsAsCollections                                  dump views as normal collections with their produced data, omitting standard collections
-</code></pre></div> </div> <div class="post"> <h1 class="post-title"> <a href="/new-post/"> New Post </a> </h1> <span class="post-date">07 Oct 2022</span> <div class="link-underline"> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/google-colab-tips-tricks/"> Google ColaB Tips and Tricks </a> </h1> <span class="post-date">06 Oct 2022</span> <div class="link-underline"> <p>Stop Google Colab from disconnecting</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kd">function</span> <span class="nx">ClickConnect</span><span class="p">()</span> <span class="p">{</span>
+</code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/new-post/"> New Post </a> </h1> <span class="post-date">07 Oct 2022</span> <div class="link-underline"> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/google-colab-tips-tricks/"> Google ColaB Tips and Tricks </a> </h1> <span class="post-date">06 Oct 2022</span> <div class="link-underline"> <p>Stop Google Colab from disconnecting</p> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kd">function</span> <span class="nx">ClickConnect</span><span class="p">()</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Click Connect - Working</span><span class="dl">'</span><span class="p">)</span>
   <span class="nb">document</span>
     <span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#top-toolbar &gt; colab-connect-button</span><span class="dl">'</span><span class="p">)</span>
@@ -223,70 +225,70 @@ output options:
 
 <span class="nt">-ms</span><span class="o">=</span>on solid archive <span class="o">=</span> on
 </code></pre></div></div> <p>7z is available on most standard Linux distros</p> <p>Max OS - install via homebrew</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>brew install p7zip
-</code></pre></div></div> <h2 id="extras">Extras</h2> <p>7z command reference:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
-7-Zip <span class="o">[</span>64] 17.04 : Copyright <span class="o">(</span>c<span class="o">)</span> 1999-2021 Igor Pavlov : 2017-08-28
-p7zip Version 17.04 <span class="o">(</span><span class="nv">locale</span><span class="o">=</span>utf8,Utf16<span class="o">=</span>on,HugeFiles<span class="o">=</span>on,64 bits,16 CPUs x64<span class="o">)</span>
+</code></pre></div></div> <h2 id="extras">Extras</h2> <p>7z command reference:</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+7-Zip [64] 17.04 : Copyright (c) 1999-2021 Igor Pavlov : 2017-08-28
+p7zip Version 17.04 (locale=utf8,Utf16=on,HugeFiles=on,64 bits,16 CPUs x64)
 
-Usage: 7z &lt;<span class="nb">command</span><span class="o">&gt;</span> <span class="o">[</span>&lt;switches&gt;...] &lt;archive_name&gt; <span class="o">[</span>&lt;file_names&gt;...]
+Usage: 7z &lt;command&gt; [&lt;switches&gt;...] &lt;archive_name&gt; [&lt;file_names&gt;...]
 
 &lt;Commands&gt;
   a : Add files to archive
   b : Benchmark
   d : Delete files from archive
-  e : Extract files from archive <span class="o">(</span>without using directory names<span class="o">)</span>
-  h : Calculate <span class="nb">hash </span>values <span class="k">for </span>files
+  e : Extract files from archive (without using directory names)
+  h : Calculate hash values for files
   i : Show information about supported formats
   l : List contents of archive
-  rn : Rename files <span class="k">in </span>archive
+  rn : Rename files in archive
   t : Test integrity of archive
   u : Update files to archive
   x : eXtract files with full paths
 
 &lt;Switches&gt;
-  <span class="nt">--</span> : Stop switches parsing
-  @listfile : <span class="nb">set </span>path to listfile that contains file names
-  <span class="nt">-ai</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : Include archives
-  <span class="nt">-ax</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : eXclude archives
-  <span class="nt">-ao</span><span class="o">{</span>a|s|t|u<span class="o">}</span> : <span class="nb">set </span>Overwrite mode
-  <span class="nt">-an</span> : disable archive_name field
-  <span class="nt">-bb</span><span class="o">[</span>0-3] : <span class="nb">set </span>output log level
-  <span class="nt">-bd</span> : disable progress indicator
-  <span class="nt">-bs</span><span class="o">{</span>o|e|p<span class="o">}{</span>0|1|2<span class="o">}</span> : <span class="nb">set </span>output stream <span class="k">for </span>output/error/progress line
-  <span class="nt">-bt</span> : show execution <span class="nb">time </span>statistics
-  <span class="nt">-i</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : Include filenames
-  <span class="nt">-m</span><span class="o">{</span>Parameters<span class="o">}</span> : <span class="nb">set </span>compression Method
-    <span class="nt">-mmt</span><span class="o">[</span>N] : <span class="nb">set </span>number of CPU threads
-    <span class="nt">-mx</span><span class="o">[</span>N] : <span class="nb">set </span>compression level: <span class="nt">-mx1</span> <span class="o">(</span>fastest<span class="o">)</span> ... <span class="nt">-mx9</span> <span class="o">(</span>ultra<span class="o">)</span>
-  <span class="nt">-o</span><span class="o">{</span>Directory<span class="o">}</span> : <span class="nb">set </span>Output directory
-  <span class="nt">-p</span><span class="o">{</span>Password<span class="o">}</span> : <span class="nb">set </span>Password
-  <span class="nt">-r</span><span class="o">[</span>-|0] : Recurse subdirectories
-  <span class="nt">-sa</span><span class="o">{</span>a|e|s<span class="o">}</span> : <span class="nb">set </span>Archive name mode
-  <span class="nt">-scc</span><span class="o">{</span>UTF-8|WIN|DOS<span class="o">}</span> : <span class="nb">set </span>charset <span class="k">for for </span>console input/output
-  <span class="nt">-scs</span><span class="o">{</span>UTF-8|UTF-16LE|UTF-16BE|WIN|DOS|<span class="o">{</span><span class="nb">id</span><span class="o">}}</span> : <span class="nb">set </span>charset <span class="k">for </span>list files
-  <span class="nt">-scrc</span><span class="o">[</span>CRC32|CRC64|SHA1|SHA256|<span class="k">*</span><span class="o">]</span> : <span class="nb">set hash </span><span class="k">function for </span>x, e, h commands
-  <span class="nt">-sdel</span> : delete files after compression
-  <span class="nt">-seml</span><span class="o">[</span>.] : send archive by email
-  <span class="nt">-sfx</span><span class="o">[{</span>name<span class="o">}]</span> : Create SFX archive
-  <span class="nt">-si</span><span class="o">[{</span>name<span class="o">}]</span> : <span class="nb">read </span>data from stdin
-  <span class="nt">-slp</span> : <span class="nb">set </span>Large Pages mode
-  <span class="nt">-slt</span> : show technical information <span class="k">for </span>l <span class="o">(</span>List<span class="o">)</span> <span class="nb">command</span>
-  <span class="nt">-snh</span> : store hard links as links
-  <span class="nt">-snl</span> : store symbolic links as links
-  <span class="nt">-sni</span> : store NT security information
-  <span class="nt">-sns</span><span class="o">[</span>-] : store NTFS alternate streams
-  <span class="nt">-so</span> : write data to stdout
-  <span class="nt">-spd</span> : disable wildcard matching <span class="k">for </span>file names
-  <span class="nt">-spe</span> : eliminate duplication of root folder <span class="k">for </span>extract <span class="nb">command</span>
-  <span class="nt">-spf</span> : use fully qualified file paths
-  <span class="nt">-ssc</span><span class="o">[</span>-] : <span class="nb">set </span>sensitive <span class="k">case</span> mode
-  <span class="nt">-ssw</span> : compress shared files
-  <span class="nt">-stl</span> : <span class="nb">set </span>archive timestamp from the most recently modified file
-  <span class="nt">-stm</span><span class="o">{</span>HexMask<span class="o">}</span> : <span class="nb">set </span>CPU thread affinity mask <span class="o">(</span>hexadecimal number<span class="p">)</span>
-  <span class="nt">-stx</span><span class="o">{</span>Type<span class="o">}</span> : exclude archive <span class="nb">type</span>
-  <span class="nt">-t</span><span class="o">{</span>Type<span class="o">}</span> : Set <span class="nb">type </span>of archive
-  <span class="nt">-u</span><span class="o">[</span>-][p#][q#][r#][x#][y#][z#][!newArchiveName] : Update options
-  <span class="nt">-v</span><span class="o">{</span>Size<span class="o">}[</span>b|k|m|g] : Create volumes
-  <span class="nt">-w</span><span class="o">[{</span>path<span class="o">}]</span> : assign Work directory. Empty path means a temporary directory
-  <span class="nt">-x</span><span class="o">[</span>r[-|0]]<span class="o">{</span>@listfile|!wildcard<span class="o">}</span> : eXclude filenames
-  <span class="nt">-y</span> : assume Yes on all queries
+  -- : Stop switches parsing
+  @listfile : set path to listfile that contains file names
+  -ai[r[-|0]]{@listfile|!wildcard} : Include archives
+  -ax[r[-|0]]{@listfile|!wildcard} : eXclude archives
+  -ao{a|s|t|u} : set Overwrite mode
+  -an : disable archive_name field
+  -bb[0-3] : set output log level
+  -bd : disable progress indicator
+  -bs{o|e|p}{0|1|2} : set output stream for output/error/progress line
+  -bt : show execution time statistics
+  -i[r[-|0]]{@listfile|!wildcard} : Include filenames
+  -m{Parameters} : set compression Method
+    -mmt[N] : set number of CPU threads
+    -mx[N] : set compression level: -mx1 (fastest) ... -mx9 (ultra)
+  -o{Directory} : set Output directory
+  -p{Password} : set Password
+  -r[-|0] : Recurse subdirectories
+  -sa{a|e|s} : set Archive name mode
+  -scc{UTF-8|WIN|DOS} : set charset for for console input/output
+  -scs{UTF-8|UTF-16LE|UTF-16BE|WIN|DOS|{id}} : set charset for list files
+  -scrc[CRC32|CRC64|SHA1|SHA256|*] : set hash function for x, e, h commands
+  -sdel : delete files after compression
+  -seml[.] : send archive by email
+  -sfx[{name}] : Create SFX archive
+  -si[{name}] : read data from stdin
+  -slp : set Large Pages mode
+  -slt : show technical information for l (List) command
+  -snh : store hard links as links
+  -snl : store symbolic links as links
+  -sni : store NT security information
+  -sns[-] : store NTFS alternate streams
+  -so : write data to stdout
+  -spd : disable wildcard matching for file names
+  -spe : eliminate duplication of root folder for extract command
+  -spf : use fully qualified file paths
+  -ssc[-] : set sensitive case mode
+  -ssw : compress shared files
+  -stl : set archive timestamp from the most recently modified file
+  -stm{HexMask} : set CPU thread affinity mask (hexadecimal number)
+  -stx{Type} : exclude archive type
+  -t{Type} : Set type of archive
+  -u[-][p#][q#][r#][x#][y#][z#][!newArchiveName] : Update options
+  -v{Size}[b|k|m|g] : Create volumes
+  -w[{path}] : assign Work directory. Empty path means a temporary directory
+  -x[r[-|0]]{@listfile|!wildcard} : eXclude filenames
+  -y : assume Yes on all queries
 </code></pre></div></div> </div> </div> </div> <div class="pagination"> <a class="pagination-item older" href="/page2/">Older</a> <span class="pagination-item newer">Newer</span> </div> </div> </body> </html>
