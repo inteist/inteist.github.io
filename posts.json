@@ -2,6 +2,18 @@
     "posts": [
         
         {
+            "title": "2023-03-26-derived-data-deletion-useful-commands",
+            "url": "https://inteist.com/derived-data-deletion-useful-commands/",
+            "date": "2023-03-26T23:15:42-04:00"
+        },
+        
+        {
+            "title": "openSSL on Apple Silicon",
+            "url": "https://inteist.com/openssl-apple-silicon/",
+            "date": "2023-03-24T22:20:12-04:00"
+        },
+        
+        {
             "title": "Crontab CheatSheet",
             "url": "https://inteist.com/crontab-cheatsheet/",
             "date": "2023-03-20T13:39:30-04:00"

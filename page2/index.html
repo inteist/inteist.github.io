@@ -1,4 +1,125 @@
-<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2630485-14"></script> <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-2630485-14'); </script> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Inteist &middot; </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='//fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <link rel="canonical" href=" https://inteist.com/page2/" /> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <!-- Google Adsense Validation --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9336216488761027" crossorigin="anonymous"></script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1 id="site-name"> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/pages">Pages</a> <a class="sidebar-nav-item" href="/dev-resources">Dev Resources</a> <a class="sidebar-nav-item" href="/figlet">Figlet</a> <a class="sidebar-nav-item" href="/git">Git Tips</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/search">Search</a> <a class="sidebar-nav-item" href="/calendar">Posts Calendar</a> <a class="sidebar-nav-item" href="/tags">Tags</a> <a class="sidebar-nav-item" href="/archive">Archive</a> <a class="sidebar-nav-item" href="/me">Me</a> </nav> <p class="copyright">&copy; 2010 - 2023</p> </div> </div> <div class="content container"> <div class="search-bar"> <a href="/search"><img src="/public/img/search-bar-l.png" alt="Search" height="60px"></a> </div> <div class="posts"> <div class="post"> <h1 class="post-title"> <a href="/efficient-image-resizing-os/"> Efficient Image Resizing on OS X </a> </h1> <span class="post-date">27 Sep 2022</span> <div class="link-underline"> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>sips -Z 640 <span class="k">*</span>.jpg
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2630485-14"></script> <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-2630485-14'); </script> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> Inteist &middot; </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='//fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <link rel="canonical" href=" https://inteist.com/page2/" /> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <!-- Google Adsense Validation --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9336216488761027" crossorigin="anonymous"></script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1 id="site-name"> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/pages">Pages</a> <a class="sidebar-nav-item" href="/dev-resources">Dev Resources</a> <a class="sidebar-nav-item" href="/figlet">Figlet</a> <a class="sidebar-nav-item" href="/git">Git Tips</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/search">Search</a> <a class="sidebar-nav-item" href="/calendar">Posts Calendar</a> <a class="sidebar-nav-item" href="/tags">Tags</a> <a class="sidebar-nav-item" href="/archive">Archive</a> <a class="sidebar-nav-item" href="/me">Me</a> </nav> <p class="copyright">&copy; 2010 - 2023</p> </div> </div> <div class="content container"> <div class="search-bar"> <a href="/search"><img src="/public/img/search-bar-l.png" alt="Search" height="60px"></a> </div> <div class="posts"> <div class="post"> <h1 class="post-title"> <a href="/large-scale-data-gathering-journey/"> My Journey with Large Scale Data Gathering </a> </h1> <span class="post-date">06 Oct 2022</span> <div class="link-underline"> <p>Create additional indexes on the DB</p> <h1 id="setting-up-authenticated-mongo">Setting up authenticated Mongo</h1> <h2 id="mongoconf">mongo.conf</h2> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+<span class="c1"># mongod.conf</span>
+
+<span class="c1"># for documentation of all options, see:</span>
+<span class="c1">#   http://docs.mongodb.org/manual/reference/configuration-options/</span>
+
+<span class="c1"># where to write logging data.</span>
+<span class="na">systemLog</span><span class="pi">:</span>
+  <span class="na">destination</span><span class="pi">:</span> <span class="s">file</span>
+  <span class="na">logAppend</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">mongod.log</span>
+
+<span class="c1"># Where and how to store data.</span>
+<span class="na">storage</span><span class="pi">:</span>
+  <span class="na">dbPath</span><span class="pi">:</span> <span class="s">~/mongo/data</span>
+
+<span class="c1"># how the process runs</span>
+<span class="na">processManagement</span><span class="pi">:</span>
+  <span class="na">fork</span><span class="pi">:</span> <span class="no">false</span>  <span class="c1"># fork and run in background</span>
+  <span class="na">pidFilePath</span><span class="pi">:</span> <span class="s">/var/run/mongodb/mongod.pid</span>  <span class="c1"># location of pidfile</span>
+
+<span class="c1"># network interfaces</span>
+<span class="na">net</span><span class="pi">:</span>
+  <span class="na">port</span><span class="pi">:</span> <span class="m">27017</span>
+  <span class="c1"># Enter 0.0.0.0,:: to bind to all IPv4 and IPv6 addresses or, alternatively, use the net.bindIpAll setting.</span>
+  <span class="na">bindIp</span><span class="pi">:</span> <span class="s">127.0.0.1, outside_access.domain.com</span>
+
+<span class="na">security</span><span class="pi">:</span>
+  <span class="na">authorization</span><span class="pi">:</span> <span class="s">enabled</span>
+</code></pre></div></div> <p>Mongo restart comand with auth</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="syntax"><code>mongod <span class="nt">--bind_ip_all</span>  <span class="nt">--auth</span> <span class="nt">--port</span> 27017 <span class="nt">--dbpath</span> ~/mongo/data/
+</code></pre></div></div> <h2 id="to-add-users--roles">To add users + roles</h2> <div class="language-js highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+    <span class="c1">// main admin user</span>
+    <span class="nx">use</span> <span class="nx">admin</span>
+    <span class="nx">db</span><span class="p">.</span><span class="nx">createUser</span><span class="p">({</span> <span class="na">user</span><span class="p">:</span> <span class="dl">"</span><span class="s2">***</span><span class="dl">"</span><span class="p">,</span> <span class="na">pwd</span><span class="p">:</span> <span class="nx">passwordPrompt</span><span class="p">(),</span> <span class="na">roles</span><span class="p">:</span> <span class="p">[{</span> <span class="na">role</span><span class="p">:</span> <span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">,</span> <span class="na">db</span><span class="p">:</span> <span class="dl">"</span><span class="s2">admin</span><span class="dl">"</span> <span class="p">},</span> <span class="p">{</span> <span class="na">role</span><span class="p">:</span> <span class="dl">"</span><span class="s2">dbOwner</span><span class="dl">"</span><span class="p">,</span> <span class="na">db</span><span class="p">:</span> <span class="dl">"</span><span class="s2">work_db</span><span class="dl">"</span> <span class="p">}]</span> <span class="p">})</span>
+
+    <span class="c1">// specific DB user</span>
+    <span class="nx">use</span> <span class="nx">work_db</span>
+    <span class="nx">db</span><span class="p">.</span><span class="nx">createUser</span><span class="p">({</span> <span class="na">user</span><span class="p">:</span> <span class="dl">"</span><span class="s2">***</span><span class="dl">"</span><span class="p">,</span> <span class="na">pwd</span><span class="p">:</span> <span class="nx">passwordPrompt</span><span class="p">(),</span> <span class="na">roles</span><span class="p">:</span> <span class="p">[{</span> <span class="na">role</span><span class="p">:</span> <span class="dl">"</span><span class="s2">dbOwner</span><span class="dl">"</span><span class="p">,</span> <span class="na">db</span><span class="p">:</span> <span class="dl">"</span><span class="s2">work_db</span><span class="dl">"</span> <span class="p">}]</span> <span class="p">})</span>
+
+</code></pre></div></div> <h2 id="connection-string">Connection string</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="syntax"><code>connectionURI <span class="o">=</span> <span class="s2">"mongodb://user:pass@localhost:27017/?serverSelectionTimeoutMS=5000&amp;connectTimeoutMS=10000&amp;authSource=WORK_DB&amp;authMechanism=SCRAM-SHA-256"</span>
+</code></pre></div></div> <h1 id="port-forwarding">Port Forwarding</h1> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/compression-results-7z/"> Best Compression Results With 7z </a> </h1> <span class="post-date">30 Sep 2022</span> <div class="link-underline"> <p>For best 7z compression use</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>7z a <span class="nt">-t7z</span> <span class="nt">-m0</span><span class="o">=</span>lzma <span class="nt">-mx</span><span class="o">=</span>9 <span class="nt">-mfb</span><span class="o">=</span>64 <span class="nt">-md</span><span class="o">=</span>32m <span class="nt">-ms</span><span class="o">=</span>on archive.7z dir1
+</code></pre></div></div> <p>Switches explained:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nt">-t7z</span>   7z archive
+
+<span class="nt">-m0</span><span class="o">=</span>lzma
+       lzma method
+
+<span class="nt">-mx</span><span class="o">=</span>9  level of compression <span class="o">=</span> 9 <span class="o">(</span>Ultra<span class="o">)</span>
+
+<span class="nt">-mfb</span><span class="o">=</span>64
+       number of fast bytes <span class="k">for </span>LZMA <span class="o">=</span> 64
+<span class="nt">-md</span><span class="o">=</span>32m
+       dictionary size <span class="o">=</span> 32 megabytes
+
+<span class="nt">-ms</span><span class="o">=</span>on solid archive <span class="o">=</span> on
+</code></pre></div></div> <p>7z is available on most standard Linux distros</p> <p>Max OS - install via homebrew</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>brew install p7zip
+</code></pre></div></div> <h2 id="extras">Extras</h2> <p>7z command reference:</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="syntax"><code>
+7-Zip [64] 17.04 : Copyright (c) 1999-2021 Igor Pavlov : 2017-08-28
+p7zip Version 17.04 (locale=utf8,Utf16=on,HugeFiles=on,64 bits,16 CPUs x64)
+
+Usage: 7z &lt;command&gt; [&lt;switches&gt;...] &lt;archive_name&gt; [&lt;file_names&gt;...]
+
+&lt;Commands&gt;
+  a : Add files to archive
+  b : Benchmark
+  d : Delete files from archive
+  e : Extract files from archive (without using directory names)
+  h : Calculate hash values for files
+  i : Show information about supported formats
+  l : List contents of archive
+  rn : Rename files in archive
+  t : Test integrity of archive
+  u : Update files to archive
+  x : eXtract files with full paths
+
+&lt;Switches&gt;
+  -- : Stop switches parsing
+  @listfile : set path to listfile that contains file names
+  -ai[r[-|0]]{@listfile|!wildcard} : Include archives
+  -ax[r[-|0]]{@listfile|!wildcard} : eXclude archives
+  -ao{a|s|t|u} : set Overwrite mode
+  -an : disable archive_name field
+  -bb[0-3] : set output log level
+  -bd : disable progress indicator
+  -bs{o|e|p}{0|1|2} : set output stream for output/error/progress line
+  -bt : show execution time statistics
+  -i[r[-|0]]{@listfile|!wildcard} : Include filenames
+  -m{Parameters} : set compression Method
+    -mmt[N] : set number of CPU threads
+    -mx[N] : set compression level: -mx1 (fastest) ... -mx9 (ultra)
+  -o{Directory} : set Output directory
+  -p{Password} : set Password
+  -r[-|0] : Recurse subdirectories
+  -sa{a|e|s} : set Archive name mode
+  -scc{UTF-8|WIN|DOS} : set charset for for console input/output
+  -scs{UTF-8|UTF-16LE|UTF-16BE|WIN|DOS|{id}} : set charset for list files
+  -scrc[CRC32|CRC64|SHA1|SHA256|*] : set hash function for x, e, h commands
+  -sdel : delete files after compression
+  -seml[.] : send archive by email
+  -sfx[{name}] : Create SFX archive
+  -si[{name}] : read data from stdin
+  -slp : set Large Pages mode
+  -slt : show technical information for l (List) command
+  -snh : store hard links as links
+  -snl : store symbolic links as links
+  -sni : store NT security information
+  -sns[-] : store NTFS alternate streams
+  -so : write data to stdout
+  -spd : disable wildcard matching for file names
+  -spe : eliminate duplication of root folder for extract command
+  -spf : use fully qualified file paths
+  -ssc[-] : set sensitive case mode
+  -ssw : compress shared files
+  -stl : set archive timestamp from the most recently modified file
+  -stm{HexMask} : set CPU thread affinity mask (hexadecimal number)
+  -stx{Type} : exclude archive type
+  -t{Type} : Set type of archive
+  -u[-][p#][q#][r#][x#][y#][z#][!newArchiveName] : Update options
+  -v{Size}[b|k|m|g] : Create volumes
+  -w[{path}] : assign Work directory. Empty path means a temporary directory
+  -x[r[-|0]]{@listfile|!wildcard} : eXclude filenames
+  -y : assume Yes on all queries
+</code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/efficient-image-resizing-os/"> Efficient Image Resizing on OS X </a> </h1> <span class="post-date">27 Sep 2022</span> <div class="link-underline"> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>sips -Z 640 <span class="k">*</span>.jpg
 </code></pre></div></div> <p>The <code class="language-html highlighter-rouge">-Z</code> option tells it to maintain the image’s aspect ratio. “640” is the maximum height and width to be used and “*.jpg” instructs your computer to downsize every image ending in .jpg. It’s really simple and shrinks your images very <strong>very</strong> quickly.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/exploring-obsidian/"> Exploring Obsidian </a> </h1> <span class="post-date">25 May 2022</span> <div class="link-underline"> <p>I have just discovered Obsidian.md and have been exploring it. It sonds like a great idea but I already had encountered such ideas in the past but these ideas did not survice because they did not get enough traction.</p> <p>I am looking and hearing about obsidian much more than the other niche apps. That’s a good sign.</p> <p>I have moved almost all my data from Os X Notes to Obsidian vault synced via Google Drive. So far, so good.</p> <p>We shall see whether it survives the several month “brain dump” activity though. And how well…</p> <p>Time will tell…</p> <p>For now, wish me luck!</p> <p>blah blah</p> <p>Thanks!</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/removing-alpha-channel-for-app-store-pictures-figma/"> Removing Alpha Channel for App Store Pictures </a> </h1> <span class="post-date">22 May 2022</span> <div class="link-underline"> <p>It is not possible to export PNGs with no alpha channel from Figma, unfortunately.</p> <p>But fret not. It is an easy fix with an ImageMagick subcommand - <code class="language-html highlighter-rouge">mogrify</code></p> <p>All you got to do is run:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code> mogrify <span class="nt">-alpha</span> off <span class="k">*</span>.png
 </code></pre></div></div> <p>to turn <strong>off</strong> the alpha channel for all PNGs in a certain folder.</p> <p>Enjoy a hussle free upload to App Store with just one command line.</p> <p>Note, I have checked Explore Opaque plugin, but it never quite worked. It’s really cumbersome and has some bugs, I suppose. It was MUCH, MUCH easier and more straightforward to just export the images and then just run the above command.</p> <p>If you don’t have ImageMagick installed, it is easy to install with Homebrew.</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code> brew update <span class="o">&amp;&amp;</span> brew <span class="nb">install </span>imagemagick
 </code></pre></div></div> <p>Good Luck.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/customizing-custom-loading-chrome-extensions/"> Customizing and Custom Loading Chrome Extensions </a> </h1> <span class="post-date">23 Feb 2022</span> <div class="link-underline"> <p>I have just encountered an issue where Google is constantly blocking certain extension from being active in Chrome that is supposedly violating its terms. The thing is - this is an extension that hides an advertising sidebar on any Facebook sub-websites.</p> <p>This is quite annoying and that was a quick fix by copying the existing plugin, changing the metadata and side loading it.</p> <p>If you experience an extension that is blocked and you still want to use it - this is the way to go. Please note that most blocked extensions are blocked for a reason and you are doing this at your own risk. Some malicious extension can steal sensitive data, so be very careful.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/"> Reviving the blog - upgrading Ruby Jekyll and all the Gems </a> </h1> <span class="post-date">30 Jan 2022</span> <div class="link-underline"> <ul> <li><a href="https://rubygems.org/gems/jekyll/versions">Jekyll Versions</a></li> <li><a href="https://www.ruby-lang.org/en/downloads/releases/">Ruby Releases</a></li> </ul> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/long-5-years-silence/"> It's been long 5 years of silence reviving my Jekyll blog </a> </h1> <span class="post-date">27 Jan 2022</span> <div class="link-underline"> <p>I wanted to get back to writing and taking useful notes, because let’s face it, my recent musings were mostly just technical notes to self and to othergit ss to whom these could have been useful.</p> <p>I did, however, dread it because every time I wanted to write, Jekyll or Ruby or some plugins would give me troubles and I would just surrender to my laziness and proocrastination and decide that maybe I have nothing too interesting to say if I gave up so quickly.</p> <p>A few days ago I, for some reason, visited my blog and to my my great surprise realized that it is respongind with 404 error… I took me couple days to get into looking into it but once I did, I wasn’t sure what’s going on. I did not alter or change anything - my website just wasn’t working, even though I am sure it was working before.</p> <p>Looking at google analytics, it turns out my blog went dark on September 20 2020…</p> <p>I don’t know why or how… I suppose it was because of some changes GitHub made to their github pages hosting since my blog is generated with Jekyll and is hosted at Github pages.</p> <p>The Jekyll thing deserves a separate mention and discussion. I have had a lot of frustrations like I mentioned earlier due to the fact that Jekyll and/or some plugins always had issues and whenever I wanted to write someting I had to, well, resolve these issues… and since it was pretty much every time I wanted to blog - I had some new issues, I just gave up.</p> <p>I will follow up with a separate post on how I revived my 5 years old blog with Jekyll… A the moment as I type it, I am running on the latest ruby and the latest Jekyll. It was not a smooth sailing however and at some point I thought I’d have to compromise to running on Jekyll 2.X (the latest of which was 2.5.1 I think).</p> <p>But, alas, here we are - running on the latest ruby and Jekyll versions with all the new bells an whistles (are there any?).</p> <p>So… here’s to the renewed blogging.</p> <p>I have been interested in Flutter for a while and it looks like this is finally the time when it will all come together and I will finally make the plunge from native development to Flutter…</p> <p>Exciting times are ahead, so strap down, buckle up and and let’s go on this adventure together!</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/scheduling-randomized-cron-within-an-hour/"> Scheduling randomized cron within an hour or within a minute </a> </h1> <span class="post-date">18 Feb 2017</span> <div class="link-underline"> <p>It is <strong>usually</strong> a good idea in general to add slight randomness to the start time of a cron job, especially if you are accessing some 3-d party resource to prevent flooding of 3-d party at the top of the hour or at the top of the minute.</p> <p>This will run the cron job every day sometime between 2pm-3pm and 2am–3am in a randomized manner</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="syntax"><code>0 2,14 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="nb">sleep</span> <span class="si">$(</span><span class="nb">expr</span> <span class="nv">$RANDOM</span> <span class="se">\%</span> 3600<span class="si">)</span><span class="p">;</span> ~/bin/batch_job
@@ -13,4 +134,4 @@
 +————- min <span class="o">(</span>0 – 59<span class="o">)</span>
 </code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/android-working-with-gradle-purging-gradle-cache/"> Android - working with Gradle: purging gradle cache </a> </h1> <span class="post-date">13 Jan 2017</span> <div class="link-underline"> <p>To force refresh the dependencies for gradle build you can first try running the task with <code class="language-html highlighter-rouge">--refresh-dependencies</code> switch</p> <p>The whole command would be</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="syntax"><code>gradle <span class="nt">--refresh-dependencies</span> &lt;task&gt;
 </code></pre></div></div> <p>If that does not work for some reason you can try removing the <code class="language-html highlighter-rouge">~./gradle/caches</code> folder</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="nb">rm</span> <span class="nt">-rf</span> <span class="nv">$HOME</span>/.gradle/caches/
-</code></pre></div></div> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/git-trello-integration/"> Git + Trello Integration </a> </h1> <span class="post-date">23 May 2016</span> <div class="link-underline"> <p align="center"> <img src="/media/trello-git-hooks-logo.png" /> </p> <p>A little weekend project <a href="/git-hooks-for-trello">git-hooks-trello</a> to be able to easily and automatically interface with Trello from your git repo.</p> </div> </div> <div class="post"> <h1 class="post-title"> <a href="/google-i-o-videos-list/"> Google I/O Videos List </a> </h1> <span class="post-date">20 May 2016</span> <div class="link-underline"> <h2 id="httpbitlygio2016videos">http://bit.ly/gio2016videos</h2> </div> </div> </div> <div class="pagination"> <a class="pagination-item older" href="/page3/">Older</a> <a class="pagination-item newer" href="/">Newer</a> </div> </div> </body> </html>
+</code></pre></div></div> </div> </div> </div> <div class="pagination"> <a class="pagination-item older" href="/page3/">Older</a> <a class="pagination-item newer" href="/">Newer</a> </div> </div> </body> </html>

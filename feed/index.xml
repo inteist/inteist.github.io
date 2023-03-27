@@ -7,6 +7,30 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>2023-03-26-derived-data-deletion-useful-commands</title>
+                
+                
+                    <description>&lt;h3 id=&quot;why-delete-deriveddata&quot;&gt;Why delete DerivedData&lt;/h3&gt;
+</description>
+                
+                <pubDate>Sun, 26 Mar 2023 23:15:42 -0400</pubDate>
+                <link>https://inteist.com/derived-data-deletion-useful-commands/</link>
+                <guid isPermaLink="true">https://inteist.com/derived-data-deletion-useful-commands/</guid>
+            </item>
+        
+            <item>
+                <title>openSSL on Apple Silicon</title>
+                
+                
+                    <description>&lt;p&gt;in 3 words&lt;/p&gt;
+</description>
+                
+                <pubDate>Fri, 24 Mar 2023 22:20:12 -0400</pubDate>
+                <link>https://inteist.com/openssl-apple-silicon/</link>
+                <guid isPermaLink="true">https://inteist.com/openssl-apple-silicon/</guid>
+            </item>
+        
+            <item>
                 <title>Crontab CheatSheet</title>
                 
                 
@@ -229,32 +253,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Fri, 13 Jan 2017 15:28:00 -0500</pubDate>
                 <link>https://inteist.com/android-working-with-gradle-purging-gradle-cache/</link>
                 <guid isPermaLink="true">https://inteist.com/android-working-with-gradle-purging-gradle-cache/</guid>
-            </item>
-        
-            <item>
-                <title>Git + Trello Integration</title>
-                
-                
-                    <description>&lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;/media/trello-git-hooks-logo.png&quot; /&gt;
-&lt;/p&gt;
-</description>
-                
-                <pubDate>Mon, 23 May 2016 00:31:00 -0400</pubDate>
-                <link>https://inteist.com/git-trello-integration/</link>
-                <guid isPermaLink="true">https://inteist.com/git-trello-integration/</guid>
-            </item>
-        
-            <item>
-                <title>Google I/O Videos List</title>
-                
-                
-                    <description>&lt;h2 id=&quot;httpbitlygio2016videos&quot;&gt;http://bit.ly/gio2016videos&lt;/h2&gt;
-</description>
-                
-                <pubDate>Fri, 20 May 2016 18:37:00 -0400</pubDate>
-                <link>https://inteist.com/google-i-o-videos-list/</link>
-                <guid isPermaLink="true">https://inteist.com/google-i-o-videos-list/</guid>
             </item>
         
     </channel>

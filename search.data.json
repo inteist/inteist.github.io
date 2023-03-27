@@ -1,6 +1,24 @@
 [
     
     {
+        "title": "2023-03-26-derived-data-deletion-useful-commands",
+        "url": "/derived-data-deletion-useful-commands/",
+        "category": "",
+        "tags": "",
+        "date": "March 26  2023",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "openSSL on Apple Silicon",
+        "url": "/openssl-apple-silicon/",
+        "category": "ios, Mobile",
+        "tags": "*nix, xcode, ssl",
+        "date": "March 24  2023",
+        "discription": ""
+    } ,
+  
+    {
         "title": "Crontab CheatSheet",
         "url": "/crontab-cheatsheet/",
         "category": "post",
