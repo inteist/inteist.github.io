@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "Automated Snapshots on Digital Ocean Instead of Backups",
+            "url": "https://inteist.com/automated-snapshots-digital-ocean-backups/",
+            "date": "2023-04-01T20:19:53-04:00"
+        },
+        
+        {
             "title": "DerivedData Deletion - Useful Commands",
             "url": "https://inteist.com/derived-data-deletion-useful-commands/",
             "date": "2023-03-26T23:15:42-04:00"

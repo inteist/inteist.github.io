@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Automated Snapshots on Digital Ocean Instead of Backups</title>
+                
+                
+                    <description>&lt;h2 id=&quot;what-is-doctl&quot;&gt;What is &lt;code class=&quot;language-html highlighter-rouge&quot;&gt;doctl&lt;/code&gt;&lt;/h2&gt;
+</description>
+                
+                <pubDate>Sat, 01 Apr 2023 20:19:53 -0400</pubDate>
+                <link>https://inteist.com/automated-snapshots-digital-ocean-backups/</link>
+                <guid isPermaLink="true">https://inteist.com/automated-snapshots-digital-ocean-backups/</guid>
+            </item>
+        
+            <item>
                 <title>DerivedData Deletion - Useful Commands</title>
                 
                 
@@ -240,19 +252,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Sat, 18 Feb 2017 12:24:00 -0500</pubDate>
                 <link>https://inteist.com/scheduling-randomized-cron-within-an-hour/</link>
                 <guid isPermaLink="true">https://inteist.com/scheduling-randomized-cron-within-an-hour/</guid>
-            </item>
-        
-            <item>
-                <title>Android - working with Gradle: purging gradle cache</title>
-                
-                
-                    <description>&lt;p&gt;To force refresh the dependencies for gradle build you can first try running the task with
-&lt;code class=&quot;language-html highlighter-rouge&quot;&gt;--refresh-dependencies&lt;/code&gt; switch&lt;/p&gt;
-</description>
-                
-                <pubDate>Fri, 13 Jan 2017 15:28:00 -0500</pubDate>
-                <link>https://inteist.com/android-working-with-gradle-purging-gradle-cache/</link>
-                <guid isPermaLink="true">https://inteist.com/android-working-with-gradle-purging-gradle-cache/</guid>
             </item>
         
     </channel>
