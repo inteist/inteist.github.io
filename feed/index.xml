@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>VSCode vertical rulers setup</title>
+                
+                
+                    <description>&lt;p&gt;If you like the vertical rulers showing the column limit of the 80, 100, 120, or whatever you like to have, it’s super easy to seetu pin VSCode, apparently – no extensions needed.&lt;/p&gt;
+</description>
+                
+                <pubDate>Tue, 25 Apr 2023 17:16:23 -0400</pubDate>
+                <link>https://inteist.com/vscode-vertical-rulers-setup/</link>
+                <guid isPermaLink="true">https://inteist.com/vscode-vertical-rulers-setup/</guid>
+            </item>
+        
+            <item>
                 <title>Automated Snapshots on Digital Ocean Instead of Backups</title>
                 
                 
@@ -240,18 +252,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Thu, 27 Jan 2022 20:27:13 -0500</pubDate>
                 <link>https://inteist.com/long-5-years-silence/</link>
                 <guid isPermaLink="true">https://inteist.com/long-5-years-silence/</guid>
-            </item>
-        
-            <item>
-                <title>Scheduling randomized cron within an hour or within a minute</title>
-                
-                
-                    <description>&lt;p&gt;It is &lt;strong&gt;usually&lt;/strong&gt; a good idea in general to add slight randomness to the start time of a cron job, especially if you are accessing some 3-d party resource to prevent flooding of 3-d party at the top of the hour or at the top of the minute.&lt;/p&gt;
-</description>
-                
-                <pubDate>Sat, 18 Feb 2017 12:24:00 -0500</pubDate>
-                <link>https://inteist.com/scheduling-randomized-cron-within-an-hour/</link>
-                <guid isPermaLink="true">https://inteist.com/scheduling-randomized-cron-within-an-hour/</guid>
             </item>
         
     </channel>

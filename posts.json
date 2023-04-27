@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "VSCode vertical rulers setup",
+            "url": "https://inteist.com/vscode-vertical-rulers-setup/",
+            "date": "2023-04-25T17:16:23-04:00"
+        },
+        
+        {
             "title": "Automated Snapshots on Digital Ocean Instead of Backups",
             "url": "https://inteist.com/automated-snapshots-digital-ocean-backups/",
             "date": "2023-04-01T20:19:53-04:00"

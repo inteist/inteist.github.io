@@ -513,7 +513,9 @@
         
         "*nix",
         
-        "ssl"
+        "ssl",
+        
+        "vscode"
         
     ]
 }

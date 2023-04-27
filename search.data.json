@@ -1,6 +1,15 @@
 [
     
     {
+        "title": "VSCode vertical rulers setup",
+        "url": "/vscode-vertical-rulers-setup/",
+        "category": "",
+        "tags": "vscode",
+        "date": "April 25  2023",
+        "discription": ""
+    } ,
+  
+    {
         "title": "Automated Snapshots on Digital Ocean Instead of Backups",
         "url": "/automated-snapshots-digital-ocean-backups/",
         "category": "",
