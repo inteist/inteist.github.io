@@ -515,7 +515,13 @@
         
         "ssl",
         
-        "vscode"
+        "vscode",
+        
+        "hammerspoon",
+        
+        "automation",
+        
+        "lua"
         
     ]
 }

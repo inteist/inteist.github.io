@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Hammerspoon Key Map (Key Names)</title>
+                
+                
+                    <description>&lt;p&gt;Valid strings are any single-character string, or any of the following strings:&lt;/p&gt;
+</description>
+                
+                <pubDate>Sat, 13 May 2023 16:52:32 -0400</pubDate>
+                <link>https://inteist.com/hammerspoon-key-map-key-names/</link>
+                <guid isPermaLink="true">https://inteist.com/hammerspoon-key-map-key-names/</guid>
+            </item>
+        
+            <item>
                 <title>VSCode vertical rulers setup</title>
                 
                 
@@ -240,18 +252,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Sun, 30 Jan 2022 01:11:00 -0500</pubDate>
                 <link>https://inteist.com/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</link>
                 <guid isPermaLink="true">https://inteist.com/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</guid>
-            </item>
-        
-            <item>
-                <title>It&apos;s been long 5 years of silence reviving my Jekyll blog</title>
-                
-                
-                    <description>&lt;p&gt;I wanted to get back to writing and taking useful notes, because let’s face it, my recent musings were mostly just technical notes to self and to othergit ss to whom these could have been useful.&lt;/p&gt;
-</description>
-                
-                <pubDate>Thu, 27 Jan 2022 20:27:13 -0500</pubDate>
-                <link>https://inteist.com/long-5-years-silence/</link>
-                <guid isPermaLink="true">https://inteist.com/long-5-years-silence/</guid>
             </item>
         
     </channel>

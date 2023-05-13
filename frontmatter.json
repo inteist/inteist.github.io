@@ -369,5 +369,10 @@
     "tips",
     "wp7",
     "y"
-  ]
+  ],
+  "frontMatter.content.fmHighlight": true,
+  "frontMatter.custom.scripts": [],
+  "frontMatter.dashboard.openOnStart": false,
+  "frontMatter.framework.startCommand": "jekyll s",
+  "frontMatter.preview.host": "http://127.0.0.1:4000//"
 }

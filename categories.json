@@ -73,7 +73,9 @@
         
         "hack",
         
-        "chrome"
+        "chrome",
+        
+        "tools"
         
     ]
 }
