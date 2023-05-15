@@ -7,6 +7,18 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>PhaseScriptExecution [CP] Embed Pods Frameworks issue in XCode 14.3</title>
+                
+                
+                    <description>&lt;p&gt;If you are getting the:&lt;/p&gt;
+</description>
+                
+                <pubDate>Mon, 15 May 2023 16:29:35 -0400</pubDate>
+                <link>https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks-issue-xcode-14-3/</link>
+                <guid isPermaLink="true">https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks-issue-xcode-14-3/</guid>
+            </item>
+        
+            <item>
                 <title>Hammerspoon Key Map (Key Names)</title>
                 
                 
@@ -237,21 +249,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Wed, 23 Feb 2022 21:27:00 -0500</pubDate>
                 <link>https://inteist.com/customizing-custom-loading-chrome-extensions/</link>
                 <guid isPermaLink="true">https://inteist.com/customizing-custom-loading-chrome-extensions/</guid>
-            </item>
-        
-            <item>
-                <title>Reviving the blog - upgrading Ruby Jekyll and all the Gems</title>
-                
-                
-                    <description>&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://rubygems.org/gems/jekyll/versions&quot;&gt;Jekyll Versions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/downloads/releases/&quot;&gt;Ruby Releases&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-                
-                <pubDate>Sun, 30 Jan 2022 01:11:00 -0500</pubDate>
-                <link>https://inteist.com/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</link>
-                <guid isPermaLink="true">https://inteist.com/reviving-the-blog-upgrading-ruby-jekyll-and-all-the-gems/</guid>
             </item>
         
     </channel>
