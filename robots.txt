@@ -1,1 +1,2 @@
-Sitemap: https://inteist.com/sitemap.xml
+User-agent: GPTBot
+Disallow: /
