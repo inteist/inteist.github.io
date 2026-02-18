@@ -521,7 +521,9 @@
         
         "automation",
         
-        "lua"
+        "lua",
+        
+        "cheatsheet"
         
     ]
 }
