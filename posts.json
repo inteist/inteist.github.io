@@ -2,6 +2,18 @@
     "posts": [
         
         {
+            "title": "5.3 Codex Flavors Performance",
+            "url": "https://inteist.com/53-codex-flavors-performance/",
+            "date": "2026-02-18T15:29:35-05:00"
+        },
+        
+        {
+            "title": "PhaseScriptExecution [CP] Embed Pods Frameworks issue in XCode 14.3",
+            "url": "https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks/",
+            "date": "2023-05-15T16:29:35-04:00"
+        },
+        
+        {
             "title": "PhaseScriptExecution [CP] Embed Pods Frameworks issue in XCode 14.3",
             "url": "https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks/",
             "date": "2023-05-15T16:29:35-04:00"
@@ -71,12 +83,6 @@
             "title": "Mongo DB Backup and Restore",
             "url": "https://inteist.com/mongo-db-backup-restore/",
             "date": "2022-10-07T00:27:24-04:00"
-        },
-        
-        {
-            "title": "New Post",
-            "url": "https://inteist.com/new-post/",
-            "date": "2022-10-07T00:00:00-04:00"
         },
         
         {
