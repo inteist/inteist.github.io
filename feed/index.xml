@@ -31,18 +31,6 @@
             </item>
         
             <item>
-                <title>PhaseScriptExecution [CP] Embed Pods Frameworks issue in XCode 14.3</title>
-                
-                
-                    <description>&lt;p&gt;If you are getting the:&lt;/p&gt;
-</description>
-                
-                <pubDate>Mon, 15 May 2023 16:29:35 -0400</pubDate>
-                <link>https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks/</link>
-                <guid isPermaLink="true">https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks/</guid>
-            </item>
-        
-            <item>
                 <title>Hammerspoon Key Map (Key Names)</title>
                 
                 
@@ -249,6 +237,18 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Sun, 22 May 2022 18:47:59 -0400</pubDate>
                 <link>https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</link>
                 <guid isPermaLink="true">https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</guid>
+            </item>
+        
+            <item>
+                <title>Customizing and Custom Loading Chrome Extensions</title>
+                
+                
+                    <description>&lt;p&gt;I have just encountered an issue where Google is constantly blocking certain extension from being active in Chrome that is supposedly violating its terms. The thing is - this is an extension that hides an advertising sidebar on any Facebook sub-websites.&lt;/p&gt;
+</description>
+                
+                <pubDate>Wed, 23 Feb 2022 21:27:00 -0500</pubDate>
+                <link>https://inteist.com/customizing-custom-loading-chrome-extensions/</link>
+                <guid isPermaLink="true">https://inteist.com/customizing-custom-loading-chrome-extensions/</guid>
             </item>
         
     </channel>
