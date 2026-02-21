@@ -1,0 +1,176 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"> <head> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2630485-14"></script> <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-2630485-14'); </script> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <!-- Enable responsiveness on mobile devices--> <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> <title> lazygit keybindings &middot; Inteist </title> <!-- CSS --> <link rel="stylesheet" href="/public/css/poole.css"> <link rel="stylesheet" href="/public/css/hyde.css"> <link href='//fonts.googleapis.com/css?family=Fjalla+One|Lato|Droid+Sans+Mono' rel='stylesheet' type='text/css'> <link rel="canonical" href=" https://inteist.com/lazygit-keybindings/" /> <!-- Default pygments --> <link rel="stylesheet" href="/public/css/extra/pygments/monokai.css"> <!-- Icons --> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> <link rel="shortcut icon" href="/public/favicon.ico"> <!-- RSS --> <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> <!-- Google Adsense Validation --> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9336216488761027" crossorigin="anonymous"></script> </head> <body> <div class="sidebar"> <div class="container sidebar-sticky"> <div class="sidebar-about"> <h1 id="site-name"> <a href="/"> Inteist </a> </h1> <p class="lead">I code for living</p> </div> <nav class="sidebar-nav"> <!-- <a class="sidebar-nav-item" href="/">Home</a> --> <a class="sidebar-nav-item" href="/pages">Pages</a> <a class="sidebar-nav-item" href="/dev-resources">Dev Resources</a> <a class="sidebar-nav-item" href="/figlet">Figlet</a> <a class="sidebar-nav-item" href="/git">Git Tips</a> <div class="sidebar-spacer">&nbsp;</div> <a class="sidebar-nav-item" href="/search">Search</a> <a class="sidebar-nav-item" href="/calendar">Posts Calendar</a> <a class="sidebar-nav-item" href="/tags">Tags</a> <a class="sidebar-nav-item" href="/archive">Archive</a> <a class="sidebar-nav-item" href="/me">Me</a> </nav> <p class="copyright">&copy; 2010 - 2026</p> </div> </div> <div class="content container"> <div class="search-bar"> <a href="/search"><img src="/public/img/search-bar-l.png" alt="Search" height="60px"></a> </div> <div class="page"> <h1 class="page-title">lazygit keybindings</h1> <p>A reference from the config <code class="language-html highlighter-rouge">lazygit -c</code></p> <p>This is an exhaustive list of all the keybindings in lazygit. You can always view more context aware keybindings by pressing <code class="language-html highlighter-rouge">?</code> in lazygit.</p> <p>Pro tip: <code class="language-html highlighter-rouge">/</code> for text search on any screen</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="na">keybinding</span><span class="pi">:</span>
+    <span class="na">universal</span><span class="pi">:</span>
+        <span class="na">quit</span><span class="pi">:</span> <span class="s">q</span>
+        <span class="na">quit-alt1</span><span class="pi">:</span> <span class="s">&lt;c-c&gt;</span>
+        <span class="na">suspendApp</span><span class="pi">:</span> <span class="s">&lt;c-z&gt;</span>
+        <span class="na">return</span><span class="pi">:</span> <span class="s">&lt;esc&gt;</span>
+        <span class="na">quitWithoutChangingDirectory</span><span class="pi">:</span> <span class="s">Q</span>
+        <span class="na">togglePanel</span><span class="pi">:</span> <span class="s">&lt;tab&gt;</span>
+        <span class="na">prevItem</span><span class="pi">:</span> <span class="s">&lt;up&gt;</span>
+        <span class="na">nextItem</span><span class="pi">:</span> <span class="s">&lt;down&gt;</span>
+        <span class="na">prevItem-alt</span><span class="pi">:</span> <span class="s">k</span>
+        <span class="na">nextItem-alt</span><span class="pi">:</span> <span class="s">j</span>
+        <span class="na">prevPage</span><span class="pi">:</span> <span class="s1">'</span><span class="s">,'</span>
+        <span class="na">nextPage</span><span class="pi">:</span> <span class="s">.</span>
+        <span class="na">scrollLeft</span><span class="pi">:</span> <span class="s">H</span>
+        <span class="na">scrollRight</span><span class="pi">:</span> <span class="s">L</span>
+        <span class="na">gotoTop</span><span class="pi">:</span> <span class="s">&lt;</span>
+        <span class="na">gotoBottom</span><span class="pi">:</span> <span class="s1">'</span><span class="s">&gt;'</span>
+        <span class="na">gotoTop-alt</span><span class="pi">:</span> <span class="s">&lt;home&gt;</span>
+        <span class="na">gotoBottom-alt</span><span class="pi">:</span> <span class="s">&lt;end&gt;</span>
+        <span class="na">toggleRangeSelect</span><span class="pi">:</span> <span class="s">v</span>
+        <span class="na">rangeSelectDown</span><span class="pi">:</span> <span class="s">&lt;s-down&gt;</span>
+        <span class="na">rangeSelectUp</span><span class="pi">:</span> <span class="s">&lt;s-up&gt;</span>
+        <span class="na">prevBlock</span><span class="pi">:</span> <span class="s">&lt;left&gt;</span>
+        <span class="na">nextBlock</span><span class="pi">:</span> <span class="s">&lt;right&gt;</span>
+        <span class="na">prevBlock-alt</span><span class="pi">:</span> <span class="s">h</span>
+        <span class="na">nextBlock-alt</span><span class="pi">:</span> <span class="s">l</span>
+        <span class="na">nextBlock-alt2</span><span class="pi">:</span> <span class="s">&lt;tab&gt;</span>
+        <span class="na">prevBlock-alt2</span><span class="pi">:</span> <span class="s">&lt;backtab&gt;</span>
+        <span class="na">jumpToBlock</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s2">"</span><span class="s">1"</span>
+            <span class="pi">-</span> <span class="s2">"</span><span class="s">2"</span>
+            <span class="pi">-</span> <span class="s2">"</span><span class="s">3"</span>
+            <span class="pi">-</span> <span class="s2">"</span><span class="s">4"</span>
+            <span class="pi">-</span> <span class="s2">"</span><span class="s">5"</span>
+        <span class="na">focusMainView</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0"</span>
+        <span class="na">nextMatch</span><span class="pi">:</span> <span class="s2">"</span><span class="s">n"</span>
+        <span class="na">prevMatch</span><span class="pi">:</span> <span class="s2">"</span><span class="s">N"</span>
+        <span class="na">startSearch</span><span class="pi">:</span> <span class="s">/</span>
+        <span class="na">optionMenu</span><span class="pi">:</span> <span class="s">&lt;disabled&gt;</span>
+        <span class="na">optionMenu-alt1</span><span class="pi">:</span> <span class="s1">'</span><span class="s">?'</span>
+        <span class="na">select</span><span class="pi">:</span> <span class="s">&lt;space&gt;</span>
+        <span class="na">goInto</span><span class="pi">:</span> <span class="s">&lt;enter&gt;</span>
+        <span class="na">confirm</span><span class="pi">:</span> <span class="s">&lt;enter&gt;</span>
+        <span class="na">confirmMenu</span><span class="pi">:</span> <span class="s">&lt;enter&gt;</span>
+        <span class="na">confirmSuggestion</span><span class="pi">:</span> <span class="s">&lt;enter&gt;</span>
+        <span class="na">confirmInEditor</span><span class="pi">:</span> <span class="s">&lt;a-enter&gt;</span>
+        <span class="na">confirmInEditor-alt</span><span class="pi">:</span> <span class="s">&lt;c-s&gt;</span>
+        <span class="na">remove</span><span class="pi">:</span> <span class="s">d</span>
+        <span class="na">new</span><span class="pi">:</span> <span class="s2">"</span><span class="s">n"</span>
+        <span class="na">edit</span><span class="pi">:</span> <span class="s">e</span>
+        <span class="na">openFile</span><span class="pi">:</span> <span class="s">o</span>
+        <span class="na">scrollUpMain</span><span class="pi">:</span> <span class="s">&lt;pgup&gt;</span>
+        <span class="na">scrollDownMain</span><span class="pi">:</span> <span class="s">&lt;pgdown&gt;</span>
+        <span class="na">scrollUpMain-alt1</span><span class="pi">:</span> <span class="s">K</span>
+        <span class="na">scrollDownMain-alt1</span><span class="pi">:</span> <span class="s">J</span>
+        <span class="na">scrollUpMain-alt2</span><span class="pi">:</span> <span class="s">&lt;c-u&gt;</span>
+        <span class="na">scrollDownMain-alt2</span><span class="pi">:</span> <span class="s">&lt;c-d&gt;</span>
+        <span class="na">executeShellCommand</span><span class="pi">:</span> <span class="s1">'</span><span class="s">:'</span>
+        <span class="na">createRebaseOptionsMenu</span><span class="pi">:</span> <span class="s">m</span>
+        <span class="na">pushFiles</span><span class="pi">:</span> <span class="s">P</span>
+        <span class="na">pullFiles</span><span class="pi">:</span> <span class="s">p</span>
+        <span class="na">refresh</span><span class="pi">:</span> <span class="s">R</span>
+        <span class="na">createPatchOptionsMenu</span><span class="pi">:</span> <span class="s">&lt;c-p&gt;</span>
+        <span class="na">nextTab</span><span class="pi">:</span> <span class="s1">'</span><span class="s">]'</span>
+        <span class="na">prevTab</span><span class="pi">:</span> <span class="s1">'</span><span class="s">['</span>
+        <span class="na">nextScreenMode</span><span class="pi">:</span> <span class="s">+</span>
+        <span class="na">prevScreenMode</span><span class="pi">:</span> <span class="s">_</span>
+        <span class="na">cyclePagers</span><span class="pi">:</span> <span class="s1">'</span><span class="s">|'</span>
+        <span class="na">undo</span><span class="pi">:</span> <span class="s">z</span>
+        <span class="na">redo</span><span class="pi">:</span> <span class="s">Z</span>
+        <span class="na">filteringMenu</span><span class="pi">:</span> <span class="s">&lt;c-s&gt;</span>
+        <span class="na">diffingMenu</span><span class="pi">:</span> <span class="s">W</span>
+        <span class="na">diffingMenu-alt</span><span class="pi">:</span> <span class="s">&lt;c-e&gt;</span>
+        <span class="na">copyToClipboard</span><span class="pi">:</span> <span class="s">&lt;c-o&gt;</span>
+        <span class="na">openRecentRepos</span><span class="pi">:</span> <span class="s">&lt;c-r&gt;</span>
+        <span class="na">submitEditorText</span><span class="pi">:</span> <span class="s">&lt;enter&gt;</span>
+        <span class="na">extrasMenu</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@'</span>
+        <span class="na">toggleWhitespaceInDiffView</span><span class="pi">:</span> <span class="s">&lt;c-w&gt;</span>
+        <span class="na">increaseContextInDiffView</span><span class="pi">:</span> <span class="s1">'</span><span class="s">}'</span>
+        <span class="na">decreaseContextInDiffView</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{'</span>
+        <span class="na">increaseRenameSimilarityThreshold</span><span class="pi">:</span> <span class="s">)</span>
+        <span class="na">decreaseRenameSimilarityThreshold</span><span class="pi">:</span> <span class="s">(</span>
+        <span class="na">openDiffTool</span><span class="pi">:</span> <span class="s">&lt;c-t&gt;</span>
+    <span class="na">status</span><span class="pi">:</span>
+        <span class="na">checkForUpdate</span><span class="pi">:</span> <span class="s">u</span>
+        <span class="na">recentRepos</span><span class="pi">:</span> <span class="s">&lt;enter&gt;</span>
+        <span class="na">allBranchesLogGraph</span><span class="pi">:</span> <span class="s">a</span>
+    <span class="na">files</span><span class="pi">:</span>
+        <span class="na">commitChanges</span><span class="pi">:</span> <span class="s">c</span>
+        <span class="na">commitChangesWithoutHook</span><span class="pi">:</span> <span class="s">w</span>
+        <span class="na">amendLastCommit</span><span class="pi">:</span> <span class="s">A</span>
+        <span class="na">commitChangesWithEditor</span><span class="pi">:</span> <span class="s">C</span>
+        <span class="na">findBaseCommitForFixup</span><span class="pi">:</span> <span class="s">&lt;c-f&gt;</span>
+        <span class="na">confirmDiscard</span><span class="pi">:</span> <span class="s">x</span>
+        <span class="na">ignoreFile</span><span class="pi">:</span> <span class="s">i</span>
+        <span class="na">refreshFiles</span><span class="pi">:</span> <span class="s">r</span>
+        <span class="na">stashAllChanges</span><span class="pi">:</span> <span class="s">s</span>
+        <span class="na">viewStashOptions</span><span class="pi">:</span> <span class="s">S</span>
+        <span class="na">toggleStagedAll</span><span class="pi">:</span> <span class="s">a</span>
+        <span class="na">viewResetOptions</span><span class="pi">:</span> <span class="s">D</span>
+        <span class="na">fetch</span><span class="pi">:</span> <span class="s">f</span>
+        <span class="na">toggleTreeView</span><span class="pi">:</span> <span class="s1">'</span><span class="s">`'</span>
+        <span class="na">openMergeOptions</span><span class="pi">:</span> <span class="s">M</span>
+        <span class="na">openStatusFilter</span><span class="pi">:</span> <span class="s">&lt;c-b&gt;</span>
+        <span class="na">copyFileInfoToClipboard</span><span class="pi">:</span> <span class="s2">"</span><span class="s">y"</span>
+        <span class="na">collapseAll</span><span class="pi">:</span> <span class="s1">'</span><span class="s">-'</span>
+        <span class="na">expandAll</span><span class="pi">:</span> <span class="s">=</span>
+    <span class="na">branches</span><span class="pi">:</span>
+        <span class="na">createPullRequest</span><span class="pi">:</span> <span class="s">o</span>
+        <span class="na">viewPullRequestOptions</span><span class="pi">:</span> <span class="s">O</span>
+        <span class="na">copyPullRequestURL</span><span class="pi">:</span> <span class="s">&lt;c-y&gt;</span>
+        <span class="na">checkoutBranchByName</span><span class="pi">:</span> <span class="s">c</span>
+        <span class="na">forceCheckoutBranch</span><span class="pi">:</span> <span class="s">F</span>
+        <span class="na">checkoutPreviousBranch</span><span class="pi">:</span> <span class="s1">'</span><span class="s">-'</span>
+        <span class="na">rebaseBranch</span><span class="pi">:</span> <span class="s">r</span>
+        <span class="na">renameBranch</span><span class="pi">:</span> <span class="s">R</span>
+        <span class="na">mergeIntoCurrentBranch</span><span class="pi">:</span> <span class="s">M</span>
+        <span class="na">moveCommitsToNewBranch</span><span class="pi">:</span> <span class="s2">"</span><span class="s">N"</span>
+        <span class="na">viewGitFlowOptions</span><span class="pi">:</span> <span class="s">i</span>
+        <span class="na">fastForward</span><span class="pi">:</span> <span class="s">f</span>
+        <span class="na">createTag</span><span class="pi">:</span> <span class="s">T</span>
+        <span class="na">pushTag</span><span class="pi">:</span> <span class="s">P</span>
+        <span class="na">setUpstream</span><span class="pi">:</span> <span class="s">u</span>
+        <span class="na">fetchRemote</span><span class="pi">:</span> <span class="s">f</span>
+        <span class="na">addForkRemote</span><span class="pi">:</span> <span class="s">F</span>
+        <span class="na">sortOrder</span><span class="pi">:</span> <span class="s">s</span>
+    <span class="na">worktrees</span><span class="pi">:</span>
+        <span class="na">viewWorktreeOptions</span><span class="pi">:</span> <span class="s">w</span>
+    <span class="na">commits</span><span class="pi">:</span>
+        <span class="na">squashDown</span><span class="pi">:</span> <span class="s">s</span>
+        <span class="na">renameCommit</span><span class="pi">:</span> <span class="s">r</span>
+        <span class="na">renameCommitWithEditor</span><span class="pi">:</span> <span class="s">R</span>
+        <span class="na">viewResetOptions</span><span class="pi">:</span> <span class="s">g</span>
+        <span class="na">markCommitAsFixup</span><span class="pi">:</span> <span class="s">f</span>
+        <span class="na">setFixupMessage</span><span class="pi">:</span> <span class="s">c</span>
+        <span class="na">createFixupCommit</span><span class="pi">:</span> <span class="s">F</span>
+        <span class="na">squashAboveCommits</span><span class="pi">:</span> <span class="s">S</span>
+        <span class="na">moveDownCommit</span><span class="pi">:</span> <span class="s">&lt;c-j&gt;</span>
+        <span class="na">moveUpCommit</span><span class="pi">:</span> <span class="s">&lt;c-k&gt;</span>
+        <span class="na">amendToCommit</span><span class="pi">:</span> <span class="s">A</span>
+        <span class="na">resetCommitAuthor</span><span class="pi">:</span> <span class="s">a</span>
+        <span class="na">pickCommit</span><span class="pi">:</span> <span class="s">p</span>
+        <span class="na">revertCommit</span><span class="pi">:</span> <span class="s">t</span>
+        <span class="na">cherryPickCopy</span><span class="pi">:</span> <span class="s">C</span>
+        <span class="na">pasteCommits</span><span class="pi">:</span> <span class="s">V</span>
+        <span class="na">markCommitAsBaseForRebase</span><span class="pi">:</span> <span class="s">B</span>
+        <span class="na">tagCommit</span><span class="pi">:</span> <span class="s">T</span>
+        <span class="na">checkoutCommit</span><span class="pi">:</span> <span class="s">&lt;space&gt;</span>
+        <span class="na">resetCherryPick</span><span class="pi">:</span> <span class="s">&lt;c-R&gt;</span>
+        <span class="na">copyCommitAttributeToClipboard</span><span class="pi">:</span> <span class="s2">"</span><span class="s">y"</span>
+        <span class="na">openLogMenu</span><span class="pi">:</span> <span class="s">&lt;c-l&gt;</span>
+        <span class="na">openInBrowser</span><span class="pi">:</span> <span class="s">o</span>
+        <span class="na">viewBisectOptions</span><span class="pi">:</span> <span class="s">b</span>
+        <span class="na">startInteractiveRebase</span><span class="pi">:</span> <span class="s">i</span>
+        <span class="na">selectCommitsOfCurrentBranch</span><span class="pi">:</span> <span class="s1">'</span><span class="s">*'</span>
+    <span class="na">amendAttribute</span><span class="pi">:</span>
+        <span class="na">resetAuthor</span><span class="pi">:</span> <span class="s">a</span>
+        <span class="na">setAuthor</span><span class="pi">:</span> <span class="s">A</span>
+        <span class="na">addCoAuthor</span><span class="pi">:</span> <span class="s">c</span>
+    <span class="na">stash</span><span class="pi">:</span>
+        <span class="na">popStash</span><span class="pi">:</span> <span class="s">g</span>
+        <span class="na">renameStash</span><span class="pi">:</span> <span class="s">r</span>
+    <span class="na">commitFiles</span><span class="pi">:</span>
+        <span class="na">checkoutCommitFile</span><span class="pi">:</span> <span class="s">c</span>
+    <span class="na">main</span><span class="pi">:</span>
+        <span class="na">toggleSelectHunk</span><span class="pi">:</span> <span class="s">a</span>
+        <span class="na">pickBothHunks</span><span class="pi">:</span> <span class="s">b</span>
+        <span class="na">editSelectHunk</span><span class="pi">:</span> <span class="s">E</span>
+    <span class="na">submodules</span><span class="pi">:</span>
+        <span class="na">init</span><span class="pi">:</span> <span class="s">i</span>
+        <span class="na">update</span><span class="pi">:</span> <span class="s">u</span>
+        <span class="na">bulkMenu</span><span class="pi">:</span> <span class="s">b</span>
+    <span class="na">commitMessage</span><span class="pi">:</span>
+        <span class="na">commitMenu</span><span class="pi">:</span> <span class="s">&lt;c-o&gt;</span>
+</code></pre></div></div> </div> </div> </body> </html>

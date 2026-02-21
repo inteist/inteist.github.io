@@ -517,13 +517,19 @@
         
         "vscode",
         
+        "cheatsheet",
+        
         "hammerspoon",
         
         "automation",
         
         "lua",
         
-        "cheatsheet"
+        "Codex",
+        
+        "openAi",
+        
+        "LLMs"
         
     ]
 }

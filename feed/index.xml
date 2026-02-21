@@ -19,6 +19,18 @@
             </item>
         
             <item>
+                <title>Back to Writing</title>
+                
+                
+                    <description>&lt;p&gt;This is a draft post.&lt;/p&gt;
+</description>
+                
+                <pubDate>Wed, 18 Feb 2026 13:02:58 -0500</pubDate>
+                <link>https://inteist.com/back-to-writing/</link>
+                <guid isPermaLink="true">https://inteist.com/back-to-writing/</guid>
+            </item>
+        
+            <item>
                 <title>PhaseScriptExecution [CP] Embed Pods Frameworks issue in XCode 14.3</title>
                 
                 
@@ -46,7 +58,7 @@
                 <title>VSCode vertical rulers setup</title>
                 
                 
-                    <description>&lt;p&gt;If you like the vertical rulers showing the column limit of the 80, 100, 120, or whatever you like to have, it’s super easy to seetu pin VSCode, apparently – no extensions needed.&lt;/p&gt;
+                    <description>&lt;p&gt;If you like the vertical rulers showing the column limit of the 80, 100, 120, or whatever you like to have, it’s super easy to set up in VSCode, apparently – no extensions needed.&lt;/p&gt;
 </description>
                 
                 <pubDate>Tue, 25 Apr 2023 17:16:23 -0400</pubDate>
@@ -237,18 +249,6 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Sun, 22 May 2022 18:47:59 -0400</pubDate>
                 <link>https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</link>
                 <guid isPermaLink="true">https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</guid>
-            </item>
-        
-            <item>
-                <title>Customizing and Custom Loading Chrome Extensions</title>
-                
-                
-                    <description>&lt;p&gt;I have just encountered an issue where Google is constantly blocking certain extension from being active in Chrome that is supposedly violating its terms. The thing is - this is an extension that hides an advertising sidebar on any Facebook sub-websites.&lt;/p&gt;
-</description>
-                
-                <pubDate>Wed, 23 Feb 2022 21:27:00 -0500</pubDate>
-                <link>https://inteist.com/customizing-custom-loading-chrome-extensions/</link>
-                <guid isPermaLink="true">https://inteist.com/customizing-custom-loading-chrome-extensions/</guid>
             </item>
         
     </channel>

@@ -3,6 +3,15 @@
     {
         "title": "5.3 Codex Flavors Performance",
         "url": "/53-codex-flavors-performance/",
+        "category": "short",
+        "tags": "Codex, openAi, LLMs",
+        "date": "February 18  2026",
+        "discription": ""
+    } ,
+  
+    {
+        "title": "Back to Writing",
+        "url": "/back-to-writing/",
         "category": "",
         "tags": "",
         "date": "February 18  2026",
@@ -31,7 +40,7 @@
         "title": "VSCode vertical rulers setup",
         "url": "/vscode-vertical-rulers-setup/",
         "category": "",
-        "tags": "vscode",
+        "tags": "vscode, cheatsheet, tips",
         "date": "April 25  2023",
         "discription": ""
     } ,

@@ -75,7 +75,9 @@
         
         "chrome",
         
-        "tools"
+        "tools",
+        
+        "short"
         
     ]
 }
