@@ -19,15 +19,6 @@
     } ,
   
     {
-        "title": "Back to Writing",
-        "url": "/back-to-writing/",
-        "category": "",
-        "tags": "",
-        "date": "February 18  2026",
-        "discription": ""
-    } ,
-  
-    {
         "title": "PhaseScriptExecution [CP] Embed Pods Frameworks issue in XCode 14.3",
         "url": "/phasescriptexecution-cp-embed-pods-frameworks/",
         "category": "",

@@ -31,18 +31,6 @@
             </item>
         
             <item>
-                <title>Back to Writing</title>
-                
-                
-                    <description>&lt;p&gt;This is a draft post.&lt;/p&gt;
-</description>
-                
-                <pubDate>Wed, 18 Feb 2026 13:02:58 -0500</pubDate>
-                <link>https://inteist.com/back-to-writing/</link>
-                <guid isPermaLink="true">https://inteist.com/back-to-writing/</guid>
-            </item>
-        
-            <item>
                 <title>PhaseScriptExecution [CP] Embed Pods Frameworks issue in XCode 14.3</title>
                 
                 
@@ -249,6 +237,18 @@ such ideas in the past but these ideas did not survice because they did not get 
                 <pubDate>Wed, 25 May 2022 19:52:00 -0400</pubDate>
                 <link>https://inteist.com/exploring-obsidian/</link>
                 <guid isPermaLink="true">https://inteist.com/exploring-obsidian/</guid>
+            </item>
+        
+            <item>
+                <title>Removing Alpha Channel for App Store Pictures</title>
+                
+                
+                    <description>&lt;p&gt;It is not possible to export PNGs with no alpha channel from Figma, unfortunately.&lt;/p&gt;
+</description>
+                
+                <pubDate>Sun, 22 May 2022 18:47:59 -0400</pubDate>
+                <link>https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</link>
+                <guid isPermaLink="true">https://inteist.com/removing-alpha-channel-for-app-store-pictures-figma/</guid>
             </item>
         
     </channel>
