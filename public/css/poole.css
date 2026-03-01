@@ -249,6 +249,28 @@ blockquote {
     border-left: .25rem solid #e5e5e5;
 }
 
+/* special quote style used in blog posts */
+.highlight-quote {
+    background: #f5f5f5;
+    border-left-color: #000;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.highlight-quote cite {
+    display: block;
+    margin-top: 0;
+    font-size: 0.85rem;
+    font-style: normal;
+    color: #555;
+    text-align: right;
+    line-height: 1;
+}
+
 blockquote p: last-child {
     margin-bottom: 0;
 }
@@ -546,9 +568,16 @@ a.pagination-item:hover {
 }
 
 .search-bar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 100;
+}
+
+@media (max-width: 47.99em) {
+    .search-bar img {
+        filter: invert(1);
+    }
 }
 
 .reading-time {
@@ -573,15 +602,25 @@ a.pagination-item:hover {
 
 /* Meant for the search box */
 input[type="text"] {
-    width: 20em;
-    height: 100px;
-    font-size: 24pt;
+    width: 100%;
+    max-width: 20em;
+    height: 60px;
+    font-size: 16pt;
     background: #EDEFF2;
     border: 2px solid grey;
     border-radius: 15px;
     color: rgb(103, 103, 103);
-    padding: 20px;
+    padding: 12px 16px;
     transition: border-color 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+@media (min-width: 48em) {
+    input[type="text"] {
+        height: 100px;
+        font-size: 24pt;
+        padding: 20px;
+    }
 }
 
 input[type="text"]:focus {
@@ -589,8 +628,68 @@ input[type="text"]:focus {
     border-color: grey;
 }
 
+/* Search header with close button */
+.search-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.search-close-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    color: #636363;
+    background: #EDEFF2;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background .15s ease, border-color .15s ease, color .15s ease, transform .1s ease;
+}
+
+.search-close-btn svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.search-close-btn:hover,
+.search-close-btn:focus {
+    background: #e0e0e0;
+    border-color: #888;
+    color: #222;
+    text-decoration: none;
+    transform: scale(1.08);
+}
+
+@media (min-width: 48em) {
+    .search-close-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    .search-close-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 #results-container {
-    width: 40em;
-    font-size: 14pt;
-    padding-top: 40px;
+    width: 100%;
+    max-width: 40em;
+    font-size: 12pt;
+    padding-top: 24px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+@media (min-width: 48em) {
+    #results-container {
+        font-size: 14pt;
+        padding-top: 40px;
+    }
 }

@@ -50,9 +50,88 @@ hr {
     text-align: left;
     color: rgb(200, 200, 200) rgba(255, 255, 255, .5);
     background-color: #202020;
+    overflow: hidden;
 }
 
+/* ---- Mobile menu toggle ---- */
+
+.sidebar-toggle-checkbox {
+    display: none;
+}
+
+.sidebar-toggle-label {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.sidebar-toggle-label .hamburger,
+.sidebar-toggle-label .hamburger::before,
+.sidebar-toggle-label .hamburger::after {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 2px;
+    transition: transform .25s ease, opacity .15s ease;
+}
+
+.sidebar-toggle-label .hamburger {
+    position: relative;
+}
+
+.sidebar-toggle-label .hamburger::before,
+.sidebar-toggle-label .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.sidebar-toggle-label .hamburger::before {
+    top: -6px;
+}
+
+.sidebar-toggle-label .hamburger::after {
+    top: 6px;
+}
+
+/* Animate to X when open */
+.sidebar-toggle-checkbox:checked+.sidebar-toggle-label .hamburger {
+    background: transparent;
+}
+
+.sidebar-toggle-checkbox:checked+.sidebar-toggle-label .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.sidebar-toggle-checkbox:checked+.sidebar-toggle-label .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+/* Hide nav on mobile by default, show when checkbox is checked */
+.sidebar-nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+
+.sidebar-toggle-checkbox:checked~.sidebar-nav {
+    max-height: 40rem;
+}
+
+/* On desktop: always show nav, hide toggle */
 @media (min-width: 48em) {
+    .sidebar-toggle-label {
+        display: none;
+    }
+
+    .sidebar-nav {
+        max-height: none;
+        overflow: visible;
+    }
+
     .sidebar {
         position: fixed;
         top: 0;
