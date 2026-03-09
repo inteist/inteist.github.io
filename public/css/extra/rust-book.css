@@ -89,6 +89,540 @@
   font-weight: 300;
 }
 
+/* Walking Crab Animation */
+.walking-crab-container {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 15;
+}
+
+.crab-wrapper {
+  position: absolute;
+  bottom: 0px;
+  left: 2%;
+  width: 100px;
+  height: 100px;
+  animation: crab-scurry-move 80s ease-in-out infinite;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.crab-flipper {
+  width: 100%;
+  height: 100%;
+  animation: crab-scurry-flip 80s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.walking-crab {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  transform-origin: center center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  object-fit: contain;
+}
+
+.crab-speech-bubble {
+  position: absolute;
+  bottom: 115px;
+  background: #e85e54;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 10px 25px rgba(232, 94, 84, 0.4), 0 5px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: talk-bubble-fade 80s linear infinite;
+  z-index: 20;
+}
+
+.crab-speech-bubble.bubble-extend-left {
+  right: 15px;
+  left: auto;
+}
+
+.crab-speech-bubble.bubble-extend-right {
+  left: 15px;
+  right: auto;
+}
+
+/* Little tail indicator */
+.crab-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid #e85e54;
+  filter: drop-shadow(0 4px 4px rgba(232, 94, 84, 0.3));
+}
+
+.crab-speech-bubble.bubble-extend-left::after {
+  right: 25px;
+  left: auto;
+}
+
+.crab-speech-bubble.bubble-extend-right::after {
+  left: 25px;
+  right: auto;
+}
+
+@keyframes talk-bubble-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  /* Flip at 8% */
+  7.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  8.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  11% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  11.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Flip at 14% */
+  13.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  14.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  17% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  17.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Flip at 28% */
+  27.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  28.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  31% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  31.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Flip at 38% */
+  37.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  38.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  41% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  41.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Wait at 52% (longer pause) */
+  51.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  52.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  60.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Flip at 70% */
+  69.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  70.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  73% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  73.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Flip at 78% */
+  77.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  78.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  81% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  81.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Flip at 95% */
+  94.9% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  95.2% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  98% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  98.5% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.crab-knocked-over {
+  animation:
+    crab-jump-fall 0.6s ease-in-out forwards,
+    crab-rocking-increasing var(--rock-duration, 5s) ease-in-out 0.6s forwards;
+}
+
+.crab-recover {
+  animation: crab-flip-back 0.4s ease-in forwards;
+}
+
+@keyframes crab-jump-fall {
+  0% {
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+
+  45% {
+    bottom: 50px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    bottom: 0px;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes crab-rocking-increasing {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  7% {
+    transform: rotate(175deg);
+  }
+
+  14% {
+    transform: rotate(186deg);
+  }
+
+  21% {
+    transform: rotate(168deg);
+  }
+
+  28% {
+    transform: rotate(195deg);
+  }
+
+  35% {
+    transform: rotate(158deg);
+  }
+
+  42% {
+    transform: rotate(208deg);
+  }
+
+  49% {
+    transform: rotate(145deg);
+  }
+
+  56% {
+    transform: rotate(222deg);
+  }
+
+  63% {
+    transform: rotate(130deg);
+  }
+
+  70% {
+    transform: rotate(235deg);
+  }
+
+  77% {
+    transform: rotate(110deg);
+  }
+
+  85% {
+    transform: rotate(250deg);
+  }
+
+  92% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes crab-flip-back {
+  0% {
+    bottom: 0px;
+    transform: rotate(270deg);
+  }
+
+  100% {
+    bottom: 0px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes crab-scurry-move {
+  0% {
+    left: 2%;
+  }
+
+  8% {
+    left: 20%;
+  }
+
+  8.001% {
+    left: 20%;
+  }
+
+  14% {
+    left: 5%;
+  }
+
+  14.001% {
+    left: 5%;
+  }
+
+  28% {
+    left: 65%;
+  }
+
+  28.001% {
+    left: 65%;
+  }
+
+  38% {
+    left: 45%;
+  }
+
+  38.001% {
+    left: 45%;
+  }
+
+  52% {
+    left: calc(100% - 90px);
+  }
+
+  52.001% {
+    left: calc(100% - 90px);
+  }
+
+  62% {
+    left: calc(100% - 90px);
+  }
+
+  70% {
+    left: 60%;
+  }
+
+  70.001% {
+    left: 60%;
+  }
+
+  78% {
+    left: 85%;
+  }
+
+  78.001% {
+    left: 85%;
+  }
+
+  95% {
+    left: 2%;
+  }
+
+  95.001% {
+    left: 2%;
+  }
+
+  100% {
+    left: 2%;
+  }
+}
+
+@keyframes crab-scurry-flip {
+  0% {
+    transform: scaleX(-1);
+  }
+
+  8% {
+    transform: scaleX(-1);
+  }
+
+  8.001% {
+    transform: scaleX(1);
+  }
+
+  14% {
+    transform: scaleX(1);
+  }
+
+  14.001% {
+    transform: scaleX(-1);
+  }
+
+  28% {
+    transform: scaleX(-1);
+  }
+
+  28.001% {
+    transform: scaleX(1);
+  }
+
+  38% {
+    transform: scaleX(1);
+  }
+
+  38.001% {
+    transform: scaleX(-1);
+  }
+
+  52% {
+    transform: scaleX(-1);
+  }
+
+  52.001% {
+    transform: scaleX(1);
+  }
+
+  62% {
+    transform: scaleX(1);
+  }
+
+  70% {
+    transform: scaleX(1);
+  }
+
+  70.001% {
+    transform: scaleX(-1);
+  }
+
+  78% {
+    transform: scaleX(-1);
+  }
+
+  78.001% {
+    transform: scaleX(1);
+  }
+
+  95% {
+    transform: scaleX(1);
+  }
+
+  95.001% {
+    transform: scaleX(-1);
+  }
+
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
 /* Story Section */
 .rb-story {
   display: flex;
@@ -155,12 +689,13 @@
 }
 
 .rb-highlights li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
   font-size: 1.15rem;
   color: #444;
   position: relative;
-  padding-left: 2.5rem;
+  padding-left: 60px;
   line-height: 1.6;
+  min-height: 80px;
 }
 
 .rb-highlights li strong {
@@ -168,11 +703,16 @@
 }
 
 .rb-highlights li::before {
-  content: '🦀';
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 1.4rem;
+  width: 60px;
+  height: 50px;
+  background-image: url('/public/img/projects/rustacean-orig.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 @media (max-width: 768px) {
@@ -194,6 +734,12 @@
   }
 
   .rb-highlights li {
-    padding-left: 2rem;
+    padding-left: 85px;
+    min-height: 65px;
+  }
+
+  .rb-highlights li::before {
+    width: 65px;
+    height: 65px;
   }
 }

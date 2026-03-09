@@ -122,7 +122,7 @@ hr {
 }
 
 /* On desktop: always show nav, hide toggle */
-@media (min-width: 48em) {
+@media (min-width: 58em) {
     .sidebar-toggle-label {
         display: none;
     }
@@ -249,7 +249,7 @@ a:focus {
     font-family: 'Fjalla One', sans-serif;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 58em) {
     .sidebar-sticky {
         position: absolute;
         right: 1rem;
@@ -278,7 +278,7 @@ a:focus {
     font-size: 1rem;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 58em) {
     .content {
         max-width: 40rem;
         margin-left: 20rem;
@@ -298,7 +298,7 @@ a:focus {
 
 @media (min-width: 80em) {
     .content {
-        margin-left: 28rem;
+        margin-left: 24rem;
         margin-right: 4rem;
     }
 }
