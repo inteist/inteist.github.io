@@ -743,3 +743,101 @@
     height: 65px;
   }
 }
+
+/* Downloads Section */
+.rb-downloads-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 4rem auto 8rem;
+  max-width: 900px;
+}
+
+.rb-downloads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.rb-dl-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e85e54;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  text-decoration: none !important;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 10px 25px rgba(232, 94, 84, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Override global unstyled hyperlink defaults from Hyde */
+a.rb-dl-card {
+  border-bottom: none;
+}
+a.rb-dl-card:hover {
+  background: #ef6b62; /* Slightly brighter orange on hover */
+  border-bottom: none;
+}
+
+.rb-dl-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(232, 94, 84, 0.45);
+  color: #fff;
+}
+
+.rb-dl-text {
+  flex: 1;
+  text-align: left;
+}
+
+.rb-dl-title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.rb-dl-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.rb-dl-action {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.rb-dl-card:hover .rb-dl-action {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.rb-dl-icon-svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+  margin: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+@media (max-width: 768px) {
+  .rb-downloads {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
+
