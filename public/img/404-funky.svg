@@ -1,0 +1,190 @@
+<svg width="1600" height="1000" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="win404" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#161b22"/>
+    <stop offset="100%" stop-color="#0d1117"/>
+  </linearGradient>
+  <linearGradient id="hdr404" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#21262d"/>
+    <stop offset="100%" stop-color="#1c2128"/>
+  </linearGradient>
+  <radialGradient id="btnR" cx="35%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#ff7058"/>
+    <stop offset="100%" stop-color="#de3e2c"/>
+  </radialGradient>
+  <radialGradient id="btnY" cx="35%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#fecd2e"/>
+    <stop offset="100%" stop-color="#d4960f"/>
+  </radialGradient>
+  <radialGradient id="btnG" cx="35%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#28c840"/>
+    <stop offset="100%" stop-color="#1a9c2f"/>
+  </radialGradient>
+  <filter id="glow404f" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="errGlow" x="-5%" y="-80%" width="110%" height="260%">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="winShadow404" x="-10%" y="-10%" width="125%" height="130%">
+    <feDropShadow dx="0" dy="14" stdDeviation="30" flood-color="#000" flood-opacity="0.75"/>
+  </filter>
+  <clipPath id="winClip">
+    <rect x="24" y="24" width="752" height="452" rx="11"/>
+  </clipPath>
+</defs>
+
+<style>
+.f  { font-family: 'Cascadia Code','JetBrains Mono','SF Mono','Fira Code','Menlo','Monaco','Courier New',monospace; }
+.sm { font-size: 11.5px; }
+.xs { font-size: 10px; }
+.b  { font-weight: 700; }
+.dim    { fill: #484f58; }
+.base   { fill: #c9d1d9; }
+.faint  { fill: #6e7681; }
+.blue   { fill: #79c0ff; }
+.green  { fill: #3fb950; }
+.red    { fill: #ff7b72; }
+.orange { fill: #ffa657; }
+.purple { fill: #d2a8ff; }
+.yellow { fill: #e3b341; }
+.teal   { fill: #39c5cf; }
+.title  { fill: #7d8590; }
+
+.cursor { animation: blink 1s step-start infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.ghost404 { animation: pulse404 3.5s ease-in-out infinite; }
+@keyframes pulse404 { 0%,100% { opacity: 0.5; } 50% { opacity: 0.55; } }
+
+.glitch { animation: glitch404 7s 2s infinite; }
+@keyframes glitch404 {
+  0%,82%,100% { transform: translate(0,0); }
+  83% { transform: translate(-4px, 2px); }
+  84% { transform: translate(3px,-1px); }
+  85% { transform: translate(-2px, 1px); }
+  86% { transform: translate(0,0); }
+}
+</style>
+
+<!-- Window shadow -->
+<!-- <rect x="24" y="24" width="752" height="452" rx="11" fill="#000" opacity="0.5" filter="url(#winShadow404)"/> -->
+
+<!-- Window body -->
+<rect x="24" y="24" width="752" height="452" rx="11" fill="url(#win404)" stroke="#30363d" stroke-width="0.8"/>
+
+<!-- Ghost 404 inside window (behind content, above bg) -->
+<g clip-path="url(#winClip)">
+  <text x="764" y="456" text-anchor="end"
+    class="f b ghost404 glitch"
+    fill="#ff7b72"
+    style="font-size:198px; letter-spacing:-5px;"
+    filter="url(#glow404f)">404</text>
+</g>
+
+<!-- Title bar -->
+<rect x="24" y="24" width="752" height="38" rx="11" fill="url(#hdr404)"/>
+<rect x="24" y="50" width="752" height="12" fill="url(#hdr404)"/>
+<line x1="24" y1="62" x2="776" y2="62" stroke="#30363d" stroke-width="0.6"/>
+
+<!-- Traffic lights -->
+<circle cx="52"  cy="43" r="7" fill="url(#btnR)"/>
+<circle cx="76"  cy="43" r="7" fill="url(#btnY)"/>
+<circle cx="100" cy="43" r="7" fill="url(#btnG)"/>
+
+<!-- Window title -->
+<text x="400" y="47" text-anchor="middle" class="f sm title">inteist.com — cargo run — 140×36</text>
+
+<!-- ── Terminal content ── -->
+
+<!-- Prompt + command -->
+<text y="91" class="f sm">
+  <tspan x="46" class="faint">~/inteist </tspan><tspan class="green">git:(</tspan><tspan class="red">main</tspan><tspan class="green">) ❯ </tspan><tspan class="blue b">cargo run --release</tspan>
+</text>
+
+<!-- Compiling -->
+<text y="109" class="f sm">
+  <tspan x="46" class="green b">   Compiling </tspan><tspan class="base">inteist v0.1.0 (~/inteist)</tspan>
+</text>
+
+<!-- error[E0404] -->
+<text y="130" class="f sm b" filter="url(#errGlow)">
+  <tspan x="46" class="red">error</tspan><tspan class="faint">[</tspan><tspan class="orange">E0404</tspan><tspan class="faint">]: </tspan><tspan class="base">cannot find page </tspan><tspan class="blue">`this`</tspan><tspan class="base"> in this scope</tspan>
+</text>
+
+<!-- file path -->
+<text y="147" class="f sm">
+  <tspan x="46" class="faint">  --&gt; </tspan><tspan class="teal">src/router.rs</tspan><tspan class="faint">:404:42</tspan>
+</text>
+
+<!-- pipe -->
+<text x="46" y="163" class="f sm faint">   |</text>
+
+<!-- code line 404 -->
+<text y="180" class="f sm">
+  <tspan x="46" class="orange b">404</tspan><tspan class="faint"> | </tspan><tspan class="purple">  route!</tspan><tspan class="base">(</tspan><tspan class="yellow">"/this"</tspan><tspan class="base">, handle_request)</tspan>
+</text>
+
+<!-- carets -->
+<text y="197" class="f sm">
+  <tspan x="46" class="faint">    | </tspan><tspan class="red b">       ^^^^^^ </tspan><tspan class="base">page not found in this scope</tspan>
+</text>
+
+<!-- pipe -->
+<text x="46" y="213" class="f sm faint">   |</text>
+
+<!-- note: did you mean -->
+<text y="230" class="f sm">
+  <tspan x="46" class="faint">   = </tspan><tspan class="base b">note: </tspan><tspan class="base">did you mean </tspan><tspan class="blue">`/home`</tspan><tspan class="base">?</tspan>
+</text>
+
+<!-- help: RUST_BACKTRACE -->
+<text y="247" class="f sm">
+  <tspan x="46" class="faint">   = </tspan><tspan class="green b">help: </tspan><tspan class="base">set </tspan><tspan class="yellow">RUST_BACKTRACE=full</tspan><tspan class="base"> for an existential crisis</tspan>
+</text>
+
+<!-- spacer line -->
+<text x="46" y="263" class="f sm faint">   |</text>
+
+<!-- thread panicked -->
+<text y="283" class="f sm b" filter="url(#errGlow)">
+  <tspan x="46" class="red">thread </tspan><tspan class="blue">'main'</tspan><tspan class="red"> panicked at </tspan><tspan class="yellow">'page not found: 404'</tspan>
+</text>
+<text y="299" class="f xs">
+  <tspan x="46" class="faint">         src/router.rs:404:1  — and honestly, same</tspan>
+</text>
+
+<!-- backtrace note -->
+<text y="315" class="f xs">
+  <tspan x="46" class="faint">note: run with </tspan><tspan class="yellow">RUST_BACKTRACE=1</tspan><tspan class="faint"> to display 400 frames of regret</tspan>
+</text>
+
+<!-- aborting -->
+<text y="335" class="f sm b" filter="url(#errGlow)">
+  <tspan x="46" class="red">error: </tspan><tspan class="base">aborting due to </tspan><tspan class="orange">1</tspan><tspan class="base"> previous error; have you considered </tspan><tspan class="blue">/home</tspan><tspan class="base">?</tspan>
+</text>
+
+<!-- spacer -->
+
+<!-- shrug prompt -->
+<text y="368" class="f sm">
+  <tspan x="46" class="faint">~/inteist </tspan><tspan class="green">git:(</tspan><tspan class="red">main</tspan><tspan class="green">) ❯ </tspan><tspan class="base">¯\_(ツ)_/¯</tspan>
+</text>
+
+<!-- empty prompt + blinking cursor -->
+<text y="389" class="f sm">
+  <tspan x="46" class="faint">~/inteist </tspan><tspan class="green">git:(</tspan><tspan class="red">main</tspan><tspan class="green">) ❯ </tspan><tspan class="base cursor">█</tspan>
+</text>
+
+<!-- footer hint -->
+<text x="776" y="463" text-anchor="end" class="f xs dim">// cargo check next time, maybe</text>
+
+</svg>
