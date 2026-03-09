@@ -209,8 +209,8 @@ a:focus {
     margin: 0 0.25rem 0.25rem 0;
     border-radius: 999px;
     /* pill */
-    font-weight: 600;
-    /* slightly bolder */
+    font-weight: 400;
+    /* slightly heavier weight */
     color: #ffffff;
     /* white text */
     background: hsl(189, 100%, 31%);
@@ -293,4 +293,99 @@ a:focus {
         margin-left: 22rem;
         margin-right: 4rem;
     }
+}
+#typed-cursor {
+    font-weight: 100;
+    color: #aeaeae;
+}
+
+#typed-cursor.blinking {
+    -webkit-animation: CursorBlink 800ms infinite linear;
+    -moz-animation: CursorBlink 800ms infinite linear;
+    -ms-animation: CursorBlink 800ms infinite linear;
+    -o-animation: CursorBlink 800ms infinite linear;
+    animation: CursorBlink 800ms infinite linear
+}
+@-webkit-keyframes CursorBlink {
+    0% {
+        opacity: 1
+   }
+   60% {
+       opacity: 1
+  }
+  61% {
+      opacity: 0
+ }
+ 100% {
+     opacity: 0
+}
+}
+@-moz-keyframes CursorBlink {
+    0% {
+        opacity: 1
+   }
+   60% {
+       opacity: 1
+  }
+  61% {
+      opacity: 0
+ }
+ 100% {
+     opacity: 0
+}
+}
+@-ms-keyframes CursorBlink {
+    0% {
+        opacity: 1
+   }
+   60% {
+       opacity: 1
+  }
+  61% {
+      opacity: 0
+ }
+ 100% {
+     opacity: 0
+}
+}
+@-o-keyframes CursorBlink {
+    0% {
+        opacity: 1
+   }
+   60% {
+       opacity: 1
+  }
+  61% {
+      opacity: 0
+ }
+ 100% {
+     opacity: 0
+}
+}
+@keyframes CursorBlink {
+    0% {
+        opacity: 1
+   }
+   60% {
+       opacity: 1
+  }
+  61% {
+      opacity: 0
+ }
+ 100% {
+     opacity: 0
+}
+}
+
+.title-me {
+    font-size: 4rem;
+    text-align: center;
+    color: #484848;
+}
+
+.tag-count {
+    margin-left: 0.4rem;
+    color: #80eaff;
+    font-weight: 600;
+    opacity: 0.95;
 }
