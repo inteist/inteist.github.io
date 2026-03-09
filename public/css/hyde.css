@@ -260,8 +260,6 @@ a:focus {
 
 /* Titles */
 
-.post-title-accent {}
-
 /* Meta data line below post title */
 
 .post-date {
@@ -282,18 +280,29 @@ a:focus {
 
 @media (min-width: 48em) {
     .content {
-        max-width: 38rem;
+        max-width: 40rem;
         margin-left: 20rem;
         margin-right: 2rem;
     }
+
+    .content.container-wide {
+        max-width: 70%;
+        /* Wider than 38rem for info-heavy pages */
+    }
+
+    .content.container-extra-wide {
+        max-width: 85%;
+        /* Much wider for full-screen experiences */
+    }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 80em) {
     .content {
-        margin-left: 22rem;
+        margin-left: 28rem;
         margin-right: 4rem;
     }
 }
+
 #typed-cursor {
     font-weight: 100;
     color: #aeaeae;
@@ -306,75 +315,95 @@ a:focus {
     -o-animation: CursorBlink 800ms infinite linear;
     animation: CursorBlink 800ms infinite linear
 }
+
 @-webkit-keyframes CursorBlink {
     0% {
         opacity: 1
-   }
-   60% {
-       opacity: 1
-  }
-  61% {
-      opacity: 0
- }
- 100% {
-     opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    61% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
 }
-}
+
 @-moz-keyframes CursorBlink {
     0% {
         opacity: 1
-   }
-   60% {
-       opacity: 1
-  }
-  61% {
-      opacity: 0
- }
- 100% {
-     opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    61% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
 }
-}
+
 @-ms-keyframes CursorBlink {
     0% {
         opacity: 1
-   }
-   60% {
-       opacity: 1
-  }
-  61% {
-      opacity: 0
- }
- 100% {
-     opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    61% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
 }
-}
+
 @-o-keyframes CursorBlink {
     0% {
         opacity: 1
-   }
-   60% {
-       opacity: 1
-  }
-  61% {
-      opacity: 0
- }
- 100% {
-     opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    61% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
 }
-}
+
 @keyframes CursorBlink {
     0% {
         opacity: 1
-   }
-   60% {
-       opacity: 1
-  }
-  61% {
-      opacity: 0
- }
- 100% {
-     opacity: 0
-}
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    61% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
+    }
 }
 
 .title-me {
