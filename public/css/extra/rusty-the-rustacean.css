@@ -1,0 +1,117 @@
+/* rusty-the-rustacean.css */
+
+.section-header {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.rusty-scene {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  /* The scene uses the background image to establish dimensions */
+}
+
+
+/* Background image sets Scene's height and width */
+.rusty-scene .rs-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  /* Background layer */
+}
+
+/* Modify the inherited walking-crab-container styling to fit this scene */
+.rusty-scene .walking-crab-container {
+  /* Override styles from rust-book.css */
+  position: absolute;
+  /* Controlled dynamically over seabed-path.png map by JS in the layout */
+  left: 0;
+  width: 100%;
+  /* Use explicit Z-Index to place between bg and fg */
+  z-index: 2;
+  /* Pointer events none on container so we can only click crab wrapper */
+  pointer-events: none;
+}
+
+.rusty-scene .crab-wrapper {
+  /* Scale crab up slightly for this large immersive scene */
+  width: 120px;
+  height: 120px;
+}
+
+.rusty-scene .crab-speech-bubble {
+  bottom: 135px;
+}
+
+.rusty-scene .crab-think-bubble {
+  bottom: 235px;
+}
+
+/* Foreground image overlaid on top of crab */
+.rusty-scene .rs-fg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  /* Foreground layer */
+  /* Ignore clicks on the foreground so you can always click the crab inside */
+  pointer-events: none;
+}
+
+/* Verification Overlay */
+.rusty-scene .rs-path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Mobile responsiveness: adjust the line where crab walks due to image scaling */
+@media (max-width: 768px) {
+  .rusty-scene .crab-wrapper {
+    /* Scale crab down matching the image scaling */
+    width: 80px;
+    height: 80px;
+  }
+
+  .rusty-scene .crab-speech-bubble {
+    bottom: 95px;
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  .rusty-scene .crab-think-bubble {
+    bottom: 165px;
+    font-size: 0.9rem;
+  }
+}
