@@ -1,1 +1,9 @@
-code,pre{font-family:Meslo LG S,Droid Sans Mono,Ubuntu Mono,monospace}
+/* _src/css/extra/meslo-font.css */
+code,
+pre {
+  font-family:
+    "Meslo LG S",
+    "Droid Sans Mono",
+    "Ubuntu Mono",
+    monospace;
+}

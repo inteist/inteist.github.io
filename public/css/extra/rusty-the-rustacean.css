@@ -1,1 +1,91 @@
-.section-header{text-align:center;margin-top:2rem;margin-bottom:2rem}.section-header h1{color:#ff3100}.intro-text{max-width:800px;margin:0 auto 3rem;text-align:center;font-size:1.2rem;line-height:1.6}.rusty-scene{position:relative;width:100%;max-width:1100px;margin:0 auto 4rem;border-radius:16px;overflow:hidden;box-shadow:0 15px 35px #0003}.rusty-scene .rs-bg{display:block;width:100%;height:auto;margin:0;padding:0;position:relative;z-index:1}.rusty-scene .walking-crab-container{position:absolute;left:0;width:100%;z-index:2;pointer-events:none}.rusty-scene .crab-wrapper{width:120px;height:120px}.rusty-scene .crab-speech-bubble{bottom:135px}.rusty-scene .crab-think-bubble{bottom:235px}.rusty-scene .rs-fg{position:absolute;top:0;left:0;display:block;width:100%;height:auto;margin:0;padding:0;z-index:3;pointer-events:none}.rusty-scene .rs-path{position:absolute;top:0;left:0;display:block;width:100%;height:auto;margin:0;padding:0;z-index:10;opacity:.6;pointer-events:none}@media(max-width:768px){.rusty-scene .crab-wrapper{width:80px;height:80px}.rusty-scene .crab-speech-bubble{bottom:95px;font-size:1rem;padding:10px 18px}.rusty-scene .crab-think-bubble{bottom:165px;font-size:.9rem}}
+/* _src/css/extra/rusty-the-rustacean.css */
+.section-header {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.section-header h1 {
+  color: #ff3100;
+}
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.rusty-scene {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.rusty-scene .rs-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+.rusty-scene .walking-crab-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.rusty-scene .crab-wrapper {
+  width: 120px;
+  height: 120px;
+}
+.rusty-scene .crab-speech-bubble {
+  bottom: 135px;
+}
+.rusty-scene .crab-think-bubble {
+  bottom: 235px;
+}
+.rusty-scene .rs-fg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+.rusty-scene .rs-path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  opacity: 0.6;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .rusty-scene .crab-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+  .rusty-scene .crab-speech-bubble {
+    bottom: 95px;
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+  .rusty-scene .crab-think-bubble {
+    bottom: 165px;
+    font-size: 0.9rem;
+  }
+}
