@@ -3,8 +3,8 @@
     <channel>
         <title></title>
         <description>I code for living</description>
-        <link>http://localhost:6767</link>
-        <atom:link href="http://localhost:6767/feed.xml" rel="self" type="application/rss+xml" />
+        <link>https://inteist.com</link>
+        <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
                 <title>Why AI Keeps Breaking Your Code</title>
@@ -14,8 +14,8 @@
 </description>
                 
                 <pubDate>Tue, 14 Apr 2026 20:16:09 -0400</pubDate>
-                <link>http://localhost:6767/why-ai-keeps-breaking-your-code/</link>
-                <guid isPermaLink="true">http://localhost:6767/why-ai-keeps-breaking-your-code/</guid>
+                <link>https://inteist.com/why-ai-keeps-breaking-your-code/</link>
+                <guid isPermaLink="true">https://inteist.com/why-ai-keeps-breaking-your-code/</guid>
             </item>
         
             <item>
@@ -26,8 +26,8 @@
 </description>
                 
                 <pubDate>Wed, 25 Feb 2026 13:02:58 -0500</pubDate>
-                <link>http://localhost:6767/evolution-of-programming-in-the-age-of-LLMs/</link>
-                <guid isPermaLink="true">http://localhost:6767/evolution-of-programming-in-the-age-of-LLMs/</guid>
+                <link>https://inteist.com/evolution-of-programming-in-the-age-of-LLMs/</link>
+                <guid isPermaLink="true">https://inteist.com/evolution-of-programming-in-the-age-of-LLMs/</guid>
             </item>
         
             <item>
@@ -38,8 +38,8 @@
 </description>
                 
                 <pubDate>Wed, 18 Feb 2026 15:29:35 -0500</pubDate>
-                <link>http://localhost:6767/53-codex-flavors-performance/</link>
-                <guid isPermaLink="true">http://localhost:6767/53-codex-flavors-performance/</guid>
+                <link>https://inteist.com/53-codex-flavors-performance/</link>
+                <guid isPermaLink="true">https://inteist.com/53-codex-flavors-performance/</guid>
             </item>
         
             <item>
@@ -50,8 +50,8 @@
 </description>
                 
                 <pubDate>Mon, 15 May 2023 16:29:35 -0400</pubDate>
-                <link>http://localhost:6767/phasescriptexecution-cp-embed-pods-frameworks/</link>
-                <guid isPermaLink="true">http://localhost:6767/phasescriptexecution-cp-embed-pods-frameworks/</guid>
+                <link>https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks/</link>
+                <guid isPermaLink="true">https://inteist.com/phasescriptexecution-cp-embed-pods-frameworks/</guid>
             </item>
         
             <item>
@@ -62,8 +62,8 @@
 </description>
                 
                 <pubDate>Sat, 13 May 2023 16:52:32 -0400</pubDate>
-                <link>http://localhost:6767/hammerspoon-key-map-key-names/</link>
-                <guid isPermaLink="true">http://localhost:6767/hammerspoon-key-map-key-names/</guid>
+                <link>https://inteist.com/hammerspoon-key-map-key-names/</link>
+                <guid isPermaLink="true">https://inteist.com/hammerspoon-key-map-key-names/</guid>
             </item>
         
             <item>
@@ -74,8 +74,8 @@
 </description>
                 
                 <pubDate>Tue, 25 Apr 2023 17:16:23 -0400</pubDate>
-                <link>http://localhost:6767/vscode-vertical-rulers-setup/</link>
-                <guid isPermaLink="true">http://localhost:6767/vscode-vertical-rulers-setup/</guid>
+                <link>https://inteist.com/vscode-vertical-rulers-setup/</link>
+                <guid isPermaLink="true">https://inteist.com/vscode-vertical-rulers-setup/</guid>
             </item>
         
             <item>
@@ -86,8 +86,8 @@
 </description>
                 
                 <pubDate>Sat, 01 Apr 2023 20:19:53 -0400</pubDate>
-                <link>http://localhost:6767/automated-snapshots-digital-ocean-backups/</link>
-                <guid isPermaLink="true">http://localhost:6767/automated-snapshots-digital-ocean-backups/</guid>
+                <link>https://inteist.com/automated-snapshots-digital-ocean-backups/</link>
+                <guid isPermaLink="true">https://inteist.com/automated-snapshots-digital-ocean-backups/</guid>
             </item>
         
             <item>
@@ -98,8 +98,8 @@
 </description>
                 
                 <pubDate>Sun, 26 Mar 2023 23:15:42 -0400</pubDate>
-                <link>http://localhost:6767/derived-data-deletion-useful-commands/</link>
-                <guid isPermaLink="true">http://localhost:6767/derived-data-deletion-useful-commands/</guid>
+                <link>https://inteist.com/derived-data-deletion-useful-commands/</link>
+                <guid isPermaLink="true">https://inteist.com/derived-data-deletion-useful-commands/</guid>
             </item>
         
             <item>
@@ -110,8 +110,8 @@
 </description>
                 
                 <pubDate>Fri, 24 Mar 2023 22:20:12 -0400</pubDate>
-                <link>http://localhost:6767/openssl-apple-silicon/</link>
-                <guid isPermaLink="true">http://localhost:6767/openssl-apple-silicon/</guid>
+                <link>https://inteist.com/openssl-apple-silicon/</link>
+                <guid isPermaLink="true">https://inteist.com/openssl-apple-silicon/</guid>
             </item>
         
             <item>
@@ -122,8 +122,8 @@
 </description>
                 
                 <pubDate>Mon, 20 Mar 2023 13:39:30 -0400</pubDate>
-                <link>http://localhost:6767/crontab-cheatsheet/</link>
-                <guid isPermaLink="true">http://localhost:6767/crontab-cheatsheet/</guid>
+                <link>https://inteist.com/crontab-cheatsheet/</link>
+                <guid isPermaLink="true">https://inteist.com/crontab-cheatsheet/</guid>
             </item>
         
             <item>
@@ -134,8 +134,8 @@
 </description>
                 
                 <pubDate>Fri, 14 Oct 2022 13:53:17 -0400</pubDate>
-                <link>http://localhost:6767/mongodump-backup-script/</link>
-                <guid isPermaLink="true">http://localhost:6767/mongodump-backup-script/</guid>
+                <link>https://inteist.com/mongodump-backup-script/</link>
+                <guid isPermaLink="true">https://inteist.com/mongodump-backup-script/</guid>
             </item>
         
             <item>
@@ -149,8 +149,8 @@
 </description>
                 
                 <pubDate>Tue, 11 Oct 2022 00:28:49 -0400</pubDate>
-                <link>http://localhost:6767/creating-nested-folders-bash/</link>
-                <guid isPermaLink="true">http://localhost:6767/creating-nested-folders-bash/</guid>
+                <link>https://inteist.com/creating-nested-folders-bash/</link>
+                <guid isPermaLink="true">https://inteist.com/creating-nested-folders-bash/</guid>
             </item>
         
             <item>
@@ -161,8 +161,8 @@
 </description>
                 
                 <pubDate>Fri, 07 Oct 2022 12:11:15 -0400</pubDate>
-                <link>http://localhost:6767/super-easy-prevent-computer-sleeping/</link>
-                <guid isPermaLink="true">http://localhost:6767/super-easy-prevent-computer-sleeping/</guid>
+                <link>https://inteist.com/super-easy-prevent-computer-sleeping/</link>
+                <guid isPermaLink="true">https://inteist.com/super-easy-prevent-computer-sleeping/</guid>
             </item>
         
             <item>
@@ -173,8 +173,8 @@
 </description>
                 
                 <pubDate>Fri, 07 Oct 2022 00:31:03 -0400</pubDate>
-                <link>http://localhost:6767/mongodb-adding-users-roles-databases/</link>
-                <guid isPermaLink="true">http://localhost:6767/mongodb-adding-users-roles-databases/</guid>
+                <link>https://inteist.com/mongodb-adding-users-roles-databases/</link>
+                <guid isPermaLink="true">https://inteist.com/mongodb-adding-users-roles-databases/</guid>
             </item>
         
             <item>
@@ -185,8 +185,8 @@
 </description>
                 
                 <pubDate>Fri, 07 Oct 2022 00:27:24 -0400</pubDate>
-                <link>http://localhost:6767/mongo-db-backup-restore/</link>
-                <guid isPermaLink="true">http://localhost:6767/mongo-db-backup-restore/</guid>
+                <link>https://inteist.com/mongo-db-backup-restore/</link>
+                <guid isPermaLink="true">https://inteist.com/mongo-db-backup-restore/</guid>
             </item>
         
             <item>
@@ -197,8 +197,8 @@
 </description>
                 
                 <pubDate>Thu, 06 Oct 2022 15:12:15 -0400</pubDate>
-                <link>http://localhost:6767/google-colab-tips-tricks/</link>
-                <guid isPermaLink="true">http://localhost:6767/google-colab-tips-tricks/</guid>
+                <link>https://inteist.com/google-colab-tips-tricks/</link>
+                <guid isPermaLink="true">https://inteist.com/google-colab-tips-tricks/</guid>
             </item>
         
             <item>
@@ -209,8 +209,8 @@
 </description>
                 
                 <pubDate>Thu, 06 Oct 2022 12:56:54 -0400</pubDate>
-                <link>http://localhost:6767/large-scale-data-gathering-journey/</link>
-                <guid isPermaLink="true">http://localhost:6767/large-scale-data-gathering-journey/</guid>
+                <link>https://inteist.com/large-scale-data-gathering-journey/</link>
+                <guid isPermaLink="true">https://inteist.com/large-scale-data-gathering-journey/</guid>
             </item>
         
             <item>
@@ -221,8 +221,8 @@
 </description>
                 
                 <pubDate>Fri, 30 Sep 2022 17:04:38 -0400</pubDate>
-                <link>http://localhost:6767/compression-results-7z/</link>
-                <guid isPermaLink="true">http://localhost:6767/compression-results-7z/</guid>
+                <link>https://inteist.com/compression-results-7z/</link>
+                <guid isPermaLink="true">https://inteist.com/compression-results-7z/</guid>
             </item>
         
             <item>
@@ -234,8 +234,8 @@
 </description>
                 
                 <pubDate>Tue, 27 Sep 2022 21:06:44 -0400</pubDate>
-                <link>http://localhost:6767/efficient-image-resizing-os/</link>
-                <guid isPermaLink="true">http://localhost:6767/efficient-image-resizing-os/</guid>
+                <link>https://inteist.com/efficient-image-resizing-os/</link>
+                <guid isPermaLink="true">https://inteist.com/efficient-image-resizing-os/</guid>
             </item>
         
             <item>
@@ -247,8 +247,8 @@ such ideas in the past but these ideas did not survice because they did not get 
 </description>
                 
                 <pubDate>Wed, 25 May 2022 19:52:00 -0400</pubDate>
-                <link>http://localhost:6767/exploring-obsidian/</link>
-                <guid isPermaLink="true">http://localhost:6767/exploring-obsidian/</guid>
+                <link>https://inteist.com/exploring-obsidian/</link>
+                <guid isPermaLink="true">https://inteist.com/exploring-obsidian/</guid>
             </item>
         
     </channel>
