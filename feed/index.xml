@@ -7,6 +7,26 @@
         <atom:link href="https://inteist.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>YAML vs TOML: expressiveness, strictness, the tradeoffs summarized infographic and comparison</title>
+                
+                
+                    <description>&lt;article class=&quot;yvt-article&quot;&gt;
+  &lt;section class=&quot;yvt-hero&quot;&gt;
+  &lt;div class=&quot;yvt-badges&quot;&gt;
+    &lt;span class=&quot;yvt-badge&quot;&gt;Config formats&lt;/span&gt;
+    &lt;span class=&quot;yvt-badge&quot;&gt;Deep technical comparison&lt;/span&gt;
+    &lt;span class=&quot;yvt-badge&quot;&gt;Mermaid enabled&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/article&gt;
+</description>
+                
+                <pubDate>Wed, 15 Apr 2026 12:00:00 -0400</pubDate>
+                <link>https://inteist.com/yaml-vs-toml/</link>
+                <guid isPermaLink="true">https://inteist.com/yaml-vs-toml/</guid>
+            </item>
+        
+            <item>
                 <title>Why AI Keeps Breaking Your Code</title>
                 
                 
@@ -236,19 +256,6 @@
                 <pubDate>Tue, 27 Sep 2022 21:06:44 -0400</pubDate>
                 <link>https://inteist.com/efficient-image-resizing-os/</link>
                 <guid isPermaLink="true">https://inteist.com/efficient-image-resizing-os/</guid>
-            </item>
-        
-            <item>
-                <title>Exploring Obsidian</title>
-                
-                
-                    <description>&lt;p&gt;I have just discovered Obsidian.md and have been exploring it. It sonds like a great idea but I already had encountered
-such ideas in the past but these ideas did not survice because they did not get enough traction.&lt;/p&gt;
-</description>
-                
-                <pubDate>Wed, 25 May 2022 19:52:00 -0400</pubDate>
-                <link>https://inteist.com/exploring-obsidian/</link>
-                <guid isPermaLink="true">https://inteist.com/exploring-obsidian/</guid>
             </item>
         
     </channel>

@@ -1,6 +1,15 @@
 [
     
     {
+        "title": "YAML vs TOML: expressiveness, strictness, the tradeoffs summarized infographic and comparison",
+        "url": "/yaml-vs-toml/",
+        "category": "",
+        "tags": "yaml, toml, configuration, formats, tooling",
+        "date": "April 15  2026",
+        "discription": ""
+    } ,
+  
+    {
         "title": "Why AI Keeps Breaking Your Code",
         "url": "/why-ai-keeps-breaking-your-code/",
         "category": "thoughts, essay",

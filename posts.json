@@ -2,6 +2,12 @@
     "posts": [
         
         {
+            "title": "YAML vs TOML: expressiveness, strictness, the tradeoffs summarized infographic and comparison",
+            "url": "https://inteist.com/yaml-vs-toml/",
+            "date": "2026-04-15T12:00:00-04:00"
+        },
+        
+        {
             "title": "Why AI Keeps Breaking Your Code",
             "url": "https://inteist.com/why-ai-keeps-breaking-your-code/",
             "date": "2026-04-14T20:16:09-04:00"

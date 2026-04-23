@@ -535,7 +535,17 @@
         
         "AI",
         
-        "musings"
+        "musings",
+        
+        "yaml",
+        
+        "toml",
+        
+        "configuration",
+        
+        "formats",
+        
+        "tooling"
         
     ]
 }
