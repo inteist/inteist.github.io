@@ -12,9 +12,18 @@ pushd "$source_root" > /dev/null
 npm run build
 popd > /dev/null
 
+echo "Optimizing generated images..."
+pushd "$publish_root" > /dev/null
+if command -v imgoptim >/dev/null 2>&1; then
+  imgoptim > /dev/null 2>&1
+else
+  echo "imgoptim not found, skipping image optimization."
+fi
+popd > /dev/null
+
 echo "Validating generated SEO output..."
-if rg -n "localhost:6767" "$publish_root/sitemap.xml" "$publish_root/feed/index.xml" "$publish_root/index.html" > /dev/null; then
-  echo "Refusing to deploy because generated output still contains localhost URLs." >&2
+if rg -n "https?://(localhost|127\.0\.0\.1)(:[0-9]+)?" "$publish_root/sitemap.xml" "$publish_root/feed/index.xml" "$publish_root/index.html" > /dev/null; then
+  echo "Refusing to deploy because generated output still contains local URLs." >&2
   exit 1
 fi
 
