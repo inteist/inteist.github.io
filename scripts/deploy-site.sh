@@ -33,11 +33,9 @@ git add -A
 
 if git diff --cached --quiet; then
   echo "No generated changes to deploy."
-  popd > /dev/null
-  exit 0
+else
+  git commit -m "$commit_message"
 fi
-
-git commit -m "$commit_message"
 
 git push origin HEAD:main
 popd > /dev/null
